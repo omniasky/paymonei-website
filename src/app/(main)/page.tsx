@@ -289,6 +289,15 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
                   <Image
+                    src="https://logo.clearbit.com/resend.com"
+                    alt="Resend"
+                    width={80}
+                    height={40}
+                    className="max-h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
+                  <Image
                     src="https://logo.clearbit.com/chainalysis.com"
                     alt="Chainalysis"
                     width={80}
