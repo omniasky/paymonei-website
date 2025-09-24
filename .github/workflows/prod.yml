@@ -394,20 +394,20 @@ jobs:
 
   # Notify deployment status
   # notify:
-    runs-on: ubuntu-latest
-    needs: [versioning, deploy, tag-release, generate-changelog]
-    if: always() && github.ref == 'refs/heads/main'
-    steps:
-      - name: Deployment notification
-        run: |
-          if [[ "${{ needs.deploy.result }}" == "success" ]]; then
-            echo "🚀 paymonei-website deployment successful!"
-            echo "✅ Version ${{ needs.versioning.outputs.version }} deployed to ECS"
-            echo "🏷️ Tagged as ${{ needs.versioning.outputs.tag }}"
-            echo "🌐 Service URL: https://paymonei.com"
-            echo "📝 Draft changelog created as GitHub issue"
-          else
-            echo "❌ paymonei-website deployment failed"
-            echo "Check the logs above for details"
-            exit 1
-          fi
+    # runs-on: ubuntu-latest
+    # needs: [versioning, deploy, tag-release, generate-changelog]
+    # if: always() && github.ref == 'refs/heads/main'
+    # steps:
+    #   - name: Deployment notification
+    #     run: |
+    #       if [[ "${{ needs.deploy.result }}" == "success" ]]; then
+    #         echo "🚀 paymonei-website deployment successful!"
+    #         echo "✅ Version ${{ needs.versioning.outputs.version }} deployed to ECS"
+    #         echo "🏷️ Tagged as ${{ needs.versioning.outputs.tag }}"
+    #         echo "🌐 Service URL: https://paymonei.com"
+    #         echo "📝 Draft changelog created as GitHub issue"
+    #       else
+    #         echo "❌ paymonei-website deployment failed"
+    #         echo "Check the logs above for details"
+    #         exit 1
+    #       fi
