@@ -253,8 +253,26 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
                   <Image
+                    src="https://logo.clearbit.com/quicknode.com"
+                    alt="Quicknode"
+                    width={80}
+                    height={40}
+                    className="max-h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
+                  <Image
                     src="https://logo.clearbit.com/ripple.com"
                     alt="Ripple"
+                    width={80}
+                    height={40}
+                    className="max-h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
+                  <Image
+                    src="https://logo.clearbit.com/paypal.com"
+                    alt="Paypal"
                     width={80}
                     height={40}
                     className="max-h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300"
@@ -280,8 +298,26 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
                   <Image
+                    src="https://logo.clearbit.com/nium.com"
+                    alt="Nium"
+                    width={80}
+                    height={40}
+                    className="max-h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
+                  <Image
                     src="https://logo.clearbit.com/vercel.com"
                     alt="Vercel"
+                    width={80}
+                    height={40}
+                    className="max-h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
+                  <Image
+                    src="https://logo.clearbit.com/phantom.com"
+                    alt="Phantom"
                     width={80}
                     height={40}
                     className="max-h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300"
@@ -543,15 +579,6 @@ export default function HomePage() {
                   <Image
                     src="https://logo.clearbit.com/agoda.com"
                     alt="Agoda"
-                    width={80}
-                    height={40}
-                    className="max-h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300"
-                  />
-                </div>
-                <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
-                  <Image
-                    src="https://logo.clearbit.com/paypal.com"
-                    alt="Paypal"
                     width={80}
                     height={40}
                     className="max-h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300"
@@ -1169,9 +1196,9 @@ export default function HomePage() {
                     </span>
                   </h3>
                   <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                    We didn&apos;t just improve payments—we architected the financial
-                    nervous system for AI. Where others offer routing, we
-                    deliver complete infrastructure.
+                    We didn&apos;t just improve payments—we architected the
+                    financial nervous system for AI. Where others offer routing,
+                    we deliver complete infrastructure.
                   </p>
                 </div>
 
@@ -1364,9 +1391,10 @@ export default function HomePage() {
                     Instant Payment Link Generation
                   </h3>
                   <p className="text-muted-foreground mb-6 leading-relaxed">
-                    Merchants interact with Paymonei&apos;s AI agent to instantly
-                    create customized payment links and send them directly to
-                    customers via email, SMS, or any communication channel.
+                    Merchants interact with Paymonei&apos;s AI agent to
+                    instantly create customized payment links and send them
+                    directly to customers via email, SMS, or any communication
+                    channel.
                   </p>
                   <div className="space-y-4">
                     <div className="flex items-start gap-3">
@@ -1434,8 +1462,8 @@ export default function HomePage() {
                           <div className="max-w-xs">
                             <div className="bg-muted rounded-2xl rounded-bl-md px-4 py-3">
                               <p className="text-sm font-medium">
-                                Absolutely! I&apos;ve created the payment link for
-                                John.
+                                Absolutely! I&apos;ve created the payment link
+                                for John.
                               </p>
                               <div className="text-xs text-muted-foreground mt-2 space-y-1">
                                 <p>🔗 pay.paymonei.com/inv/abc123</p>
@@ -1507,7 +1535,8 @@ export default function HomePage() {
                             <div className="max-w-xs">
                               <div className="bg-muted rounded-2xl rounded-bl-md px-4 py-3">
                                 <p className="text-sm font-medium">
-                                  Perfect! I&apos;ve drafted the invoice for XYZ Ltd.
+                                  Perfect! I&apos;ve drafted the invoice for XYZ
+                                  Ltd.
                                 </p>
                                 <div className="text-xs text-muted-foreground mt-2 space-y-1">
                                   <p>📄 Invoice #INV-2024-Q4-001</p>
@@ -2354,8 +2383,8 @@ export default function HomePage() {
                             <div className="max-w-xs">
                               <div className="bg-muted rounded-2xl rounded-bl-md px-4 py-3">
                                 <p className="text-sm font-medium">
-                                  Perfect! I&apos;ll orchestrate a multi-platform
-                                  campaign
+                                  Perfect! I&apos;ll orchestrate a
+                                  multi-platform campaign
                                 </p>
                                 <div className="text-xs text-muted-foreground mt-2 space-y-1">
                                   <p>
@@ -2627,8 +2656,8 @@ export default function HomePage() {
                             <div className="max-w-xs">
                               <div className="bg-muted rounded-2xl rounded-bl-md px-4 py-3">
                                 <p className="text-sm">
-                                  Perfect! I&apos;ve analyzed your requirements and
-                                  found 2 excellent remote engineers
+                                  Perfect! I&apos;ve analyzed your requirements
+                                  and found 2 excellent remote engineers
                                   specializing in modern landing pages and
                                   Vercel deployment.
                                 </p>
@@ -2691,8 +2720,8 @@ export default function HomePage() {
                             <div className="max-w-xs">
                               <div className="bg-blue-500 text-white rounded-2xl rounded-br-md px-4 py-3">
                                 <p className="text-sm">
-                                  I&apos;ll go with Alex Chen. Can you get a detailed
-                                  quote and draft the contract?
+                                  I&apos;ll go with Alex Chen. Can you get a
+                                  detailed quote and draft the contract?
                                 </p>
                               </div>
                               <div className="flex items-center justify-end gap-2 mt-1">
@@ -3469,8 +3498,8 @@ export default function HomePage() {
                 </span>
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Built for the world&apos;s most demanding financial institutions with
-                uncompromising standards.
+                Built for the world&apos;s most demanding financial institutions
+                with uncompromising standards.
               </p>
             </div>
 
