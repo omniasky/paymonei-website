@@ -8,23 +8,24 @@ on:
         type: string
         description: Merged to Main branch PR number
         required: true
-  # push:
-  #   branches: [main]
+  push:
+    branches: [main]
   # pull_request:
   #   branches: [main]
 
 concurrency: prod-paymonei-website
 
 env:
-  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-  AWS_REGION: ${{ secrets.AWS_REGION }}
+  ENVIRONMENT: production
+  AWS_ACCESS_KEY_ID: ${{ secrets.PROD_AWS_ACCESS_KEY }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.PROD_AWS_SECRET_KEY }}
+  AWS_REGION: ap-southeast-3
   ECR_REGISTRY: ${{ secrets.ECR_REGISTRY }}
   ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY_PAYMONEI_WEBSITE }}
   ECS_CLUSTER: ${{ secrets.ECS_CLUSTER }}
   ECS_SERVICE: ${{ secrets.ECS_SERVICE_PAYMONEI_WEBSITE }}
-  PROJECT_NAME: ${{ secrets.PROJECT_NAME }}
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  PROJECT_NAME: paymonei-website
+  GITHUB_TOKEN: ${{ secrets.PROD_OMNIASKY_PAT }}
 
 jobs:
   # Generate semantic version for main branch deployments
@@ -108,291 +109,291 @@ jobs:
         run: npm run build
 
   # Deploy to AWS (only on main branch)
-  deploy:
-    runs-on: ubuntu-latest
-    needs: [versioning, build-and-test]
-    if: github.ref == 'refs/heads/main'
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+  # deploy:
+  #   runs-on: ubuntu-latest
+  #   needs: [versioning, build-and-test]
+  #   if: github.ref == 'refs/heads/main'
+  #   steps:
+  #     - name: Checkout code
+  #       uses: actions/checkout@v4
 
-      - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          aws-access-key-id: ${{ env.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ env.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ${{ env.AWS_REGION }}
+  #     - name: Configure AWS credentials
+  #       uses: aws-actions/configure-aws-credentials@v4
+  #       with:
+  #         aws-access-key-id: ${{ env.AWS_ACCESS_KEY_ID }}
+  #         aws-secret-access-key: ${{ env.AWS_SECRET_ACCESS_KEY }}
+  #         aws-region: ${{ env.AWS_REGION }}
 
-      - name: Login to Amazon ECR
-        id: login-ecr
-        uses: aws-actions/amazon-ecr-login@v2
+  #     - name: Login to Amazon ECR
+  #       id: login-ecr
+  #       uses: aws-actions/amazon-ecr-login@v2
 
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
+  #     - name: Set up Docker Buildx
+  #       uses: docker/setup-buildx-action@v3
 
-      - name: Build and push Docker image
-        run: |
-          IMAGE_TAG=${{ needs.versioning.outputs.version }}
-          ECR_URI="${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}"
+  #     - name: Build and push Docker image
+  #       run: |
+  #         IMAGE_TAG=${{ needs.versioning.outputs.version }}
+  #         ECR_URI="${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}"
           
-          echo "Building and pushing image: $ECR_URI"
-          echo "Version: $IMAGE_TAG"
+  #         echo "Building and pushing image: $ECR_URI"
+  #         echo "Version: $IMAGE_TAG"
           
-          # Build the Docker image
-          docker build \
-            -t $ECR_URI:latest \
-            -t $ECR_URI:$IMAGE_TAG \
-            --build-arg ENVIRONMENT=production \
-            --build-arg VERSION=$IMAGE_TAG \
-            --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ') \
-            --build-arg VCS_REF=${{ github.sha }} \
-            .
+  #         # Build the Docker image
+  #         docker build \
+  #           -t $ECR_URI:latest \
+  #           -t $ECR_URI:$IMAGE_TAG \
+  #           --build-arg ENVIRONMENT=${{ env.EVIRONMENT }} \
+  #           --build-arg VERSION=$IMAGE_TAG \
+  #           --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ') \
+  #           --build-arg VCS_REF=${{ github.sha }} \
+  #           .
           
-          # Push both tags
-          docker push $ECR_URI:latest
-          docker push $ECR_URI:$IMAGE_TAG
+  #         # Push both tags
+  #         docker push $ECR_URI:latest
+  #         docker push $ECR_URI:$IMAGE_TAG
           
-          echo "✅ Image pushed successfully"
-          echo "🏷️ Tags: latest, $IMAGE_TAG"
+  #         echo "✅ Image pushed successfully"
+  #         echo "🏷️ Tags: latest, $IMAGE_TAG"
 
-      - name: Update ECS service
-        run: |
-          echo "Updating ECS service: ${{ env.ECS_SERVICE }}"
-          echo "Cluster: ${{ env.ECS_CLUSTER }}"
+  #     - name: Update ECS service
+  #       run: |
+  #         echo "Updating ECS service: ${{ env.ECS_SERVICE }}"
+  #         echo "Cluster: ${{ env.ECS_CLUSTER }}"
           
-          # Force new deployment with the latest image
-          aws ecs update-service \
-            --cluster ${{ env.ECS_CLUSTER }} \
-            --service ${{ env.ECS_SERVICE }} \
-            --force-new-deployment \
-            --query 'service.serviceName' \
-            --output text
+  #         # Force new deployment with the latest image
+  #         aws ecs update-service \
+  #           --cluster ${{ env.ECS_CLUSTER }} \
+  #           --service ${{ env.ECS_SERVICE }} \
+  #           --force-new-deployment \
+  #           --query 'service.serviceName' \
+  #           --output text
           
-          echo "🚀 Deployment initiated"
+  #         echo "🚀 Deployment initiated"
 
-      - name: Wait for deployment completion
-        run: |
-          echo "Waiting for service deployment to stabilize..."
-          echo "This may take a few minutes..."
+  #     - name: Wait for deployment completion
+  #       run: |
+  #         echo "Waiting for service deployment to stabilize..."
+  #         echo "This may take a few minutes..."
           
-          # Wait for the service to become stable
-          aws ecs wait services-stable \
-            --cluster ${{ env.ECS_CLUSTER }} \
-            --services ${{ env.ECS_SERVICE }} \
-            --no-cli-pager
+  #         # Wait for the service to become stable
+  #         aws ecs wait services-stable \
+  #           --cluster ${{ env.ECS_CLUSTER }} \
+  #           --services ${{ env.ECS_SERVICE }} \
+  #           --no-cli-pager
           
-          echo "✅ Service deployment completed successfully!"
+  #         echo "✅ Service deployment completed successfully!"
 
-      - name: Get deployment status
-        run: |
-          # Get service details
-          SERVICE_INFO=$(aws ecs describe-services \
-            --cluster ${{ env.ECS_CLUSTER }} \
-            --services ${{ env.ECS_SERVICE }} \
-            --query 'services[0]' \
-            --output json)
+  #     - name: Get deployment status
+  #       run: |
+  #         # Get service details
+  #         SERVICE_INFO=$(aws ecs describe-services \
+  #           --cluster ${{ env.ECS_CLUSTER }} \
+  #           --services ${{ env.ECS_SERVICE }} \
+  #           --query 'services[0]' \
+  #           --output json)
           
-          RUNNING_COUNT=$(echo $SERVICE_INFO | jq -r '.runningCount')
-          DESIRED_COUNT=$(echo $SERVICE_INFO | jq -r '.desiredCount')
-          TASK_DEFINITION=$(echo $SERVICE_INFO | jq -r '.taskDefinition')
+  #         RUNNING_COUNT=$(echo $SERVICE_INFO | jq -r '.runningCount')
+  #         DESIRED_COUNT=$(echo $SERVICE_INFO | jq -r '.desiredCount')
+  #         TASK_DEFINITION=$(echo $SERVICE_INFO | jq -r '.taskDefinition')
           
-          echo "📊 Deployment Summary:"
-          echo "   Service: ${{ env.ECS_SERVICE }}"
-          echo "   Running Tasks: $RUNNING_COUNT/$DESIRED_COUNT"
-          echo "   Task Definition: $TASK_DEFINITION"
-          echo "   Version: ${{ needs.versioning.outputs.version }}"
+  #         echo "📊 Deployment Summary:"
+  #         echo "   Service: ${{ env.ECS_SERVICE }}"
+  #         echo "   Running Tasks: $RUNNING_COUNT/$DESIRED_COUNT"
+  #         echo "   Task Definition: $TASK_DEFINITION"
+  #         echo "   Version: ${{ needs.versioning.outputs.version }}"
 
   # Create git tag after successful deployment
-  tag-release:
-    runs-on: ubuntu-latest
-    needs: [versioning, deploy]
-    if: github.ref == 'refs/heads/main' && success()
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          token: ${{ env.GITHUB_TOKEN }}
+  # tag-release:
+  #   runs-on: ubuntu-latest
+  #   needs: [versioning, deploy]
+  #   if: github.ref == 'refs/heads/main' && success()
+  #   steps:
+  #     - name: Checkout code
+  #       uses: actions/checkout@v4
+  #       with:
+  #         token: ${{ env.GITHUB_TOKEN }}
 
-      - name: Create and push tag
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+  #     - name: Create and push tag
+  #       run: |
+  #         git config --local user.email "action@github.com"
+  #         git config --local user.name "GitHub Action"
           
-          echo "Creating tag: ${{ needs.versioning.outputs.tag }}"
-          git tag -a ${{ needs.versioning.outputs.tag }} -m "Release ${{ needs.versioning.outputs.tag }}"
-          git push origin ${{ needs.versioning.outputs.tag }}
+  #         echo "Creating tag: ${{ needs.versioning.outputs.tag }}"
+  #         git tag -a ${{ needs.versioning.outputs.tag }} -m "Release ${{ needs.versioning.outputs.tag }}"
+  #         git push origin ${{ needs.versioning.outputs.tag }}
 
-      - name: Create GitHub Release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ env.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ needs.versioning.outputs.tag }}
-          release_name: Release ${{ needs.versioning.outputs.tag }}
-          body: |
-            ## paymonei-website Release ${{ needs.versioning.outputs.tag }}
+  #     - name: Create GitHub Release
+  #       uses: actions/create-release@v1
+  #       env:
+  #         GITHUB_TOKEN: ${{ env.GITHUB_TOKEN }}
+  #       with:
+  #         tag_name: ${{ needs.versioning.outputs.tag }}
+  #         release_name: Release ${{ needs.versioning.outputs.tag }}
+  #         body: |
+  #           ## paymonei-website Release ${{ needs.versioning.outputs.tag }}
             
-            ### Changes
-            - Updated paymonei-website service
-            - Deployed to production ECS cluster
+  #           ### Changes
+  #           - Updated paymonei-website service
+  #           - Deployed to production ECS cluster
             
-            ### Deployment Details
-            - **Image Tag:** ${{ needs.versioning.outputs.version }}
-            - **Deployed at:** ${{ github.event.head_commit.timestamp }}
-            - **Commit:** ${{ github.sha }}
-            - **ECS Cluster:** ${{ env.ECS_CLUSTER }}
-            - **ECS Service:** ${{ env.ECS_SERVICE }}
-          draft: false
-          prerelease: false
+  #           ### Deployment Details
+  #           - **Image Tag:** ${{ needs.versioning.outputs.version }}
+  #           - **Deployed at:** ${{ github.event.head_commit.timestamp }}
+  #           - **Commit:** ${{ github.sha }}
+  #           - **ECS Cluster:** ${{ env.ECS_CLUSTER }}
+  #           - **ECS Service:** ${{ env.ECS_SERVICE }}
+  #         draft: false
+  #         prerelease: false
 
   # Generate draft changelog
-  generate-changelog:
-    runs-on: ubuntu-latest
-    needs: [versioning, tag-release]
-    if: github.ref == 'refs/heads/main' && success()
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+  # generate-changelog:
+  #   runs-on: ubuntu-latest
+  #   needs: [versioning, tag-release]
+  #   if: github.ref == 'refs/heads/main' && success()
+  #   steps:
+  #     - name: Checkout code
+  #       uses: actions/checkout@v4
+  #       with:
+  #         fetch-depth: 0
 
-      - name: Generate changelog
-        run: |
-          echo "Generating changelog for ${{ needs.versioning.outputs.tag }}..."
+  #     - name: Generate changelog
+  #       run: |
+  #         echo "Generating changelog for ${{ needs.versioning.outputs.tag }}..."
           
-          # Get previous tag
-          PREVIOUS_TAG=$(git describe --tags --abbrev=0 ${{ needs.versioning.outputs.tag }}^^ 2>/dev/null || echo "")
+  #         # Get previous tag
+  #         PREVIOUS_TAG=$(git describe --tags --abbrev=0 ${{ needs.versioning.outputs.tag }}^^ 2>/dev/null || echo "")
           
-          # Create changelog file
-          CHANGELOG_FILE="CHANGELOG_${{ needs.versioning.outputs.version }}.md"
+  #         # Create changelog file
+  #         CHANGELOG_FILE="CHANGELOG_${{ needs.versioning.outputs.version }}.md"
           
-          echo "# Changelog for ${{ needs.versioning.outputs.tag }}" > $CHANGELOG_FILE
-          echo "" >> $CHANGELOG_FILE
-          echo "**Release Date:** $(date '+%Y-%m-%d %H:%M:%S UTC')" >> $CHANGELOG_FILE
-          echo "**Commit:** ${{ github.sha }}" >> $CHANGELOG_FILE
-          echo "" >> $CHANGELOG_FILE
+  #         echo "# Changelog for ${{ needs.versioning.outputs.tag }}" > $CHANGELOG_FILE
+  #         echo "" >> $CHANGELOG_FILE
+  #         echo "**Release Date:** $(date '+%Y-%m-%d %H:%M:%S UTC')" >> $CHANGELOG_FILE
+  #         echo "**Commit:** ${{ github.sha }}" >> $CHANGELOG_FILE
+  #         echo "" >> $CHANGELOG_FILE
           
-          if [ -n "$PREVIOUS_TAG" ]; then
-            echo "## Changes since $PREVIOUS_TAG" >> $CHANGELOG_FILE
-            echo "" >> $CHANGELOG_FILE
+  #         if [ -n "$PREVIOUS_TAG" ]; then
+  #           echo "## Changes since $PREVIOUS_TAG" >> $CHANGELOG_FILE
+  #           echo "" >> $CHANGELOG_FILE
             
-            # Get merged PRs and categorize commits
-            echo "### Features" >> $CHANGELOG_FILE
-            FEATURES=$(git log --pretty=format:"- %s (#%h)" $PREVIOUS_TAG..${{ needs.versioning.outputs.tag }} --no-merges --grep="^feat" --grep="^feature" -i)
-            if [ -n "$FEATURES" ]; then
-              echo "$FEATURES" >> $CHANGELOG_FILE
-            else
-              echo "- No new features" >> $CHANGELOG_FILE
-            fi
-            echo "" >> $CHANGELOG_FILE
+  #           # Get merged PRs and categorize commits
+  #           echo "### Features" >> $CHANGELOG_FILE
+  #           FEATURES=$(git log --pretty=format:"- %s (#%h)" $PREVIOUS_TAG..${{ needs.versioning.outputs.tag }} --no-merges --grep="^feat" --grep="^feature" -i)
+  #           if [ -n "$FEATURES" ]; then
+  #             echo "$FEATURES" >> $CHANGELOG_FILE
+  #           else
+  #             echo "- No new features" >> $CHANGELOG_FILE
+  #           fi
+  #           echo "" >> $CHANGELOG_FILE
             
-            echo "### Bug Fixes" >> $CHANGELOG_FILE
-            FIXES=$(git log --pretty=format:"- %s (#%h)" $PREVIOUS_TAG..${{ needs.versioning.outputs.tag }} --no-merges --grep="^fix" --grep="^bug" -i)
-            if [ -n "$FIXES" ]; then
-              echo "$FIXES" >> $CHANGELOG_FILE
-            else
-              echo "- No bug fixes" >> $CHANGELOG_FILE
-            fi
-            echo "" >> $CHANGELOG_FILE
+  #           echo "### Bug Fixes" >> $CHANGELOG_FILE
+  #           FIXES=$(git log --pretty=format:"- %s (#%h)" $PREVIOUS_TAG..${{ needs.versioning.outputs.tag }} --no-merges --grep="^fix" --grep="^bug" -i)
+  #           if [ -n "$FIXES" ]; then
+  #             echo "$FIXES" >> $CHANGELOG_FILE
+  #           else
+  #             echo "- No bug fixes" >> $CHANGELOG_FILE
+  #           fi
+  #           echo "" >> $CHANGELOG_FILE
             
-            echo "### Improvements" >> $CHANGELOG_FILE
-            IMPROVEMENTS=$(git log --pretty=format:"- %s (#%h)" $PREVIOUS_TAG..${{ needs.versioning.outputs.tag }} --no-merges --grep="^improve" --grep="^refactor" --grep="^perf" -i)
-            if [ -n "$IMPROVEMENTS" ]; then
-              echo "$IMPROVEMENTS" >> $CHANGELOG_FILE
-            else
-              echo "- No improvements" >> $CHANGELOG_FILE
-            fi
-            echo "" >> $CHANGELOG_FILE
+  #           echo "### Improvements" >> $CHANGELOG_FILE
+  #           IMPROVEMENTS=$(git log --pretty=format:"- %s (#%h)" $PREVIOUS_TAG..${{ needs.versioning.outputs.tag }} --no-merges --grep="^improve" --grep="^refactor" --grep="^perf" -i)
+  #           if [ -n "$IMPROVEMENTS" ]; then
+  #             echo "$IMPROVEMENTS" >> $CHANGELOG_FILE
+  #           else
+  #             echo "- No improvements" >> $CHANGELOG_FILE
+  #           fi
+  #           echo "" >> $CHANGELOG_FILE
             
-            echo "### Documentation" >> $CHANGELOG_FILE
-            DOCS=$(git log --pretty=format:"- %s (#%h)" $PREVIOUS_TAG..${{ needs.versioning.outputs.tag }} --no-merges --grep="^docs" -i)
-            if [ -n "$DOCS" ]; then
-              echo "$DOCS" >> $CHANGELOG_FILE
-            else
-              echo "- No documentation updates" >> $CHANGELOG_FILE
-            fi
-            echo "" >> $CHANGELOG_FILE
+  #           echo "### Documentation" >> $CHANGELOG_FILE
+  #           DOCS=$(git log --pretty=format:"- %s (#%h)" $PREVIOUS_TAG..${{ needs.versioning.outputs.tag }} --no-merges --grep="^docs" -i)
+  #           if [ -n "$DOCS" ]; then
+  #             echo "$DOCS" >> $CHANGELOG_FILE
+  #           else
+  #             echo "- No documentation updates" >> $CHANGELOG_FILE
+  #           fi
+  #           echo "" >> $CHANGELOG_FILE
             
-            # Other commits that don't match patterns
-            echo "### Other Changes" >> $CHANGELOG_FILE
-            OTHER=$(git log --pretty=format:"- %s (#%h)" $PREVIOUS_TAG..${{ needs.versioning.outputs.tag }} --no-merges --invert-grep --grep="^feat" --grep="^fix" --grep="^improve" --grep="^refactor" --grep="^perf" --grep="^docs" --grep="^bug" --grep="^feature" -i)
-            if [ -n "$OTHER" ]; then
-              echo "$OTHER" >> $CHANGELOG_FILE
-            else
-              echo "- No other changes" >> $CHANGELOG_FILE
-            fi
+  #           # Other commits that don't match patterns
+  #           echo "### Other Changes" >> $CHANGELOG_FILE
+  #           OTHER=$(git log --pretty=format:"- %s (#%h)" $PREVIOUS_TAG..${{ needs.versioning.outputs.tag }} --no-merges --invert-grep --grep="^feat" --grep="^fix" --grep="^improve" --grep="^refactor" --grep="^perf" --grep="^docs" --grep="^bug" --grep="^feature" -i)
+  #           if [ -n "$OTHER" ]; then
+  #             echo "$OTHER" >> $CHANGELOG_FILE
+  #           else
+  #             echo "- No other changes" >> $CHANGELOG_FILE
+  #           fi
             
-          else
-            echo "## Initial Release" >> $CHANGELOG_FILE
-            echo "" >> $CHANGELOG_FILE
-            echo "### Initial Commits:" >> $CHANGELOG_FILE
-            git log --pretty=format:"- %s (#%h)" --no-merges | head -10 >> $CHANGELOG_FILE
-          fi
+  #         else
+  #           echo "## Initial Release" >> $CHANGELOG_FILE
+  #           echo "" >> $CHANGELOG_FILE
+  #           echo "### Initial Commits:" >> $CHANGELOG_FILE
+  #           git log --pretty=format:"- %s (#%h)" --no-merges | head -10 >> $CHANGELOG_FILE
+  #         fi
           
-          echo "" >> $CHANGELOG_FILE
-          echo "## Deployment Information" >> $CHANGELOG_FILE
-          echo "- **Environment:** Production" >> $CHANGELOG_FILE
-          echo "- **Service:** paymonei-website" >> $CHANGELOG_FILE
-          echo "- **ECS Cluster:** ${{ env.ECS_CLUSTER }}" >> $CHANGELOG_FILE
-          echo "- **ECS Service:** ${{ env.ECS_SERVICE }}" >> $CHANGELOG_FILE
-          echo "- **Docker Image:** ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:${{ needs.versioning.outputs.version }}" >> $CHANGELOG_FILE
-          echo "- **Application URL:** https://paymonei.com" >> $CHANGELOG_FILE
+  #         echo "" >> $CHANGELOG_FILE
+  #         echo "## Deployment Information" >> $CHANGELOG_FILE
+  #         echo "- **Environment:** ${{ env.EVIRONMENT }}" >> $CHANGELOG_FILE
+  #         echo "- **Service:** paymonei-website" >> $CHANGELOG_FILE
+  #         echo "- **ECS Cluster:** ${{ env.ECS_CLUSTER }}" >> $CHANGELOG_FILE
+  #         echo "- **ECS Service:** ${{ env.ECS_SERVICE }}" >> $CHANGELOG_FILE
+  #         echo "- **Docker Image:** ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:${{ needs.versioning.outputs.version }}" >> $CHANGELOG_FILE
+  #         echo "- **Application URL:** https://paymonei.com" >> $CHANGELOG_FILE
           
-          echo "" >> $CHANGELOG_FILE
-          echo "## Technical Details" >> $CHANGELOG_FILE
-          echo "- **Node.js Version:** 22 Alpine" >> $CHANGELOG_FILE
-          echo "- **Platform:** AWS ECS Fargate" >> $CHANGELOG_FILE
-          echo "- **Region:** ap-southeast-3" >> $CHANGELOG_FILE
+  #         echo "" >> $CHANGELOG_FILE
+  #         echo "## Technical Details" >> $CHANGELOG_FILE
+  #         echo "- **Node.js Version:** 22 Alpine" >> $CHANGELOG_FILE
+  #         echo "- **Platform:** AWS ECS Fargate" >> $CHANGELOG_FILE
+  #         echo "- **Region:** ap-southeast-3" >> $CHANGELOG_FILE
           
-          echo "Generated changelog:"
-          cat $CHANGELOG_FILE
+  #         echo "Generated changelog:"
+  #         cat $CHANGELOG_FILE
 
-      - name: Upload changelog as artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: changelog-${{ needs.versioning.outputs.version }}
-          path: CHANGELOG_${{ needs.versioning.outputs.version }}.md
-          retention-days: 30
+  #     - name: Upload changelog as artifact
+  #       uses: actions/upload-artifact@v4
+  #       with:
+  #         name: changelog-${{ needs.versioning.outputs.version }}
+  #         path: CHANGELOG_${{ needs.versioning.outputs.version }}.md
+  #         retention-days: 30
 
-      - name: Create issue with changelog
-        uses: actions/github-script@v7
-        with:
-          github-token: ${{ env.GITHUB_TOKEN }}
-          script: |
-            const fs = require('fs');
-            const path = './CHANGELOG_${{ needs.versioning.outputs.version }}.md';
-            const changelogContent = fs.readFileSync(path, 'utf8');
+  #     - name: Create issue with changelog
+  #       uses: actions/github-script@v7
+  #       with:
+  #         github-token: ${{ env.GITHUB_TOKEN }}
+  #         script: |
+  #           const fs = require('fs');
+  #           const path = './CHANGELOG_${{ needs.versioning.outputs.version }}.md';
+  #           const changelogContent = fs.readFileSync(path, 'utf8');
             
-            const { data: issue } = await github.rest.issues.create({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              title: 'Draft Changelog - Release ${{ needs.versioning.outputs.tag }}',
-              body: `## Draft Changelog for Review
+  #           const { data: issue } = await github.rest.issues.create({
+  #             owner: context.repo.owner,
+  #             repo: context.repo.repo,
+  #             title: 'Draft Changelog - Release ${{ needs.versioning.outputs.tag }}',
+  #             body: `## Draft Changelog for Review
             
-            This changelog was automatically generated for release ${{ needs.versioning.outputs.tag }}.
-            Please review and edit as needed before publishing.
+  #           This changelog was automatically generated for release ${{ needs.versioning.outputs.tag }}.
+  #           Please review and edit as needed before publishing.
             
-            ---
+  #           ---
             
-            ${changelogContent}
+  #           ${changelogContent}
             
-            ---
+  #           ---
             
-            **Actions:**
-            - [ ] Review changelog content
-            - [ ] Edit if necessary  
-            - [ ] Publish to release notes
-            - [ ] Close this issue
+  #           **Actions:**
+  #           - [ ] Review changelog content
+  #           - [ ] Edit if necessary  
+  #           - [ ] Publish to release notes
+  #           - [ ] Close this issue
             
-            **Generated by:** GitHub Actions
-            **Workflow:** Deploy paymonei-website to AWS ECS`,
-              labels: ['changelog', 'release', 'draft']
-            });
+  #           **Generated by:** GitHub Actions
+  #           **Workflow:** Deploy paymonei-website to AWS ECS`,
+  #             labels: ['changelog', 'release', 'draft']
+  #           });
             
-            console.log(`Created issue #${issue.number} with draft changelog`);
+  #           console.log(`Created issue #${issue.number} with draft changelog`);
 
   # Notify deployment status
-  notify:
+  # notify:
     runs-on: ubuntu-latest
     needs: [versioning, deploy, tag-release, generate-changelog]
     if: always() && github.ref == 'refs/heads/main'
