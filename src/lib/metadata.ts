@@ -13,7 +13,7 @@ const baseMetadata = {
       index: true,
       follow: true,
       "max-video-preview": -1,
-      "max-image-preview": "large",
+      "max-image-preview": "large" as const,
       "max-snippet": -1,
     },
   },
@@ -21,7 +21,7 @@ const baseMetadata = {
     { media: "(prefers-color-scheme: light)", color: "#ffffff" },
     { media: "(prefers-color-scheme: dark)", color: "#000000" },
   ],
-} as const;
+};
 
 // Page-specific metadata generators
 export const generatePageMetadata = {
