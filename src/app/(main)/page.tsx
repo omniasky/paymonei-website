@@ -1169,7 +1169,7 @@ export default function HomePage() {
                     </span>
                   </h3>
                   <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                    We didn't just improve payments—we architected the financial
+                    We didn&apos;t just improve payments—we architected the financial
                     nervous system for AI. Where others offer routing, we
                     deliver complete infrastructure.
                   </p>
@@ -1364,7 +1364,7 @@ export default function HomePage() {
                     Instant Payment Link Generation
                   </h3>
                   <p className="text-muted-foreground mb-6 leading-relaxed">
-                    Merchants interact with Paymonei's AI agent to instantly
+                    Merchants interact with Paymonei&apos;s AI agent to instantly
                     create customized payment links and send them directly to
                     customers via email, SMS, or any communication channel.
                   </p>
@@ -1414,7 +1414,7 @@ export default function HomePage() {
                                 Hey, can you create a payment link for John Doe?
                               </p>
                               <p className="text-xs opacity-90 mt-1">
-                                It's for the website design consultation we
+                                It&apos;s for the website design consultation we
                                 discussed. Amount is $1,500
                               </p>
                             </div>
@@ -1434,7 +1434,7 @@ export default function HomePage() {
                           <div className="max-w-xs">
                             <div className="bg-muted rounded-2xl rounded-bl-md px-4 py-3">
                               <p className="text-sm font-medium">
-                                Absolutely! I've created the payment link for
+                                Absolutely! I&apos;ve created the payment link for
                                 John.
                               </p>
                               <div className="text-xs text-muted-foreground mt-2 space-y-1">
@@ -1487,7 +1487,7 @@ export default function HomePage() {
                                   Can you draft an invoice for XYZ Ltd?
                                 </p>
                                 <p className="text-xs opacity-90 mt-1">
-                                  It's for Q4 consulting services, $12,500.
+                                  It&apos;s for Q4 consulting services, $12,500.
                                   Schedule it to send Friday at 3PM
                                 </p>
                               </div>
@@ -1507,7 +1507,7 @@ export default function HomePage() {
                             <div className="max-w-xs">
                               <div className="bg-muted rounded-2xl rounded-bl-md px-4 py-3">
                                 <p className="text-sm font-medium">
-                                  Perfect! I've drafted the invoice for XYZ Ltd.
+                                  Perfect! I&apos;ve drafted the invoice for XYZ Ltd.
                                 </p>
                                 <div className="text-xs text-muted-foreground mt-2 space-y-1">
                                   <p>📄 Invoice #INV-2024-Q4-001</p>
@@ -1654,7 +1654,7 @@ export default function HomePage() {
                                 How are we doing this month?
                               </p>
                               <p className="text-xs opacity-90 mt-1">
-                                I'd like to see our revenue breakdown and
+                                I&apos;d like to see our revenue breakdown and
                                 payment status
                               </p>
                             </div>
@@ -1674,7 +1674,7 @@ export default function HomePage() {
                           <div className="max-w-xs">
                             <div className="bg-muted rounded-2xl rounded-bl-md px-4 py-3">
                               <p className="text-sm font-medium">
-                                Great question! Here's your November
+                                Great question! Here&apos;s your November
                                 performance:
                               </p>
                               <div className="mt-3 space-y-2 text-xs">
@@ -1919,7 +1919,7 @@ export default function HomePage() {
                               <div className="max-w-xs">
                                 <div className="bg-blue-500 text-white rounded-2xl rounded-br-md px-4 py-3">
                                   <p className="text-sm">
-                                    Perfect! I'm happy with this quotation
+                                    Perfect! I&apos;m happy with this quotation
                                   </p>
                                   <p className="text-xs opacity-90 mt-1">
                                     Can you get me the invoice so I can proceed
@@ -2354,7 +2354,7 @@ export default function HomePage() {
                             <div className="max-w-xs">
                               <div className="bg-muted rounded-2xl rounded-bl-md px-4 py-3">
                                 <p className="text-sm font-medium">
-                                  Perfect! I'll orchestrate a multi-platform
+                                  Perfect! I&apos;ll orchestrate a multi-platform
                                   campaign
                                 </p>
                                 <div className="text-xs text-muted-foreground mt-2 space-y-1">
@@ -2627,7 +2627,7 @@ export default function HomePage() {
                             <div className="max-w-xs">
                               <div className="bg-muted rounded-2xl rounded-bl-md px-4 py-3">
                                 <p className="text-sm">
-                                  Perfect! I've analyzed your requirements and
+                                  Perfect! I&apos;ve analyzed your requirements and
                                   found 2 excellent remote engineers
                                   specializing in modern landing pages and
                                   Vercel deployment.
@@ -2691,7 +2691,7 @@ export default function HomePage() {
                             <div className="max-w-xs">
                               <div className="bg-blue-500 text-white rounded-2xl rounded-br-md px-4 py-3">
                                 <p className="text-sm">
-                                  I'll go with Alex Chen. Can you get a detailed
+                                  I&apos;ll go with Alex Chen. Can you get a detailed
                                   quote and draft the contract?
                                 </p>
                               </div>
@@ -3469,7 +3469,7 @@ export default function HomePage() {
                 </span>
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Built for the world's most demanding financial institutions with
+                Built for the world&apos;s most demanding financial institutions with
                 uncompromising standards.
               </p>
             </div>

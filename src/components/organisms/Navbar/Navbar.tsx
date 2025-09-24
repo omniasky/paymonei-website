@@ -23,7 +23,6 @@ export interface NavbarProps {
 }
 
 export function Navbar({
-  logoText = "Paymonei",
   navLinks = [
     { href: "#features", label: "Features" },
     { href: "#security", label: "Security" },

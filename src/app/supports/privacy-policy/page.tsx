@@ -2,9 +2,6 @@ import { Navbar } from "@/components/organisms/Navbar";
 import { Footer } from "@/components/organisms/Footer";
 
 export default function PrivacyPolicyPage() {
-  const lastUpdated = "January 1, 2025";
-  const effectiveDate = "January 1, 2025";
-
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
       <Navbar navLinks={[]} />
@@ -18,11 +15,11 @@ export default function PrivacyPolicyPage() {
         <div className="space-y-4">
           <p>
             Cosgrove Technology Inc., Cosgrove Technology Pte Ltd, and PT
-            Cosgrove Teknologi Indonesia (collectively, "Cosgrove", "Company",
-            "we", "us", or "our") are committed to protecting your privacy. This
+            Cosgrove Teknologi Indonesia (collectively, &quot;Cosgrove&quot;, &quot;Company&quot;,
+            &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) are committed to protecting your privacy. This
             Privacy Policy explains how we collect, use, disclose, and safeguard
             your information when you use our Paymonei platform and related
-            services (the "Services"). This Policy applies to all information
+            services (the &quot;Services&quot;). This Policy applies to all information
             collected through our Services, as well as any related services,
             sales, marketing, or events.
           </p>
@@ -37,7 +34,7 @@ export default function PrivacyPolicyPage() {
           <p>
             We collect information that you provide to us, information that is
             automatically collected, and information from third parties. The
-            types of personal information ("Personal Data") we may collect
+            types of personal information (&quot;Personal Data&quot;) we may collect
             include:
           </p>
 
@@ -52,8 +49,8 @@ export default function PrivacyPolicyPage() {
               <strong>Formal Identification Information:</strong>{" "}
               Government-issued identification numbers (e.g., Passport, Driver’s
               License), and other documents requested for our Know-Your-Customer
-              ("KYC") and Know-Your-Business ("KYB") verification processes,
-              including photographs or "selfies" for identity confirmation.
+              (&quot;KYC&quot;) and Know-Your-Business (&quot;KYB&quot;) verification processes,
+              including photographs or &quot;selfies&quot; for identity confirmation.
             </li>
             <li>
               <strong>Business Information:</strong> For entity accounts, we may
@@ -279,7 +276,7 @@ export default function PrivacyPolicyPage() {
           <p>
             We may update this Privacy Policy from time to time. We will notify
             you of any changes by posting the new Privacy Policy on this page
-            and updating the "Last Updated" date. You are advised to review this
+            and updating the &quot;Last Updated&quot; date. You are advised to review this
             Privacy Policy periodically for any changes.
           </p>
 

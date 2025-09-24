@@ -315,7 +315,7 @@ export const generateStructuredData = {
 export const generateRobots = (
   index: boolean = true,
   follow: boolean = true,
-  additionalRules?: Record<string, any>
+  additionalRules?: Record<string, unknown>
 ) => ({
   index,
   follow,

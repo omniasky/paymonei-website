@@ -2,9 +2,6 @@ import { Navbar } from "@/components/organisms/Navbar";
 import { Footer } from "@/components/organisms/Footer";
 
 export default function TermsOfServicePage() {
-  const lastUpdated = "January 1, 2025";
-  const effectiveDate = "January 1, 2025";
-
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
       <Navbar navLinks={[]} />
@@ -17,15 +14,15 @@ export default function TermsOfServicePage() {
         </p>
         <div className="space-y-4">
           <p>
-            This Terms of Service agreement ("Agreement") constitutes a legally
+            This Terms of Service agreement (&quot;Agreement&quot;) constitutes a legally
             binding agreement made between you, whether personally or on behalf
-            of an entity ("you" or "User"), and Cosgrove Technology Inc.,
+            of an entity (&quot;you&quot; or &quot;User&quot;), and Cosgrove Technology Inc.,
             Cosgrove Technology Pte Ltd, and PT Cosgrove Teknologi Indonesia
-            (collectively, "Cosgrove", "Company", "we", "us", or "our"),
+            (collectively, &quot;Cosgrove&quot;, &quot;Company&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;),
             concerning your access to and use of the Paymonei payment
             infrastructure, the AI Agent Payment Protocol, and all related
             software, application programming interfaces (APIs), and services
-            (collectively, the "Services").
+            (collectively, the &quot;Services&quot;).
           </p>
           <p>
             <strong>
@@ -44,9 +41,9 @@ export default function TermsOfServicePage() {
             <strong>1.1. Nature of the Services.</strong> Paymonei is a
             technology platform that provides software infrastructure for: (a)
             facilitating payments using stablecoins and other digital assets
-            ("Digital Assets") on public blockchain networks; and (b) a protocol
+            (&quot;Digital Assets&quot;) on public blockchain networks; and (b) a protocol
             enabling users to create, configure, and deploy autonomous software
-            agents ("AI Agents") to programmatically initiate transactions on
+            agents (&quot;AI Agents&quot;) to programmatically initiate transactions on
             their behalf.{" "}
           </p>
           <p>
@@ -64,8 +61,8 @@ export default function TermsOfServicePage() {
             services, particularly those involving fiat currency on-ramps and
             off-ramps (settlement), are provided by licensed third-party
             financial institutions, including but not limited to Circle Internet
-            Financial, LLC, Nium Pte. Ltd., and Adyen N.V. ("Financial
-            Partners"). Your use of such services is subject to the separate
+            Financial, LLC, Nium Pte. Ltd., and Adyen N.V. (&quot;Financial
+            Partners&quot;). Your use of such services is subject to the separate
             terms and conditions of these Financial Partners. The Company is not
             responsible for the performance, availability, or security of
             services provided by Financial Partners.
@@ -124,10 +121,10 @@ export default function TermsOfServicePage() {
             kind arising from or in connection with the actions or inactions of
             your AI Agent. This includes, but is not limited to, losses
             resulting from: (a) programming errors, bugs, or flaws in your AI
-            Agent's logic; (b) misconfiguration of spending limits, permissions,
+            Agent&apos;s logic; (b) misconfiguration of spending limits, permissions,
             or target addresses; (c) exploitation of vulnerabilities in your AI
-            Agent's code; or (d) unexpected market conditions or external data
-            inputs affecting your AI Agent's behavior.
+            Agent&apos;s code; or (d) unexpected market conditions or external data
+            inputs affecting your AI Agent&apos;s behavior.
           </p>
 
           <h3>4. Prohibited Uses</h3>
@@ -234,7 +231,7 @@ export default function TermsOfServicePage() {
             license to access and use the Services for your internal business
             purposes. All rights, title, and interest in and to the Services,
             including all logos, software, and other intellectual property
-            ("Company IP"), are and will remain the exclusive property of
+            (&quot;Company IP&quot;), are and will remain the exclusive property of
             Cosgrove and its licensors. This Agreement does not grant you any
             rights to use the Company IP except as expressly permitted.
           </p>
@@ -243,14 +240,14 @@ export default function TermsOfServicePage() {
           <p>
             <strong>
               <u>
-                THE SERVICES ARE PROVIDED ON AN "AS-IS" AND "AS-AVAILABLE"
+                THE SERVICES ARE PROVIDED ON AN &quot;AS-IS&quot; AND &quot;AS-AVAILABLE&quot;
                 BASIS. TO THE FULLEST EXTENT PERMITTED BY LAW, COSGROVE, ITS
                 AFFILIATES, AND ITS LICENSORS DISCLAIM ALL WARRANTIES, EXPRESS
                 OR IMPLIED, IN CONNECTION WITH THE SERVICES, INCLUDING, WITHOUT
                 LIMITATION, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS
                 FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. WE MAKE NO
                 WARRANTIES OR REPRESENTATIONS ABOUT THE ACCURACY, RELIABILITY,
-                OR COMPLETENESS OF THE SERVICES' CONTENT OR THE CONTENT OF ANY
+                OR COMPLETENESS OF THE SERVICES&apos; CONTENT OR THE CONTENT OF ANY
                 SITES LINKED TO THE SERVICES.
               </u>
             </strong>
