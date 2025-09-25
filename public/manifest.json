@@ -1,7 +1,7 @@
 {
   "name": "Paymonei - AI Agent Payment Protocol",
   "short_name": "Paymonei",
-  "description": "The autonomous economy standard. AI-native payment protocol enabling secure agent-to-agent transactions, institutional-grade wallets, and stablecoin payment infrastructure.",
+  "description": "AI-native payment protocol enabling secure agent-to-agent transactions, institutional-grade security, and stablecoin payment infrastructure.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#000000",

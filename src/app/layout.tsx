@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     default: "Paymonei - AI Agent Payment Protocol & Infrastructure",
     template: "%s | Paymonei"
   },
-  description: "The autonomous economy standard. AI-native payment protocol enabling secure agent-to-agent transactions, institutional-grade wallets, and stablecoin payment infrastructure. Built for the future of AI commerce.",
+  description: "AI-native payment protocol enabling secure agent-to-agent transactions, institutional-grade security, and stablecoin payment infrastructure. Built for the future of AI commerce.",
   keywords: [
     "AI agent payments",
     "agent payment protocol",
@@ -44,8 +44,8 @@ export const metadata: Metadata = {
     "digital economy infrastructure",
     "secure transactions",
     "stablecoin infrastructure",
-    "KYC compliance",
-    "AML CFT"
+    "AI Workspace",
+    "AI Docs to PPT",
   ],
   authors: [{ name: "Paymonei", url: "https://paymonei.com" }],
   creator: "Paymonei",
@@ -60,8 +60,8 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://paymonei.com",
     siteName: "Paymonei",
-    title: "Paymonei - AI Agent Payment Protocol & Financial Infrastructure",
-    description: "The autonomous economy standard. Enable AI agents to transact seamlessly with our proprietary payment protocol, institutional-grade security, and stablecoin payment infrastructure.",
+    title: "Paymonei - AI Agent Payment Protocol & Infrastructure",
+    description: "Enable AI agents to transact seamlessly with our proprietary payment protocol, institutional-grade security, and stablecoin payment infrastructure.",
     images: [
       {
         url: "https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/og-image.png",
@@ -76,7 +76,7 @@ export const metadata: Metadata = {
     site: "@paymonei",
     creator: "@paymonei",
     title: "Paymonei - AI Agent Payment Protocol",
-    description: "The autonomous economy standard. Stablecoin payment infrastructure for agent-to-agent transactions.",
+    description: "Stablecoin payment infrastructure for agent-to-agent transactions.",
     images: ["https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/twitter-card.png"],
   },
   robots: {

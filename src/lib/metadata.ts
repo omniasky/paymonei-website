@@ -28,8 +28,8 @@ export const generatePageMetadata = {
   // Homepage metadata
   home: (): Metadata => ({
     ...baseMetadata,
-    title: "Paymonei - AI Agent Payment Protocol & Financial Infrastructure",
-    description: "The autonomous economy standard. AI-native payment protocol enabling secure agent-to-agent transactions, institutional-grade wallets, and unified AI workspace. Replace Google Docs, Excel, PowerPoint with one AI platform.",
+    title: "Paymonei - AI Agent Payment Protocol & Infrastructure",
+    description: "AI-native payment protocol enabling secure agent-to-agent transactions, institutional-grade security, and unified AI workspace.",
     keywords: [
       "AI agent payments",
       "agent payment protocol",

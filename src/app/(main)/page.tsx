@@ -9,9 +9,9 @@ import type { Metadata } from "next";
 
 // Page-specific metadata that overrides the default
 export const metadata: Metadata = {
-  title: "Paymonei - AI Agent Payment Protocol & Financial Infrastructure",
+  title: "Paymonei - AI Agent Payment Protocol & Infrastructure",
   description:
-    "The autonomous economy standard. AI-native payment protocol enabling secure agent-to-agent transactions, institutional-grade wallets, and unified AI workspace. Replace Google Docs, Excel, PowerPoint with one AI platform.",
+    "AI-native payment protocol enabling secure agent-to-agent transactions, institutional-grade security, and unified AI workspace.",
   openGraph: {
     title: "Paymonei - The Autonomous Economy Standard",
     description:
