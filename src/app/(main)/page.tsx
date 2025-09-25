@@ -3088,7 +3088,7 @@ export default function HomePage() {
                       <h3 className="text-xl font-bold mb-2">Smart Invoice</h3>
                       <p className="text-sm text-muted-foreground leading-relaxed">
                         Streamline your invoicing with intelligent, automated
-                        follow-ups, and stablecoin acceptance.
+                        follow-ups, and multicurrency payment acceptance.
                       </p>
                     </div>
                   </div>
