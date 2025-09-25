@@ -17,8 +17,8 @@ export default function TermsOfServicePage() {
             This Terms of Service agreement (&quot;Agreement&quot;) constitutes a legally
             binding agreement made between you, whether personally or on behalf
             of an entity (&quot;you&quot; or &quot;User&quot;), and Cosgrove Technology Inc.,
-            Cosgrove Technology Pte Ltd, and PT Cosgrove Teknologi Indonesia
-            (collectively, &quot;Cosgrove&quot;, &quot;Company&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;),
+            Cosgrove Technology Pte Ltd, PT Cosgrove Teknologi Indonesia and PT Evora Vera Teknologi
+            (collectively, &quot;Paymonei&quot;, &quot;Company&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;),
             concerning your access to and use of the Paymonei payment
             infrastructure, the AI Agent Payment Protocol, and all related
             software, application programming interfaces (APIs), and services
@@ -48,7 +48,7 @@ export default function TermsOfServicePage() {
           </p>
           <p>
             <strong>1.2. Role of the Company.</strong> You expressly acknowledge
-            and agree that Cosgrove is a non-custodial technology provider. We
+            and agree that Paymonei is a non-custodial technology provider. We
             provide software as a service and do not have custody or control
             over your Digital Assets, private keys, or the AI Agents you deploy.
             We are not a bank, money transmitter, brokerage, exchange, or
@@ -232,7 +232,7 @@ export default function TermsOfServicePage() {
             purposes. All rights, title, and interest in and to the Services,
             including all logos, software, and other intellectual property
             (&quot;Company IP&quot;), are and will remain the exclusive property of
-            Cosgrove and its licensors. This Agreement does not grant you any
+            Paymonei and its licensors. This Agreement does not grant you any
             rights to use the Company IP except as expressly permitted.
           </p>
 
@@ -241,7 +241,7 @@ export default function TermsOfServicePage() {
             <strong>
               <u>
                 THE SERVICES ARE PROVIDED ON AN &quot;AS-IS&quot; AND &quot;AS-AVAILABLE&quot;
-                BASIS. TO THE FULLEST EXTENT PERMITTED BY LAW, COSGROVE, ITS
+                BASIS. TO THE FULLEST EXTENT PERMITTED BY LAW, PAYMONEI, ITS
                 AFFILIATES, AND ITS LICENSORS DISCLAIM ALL WARRANTIES, EXPRESS
                 OR IMPLIED, IN CONNECTION WITH THE SERVICES, INCLUDING, WITHOUT
                 LIMITATION, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS
@@ -257,7 +257,7 @@ export default function TermsOfServicePage() {
           <p>
             <strong>
               <u>
-                IN NO EVENT WILL COSGROVE, ITS DIRECTORS, EMPLOYEES, PARTNERS,
+                IN NO EVENT WILL PAYMONEI, ITS DIRECTORS, EMPLOYEES, PARTNERS,
                 OR AGENTS BE LIABLE TO YOU OR ANY THIRD PARTY FOR ANY DIRECT,
                 INDIRECT, CONSEQUENTIAL, EXEMPLARY, INCIDENTAL, SPECIAL, OR
                 PUNITIVE DAMAGES, INCLUDING LOST PROFIT, LOST REVENUE, LOSS OF

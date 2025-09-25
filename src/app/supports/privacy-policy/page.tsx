@@ -14,8 +14,9 @@ export default function PrivacyPolicyPage() {
         </p>
         <div className="space-y-4">
           <p>
-            Cosgrove Technology Inc., Cosgrove Technology Pte Ltd, and PT
-            Cosgrove Teknologi Indonesia (collectively, &quot;Cosgrove&quot;, &quot;Company&quot;,
+            Cosgrove Technology Inc., Cosgrove Technology Pte Ltd, PT
+            Cosgrove Teknologi Indonesia and PT
+            Evora Vera Teknologi (collectively, &quot;Paymonei&quot;, &quot;Company&quot;,
             &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) are committed to protecting your privacy. This
             Privacy Policy explains how we collect, use, disclose, and safeguard
             your information when you use our Paymonei platform and related
@@ -193,7 +194,7 @@ export default function PrivacyPolicyPage() {
                 Please be aware that information recorded on a public
                 blockchain, such as your public wallet address and transaction
                 details, is inherently public and permanent. This information is
-                not controlled by Cosgrove and is not covered by this Privacy
+                not controlled by Paymonei and is not covered by this Privacy
                 Policy. Anyone can view this data.
               </u>
             </strong>
