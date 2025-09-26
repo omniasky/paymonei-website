@@ -61,14 +61,14 @@ export default function CompliancePage() {
             payment institution licenses, money transmission licenses, and
             electronic money institution authorizations across North America,
             Europe, Asia Pacific, and Latin America, enabling comprehensive
-            cross-border payment and card issuance services. Adyen N.V. and its
-            subsidiaries are licensed payment service providers authorized by
-            central banks and financial authorities worldwide, including
-            registration as a Payment Service Provider with De Nederlandsche
-            Bank in the Netherlands, Financial Conduct Authority in the UK, and
-            various state licenses in the US, providing global payment
-            acceptance and processing services for card, digital wallet, and
-            local payment methods.
+            cross-border payment and card issuance services. Stripe, Inc. and
+            its subsidiaries are licensed payment service providers operating
+            globally with regulatory authorizations including registration as
+            a Payment Institution with the Financial Conduct Authority in the
+            UK, Electronic Money Institution licenses across Europe, and money
+            transmitter licenses in various US states, providing comprehensive
+            payment processing, card issuing, and financial infrastructure
+            services worldwide.
           </p>
 
           <h3>Intellectual Property and Trademarks</h3>

@@ -61,7 +61,7 @@ export default function TermsOfServicePage() {
             services, particularly those involving fiat currency on-ramps and
             off-ramps (settlement), are provided by licensed third-party
             financial institutions, including but not limited to Circle Internet
-            Financial, LLC, Nium Pte. Ltd., and Adyen N.V. (&quot;Financial
+            Financial, LLC, Nium Pte. Ltd., and Stripe, Inc. (&quot;Financial
             Partners&quot;). Your use of such services is subject to the separate
             terms and conditions of these Financial Partners. The Company is not
             responsible for the performance, availability, or security of

@@ -443,6 +443,15 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
                   <Image
+                    src="https://logo.clearbit.com/stripe.com"
+                    alt="Stripe"
+                    width={80}
+                    height={40}
+                    className="max-h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
+                  <Image
                     src="https://logo.clearbit.com/foodpanda.com"
                     alt="Foodpanda"
                     width={80}
@@ -562,15 +571,6 @@ export default function HomePage() {
                   <Image
                     src="https://logo.clearbit.com/polygon.technology"
                     alt="Polygon Technology"
-                    width={80}
-                    height={40}
-                    className="max-h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300"
-                  />
-                </div>
-                <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
-                  <Image
-                    src="https://logo.clearbit.com/adyen.com"
-                    alt="Adyen"
                     width={80}
                     height={40}
                     className="max-h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300"
