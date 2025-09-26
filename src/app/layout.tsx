@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers/theme-provider";
-import { LegalDisclaimer } from "@/components/organisms/LegalDisclaimer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -125,7 +124,6 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
-          <LegalDisclaimer />
         </ThemeProvider>
       </body>
     </html>

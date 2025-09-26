@@ -27,7 +27,7 @@ const defaultSections: FooterSection[] = [
     links: [
       { label: "Privacy Policy", href: "/supports/privacy-policy" },
       { label: "Terms of Service", href: "/supports/terms-of-service" },
-      // { label: "Compliance Guide", href: "/supports/compliance-guide" },
+      { label: "Compliance", href: "/supports/compliance" },
     ],
   },
   {
@@ -70,7 +70,7 @@ export function Footer({
   const mergedSocialLinks = { ...defaultSocialLinks, ...socialLinks };
 
   return (
-    <footer className="bg-card border-t">
+    <footer className="bg-black border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
           {/* Paymonei Logo and Tagline Section */}
@@ -78,14 +78,14 @@ export function Footer({
             <div className="flex flex-col space-y-4">
               <div>
                 <Image
-                  src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/paymonei-logo-main.png"
+                  src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/paymonei-logo-secondary.png"
                   alt="Paymonei"
                   width={140}
                   height={38}
                   className="h-10 w-auto"
                 />
               </div>
-              <p className="text-sm text-muted-foreground max-w-md leading-relaxed">
+              <p className="text-sm text-gray-400 max-w-md leading-relaxed">
                 Advanced intelligent automation for business operations.
                 Streamline workflows, enhance productivity, and optimize
                 processes across your organization.
@@ -95,7 +95,7 @@ export function Footer({
                 {mergedSocialLinks.linkedin && (
                   <a
                     href={mergedSocialLinks.linkedin}
-                    className="text-muted-foreground hover:text-primary transition-colors"
+                    className="text-gray-400 hover:text-white transition-colors"
                     aria-label="LinkedIn"
                   >
                     <Linkedin className="w-5 h-5" />
@@ -104,7 +104,7 @@ export function Footer({
                 {mergedSocialLinks.github && (
                   <a
                     href={mergedSocialLinks.github}
-                    className="text-muted-foreground hover:text-primary transition-colors"
+                    className="text-gray-400 hover:text-white transition-colors"
                     aria-label="GitHub"
                   >
                     <Github className="w-5 h-5" />
@@ -118,7 +118,7 @@ export function Footer({
           <div className="lg:col-span-3 grid grid-cols-2 md:grid-cols-4 gap-8">
             {sections.map((section) => (
               <div key={section.title}>
-                <h4 className="text-sm font-semibold mb-4 text-foreground">
+                <h4 className="text-sm font-semibold mb-4 text-white">
                   {section.title}
                 </h4>
                 <ul className="space-y-3">
@@ -126,7 +126,7 @@ export function Footer({
                     <li key={link.label}>
                       <Link
                         href={link.href}
-                        className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                        className="text-sm text-gray-400 hover:text-white transition-colors"
                       >
                         {link.label}
                       </Link>
@@ -139,16 +139,36 @@ export function Footer({
         </div>
 
         {/* Bottom Section */}
-        <div className="mt-12 pt-8 border-t">
+        <div className="mt-12 pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
-            <p className="text-sm text-muted-foreground">
+            <p className="text-xs text-gray-400">
+              Advanced intelligent systems for modern enterprises
+            </p>
+            <p className="text-xs text-gray-400">
               © {new Date().getFullYear()} {companyName}. All rights reserved.
             </p>
-            <div className="mt-4 md:mt-0">
-              <p className="text-xs text-muted-foreground">
-                Advanced intelligent systems for modern enterprises
-              </p>
-            </div>
+          </div>
+          <div className="mt-4 md:mt-0">
+            <p className="text-xs text-gray-400">
+              By using this platform, you agree to our{" "}
+              <Link
+                href="/supports/terms-of-service"
+                className="text-gray-400 hover:text-white hover:underline"
+              >
+                {" "}
+                Terms of Service{" "}
+              </Link>{" "}
+              and{" "}
+              <Link
+                href="/supports/privacy-policy"
+                className="text-gray-400 hover:text-white hover:underline"
+              >
+                {" "}
+                Privacy Policy
+              </Link>
+              , to all applicable laws and regulations, and agree that you are
+              responsible for compliance with any and all applicable local laws.
+            </p>
           </div>
         </div>
       </div>

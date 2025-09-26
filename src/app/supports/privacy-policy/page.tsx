@@ -15,13 +15,14 @@ export default function PrivacyPolicyPage() {
         <div className="space-y-4">
           <p>
             Omniasky Technology Pte Ltd, PT Cosgrove Teknologi Indonesia and PT
-            Evora Vera Teknologi (collectively, &quot;Paymonei&quot;, &quot;Company&quot;,
-            &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) are committed to protecting your privacy. This
+            Evora Vera Teknologi (collectively, &quot;Paymonei&quot;,
+            &quot;Company&quot;, &quot;we&quot;, &quot;us&quot;, or
+            &quot;our&quot;) are committed to protecting your privacy. This
             Privacy Policy explains how we collect, use, disclose, and safeguard
             your information when you use our Paymonei platform and related
-            services (the &quot;Services&quot;). This Policy applies to all information
-            collected through our Services, as well as any related services,
-            sales, marketing, or events.
+            services (the &quot;Services&quot;). This Policy applies to all
+            information collected through our Services, as well as any related
+            services, sales, marketing, or events.
           </p>
           <p>
             Please read this Privacy Policy carefully. By using our Services,
@@ -34,8 +35,8 @@ export default function PrivacyPolicyPage() {
           <p>
             We collect information that you provide to us, information that is
             automatically collected, and information from third parties. The
-            types of personal information (&quot;Personal Data&quot;) we may collect
-            include:
+            types of personal information (&quot;Personal Data&quot;) we may
+            collect include:
           </p>
 
           <h4>1.1. Information You Provide to Us</h4>
@@ -49,8 +50,9 @@ export default function PrivacyPolicyPage() {
               <strong>Formal Identification Information:</strong>{" "}
               Government-issued identification numbers (e.g., Passport, Driver’s
               License), and other documents requested for our Know-Your-Customer
-              (&quot;KYC&quot;) and Know-Your-Business (&quot;KYB&quot;) verification processes,
-              including photographs or &quot;selfies&quot; for identity confirmation.
+              (&quot;KYC&quot;) and Know-Your-Business (&quot;KYB&quot;)
+              verification processes, including photographs or
+              &quot;selfies&quot; for identity confirmation.
             </li>
             <li>
               <strong>Business Information:</strong> For entity accounts, we may
@@ -101,9 +103,9 @@ export default function PrivacyPolicyPage() {
               databases.
             </li>
             <li>
-              <strong>Financial Partners:</strong> Our financial partners (e.g.,
-              Circle, Nium, Adyen) may share information with us regarding the
-              status of your fiat transactions and account linkage.
+              <strong>Financial Partners:</strong> Our licensed financial
+              partners may share information with us regarding the status of
+              your fiat transactions and account linkage.
             </li>
             <li>
               <strong>Blockchain Data:</strong> We collect public data from
@@ -276,8 +278,8 @@ export default function PrivacyPolicyPage() {
           <p>
             We may update this Privacy Policy from time to time. We will notify
             you of any changes by posting the new Privacy Policy on this page
-            and updating the &quot;Last Updated&quot; date. You are advised to review this
-            Privacy Policy periodically for any changes.
+            and updating the &quot;Last Updated&quot; date. You are advised to
+            review this Privacy Policy periodically for any changes.
           </p>
 
           <h3>10. Contact Us</h3>

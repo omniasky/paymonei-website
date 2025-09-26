@@ -1,26 +1,33 @@
-import Link from "next/link";
-import Image from "next/image";
+import { Navbar } from "@/components/organisms/Navbar";
+import { Footer } from "@/components/organisms/Footer";
 
-export function LegalDisclaimer() {
+export default function CompliancePage() {
   return (
-    <section className="border-t bg-black">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-4 bg-black">
-        <Image
-          src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/paymonei-logo-secondary.png"
-          alt="Paymonei"
-          width={120}
-          height={32}
-          className="h-8 w-auto"
-        />
-        <div>
-          <p className="text-xs text-gray-400 leading-relaxed text-left">
+    <div className="min-h-screen bg-white dark:bg-gray-900">
+      <Navbar navLinks={[]} />
+
+      <div className="max-w-4xl mx-auto px-6 py-24 text-sm">
+        <p>
+          <strong>Paymonei Platform - Regulatory Compliance</strong>
+          <br />
+          <strong>Last Updated: September 26, 2025</strong>
+        </p>
+        <div className="space-y-4">
+          <h3>Corporate Structure and Licensing</h3>
+          <p>
             Omniasky Technology Pte Ltd is a Singapore-incorporated company that
             owns the Paymonei brand and proprietary technology platform. PT
             Cosgrove Teknologi Indonesia and PT Evora Vera Teknologi are
             incorporated companies in Indonesia as technology providers,
-            licensed for contract development and consulting services.
-            <br />
-            <br />
+            licensed for contract development and consulting services. PT
+            Kreigan Digital Wesel is a company incorporated in Indonesia,
+            licensed and supervised by Bank Indonesia as a Digital Financial
+            Service Provider for fund transfer services in accordance with
+            Indonesian financial regulations.
+          </p>
+
+          <h3>Licensed Financial Partners</h3>
+          <p>
             Fiat currency settlement services are provided by licensed financial
             partners in each respective jurisdiction in compliance with local
             banking and money transmission regulations. Circle Internet
@@ -30,7 +37,7 @@ export function LegalDisclaimer() {
             Financial Services. Circle Internet Singapore Pte. Ltd is an
             incorporated company in Singapore licensed as a Major Payment
             Institution by the Monetary Authority of Singapore. Circle
-            Technology Services, LLC (&quot;CTS&quot;) is a software provider
+            Technology Services, LLC ("CTS") is a software provider
             and does not provide regulated financial or advisory services. Nium
             Pte. Ltd. and its subsidiaries hold regulatory licenses and
             authorizations in over 40 jurisdictions globally, including major
@@ -45,8 +52,10 @@ export function LegalDisclaimer() {
             various state licenses in the US, providing global payment
             acceptance and processing services for card, digital wallet, and
             local payment methods.
-            <br />
-            <br />
+          </p>
+
+          <h3>Intellectual Property and Trademarks</h3>
+          <p>
             All users of our platform are solely and exclusively responsible for
             their own business operations, service offerings, regulatory
             compliance, and legal obligations. All trademarked names, logos, and
@@ -58,8 +67,10 @@ export function LegalDisclaimer() {
             trademark owners. All product names, company names, and service
             marks referenced are used solely for identification purposes in
             accordance with fair use principles and applicable trademark law.
-            <br />
-            <br />
+          </p>
+
+          <h3>Platform Security and Compliance Standards</h3>
+          <p>
             Our platform provides technology infrastructure services designed
             with security and compliance standards. We implement
             enterprise-grade security protocols, activity monitoring technology,
@@ -73,20 +84,11 @@ export function LegalDisclaimer() {
             asset. Users are responsible for conducting their own due diligence
             and assessing risks. Stablecoins and digital assets may fluctuate in
             value and are not insured by government agencies.
-            <br />
-            <br />
-            By using this platform, you agree to our{" "}
-            <Link href="/supports/terms-of-service" className="hover:underline">
-              Terms of Service
-            </Link>{" "}
-            and{" "}
-            <Link href="/supports/privacy-policy" className="hover:underline">
-              Privacy Policy
-            </Link>
-            .
           </p>
         </div>
       </div>
-    </section>
+
+      <Footer />
+    </div>
   );
 }
