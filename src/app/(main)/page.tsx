@@ -5,6 +5,16 @@ import { Footer } from "@/components/organisms/Footer";
 import { HeroSection } from "@/components/templates/HeroSection";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import {
+  Monitor,
+  X,
+  Check,
+  FileText,
+  BarChart3,
+  Presentation,
+  Calendar,
+  Brain,
+} from "lucide-react";
 import type { Metadata } from "next";
 
 // Page-specific metadata that overrides the default
@@ -3123,37 +3133,25 @@ export default function HomePage() {
         </section>
 
         {/* AI-Native Operations Suite Section */}
-        {/* <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background via-muted/5 to-background">
+        <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background via-muted/5 to-background">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-violet-100 to-fuchsia-100 dark:from-violet-900/30 dark:to-fuchsia-900/30 text-violet-700 dark:text-violet-400 border border-violet-200 dark:border-violet-800 mb-6">
-                <svg
-                  className="w-4 h-4"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                  />
-                </svg>
+                <Monitor className="w-4 h-4" />
                 <span className="text-sm font-medium">
-                  Unified AI Workspace
+                  Intelligence Workspace
                 </span>
               </div>
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-                <span className="text-foreground">One AI Platform.</span>
+                <span className="text-foreground">AI-Native Operations.</span>
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-violet-600 via-fuchsia-600 to-pink-600 mt-2">
-                  Zero External Tools.
+                  Zero Context Switching.
                 </span>
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Stop juggling between Docs, Sheet, Presentation, and Calendar.
-                Your entire business operations—from documents to
-                analytics—powered by AI in a single workspace.
+                Stop manual payment processes and scattered business tools.
+                Enable autonomous agents to handle transactions seamlessly with
+                our infrastructure.
               </p>
             </div>
 
@@ -3162,96 +3160,48 @@ export default function HomePage() {
                 <div className="absolute -top-3 -left-3 px-4 py-1.5 bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400 rounded-full text-sm font-medium z-10">
                   Traditional Chaos
                 </div>
-                <div className="relative bg-gradient-to-br from-red-50/50 to-orange-50/50 dark:from-red-900/10 dark:to-orange-900/10 border-2 border-dashed border-red-200 dark:border-red-800 rounded-3xl p-8 opacity-75">
+                <div className="relative bg-gradient-to-br from-red-50/50 to-orange-50/50 dark:from-red-900/10 dark:to-orange-900/10 border-2 border-dashed border-red-200 dark:border-red-800 rounded-3xl p-8 opacity-75 h-full flex flex-col">
                   <div className="grid grid-cols-2 gap-4">
                     <div className="flex items-center gap-3 p-4 bg-white dark:bg-gray-900 rounded-xl shadow-sm">
                       <div className="w-10 h-10 bg-blue-500 rounded flex items-center justify-center text-white font-bold">
                         D
                       </div>
-                      <span className="text-sm font-medium">Docs</span>
+                      <span className="text-sm font-medium">GDocs</span>
                     </div>
                     <div className="flex items-center gap-3 p-4 bg-white dark:bg-gray-900 rounded-xl shadow-sm">
                       <div className="w-10 h-10 bg-green-600 rounded flex items-center justify-center text-white font-bold">
                         E
                       </div>
-                      <span className="text-sm font-medium">Sheet</span>
+                      <span className="text-sm font-medium">GSheet</span>
                     </div>
                     <div className="flex items-center gap-3 p-4 bg-white dark:bg-gray-900 rounded-xl shadow-sm">
-                      <div className="w-10 h-10 bg-orange-600 rounded flex items-center justify-center text-white font-bold">
-                        P
+                      <div className="w-10 h-10 bg-blue-600 rounded flex items-center justify-center text-white font-bold">
+                        c
                       </div>
-                      <span className="text-sm font-medium">Presentation</span>
+                      <span className="text-sm font-medium">Canva</span>
                     </div>
                     <div className="flex items-center gap-3 p-4 bg-white dark:bg-gray-900 rounded-xl shadow-sm">
                       <div className="w-10 h-10 bg-purple-600 rounded flex items-center justify-center text-white font-bold">
                         C
                       </div>
-                      <span className="text-sm font-medium">Calendar</span>
-                    </div>
-                    <div className="flex items-center gap-3 p-4 bg-white dark:bg-gray-900 rounded-xl shadow-sm">
-                      <div className="w-10 h-10 bg-yellow-600 rounded flex items-center justify-center text-white font-bold">
-                        S
-                      </div>
-                      <span className="text-sm font-medium">Messaging</span>
-                    </div>
-                    <div className="flex items-center gap-3 p-4 bg-white dark:bg-gray-900 rounded-xl shadow-sm">
-                      <div className="w-10 h-10 bg-cyan-600 rounded flex items-center justify-center text-white font-bold">
-                        J
-                      </div>
-                      <span className="text-sm font-medium">Ticketing</span>
+                      <span className="text-sm font-medium">Calendly</span>
                     </div>
                   </div>
                   <div className="mt-6 space-y-2">
                     <div className="flex items-center gap-2 text-red-600 dark:text-red-400">
-                      <svg
-                        className="w-4 h-4"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M6 18L18 6M6 6l12 12"
-                        />
-                      </svg>
+                      <X className="w-4 h-4" />
                       <span className="text-sm">
-                        Context switching between 6+ tools
+                        Context switching multiple tools
                       </span>
                     </div>
                     <div className="flex items-center gap-2 text-red-600 dark:text-red-400">
-                      <svg
-                        className="w-4 h-4"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M6 18L18 6M6 6l12 12"
-                        />
-                      </svg>
+                      <X className="w-4 h-4" />
                       <span className="text-sm">
                         Manual copy-paste workflows
                       </span>
                     </div>
                     <div className="flex items-center gap-2 text-red-600 dark:text-red-400">
-                      <svg
-                        className="w-4 h-4"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M6 18L18 6M6 6l12 12"
-                        />
-                      </svg>
+                      <X className="w-4 h-4" />
                       <span className="text-sm">
                         Version control nightmares
                       </span>
@@ -3264,85 +3214,37 @@ export default function HomePage() {
                 <div className="absolute -top-3 -right-3 px-4 py-1.5 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 rounded-full text-sm font-medium z-10">
                   AI-Native Future
                 </div>
-                <div className="relative bg-gradient-to-br from-violet-50 to-fuchsia-50 dark:from-violet-900/20 dark:to-fuchsia-900/20 border-2 border-violet-200 dark:border-violet-800 rounded-3xl p-8">
+                <div className="relative bg-gradient-to-br from-violet-50 to-fuchsia-50 dark:from-violet-900/20 dark:to-fuchsia-900/20 border-2 border-violet-200 dark:border-violet-800 rounded-3xl p-8 h-full flex flex-col">
                   <div className="bg-gradient-to-br from-violet-600 to-fuchsia-600 rounded-2xl p-6 text-white">
                     <div className="flex items-center justify-center mb-4">
                       <div className="w-16 h-16 bg-white/20 backdrop-blur rounded-2xl flex items-center justify-center">
-                        <svg
-                          className="w-10 h-10"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                          />
-                        </svg>
+                        <Brain className="w-10 h-10" />
                       </div>
                     </div>
                     <h3 className="text-xl font-bold text-center mb-2">
                       AI Operations Suite
                     </h3>
                     <p className="text-center text-white/90 text-sm">
-                      Everything in one intelligent workspace
+                      Intelligent document & workflow automation
                     </p>
                   </div>
                   <div className="mt-6 space-y-2">
                     <div className="flex items-center gap-2 text-green-600 dark:text-green-400">
-                      <svg
-                        className="w-4 h-4"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
+                      <Check className="w-4 h-4" />
                       <span className="text-sm">
-                        Unified AI-powered workspace
+                        AI-powered document generation
                       </span>
                     </div>
                     <div className="flex items-center gap-2 text-green-600 dark:text-green-400">
-                      <svg
-                        className="w-4 h-4"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
+                      <Check className="w-4 h-4" />
                       <span className="text-sm">
-                        Seamless data flow & automation
+                        Smart invoice & report automation
                       </span>
                     </div>
                     <div className="flex items-center gap-2 text-green-600 dark:text-green-400">
-                      <svg
-                        className="w-4 h-4"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
+                      <Check className="w-4 h-4" />
                       <span className="text-sm">
-                        Real-time collaboration & AI assist
+                        Unified business operations
                       </span>
                     </div>
                   </div>
@@ -3355,19 +3257,7 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-cyan-600/10 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 <div className="relative bg-background border border-border/50 rounded-2xl p-6 hover:border-blue-500/50 transition-all">
                   <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mb-4">
-                    <svg
-                      className="w-6 h-6 text-white"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                      />
-                    </svg>
+                    <FileText className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="font-semibold mb-2">AI Documents</h3>
                   <p className="text-sm text-muted-foreground">
@@ -3381,19 +3271,7 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-gradient-to-r from-green-600/10 to-emerald-600/10 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 <div className="relative bg-background border border-border/50 rounded-2xl p-6 hover:border-green-500/50 transition-all">
                   <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mb-4">
-                    <svg
-                      className="w-6 h-6 text-white"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-                      />
-                    </svg>
+                    <BarChart3 className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="font-semibold mb-2">AI Analytics</h3>
                   <p className="text-sm text-muted-foreground">
@@ -3407,19 +3285,7 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 <div className="relative bg-background border border-border/50 rounded-2xl p-6 hover:border-purple-500/50 transition-all">
                   <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-4">
-                    <svg
-                      className="w-6 h-6 text-white"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                      />
-                    </svg>
+                    <Presentation className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="font-semibold mb-2">AI Presentations</h3>
                   <p className="text-sm text-muted-foreground">
@@ -3433,19 +3299,7 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-gradient-to-r from-orange-600/10 to-red-600/10 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 <div className="relative bg-background border border-border/50 rounded-2xl p-6 hover:border-orange-500/50 transition-all">
                   <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center mb-4">
-                    <svg
-                      className="w-6 h-6 text-white"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                      />
-                    </svg>
+                    <Calendar className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="font-semibold mb-2">AI Scheduling</h3>
                   <p className="text-sm text-muted-foreground">
@@ -3464,8 +3318,8 @@ export default function HomePage() {
                       Ready to eliminate tool chaos?
                     </div>
                     <div className="text-violet-100">
-                      Join thousands running their entire business in one AI
-                      workspace
+                      Enable AI agents to handle your business workflows
+                      seamlessly
                     </div>
                   </div>
                   <button className="px-6 py-3 bg-white/20 backdrop-blur text-white rounded-xl font-semibold hover:bg-white/30 transition-all">
@@ -3475,7 +3329,7 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-        </section> */}
+        </section>
 
         {/* Institutional-Grade Security Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-muted/10 via-background to-muted/10">
