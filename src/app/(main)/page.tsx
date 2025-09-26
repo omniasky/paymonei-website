@@ -3149,9 +3149,9 @@ export default function HomePage() {
                 </span>
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Stop manual payment processes and scattered business tools.
-                Enable autonomous agents to handle transactions seamlessly with
-                our infrastructure.
+                Stop juggling between scattered business tools and manual
+                workflows. Your entire operations from documents to analytics
+                powered by our AI in a single workspace.
               </p>
             </div>
 
@@ -3262,7 +3262,7 @@ export default function HomePage() {
                   <h3 className="font-semibold mb-2">AI Documents</h3>
                   <p className="text-sm text-muted-foreground">
                     Auto-generate contracts, proposals, and reports with AI that
-                    understands your business context.
+                    understands your business real context.
                   </p>
                 </div>
               </div>
@@ -3275,8 +3275,8 @@ export default function HomePage() {
                   </div>
                   <h3 className="font-semibold mb-2">AI Analytics</h3>
                   <p className="text-sm text-muted-foreground">
-                    Real-time dashboards and predictive insights without manual
-                    spreadsheet formulas.
+                    Real-time dashboards and predictive insights without long
+                    hours spreadsheet formulas.
                   </p>
                 </div>
               </div>
@@ -3290,7 +3290,7 @@ export default function HomePage() {
                   <h3 className="font-semibold mb-2">AI Presentations</h3>
                   <p className="text-sm text-muted-foreground">
                     Create stunning presentations from prompts. AI designs
-                    slides that match your brand.
+                    slides that match your brand and audiences.
                   </p>
                 </div>
               </div>
