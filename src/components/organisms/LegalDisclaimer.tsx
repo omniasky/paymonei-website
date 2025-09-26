@@ -14,12 +14,11 @@ export function LegalDisclaimer() {
         />
         <div>
           <p className="text-xs text-gray-400 leading-relaxed text-left">
-            Cosgrove Technology Inc. is a technology provider incorporated in
-            Delaware, USA. Cosgrove Technology Pte Ltd is a technology provider
-            incorporated in Singapore. PT Cosgrove Teknologi Indonesia and PT
-            Evora Vera Teknologi is an incorporated company in Indonesia as
-            technology provider, licensed for contract development and
-            consulting services.
+            Omniasky Technology Pte Ltd is a Singapore-incorporated company that
+            owns the Paymonei brand and proprietary technology platform. PT
+            Cosgrove Teknologi Indonesia and PT Evora Vera Teknologi are
+            incorporated companies in Indonesia as technology providers,
+            licensed for contract development and consulting services.
             <br />
             <br />
             Fiat currency settlement services are provided by licensed financial

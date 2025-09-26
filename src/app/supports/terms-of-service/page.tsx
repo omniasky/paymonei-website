@@ -16,8 +16,8 @@ export default function TermsOfServicePage() {
           <p>
             This Terms of Service agreement (&quot;Agreement&quot;) constitutes a legally
             binding agreement made between you, whether personally or on behalf
-            of an entity (&quot;you&quot; or &quot;User&quot;), and Cosgrove Technology Inc.,
-            Cosgrove Technology Pte Ltd, PT Cosgrove Teknologi Indonesia and PT Evora Vera Teknologi
+            of an entity (&quot;you&quot; or &quot;User&quot;), and Omniasky Technology Pte Ltd,
+            PT Cosgrove Teknologi Indonesia and PT Evora Vera Teknologi
             (collectively, &quot;Paymonei&quot;, &quot;Company&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;),
             concerning your access to and use of the Paymonei payment
             infrastructure, the AI Agent Payment Protocol, and all related

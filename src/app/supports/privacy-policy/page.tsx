@@ -14,8 +14,7 @@ export default function PrivacyPolicyPage() {
         </p>
         <div className="space-y-4">
           <p>
-            Cosgrove Technology Inc., Cosgrove Technology Pte Ltd, PT
-            Cosgrove Teknologi Indonesia and PT
+            Omniasky Technology Pte Ltd, PT Cosgrove Teknologi Indonesia and PT
             Evora Vera Teknologi (collectively, &quot;Paymonei&quot;, &quot;Company&quot;,
             &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) are committed to protecting your privacy. This
             Privacy Policy explains how we collect, use, disclose, and safeguard
