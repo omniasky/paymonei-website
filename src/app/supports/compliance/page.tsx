@@ -54,7 +54,7 @@ export default function CompliancePage() {
             Financial Services. Circle Internet Singapore Pte. Ltd is an
             incorporated company in Singapore licensed as a Major Payment
             Institution by the Monetary Authority of Singapore. Circle
-            Technology Services, LLC ("CTS") is a software provider
+            Technology Services, LLC (&quot;CTS&quot;) is a software provider
             and does not provide regulated financial or advisory services. Nium
             Pte. Ltd. and its subsidiaries hold regulatory licenses and
             authorizations in over 40 jurisdictions globally, including major
