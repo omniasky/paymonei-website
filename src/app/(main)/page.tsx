@@ -3304,7 +3304,7 @@ export default function HomePage() {
                   <h3 className="font-semibold mb-2">AI Scheduling</h3>
                   <p className="text-sm text-muted-foreground">
                     Smart calendar that schedules meetings, manages tasks, and
-                    optimizes your team's time.
+                    optimizes your team&apos;s time.
                   </p>
                 </div>
               </div>
