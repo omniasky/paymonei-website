@@ -14,6 +14,12 @@ import {
   Presentation,
   Calendar,
   Brain,
+  Link2,
+  Receipt,
+  TrendingUp,
+  Store,
+  Users,
+  Shield,
 } from "lucide-react";
 import type { Metadata } from "next";
 
@@ -1391,19 +1397,7 @@ export default function HomePage() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-200 mb-4">
-                    <svg
-                      className="w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
-                      />
-                    </svg>
+                    <Link2 className="w-4 h-4" />
                     <span className="text-sm font-medium">Payment Links</span>
                   </div>
                   <h3 className="text-2xl font-bold mb-4">
@@ -1583,19 +1577,7 @@ export default function HomePage() {
 
                 <div className="order-1 lg:order-2">
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 border border-indigo-200 mb-4">
-                    <svg
-                      className="w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                      />
-                    </svg>
+                    <Receipt className="w-4 h-4" />
                     <span className="text-sm font-medium">Smart Invoicing</span>
                   </div>
                   <h3 className="text-2xl font-bold mb-4">
@@ -1633,19 +1615,7 @@ export default function HomePage() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-50 text-purple-700 border border-purple-200 mb-4">
-                    <svg
-                      className="w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-                      />
-                    </svg>
+                    <TrendingUp className="w-4 h-4" />
                     <span className="text-sm font-medium">
                       Dynamic Analytics
                     </span>
@@ -2238,19 +2208,7 @@ export default function HomePage() {
 
                 <div className="order-1 lg:order-2">
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 mb-4">
-                    <svg
-                      className="w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                      />
-                    </svg>
+                    <Store className="w-4 h-4" />
                     <span className="text-sm font-medium">AI Marketplace</span>
                   </div>
                   <h3 className="text-2xl font-bold mb-4">
@@ -2298,19 +2256,7 @@ export default function HomePage() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-pink-50 text-pink-700 border border-pink-200 mb-4">
-                    <svg
-                      className="w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m-9 8v6a2 2 0 002 2h6a2 2 0 002-2v-6M7 4h10v4a2 2 0 01-2 2H9a2 2 0 01-2-2V4z"
-                      />
-                    </svg>
+                    <Users className="w-4 h-4" />
                     <span className="text-sm font-medium">Creator Economy</span>
                   </div>
                   <h3 className="text-2xl font-bold mb-4">
@@ -2917,19 +2863,7 @@ export default function HomePage() {
 
                 <div>
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-50 text-purple-700 border border-purple-200 mb-4">
-                    <svg
-                      className="w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6M8 6V4a2 2 0 012-2h4a2 2 0 012 2v2m-8 0v2a2 2 0 002 2h4a2 2 0 002-2V6m-8 0H6a2 2 0 00-2 2v6a2 2 0 002 2h2m8-8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2"
-                      />
-                    </svg>
+                    <Shield className="w-4 h-4" />
                     <span className="text-sm font-medium">
                       Smart Contract Escrow
                     </span>
@@ -3732,7 +3666,7 @@ export default function HomePage() {
               </span>
             </h3>
             <p className="text-xl text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
-              Join thousands of companies already using AI-powered
+              Join thousands of professionals already using AI-powered
               infrastructure to streamline operations, reduce costs, and scale
               globally.
             </p>
