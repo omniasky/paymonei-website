@@ -6,6 +6,7 @@ import { useState } from "react";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/atoms/ThemeToggle";
+import { PlatformMegaMenu } from "../PlatformMegaMenu";
 import {
   Sheet,
   SheetContent,
@@ -48,18 +49,21 @@ export function Navbar({
             </Link>
           </div>
 
-          <div className="hidden md:flex items-center space-x-2">
+          <div className="hidden md:flex items-center space-x-6">
+            {/* <PlatformMegaMenu /> */}
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-muted-foreground hover:text-primary transition-colors"
+                className="text-muted-foreground hover:text-primary transition-colors px-3 py-2"
               >
                 {link.label}
               </Link>
             ))}
-            <ThemeToggle />
+          </div>
 
+          <div className="hidden md:flex items-center space-x-2">
+            <ThemeToggle />
             <Link href="https://app.paymonei.com/auth/login">
               <Button className="bg-gradient-to-r w-24 rounded-full from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white">
                 Login
