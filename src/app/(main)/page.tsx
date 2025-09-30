@@ -152,7 +152,7 @@ export default function HomePage() {
       />
 
       <div className="min-h-screen bg-gradient-to-b from-background to-muted/20">
-        <Navbar navLinks={[]} />
+        <Navbar />
 
         <HeroSection
           title={{

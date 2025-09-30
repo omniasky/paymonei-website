@@ -6,7 +6,7 @@ import { useState } from "react";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/atoms/ThemeToggle";
-// import { PlatformMegaMenu } from "../PlatformMegaMenu";
+import { CustomMegaMenu } from "../CustomMegaMenu";
 import {
   Sheet,
   SheetContent,
@@ -25,9 +25,9 @@ export interface NavbarProps {
 
 export function Navbar({
   navLinks = [
-    { href: "#features", label: "Features" },
-    { href: "#security", label: "Security" },
-    { href: "#compliance", label: "Compliance" },
+    { href: "#solutions", label: "Solutions" },
+    { href: "#developers", label: "Developers" },
+    { href: "#resources", label: "Resources" },
   ],
 }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,8 +35,9 @@ export function Navbar({
   return (
     <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-lg z-50 border-b">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex items-center">
+        <div className="flex items-center h-16">
+          {/* Logo on the left */}
+          <div className="flex items-center mr-8">
             <Link href="/" className="flex items-center">
               <Image
                 src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/paymonei-logo-main.png"
@@ -49,19 +50,23 @@ export function Navbar({
             </Link>
           </div>
 
-          <div className="hidden md:flex items-center space-x-6">
-            {/* <PlatformMegaMenu /> */}
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-muted-foreground hover:text-primary transition-colors px-3 py-2"
-              >
-                {link.label}
-              </Link>
-            ))}
+          {/* Center navigation: Platforms mega menu and nav links */}
+          <div className="hidden md:flex items-center flex-1">
+            <CustomMegaMenu />
+            <div className="flex items-center space-x-1 ml-4">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-muted-foreground hover:text-primary transition-colors px-3 py-2"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
           </div>
 
+          {/* Right side: Theme toggle, Login, Sign up */}
           <div className="hidden md:flex items-center space-x-2">
             <ThemeToggle />
             <Link href="https://app.paymonei.com/auth/login">
@@ -100,6 +105,11 @@ export function Navbar({
                   </SheetTitle>
                 </SheetHeader>
                 <div className="flex flex-col space-y-4 mt-8">
+                  <div className="font-semibold text-sm text-muted-foreground mb-2">
+                    Platforms
+                  </div>
+                  {/* Add mobile platform links here if needed */}
+
                   {navLinks.map((link) => (
                     <Link
                       key={link.href}
