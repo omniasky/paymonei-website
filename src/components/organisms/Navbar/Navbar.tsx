@@ -8,6 +8,12 @@ import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/atoms/ThemeToggle";
 import { CustomMegaMenu } from "../CustomMegaMenu";
 import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
+import { ChevronDown } from "lucide-react";
+import {
   Sheet,
   SheetContent,
   SheetHeader,
@@ -23,6 +29,34 @@ export interface NavbarProps {
   }>;
 }
 
+// Mobile platform items - simplified for mobile navigation
+const mobilePlatformItems = [
+  {
+    category: "Business",
+    items: [
+      { title: "Hugogen", href: "/business/hugogen" },
+      { title: "AI Agent Protocol", href: "/business/ai-agents" },
+      { title: "Docs", href: "/business/docs" },
+      { title: "Presentations", href: "/business/presentations" },
+      { title: "Sheets", href: "/business/sheets" },
+    ],
+  },
+  {
+    category: "Global Payments",
+    items: [
+      { title: "Payment Links", href: "/payments/links" },
+      { title: "Checkout", href: "/payments/checkout" },
+    ],
+  },
+  {
+    category: "Billing",
+    items: [
+      { title: "Invoicing", href: "/billing/invoicing" },
+      { title: "Subscription", href: "/billing/subscription" },
+    ],
+  },
+];
+
 export function Navbar({
   navLinks = [
     { href: "#solutions", label: "Solutions" },
@@ -31,6 +65,7 @@ export function Navbar({
   ],
 }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const [platformsOpen, setPlatformsOpen] = useState(false);
 
   return (
     <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-lg z-50 border-b">
@@ -50,8 +85,8 @@ export function Navbar({
             </Link>
           </div>
 
-          {/* Center navigation: Platforms mega menu and nav links */}
-          <div className="hidden md:flex items-center flex-1">
+          {/* Center navigation: Platforms mega menu and nav links - Desktop only */}
+          <div className="hidden lg:flex items-center flex-1">
             <CustomMegaMenu />
             <div className="flex items-center space-x-1 ml-4">
               {navLinks.map((link) => (
@@ -66,8 +101,11 @@ export function Navbar({
             </div>
           </div>
 
-          {/* Right side: Theme toggle, Login, Sign up */}
-          <div className="hidden md:flex items-center space-x-2">
+          {/* Spacer for tablet/mobile to push right items to the right */}
+          <div className="flex-1 lg:hidden"></div>
+
+          {/* Right side: Theme toggle, Login, Sign up - Desktop only */}
+          <div className="hidden lg:flex items-center space-x-2">
             <ThemeToggle />
             <Link href="https://app.paymonei.com/auth/login">
               <Button className="bg-gradient-to-r w-24 rounded-full from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white">
@@ -84,7 +122,8 @@ export function Navbar({
             </Link>
           </div>
 
-          <div className="flex items-center space-x-4 md:hidden">
+          {/* Mobile/Tablet: Theme toggle and hamburger on the right */}
+          <div className="flex items-center space-x-4 lg:hidden">
             <ThemeToggle />
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
@@ -105,16 +144,45 @@ export function Navbar({
                   </SheetTitle>
                 </SheetHeader>
                 <div className="flex flex-col space-y-4 mt-8">
-                  <div className="font-semibold text-sm text-muted-foreground mb-2">
-                    Platforms
-                  </div>
-                  {/* Add mobile platform links here if needed */}
+                  {/* Platforms Collapsible Section */}
+                  <Collapsible open={platformsOpen} onOpenChange={setPlatformsOpen}>
+                    <CollapsibleTrigger className="flex items-center justify-between w-full p-2 text-left text-lg font-semibold text-foreground hover:text-primary transition-colors">
+                      <span>Platforms</span>
+                      <ChevronDown
+                        className={`h-4 w-4 transition-transform ${
+                          platformsOpen ? "rotate-180" : ""
+                        }`}
+                      />
+                    </CollapsibleTrigger>
+                    <CollapsibleContent className="space-y-3 pl-4">
+                      {mobilePlatformItems.map((category) => (
+                        <div key={category.category} className="space-y-2">
+                          <div className="text-sm font-medium text-muted-foreground">
+                            {category.category}
+                          </div>
+                          <div className="space-y-1 pl-2">
+                            {category.items.map((item) => (
+                              <Link
+                                key={item.href}
+                                href={item.href}
+                                className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1"
+                                onClick={() => setIsOpen(false)}
+                              >
+                                {item.title}
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                    </CollapsibleContent>
+                  </Collapsible>
 
+                  {/* Regular Nav Links */}
                   {navLinks.map((link) => (
                     <Link
                       key={link.href}
                       href={link.href}
-                      className="text-lg text-muted-foreground hover:text-primary transition-colors"
+                      className="text-lg text-muted-foreground hover:text-primary transition-colors p-2"
                       onClick={() => setIsOpen(false)}
                     >
                       {link.label}
