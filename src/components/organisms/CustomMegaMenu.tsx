@@ -3,23 +3,17 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { createPortal } from "react-dom";
-import { ChevronDown, Coins } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import {
   Brain,
   Bot,
   FileText,
   Presentation,
   Sheet,
-  ArrowUpDown,
-  Wallet,
   Link2,
   CreditCard,
   Receipt,
   BarChart3,
-  User,
-  Search,
-  Shield,
-  Activity,
 } from "lucide-react";
 
 const platformItems = [
