@@ -171,7 +171,7 @@ export default function HomePage() {
         />
 
         {/* Used by Global Developers Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
+        <section className="py-16 px-2 xs:px-4 sm:px-6 lg:px-8 bg-background">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-foreground/90 leading-tight">
@@ -626,7 +626,7 @@ export default function HomePage() {
         {/* AI Agent Payment Protocol Section */}
         <section
           id="ai-protocol"
-          className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-background via-muted/30 to-background"
+          className="py-20 px-2 xs:px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-background via-muted/30 to-background"
         >
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -953,7 +953,7 @@ export default function HomePage() {
         </section>
 
         {/* AI Agent Payment Protocol Infrastructure Section */}
-        <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background via-background/95 to-muted/20">
+        <section className="py-24 px-2 xs:px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background via-background/95 to-muted/20">
           <div className="max-w-7xl mx-auto">
             {/* Section Header */}
             <div className="text-center mb-16">
@@ -1375,7 +1375,7 @@ export default function HomePage() {
         {/* Merchant AI Use Cases Section */}
         <section
           id="use-cases"
-          className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/50"
+          className="py-20 px-2 xs:px-4 sm:px-6 lg:px-8 bg-muted/50"
         >
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -2920,7 +2920,7 @@ export default function HomePage() {
         </section>
 
         {/* E2E Business Operations Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-2 xs:px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl sm:text-5xl font-bold mb-6">
@@ -3067,7 +3067,7 @@ export default function HomePage() {
         </section>
 
         {/* AI-Native Operations Suite Section */}
-        <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background via-muted/5 to-background">
+        <section className="py-24 px-2 xs:px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background via-muted/5 to-background">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-violet-100 to-fuchsia-100 dark:from-violet-900/30 dark:to-fuchsia-900/30 text-violet-700 dark:text-violet-400 border border-violet-200 dark:border-violet-800 mb-6">
@@ -3266,7 +3266,7 @@ export default function HomePage() {
         </section>
 
         {/* Institutional-Grade Security Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-muted/10 via-background to-muted/10">
+        <section className="py-20 px-2 xs:px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-muted/10 via-background to-muted/10">
           <div className="max-w-7xl mx-auto">
             {/* Section Header */}
             <div className="text-center mb-16">
@@ -3520,7 +3520,7 @@ export default function HomePage() {
         </section>
 
         {/* Orchestration Dominance Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-2 xs:px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-violet-100 to-purple-100 dark:from-violet-900/30 dark:to-purple-900/30 border border-violet-200 dark:border-violet-800 mb-6">
@@ -3644,7 +3644,7 @@ export default function HomePage() {
         </section>
 
         {/* CTA Section */}
-        <section className="relative py-52 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <section className="relative py-52 px-2 xs:px-4 sm:px-6 lg:px-8 overflow-hidden">
           {/* World dotted background using Image component */}
           <div className="absolute inset-0 -z-10">
             <Image

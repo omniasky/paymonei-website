@@ -240,7 +240,7 @@ export function CustomMegaMenu() {
 
   const megaMenuContent = isOpen ? (
     <div
-      className="fixed left-0 right-0 bg-background/95 backdrop-blur-xl border-b shadow-lg z-50"
+      className="fixed left-0 right-0 bg-background/95 backdrop-blur-xl border-b shadow-lg z-50 hidden lg:block"
       style={{
         top: "60px", // Slightly overlaps with navbar
         width: "100vw",
@@ -308,7 +308,7 @@ export function CustomMegaMenu() {
     <div className="relative">
       {/* Trigger Button */}
       <button
-        className="flex items-center gap-1 px-3 py-2 text-muted-foreground hover:text-primary transition-colors"
+        className="flex items-center gap-1 px-3 py-2 text-muted-foreground hover:text-primary transition-colors font-medium text-sm"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         onClick={() => setIsOpen(!isOpen)}

@@ -71,7 +71,7 @@ export function Footer({
 
   return (
     <footer className="bg-black border-t border-gray-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto px-2 xs:px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
           {/* Paymonei Logo and Tagline Section */}
           <div className="lg:col-span-2">

@@ -20,6 +20,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 export interface NavbarProps {
   logoText?: string;
@@ -69,7 +70,7 @@ export function Navbar({
 
   return (
     <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-lg z-50 border-b">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-2 xs:px-4 sm:px-6 lg:px-8">
         <div className="flex items-center h-16">
           {/* Logo on the left */}
           <div className="flex items-center mr-8">
@@ -93,7 +94,7 @@ export function Navbar({
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-muted-foreground hover:text-primary transition-colors px-3 py-2"
+                  className="text-muted-foreground hover:text-primary transition-colors px-3 py-2 font-medium text-sm"
                 >
                   {link.label}
                 </Link>
@@ -143,69 +144,85 @@ export function Navbar({
                     />
                   </SheetTitle>
                 </SheetHeader>
-                <div className="flex flex-col space-y-4 mt-8">
-                  {/* Platforms Collapsible Section */}
-                  <Collapsible open={platformsOpen} onOpenChange={setPlatformsOpen}>
-                    <CollapsibleTrigger className="flex items-center justify-between w-full p-2 text-left text-lg font-semibold text-foreground hover:text-primary transition-colors">
-                      <span>Platforms</span>
-                      <ChevronDown
-                        className={`h-4 w-4 transition-transform ${
-                          platformsOpen ? "rotate-180" : ""
-                        }`}
-                      />
-                    </CollapsibleTrigger>
-                    <CollapsibleContent className="space-y-3 pl-4">
-                      {mobilePlatformItems.map((category) => (
-                        <div key={category.category} className="space-y-2">
-                          <div className="text-sm font-medium text-muted-foreground">
-                            {category.category}
-                          </div>
-                          <div className="space-y-1 pl-2">
-                            {category.items.map((item) => (
-                              <Link
-                                key={item.href}
-                                href={item.href}
-                                className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1"
-                                onClick={() => setIsOpen(false)}
-                              >
-                                {item.title}
-                              </Link>
-                            ))}
-                          </div>
-                        </div>
-                      ))}
-                    </CollapsibleContent>
-                  </Collapsible>
-
-                  {/* Regular Nav Links */}
-                  {navLinks.map((link) => (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      className="text-lg text-muted-foreground hover:text-primary transition-colors p-2"
-                      onClick={() => setIsOpen(false)}
+                <ScrollArea className="h-[calc(100vh-120px)]">
+                  <div className="flex flex-col space-y-4 mt-8">
+                    {/* Platforms Collapsible Section */}
+                    <Collapsible
+                      open={platformsOpen}
+                      onOpenChange={setPlatformsOpen}
                     >
-                      {link.label}
-                    </Link>
-                  ))}
+                      <CollapsibleTrigger className="flex items-center justify-between w-full p-2 text-left font-medium text-sm text-foreground hover:text-primary transition-colors">
+                        <span>Platforms</span>
+                        <ChevronDown
+                          className={`h-4 w-4 transition-transform ${
+                            platformsOpen ? "rotate-180" : ""
+                          }`}
+                        />
+                      </CollapsibleTrigger>
+                      <CollapsibleContent className="space-y-3 pl-4">
+                        {mobilePlatformItems.map((category) => (
+                          <div key={category.category} className="space-y-2">
+                            <div className="text-xs font-medium text-muted-foreground border-l-2 border-border pl-3 py-1">
+                              {category.category}
+                            </div>
+                            <div className="space-y-1 pl-2">
+                              {category.items.map((item) => (
+                                <Link
+                                  key={item.href}
+                                  href={item.href}
+                                  className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1 pl-3"
+                                  onClick={() => setIsOpen(false)}
+                                >
+                                  {item.title}
+                                </Link>
+                              ))}
+                            </div>
+                          </div>
+                        ))}
+                      </CollapsibleContent>
+                    </Collapsible>
 
-                  <Link
-                    href="https://app.paymonei.com/auth/login"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    <Button className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white">
-                      Login
-                    </Button>
-                  </Link>
-                  <Link href="/auth/register" onClick={() => setIsOpen(false)}>
-                    <Button
-                      variant="outline"
-                      className="w-full border-indigo-600 text-indigo-600 hover:bg-indigo-50 dark:hover:bg-indigo-950"
-                    >
-                      Sign Up
-                    </Button>
-                  </Link>
-                </div>
+                    {/* Regular Nav Links */}
+                    {navLinks.map((link) => (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        className="font-medium text-sm text-foreground hover:text-primary transition-colors p-2"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {link.label}
+                      </Link>
+                    ))}
+
+                    {/* Auth Buttons */}
+                    <div className="space-y-3 pt-4">
+                      <div>
+                        <Link
+                          href="https://app.paymonei.com/auth/login"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          <Button className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white">
+                            Login
+                          </Button>
+                        </Link>
+                      </div>
+                      <div>
+                        {" "}
+                        <Link
+                          href="/auth/register"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          <Button
+                            variant="outline"
+                            className="w-full border-indigo-600 text-indigo-600 hover:bg-indigo-50 dark:hover:bg-indigo-950"
+                          >
+                            Sign Up
+                          </Button>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </ScrollArea>
               </SheetContent>
             </Sheet>
           </div>
