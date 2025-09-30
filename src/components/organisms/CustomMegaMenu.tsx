@@ -176,6 +176,24 @@ interface MegaMenuItemProps {
   icon: React.ElementType;
 }
 
+interface PlatformItem {
+  title: string;
+  href: string;
+  description: string;
+  icon: React.ElementType;
+}
+
+interface PlatformCategory {
+  category: string;
+  description: string;
+  items: PlatformItem[];
+  subCategory?: {
+    category: string;
+    description: string;
+    items: PlatformItem[];
+  };
+}
+
 const MegaMenuItem: React.FC<MegaMenuItemProps> = ({
   title,
   href,
