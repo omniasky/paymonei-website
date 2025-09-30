@@ -159,7 +159,7 @@ export default function HomePage() {
             main: "Infrastructure for the modern",
             highlight: "digital and AI economy",
           }}
-          subtitle="Companies worldwide use our platform to streamline operations and scale their business seamlessly, accelerating growth and global expansion."
+          subtitle="From startups processing their first transaction to enterprises, we power businesses of all sizes to streamline operations across global markets."
           primaryCta={{
             label: "Get Started",
             href: "/auth/login",
