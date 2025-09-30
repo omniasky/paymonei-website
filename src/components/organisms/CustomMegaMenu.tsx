@@ -167,7 +167,7 @@ const platformItems = [
   //     },
   //   ],
   // },
-];
+] as PlatformCategory[];
 
 interface MegaMenuItemProps {
   title: string;
@@ -183,6 +183,7 @@ interface PlatformItem {
   icon: React.ElementType;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 interface PlatformCategory {
   category: string;
   description: string;
@@ -250,7 +251,7 @@ export function CustomMegaMenu() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid grid-cols-4 gap-8">
-          {platformItems.map((category) => (
+          {platformItems.map((category: PlatformCategory) => (
             <div key={category.category} className="space-y-4">
               <div className="pb-3 border-b border-border/50">
                 <h3 className="text-sm font-semibold text-foreground">
