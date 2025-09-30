@@ -4,7 +4,7 @@ import { Footer } from "@/components/organisms/Footer";
 export default function PrivacyPolicyPage() {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
-      <Navbar navLinks={[]} />
+      <Navbar />
 
       <div className="max-w-4xl mx-auto px-6 py-24 text-sm">
         <p>

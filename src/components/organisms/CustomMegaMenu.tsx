@@ -76,85 +76,103 @@ const platformItems = [
         icon: CreditCard,
       },
     ],
-    subCategory: {
-      category: "Billing",
-      description: "Automated billing solutions",
-      items: [
-        {
-          title: "Invoicing",
-          href: "/billing/invoicing",
-          description: "Smart one-time invoicing",
-          icon: Receipt,
-        },
-        {
-          title: "Subscription",
-          href: "/billing/subscription",
-          description: "Usage-based recurring billing",
-          icon: BarChart3,
-        },
-      ],
-    },
+    // subCategory: {
+    //   category: "Billing",
+    //   description: "Automated billing solutions",
+    //   items: [
+    //     {
+    //       title: "Invoicing",
+    //       href: "/billing/invoicing",
+    //       description: "Smart one-time invoicing",
+    //       icon: Receipt,
+    //     },
+    //     {
+    //       title: "Subscription",
+    //       href: "/billing/subscription",
+    //       description: "Usage-based recurring billing",
+    //       icon: BarChart3,
+    //     },
+    //   ],
+    // },
   },
   {
-    category: "Onchain",
-    description: "Blockchain infrastructure",
+    category: "Billing",
+    description: "Automated billing solutions",
     items: [
       {
-        title: "Stablecoin",
-        href: "/onchain/stablecoin",
-        description: "Licensed & compliant stablecoins",
-        icon: Coins,
+        title: "Invoicing",
+        href: "/billing/invoicing",
+        description: "Smart one-time invoicing",
+        icon: Receipt,
       },
       {
-        title: "Ramp",
-        href: "/onchain/ramp",
-        description: "Regulated fiat-crypto gateway",
-        icon: ArrowUpDown,
-      },
-      {
-        title: "Wallets",
-        href: "/onchain/wallets",
-        description: "Institutional-grade MPC wallets",
-        icon: Wallet,
-      },
-      {
-        title: "Bridge",
-        href: "/onchain/bridge",
-        description: "Cross-chain asset transfers",
-        icon: Link2,
+        title: "Subscription",
+        href: "/billing/subscription",
+        description: "Usage-based recurring billing",
+        icon: BarChart3,
       },
     ],
   },
-  {
-    category: "Compliance",
-    description: "Risk and compliance tools",
-    items: [
-      {
-        title: "Identity",
-        href: "/compliance/identity",
-        description: "Instant KYC/KYB verification",
-        icon: User,
-      },
-      {
-        title: "KYT",
-        href: "/compliance/kyt",
-        description: "Real-time transaction monitoring",
-        icon: Search,
-      },
-      {
-        title: "Wallet Screening",
-        href: "/compliance/screening",
-        description: "Crypto address sanctions screening",
-        icon: Shield,
-      },
-      {
-        title: "Tracers",
-        href: "/compliance/tracers",
-        description: "Advanced transaction analysis",
-        icon: Activity,
-      },
-    ],
-  },
+  // {
+  //   category: "Onchain",
+  //   description: "Blockchain infrastructure",
+  //   items: [
+  //     {
+  //       title: "Stablecoin",
+  //       href: "/onchain/stablecoin",
+  //       description: "Licensed & compliant stablecoins",
+  //       icon: Coins,
+  //     },
+  //     {
+  //       title: "Ramp",
+  //       href: "/onchain/ramp",
+  //       description: "Regulated fiat-crypto gateway",
+  //       icon: ArrowUpDown,
+  //     },
+  //     {
+  //       title: "Wallets",
+  //       href: "/onchain/wallets",
+  //       description: "Institutional-grade MPC wallets",
+  //       icon: Wallet,
+  //     },
+  //     {
+  //       title: "Bridge",
+  //       href: "/onchain/bridge",
+  //       description: "Cross-chain asset transfers",
+  //       icon: Link2,
+  //     },
+  //   ],
+  // },
+  // {
+  //   category: "Compliance",
+  //   description: "Risk and compliance tools",
+  //   items: [
+  //     {
+  //       title: "Identity",
+  //       href: "/compliance/identity",
+  //       description: "Instant KYC/KYB verification",
+  //       icon: User,
+  //     },
+  //     {
+  //       title: "KYT",
+  //       href: "/compliance/kyt",
+  //       description: "Real-time transaction monitoring",
+  //       icon: Search,
+  //     },
+  //     {
+  //       title: "Wallet Screening",
+  //       href: "/compliance/screening",
+  //       description: "Crypto address sanctions screening",
+  //       icon: Shield,
+  //     },
+  //     {
+  //       title: "Tracers",
+  //       href: "/compliance/tracers",
+  //       description: "Advanced transaction analysis",
+  //       icon: Activity,
+  //     },
+  //   ],
+  // },
 ];
 
 interface MegaMenuItemProps {
