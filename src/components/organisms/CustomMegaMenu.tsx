@@ -22,7 +22,7 @@ const platformItems = [
     description: "AI-powered business tools",
     items: [
       {
-        title: "Hugogen",
+        title: "Hugogen (Soon)",
         href: "/business/hugogen",
         description: "Next-gen LLM that outperforms GPT",
         icon: Brain,

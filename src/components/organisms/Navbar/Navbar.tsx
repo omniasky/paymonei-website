@@ -35,7 +35,7 @@ const mobilePlatformItems = [
   {
     category: "Business",
     items: [
-      { title: "Hugogen", href: "/business/hugogen" },
+      { title: "Hugogen (Soon)", href: "/business/hugogen" },
       { title: "AI Agent Protocol", href: "/business/ai-agents" },
       { title: "Docs", href: "/business/docs" },
       { title: "Presentations", href: "/business/presentations" },
