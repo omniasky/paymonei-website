@@ -260,6 +260,24 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
                   <Image
+                    src="https://logo.clearbit.com/nus.edu.sg"
+                    alt="NUS"
+                    width={80}
+                    height={40}
+                    className="max-h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
+                  <Image
+                    src="https://logo.clearbit.com/ntu.edu.sg"
+                    alt="NTU"
+                    width={80}
+                    height={40}
+                    className="max-h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
+                  <Image
                     src="https://logo.clearbit.com/microsoft.com"
                     alt="Microsoft"
                     width={80}
