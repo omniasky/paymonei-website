@@ -60,9 +60,9 @@ const mobilePlatformItems = [
 
 export function Navbar({
   navLinks = [
-    { href: "#solutions", label: "Solutions" },
+    // { href: "#solutions", label: "Solutions" },
     { href: "#developers", label: "Developers" },
-    { href: "#resources", label: "Resources" },
+    // { href: "#resources", label: "Resources" },
   ],
 }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
