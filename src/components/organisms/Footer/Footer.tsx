@@ -90,6 +90,17 @@ export function Footer({
                 Streamline workflows, enhance productivity, and optimize
                 processes across your organization.
               </p>
+              <p className="text-sm text-gray-400">
+                Powered by{" "}
+                <Link
+                  href="https://www.omniasky.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                >
+                  Omniasky
+                </Link>
+              </p>
               {/* Social Links */}
               <div className="flex space-x-4 pt-2">
                 {mergedSocialLinks.linkedin && (
