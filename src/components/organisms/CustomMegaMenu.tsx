@@ -19,7 +19,7 @@ import {
 const platformItems = [
   {
     category: "Business",
-    description: "AI-powered business tools",
+    description: "Powered by Hugogen.com",
     items: [
       {
         title: "Hugogen (Soon)",
