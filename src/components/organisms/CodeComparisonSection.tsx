@@ -303,7 +303,7 @@ export function CodeComparisonSection() {
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
             From Complex to{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-600 to-pink-600">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-orange-600 to-amber-600">
               Simple
             </span>
           </h2>

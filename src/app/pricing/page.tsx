@@ -268,11 +268,17 @@ export default function PricingPage() {
               </span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 bg-gradient-to-br from-foreground to-foreground/70 bg-clip-text">
-              Simple, transparent pricing
+              Simple,{" "}
+              <span className="relative text-transparent bg-clip-text bg-gradient-to-tl from-blue-700 via-orange-700 to-blue-700">
+                transparent pricing
+              </span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
               Start for free and scale as you grow. No credit card required.{" "}
-              <br /> <u>No hidden fees, no surprises.</u>
+              <br />
+              <b className="text-zinc-900">
+                <u>No hidden fees, no surprises.</u>
+              </b>
             </p>
           </div>
         </section>
@@ -420,8 +426,7 @@ export default function PricingPage() {
               Ready to get started?
             </h2>
             <p className="text-lg text-muted-foreground mb-10">
-              Join thousands of businesses using Paymonei for their payment
-              infrastructure.
+              Join businesses using Paymonei for their infrastructure.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

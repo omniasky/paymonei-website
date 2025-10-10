@@ -95,7 +95,9 @@ export default function InvoiceFactoringPage() {
               <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 tracking-tight">
                 Turn Invoices Into
                 <br />
-                <span className="text-primary">Instant Cash</span>
+                <span className="relative text-transparent bg-clip-text bg-gradient-to-tl from-blue-700 via-orange-700 to-blue-700">
+                  Instant Cash
+                </span>
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
                 Receive up to 90% of your invoice value instantly. AI-powered

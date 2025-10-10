@@ -36,10 +36,8 @@ const mobilePlatformItems = [
     category: "Business",
     items: [
       { title: "Hugogen (Soon)", href: "/business/hugogen" },
-      { title: "AI Agent Protocol", href: "/business/ai-agents" },
-      { title: "Docs", href: "/business/docs" },
-      { title: "Presentations", href: "/business/presentations" },
-      { title: "Sheets", href: "/business/sheets" },
+      { title: "AI Agent Protocol", href: "/a2a-protocols" },
+      { title: "AI Workspaces", href: "/ai-workspaces" },
     ],
   },
   {
@@ -111,14 +109,14 @@ export function Navbar({
           <div className="hidden lg:flex items-center space-x-2">
             <ThemeToggle />
             <Link href="https://app.paymonei.com/auth/login">
-              <Button className="bg-gradient-to-r w-24 rounded-full from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white">
+              <Button className="bg-gradient-to-r w-24 rounded-full from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white">
                 Login
               </Button>
             </Link>
             <Link href="https://app.paymonei.com/auth/register">
               <Button
                 variant="outline"
-                className="rounded-full border-indigo-600 text-indigo-600 hover:bg-indigo-50 dark:hover:bg-indigo-950"
+                className="rounded-full border-orange-500 text-orange-600 hover:bg-orange-50 dark:hover:bg-orange-950"
               >
                 Sign Up
               </Button>
@@ -203,7 +201,7 @@ export function Navbar({
                           href="https://app.paymonei.com/auth/login"
                           onClick={() => setIsOpen(false)}
                         >
-                          <Button className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white">
+                          <Button className="w-full bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white">
                             Login
                           </Button>
                         </Link>
@@ -216,7 +214,7 @@ export function Navbar({
                         >
                           <Button
                             variant="outline"
-                            className="w-full border-indigo-600 text-indigo-600 hover:bg-indigo-50 dark:hover:bg-indigo-950"
+                            className="w-full border-orange-500 text-orange-600 hover:bg-orange-50 dark:hover:bg-orange-950"
                           >
                             Sign Up
                           </Button>

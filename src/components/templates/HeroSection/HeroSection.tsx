@@ -73,7 +73,7 @@ export function HeroSection({ title, subtitle, primaryCta }: HeroSectionProps) {
               </span>
               <span className="block">
                 <span className="relative inline-block">
-                  <span className="relative text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600">
+                  <span className="relative text-transparent bg-clip-text bg-gradient-to-tl from-orange-500 via-blue-700 to-orange-600">
                     {title.highlight}
                   </span>
                 </span>
@@ -90,11 +90,11 @@ export function HeroSection({ title, subtitle, primaryCta }: HeroSectionProps) {
               <Link href={primaryCta.href}>
                 <Button
                   size="lg"
-                  className="group relative rounded-full px-8 sm:px-10 lg:px-12 py-4 sm:py-5 lg:py-6 text-base sm:text-lg lg:text-xl font-semibold bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-700 hover:to-purple-700 shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300"
+                  className="group relative rounded-full px-8 sm:px-10 lg:px-12 py-4 sm:py-5 lg:py-6 text-base sm:text-lg lg:text-xl font-semibold bg-gradient-to-r from-orange-500 to-amber-600 text-white hover:from-orange-600 hover:to-amber-700 shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300"
                 >
                   <span className="absolute inset-0 rounded-full bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
                   <span className="relative flex items-center justify-center">
-                    Get Started
+                    Try Now Free
                     <svg
                       className="ml-3 w-5 h-5 sm:w-6 sm:h-6 transition-transform group-hover:translate-x-1"
                       fill="none"
