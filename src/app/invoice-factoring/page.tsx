@@ -154,7 +154,7 @@ export default function InvoiceFactoringPage() {
                   90%
                 </div>
                 <div className="text-sm md:text-base text-muted-foreground">
-                  Upfront Payment
+                  Up to Payment
                 </div>
               </div>
               <div className="text-center">
@@ -167,10 +167,10 @@ export default function InvoiceFactoringPage() {
               </div>
               <div className="text-center">
                 <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
-                  0
+                  99%
                 </div>
                 <div className="text-sm md:text-base text-muted-foreground">
-                  Manual Reviews
+                  Automated Reviews
                 </div>
               </div>
               <div className="text-center">

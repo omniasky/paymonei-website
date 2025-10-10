@@ -970,7 +970,187 @@ export default function HomePage() {
 
         {/* Code Comparison Section - How It Works */}
         <CodeComparisonSection />
+                See how Paymonei transforms complex stablecoin and card payment
+                integrations into simple API calls.
+              </p>
+            </div>
 
+            {/* Code Comparisons */}
+            <Tabs defaultValue="payments" className="w-full">
+              <TabsList className="grid w-full max-w-3xl mx-auto grid-cols-1 md:grid-cols-3 h-auto gap-2 bg-muted/30 p-2 rounded-xl mb-12">
+                <TabsTrigger
+                  value="payments"
+                  className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground py-3 px-4 text-sm md:text-base font-medium rounded-lg transition-all"
+                >
+                  Handle Payments
+                </TabsTrigger>
+                <TabsTrigger
+                  value="tracking"
+                  className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground py-3 px-4 text-sm md:text-base font-medium rounded-lg transition-all"
+                >
+                  Track Usage & Billing
+                </TabsTrigger>
+                <TabsTrigger
+                  value="webhooks"
+                  className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground py-3 px-4 text-sm md:text-base font-medium rounded-lg transition-all"
+                >
+                  No Webhooks Required
+                </TabsTrigger>
+              </TabsList>
+
+              {/* Tab 1: Handle Payments */}
+              <TabsContent value="payments" className="mt-0">
+                <div className="relative">
+                  <div className="mb-8 text-center">
+                    <p className="text-muted-foreground">
+                      Process stablecoin and card payments with a single API
+                    </p>
+                  </div>
+
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    {/* Legacy Way */}
+                    <div className="relative">
+                      <div className="bg-zinc-900 dark:bg-zinc-950 border border-zinc-700 dark:border-zinc-800 rounded-lg overflow-hidden shadow-xl">
+                        {/* Mac-style window chrome */}
+                        <div className="bg-zinc-800 dark:bg-zinc-900 px-4 py-3 border-b border-zinc-700 dark:border-zinc-800 flex items-center gap-2">
+                          <div className="flex gap-1.5">
+                            <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                            <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                            <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                          </div>
+                          <span className="text-xs text-zinc-400 ml-1 font-mono">legacy-integration.tsx</span>
+                        </div>
+                        <div className="p-4 overflow-x-auto bg-zinc-900 dark:bg-zinc-950">
+                          {/* eslint-disable react/no-unescaped-entities */}
+                          <pre className="text-xs leading-relaxed font-mono"><code><span className="text-zinc-500">{"// 1. Create stablecoin payment session"}</span>{"\n"}<span className="text-purple-400">const</span> <span className="text-blue-300">usdcSession</span> <span className="text-zinc-100">= </span><span className="text-purple-400">await</span> <span className="text-blue-300">CoinSDK</span><span className="text-zinc-100">.</span><span className="text-blue-300">payments</span><span className="text-zinc-100">.</span><span className="text-yellow-300">create</span><span className="text-zinc-100">({"{"}</span>{"\n  "}<span className="text-blue-300">customer</span><span className="text-zinc-100">: </span><span className="text-green-400">"cust_abc123"</span><span className="text-zinc-100">,</span>{"\n  "}<span className="text-blue-300">amount</span><span className="text-zinc-100">: </span><span className="text-orange-400">10000</span><span className="text-zinc-100">,</span>{"\n  "}<span className="text-blue-300">currency</span><span className="text-zinc-100">: </span><span className="text-green-400">"USDC"</span><span className="text-zinc-100">,</span>{"\n  "}<span className="text-blue-300">chain</span><span className="text-zinc-100">: </span><span className="text-green-400">"ethereum"</span><span className="text-zinc-100">,</span>{"\n  "}<span className="text-blue-300">wallet_address</span><span className="text-zinc-100">: </span><span className="text-green-400">"0x742d35Cc..."</span><span className="text-zinc-100">,</span>{"\n  "}<span className="text-blue-300">callback_url</span><span className="text-zinc-100">: </span><span className="text-green-400">"https://myapp.com/webhook"</span><span className="text-zinc-100">,</span>{"\n"}<span className="text-zinc-100">{"}"});</span>{"\n\n"}<span className="text-zinc-500">{"// 2. Create card payment separately"}</span>{"\n"}<span className="text-purple-400">const</span> <span className="text-blue-300">cardSession</span> <span className="text-zinc-100">= </span><span className="text-purple-400">await</span> <span className="text-blue-300">CardSDK</span><span className="text-zinc-100">.</span><span className="text-blue-300">checkout</span><span className="text-zinc-100">.</span><span className="text-yellow-300">create</span><span className="text-zinc-100">({"{"}</span>{"\n  "}<span className="text-blue-300">customer_id</span><span className="text-zinc-100">: </span><span className="text-green-400">"cust_abc123"</span><span className="text-zinc-100">,</span>{"\n  "}<span className="text-blue-300">amount</span><span className="text-zinc-100">: </span><span className="text-orange-400">10000</span><span className="text-zinc-100">,</span>{"\n  "}<span className="text-blue-300">currency</span><span className="text-zinc-100">: </span><span className="text-green-400">"USD"</span><span className="text-zinc-100">,</span>{"\n  "}<span className="text-blue-300">card_token</span><span className="text-zinc-100">: </span><span className="text-green-400">"tok_visa1234"</span><span className="text-zinc-100">,</span>{"\n  "}<span className="text-blue-300">metadata</span><span className="text-zinc-100">: {"{"} </span><span className="text-blue-300">order_id</span><span className="text-zinc-100">: </span><span className="text-green-400">"ord_123"</span><span className="text-zinc-100"> {"}"}</span><span className="text-zinc-100">,</span>{"\n"}<span className="text-zinc-100">{"}"});</span>{"\n\n"}<span className="text-zinc-500">{"// 3. Handle different responses"}</span>{"\n"}<span className="text-purple-400">if</span> <span className="text-zinc-100">(</span><span className="text-blue-300">usdcSession</span><span className="text-zinc-100">.</span><span className="text-blue-300">status</span> <span className="text-zinc-100">=== </span><span className="text-green-400">"pending"</span><span className="text-zinc-100">) {"{"}</span>{"\n  "}<span className="text-zinc-500">{"// Wait for blockchain confirmation"}</span>{"\n  "}<span className="text-purple-400">await</span> <span className="text-yellow-300">pollTransaction</span><span className="text-zinc-100">(</span><span className="text-blue-300">usdcSession</span><span className="text-zinc-100">.</span><span className="text-blue-300">tx_hash</span><span className="text-zinc-100">);</span>{"\n"}<span className="text-zinc-100">{"}"}</span> <span className="text-purple-400">else if</span> <span className="text-zinc-100">(</span><span className="text-blue-300">cardSession</span><span className="text-zinc-100">.</span><span className="text-blue-300">status</span> <span className="text-zinc-100">=== </span><span className="text-green-400">"requires_action"</span><span className="text-zinc-100">) {"{"}</span>{"\n  "}<span className="text-zinc-500">{"// Handle 3DS authentication"}</span>{"\n  "}<span className="text-purple-400">await</span> <span className="text-yellow-300">handle3DS</span><span className="text-zinc-100">(</span><span className="text-blue-300">cardSession</span><span className="text-zinc-100">.</span><span className="text-blue-300">client_secret</span><span className="text-zinc-100">);</span>{"\n"}<span className="text-zinc-100">{"}"}</span></code></pre>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Paymonei Way */}
+                    <div className="relative">
+                      <div className="bg-zinc-900 dark:bg-zinc-950 border-2 border-primary rounded-lg overflow-hidden shadow-xl">
+                        {/* Mac-style window chrome */}
+                        <div className="bg-zinc-800 dark:bg-zinc-900 px-4 py-3 border-b border-zinc-700 dark:border-zinc-800 flex items-center gap-2">
+                          <div className="flex gap-1.5">
+                            <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                            <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                            <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                          </div>
+                          <span className="text-xs text-zinc-400 ml-1 font-mono">paymonei.tsx</span>
+                        </div>
+                        <div className="p-4 overflow-x-auto bg-zinc-900 dark:bg-zinc-950">
+                          {/* eslint-disable react/no-unescaped-entities */}
+                          <pre className="text-xs leading-relaxed font-mono"><code><span className="text-zinc-500">{"// One API for stablecoins AND cards"}</span>{"\n"}<span className="text-purple-400">const</span> <span className="text-blue-300">payment</span> <span className="text-zinc-100">= </span><span className="text-purple-400">await</span> <span className="text-blue-300">paymonei</span><span className="text-zinc-100">.</span><span className="text-blue-300">payments</span><span className="text-zinc-100">.</span><span className="text-yellow-300">create</span><span className="text-zinc-100">({"{"}</span>{"\n  "}<span className="text-blue-300">amount</span><span className="text-zinc-100">: </span><span className="text-orange-400">10000</span><span className="text-zinc-100">,</span>{"\n  "}<span className="text-blue-300">currency</span><span className="text-zinc-100">: </span><span className="text-green-400">"USD"</span><span className="text-zinc-100">,</span>{"\n  "}<span className="text-blue-300">customer_id</span><span className="text-zinc-100">: </span><span className="text-green-400">"cust_abc123"</span><span className="text-zinc-100">,</span>{"\n  "}<span className="text-zinc-500">{"// Customer chooses: USDC, USDT, or Card"}</span>{"\n  "}<span className="text-zinc-500">{"// Everything handled automatically"}</span>{"\n"}<span className="text-zinc-100">{"}"});</span>{"\n\n"}<span className="text-zinc-500">{"// That's it! ✨"}</span>{"\n"}<span className="text-zinc-500">{"// - No separate SDKs"}</span>{"\n"}<span className="text-zinc-500">{"// - No blockchain polling"}</span>{"\n"}<span className="text-zinc-500">{"// - No 3DS handling"}</span>{"\n"}<span className="text-zinc-500">{"// - Unified settlement"}</span></code></pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </TabsContent>
+
+              {/* Tab 2: Track Usage & Billing Limits */}
+              <TabsContent value="tracking" className="mt-0">
+                <div className="relative">
+                  <div className="mb-8 text-center">
+                    <p className="text-muted-foreground">
+                      Monitor transaction volumes and manage billing cycles
+                      automatically
+                    </p>
+                  </div>
+
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    {/* Legacy Way */}
+                    <div className="relative">
+                      <div className="bg-zinc-900 dark:bg-zinc-950 border border-zinc-700 dark:border-zinc-800 rounded-lg overflow-hidden shadow-xl">
+                        <div className="bg-zinc-800 dark:bg-zinc-900 px-4 py-3 border-b border-zinc-700 dark:border-zinc-800 flex items-center gap-2">
+                          <div className="flex gap-1.5">
+                            <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                            <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                            <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                          </div>
+                          <span className="text-xs text-zinc-400 ml-1 font-mono">usage-tracking.tsx</span>
+                        </div>
+                        <div className="p-4 overflow-x-auto bg-zinc-900 dark:bg-zinc-950">
+                          {/* eslint-disable react/no-unescaped-entities */}
+                          <pre className="text-xs leading-relaxed font-mono"><code><span className="text-zinc-500">{"// 1. Track stablecoin volume manually"}</span>{"\n"}<span className="text-purple-400">const</span> <span className="text-blue-300">user</span> <span className="text-zinc-100">= </span><span className="text-purple-400">await</span> <span className="text-blue-300">db</span><span className="text-zinc-100">.</span><span className="text-yellow-300">getUser</span><span className="text-zinc-100">(</span><span className="text-blue-300">userId</span><span className="text-zinc-100">);</span>{"\n"}<span className="text-purple-400">const</span> <span className="text-blue-300">currentVolume</span> <span className="text-zinc-100">= </span><span className="text-blue-300">user</span><span className="text-zinc-100">.</span><span className="text-blue-300">monthly_volume</span> <span className="text-zinc-100">|| </span><span className="text-orange-400">0</span><span className="text-zinc-100">;</span>{"\n\n"}<span className="text-purple-400">await</span> <span className="text-blue-300">db</span><span className="text-zinc-100">.</span><span className="text-yellow-300">updateUser</span><span className="text-zinc-100">(</span><span className="text-blue-300">userId</span><span className="text-zinc-100">, {"{"}</span>{"\n  "}<span className="text-blue-300">monthly_volume</span><span className="text-zinc-100">: </span><span className="text-blue-300">currentVolume</span> <span className="text-zinc-100">+ </span><span className="text-blue-300">amount</span><span className="text-zinc-100">,</span>{"\n  "}<span className="text-blue-300">last_transaction</span><span className="text-zinc-100">: </span><span className="text-blue-300">Date</span><span className="text-zinc-100">.</span><span className="text-yellow-300">now</span><span className="text-zinc-100">(),</span>{"\n"}<span className="text-zinc-100">{"}"});</span>{"\n\n"}<span className="text-zinc-500">{"// 2. Check against plan limits"}</span>{"\n"}<span className="text-purple-400">if</span> <span className="text-zinc-100">(</span><span className="text-blue-300">user</span><span className="text-zinc-100">.</span><span className="text-blue-300">monthly_volume</span> <span className="text-zinc-100">&gt; </span><span className="text-blue-300">user</span><span className="text-zinc-100">.</span><span className="text-blue-300">plan_limit</span><span className="text-zinc-100">) {"{"}</span>{"\n  "}<span className="text-purple-400">throw new</span> <span className="text-yellow-300">Error</span><span className="text-zinc-100">(</span><span className="text-green-400">"Monthly limit exceeded"</span><span className="text-zinc-100">);</span>{"\n"}<span className="text-zinc-100">{"}"}</span>{"\n\n"}<span className="text-zinc-500">{"// 3. Track card usage separately"}</span>{"\n"}<span className="text-purple-400">await</span> <span className="text-blue-300">CardSDK</span><span className="text-zinc-100">.</span><span className="text-blue-300">usage</span><span className="text-zinc-100">.</span><span className="text-yellow-300">track</span><span className="text-zinc-100">({"{"}</span>{"\n  "}<span className="text-blue-300">customer_id</span><span className="text-zinc-100">: </span><span className="text-blue-300">user</span><span className="text-zinc-100">.</span><span className="text-blue-300">card_customer_id</span><span className="text-zinc-100">,</span>{"\n  "}<span className="text-blue-300">event</span><span className="text-zinc-100">: </span><span className="text-green-400">"transaction"</span><span className="text-zinc-100">,</span>{"\n  "}<span className="text-blue-300">value</span><span className="text-zinc-100">: </span><span className="text-blue-300">amount</span><span className="text-zinc-100">,</span>{"\n"}<span className="text-zinc-100">{"}"});</span></code></pre>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Paymonei Way */}
+                    <div className="relative">
+                      <div className="bg-zinc-900 dark:bg-zinc-950 border-2 border-primary rounded-lg overflow-hidden shadow-xl">
+                        <div className="bg-zinc-800 dark:bg-zinc-900 px-4 py-3 border-b border-zinc-700 dark:border-zinc-800 flex items-center gap-2">
+                          <div className="flex gap-1.5">
+                            <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                            <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                            <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                          </div>
+                          <span className="text-xs text-zinc-400 ml-1 font-mono">paymonei-usage.tsx</span>
+                        </div>
+                        <div className="p-4 overflow-x-auto bg-zinc-900 dark:bg-zinc-950">
+                          {/* eslint-disable react/no-unescaped-entities */}
+                          <pre className="text-xs leading-relaxed font-mono"><code><span className="text-zinc-500">{"// Everything tracked automatically"}</span>{"\n"}<span className="text-purple-400">const</span> <span className="text-blue-300">usage</span> <span className="text-zinc-100">= </span><span className="text-purple-400">await</span> <span className="text-blue-300">paymonei</span><span className="text-zinc-100">.</span><span className="text-blue-300">usage</span><span className="text-zinc-100">.</span><span className="text-yellow-300">get</span><span className="text-zinc-100">({"{"}</span>{"\n  "}<span className="text-blue-300">customer_id</span><span className="text-zinc-100">: </span><span className="text-green-400">"cust_abc123"</span><span className="text-zinc-100">,</span>{"\n"}<span className="text-zinc-100">{"}"});</span>{"\n\n"}<span className="text-blue-300">console</span><span className="text-zinc-100">.</span><span className="text-yellow-300">log</span><span className="text-zinc-100">(</span><span className="text-blue-300">usage</span><span className="text-zinc-100">);</span>{"\n"}<span className="text-zinc-500">{"// {"}</span>{"\n"}<span className="text-zinc-500">{"//   monthly_volume: 8500,"}</span>{"\n"}<span className="text-zinc-500">{"//   plan_limit: 10000,"}</span>{"\n"}<span className="text-zinc-500">{"//   remaining: 1500,"}</span>{"\n"}<span className="text-zinc-500">{"//   billing_cycle_end: \"2024-12-01\","}</span>{"\n"}<span className="text-zinc-500">{"//   status: \"active\""}</span>{"\n"}<span className="text-zinc-500">{"// }"}</span>{"\n\n"}<span className="text-zinc-500">{"// That's it! ✨"}</span>{"\n"}<span className="text-zinc-500">{"// - Automatic volume tracking"}</span>{"\n"}<span className="text-zinc-500">{"// - Unified across all payment methods"}</span>{"\n"}<span className="text-zinc-500">{"// - Automatic billing cycle resets"}</span>{"\n"}<span className="text-zinc-500">{"// - No manual database updates"}</span></code></pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </TabsContent>
+
+              {/* Tab 3: No Webhooks Required */}
+              <TabsContent value="webhooks" className="mt-0">
+                <div className="relative">
+                  <div className="mb-8 text-center">
+                    <p className="text-muted-foreground">
+                      Check payment status without complex webhook
+                      infrastructure
+                    </p>
+                  </div>
+
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    {/* Legacy Way */}
+                    <div className="relative">
+                      <div className="bg-zinc-900 dark:bg-zinc-950 border border-zinc-700 dark:border-zinc-800 rounded-lg overflow-hidden shadow-xl">
+                        <div className="bg-zinc-800 dark:bg-zinc-900 px-4 py-3 border-b border-zinc-700 dark:border-zinc-800 flex items-center gap-2">
+                          <div className="flex gap-1.5">
+                            <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                            <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                            <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                          </div>
+                          <span className="text-xs text-zinc-400 ml-1 font-mono">webhook-handlers.tsx</span>
+                        </div>
+                        <div className="p-4 overflow-x-auto bg-zinc-900 dark:bg-zinc-950">
+                          {/* eslint-disable react/no-unescaped-entities */}
+                          <pre className="text-xs leading-relaxed font-mono"><code><span className="text-zinc-500">{"// 1. Setup webhook endpoints"}</span>{"\n"}<span className="text-blue-300">app</span><span className="text-zinc-100">.</span><span className="text-yellow-300">post</span><span className="text-zinc-100">(</span><span className="text-green-400">"/webhooks/coin"</span><span className="text-zinc-100">, </span><span className="text-purple-400">async</span> <span className="text-zinc-100">(</span><span className="text-blue-300">req</span><span className="text-zinc-100">, </span><span className="text-blue-300">res</span><span className="text-zinc-100">) =&gt; {"{"}</span>{"\n  "}<span className="text-purple-400">const</span> <span className="text-blue-300">event</span> <span className="text-zinc-100">= </span><span className="text-blue-300">req</span><span className="text-zinc-100">.</span><span className="text-blue-300">body</span><span className="text-zinc-100">;</span>{"\n\n  "}<span className="text-purple-400">switch</span><span className="text-zinc-100">(</span><span className="text-blue-300">event</span><span className="text-zinc-100">.</span><span className="text-blue-300">type</span><span className="text-zinc-100">) {"{"}</span>{"\n    "}<span className="text-purple-400">case</span> <span className="text-green-400">"payment.confirmed"</span><span className="text-zinc-100">:</span>{"\n      "}<span className="text-purple-400">await</span> <span className="text-blue-300">db</span><span className="text-zinc-100">.</span><span className="text-yellow-300">updatePayment</span><span className="text-zinc-100">(</span><span className="text-blue-300">event</span><span className="text-zinc-100">.</span><span className="text-blue-300">payment_id</span><span className="text-zinc-100">, {"{"}</span>{"\n        "}<span className="text-blue-300">status</span><span className="text-zinc-100">: </span><span className="text-green-400">"confirmed"</span><span className="text-zinc-100">,</span>{"\n      "}<span className="text-zinc-100">{"}"});</span>{"\n      "}<span className="text-purple-400">break</span><span className="text-zinc-100">;</span>{"\n    "}<span className="text-purple-400">case</span> <span className="text-green-400">"payment.failed"</span><span className="text-zinc-100">:</span>{"\n      "}<span className="text-purple-400">await</span> <span className="text-blue-300">db</span><span className="text-zinc-100">.</span><span className="text-yellow-300">updatePayment</span><span className="text-zinc-100">(</span><span className="text-blue-300">event</span><span className="text-zinc-100">.</span><span className="text-blue-300">payment_id</span><span className="text-zinc-100">, {"{"}</span>{"\n        "}<span className="text-blue-300">status</span><span className="text-zinc-100">: </span><span className="text-green-400">"failed"</span><span className="text-zinc-100">,</span>{"\n      "}<span className="text-zinc-100">{"}"});</span>{"\n      "}<span className="text-purple-400">break</span><span className="text-zinc-100">;</span>{"\n  "}<span className="text-zinc-100">{"}"}</span>{"\n"}<span className="text-zinc-100">{"}"});</span>{"\n\n"}<span className="text-blue-300">app</span><span className="text-zinc-100">.</span><span className="text-yellow-300">post</span><span className="text-zinc-100">(</span><span className="text-green-400">"/webhooks/card"</span><span className="text-zinc-100">, </span><span className="text-purple-400">async</span> <span className="text-zinc-100">(</span><span className="text-blue-300">req</span><span className="text-zinc-100">, </span><span className="text-blue-300">res</span><span className="text-zinc-100">) =&gt; {"{"}</span>{"\n  "}<span className="text-purple-400">const</span> <span className="text-blue-300">event</span> <span className="text-zinc-100">= </span><span className="text-blue-300">req</span><span className="text-zinc-100">.</span><span className="text-blue-300">body</span><span className="text-zinc-100">;</span>{"\n  "}<span className="text-zinc-500">{"// Different event format!"}</span>{"\n\n  "}<span className="text-purple-400">if</span> <span className="text-zinc-100">(</span><span className="text-blue-300">event</span><span className="text-zinc-100">.</span><span className="text-blue-300">event_type</span> <span className="text-zinc-100">=== </span><span className="text-green-400">"charge.succeeded"</span><span className="text-zinc-100">) {"{"}</span>{"\n    "}<span className="text-purple-400">await</span> <span className="text-blue-300">db</span><span className="text-zinc-100">.</span><span className="text-yellow-300">updatePayment</span><span className="text-zinc-100">(</span><span className="text-blue-300">event</span><span className="text-zinc-100">.</span><span className="text-blue-300">charge</span><span className="text-zinc-100">.</span><span className="text-blue-300">id</span><span className="text-zinc-100">, {"{"}</span>{"\n      "}<span className="text-blue-300">status</span><span className="text-zinc-100">: </span><span className="text-green-400">"succeeded"</span><span className="text-zinc-100">,</span>{"\n    "}<span className="text-zinc-100">{"}"});</span>{"\n  "}<span className="text-zinc-100">{"}"}</span>{"\n"}<span className="text-zinc-100">{"}"});</span></code></pre>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Paymonei Way */}
+                    <div className="relative">
+                      <div className="bg-zinc-900 dark:bg-zinc-950 border-2 border-primary rounded-lg overflow-hidden shadow-xl">
+                        <div className="bg-zinc-800 dark:bg-zinc-900 px-4 py-3 border-b border-zinc-700 dark:border-zinc-800 flex items-center gap-2">
+                          <div className="flex gap-1.5">
+                            <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                            <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                            <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                          </div>
+                          <span className="text-xs text-zinc-400 ml-1 font-mono">paymonei-simple.tsx</span>
+                        </div>
+                        <div className="p-4 overflow-x-auto bg-zinc-900 dark:bg-zinc-950">
+                          {/* eslint-disable react/no-unescaped-entities */}
+                          <pre className="text-xs leading-relaxed font-mono"><code><span className="text-zinc-500">{"// Just check the status when you need it"}</span>{"\n"}<span className="text-purple-400">const</span> <span className="text-blue-300">payment</span> <span className="text-zinc-100">= </span><span className="text-purple-400">await</span> <span className="text-blue-300">paymonei</span><span className="text-zinc-100">.</span><span className="text-blue-300">payments</span><span className="text-zinc-100">.</span><span className="text-yellow-300">get</span><span className="text-zinc-100">({"{"}</span>{"\n  "}<span className="text-blue-300">payment_id</span><span className="text-zinc-100">: </span><span className="text-green-400">"pay_abc123"</span><span className="text-zinc-100">,</span>{"\n"}<span className="text-zinc-100">{"}"});</span>{"\n\n"}<span className="text-purple-400">if</span> <span className="text-zinc-100">(</span><span className="text-blue-300">payment</span><span className="text-zinc-100">.</span><span className="text-blue-300">status</span> <span className="text-zinc-100">=== </span><span className="text-green-400">"succeeded"</span><span className="text-zinc-100">) {"{"}</span>{"\n  "}<span className="text-zinc-500">{"// Payment completed!"}</span>{"\n  "}<span className="text-purple-400">await</span> <span className="text-yellow-300">fulfillOrder</span><span className="text-zinc-100">(</span><span className="text-blue-300">payment</span><span className="text-zinc-100">.</span><span className="text-blue-300">metadata</span><span className="text-zinc-100">.</span><span className="text-blue-300">order_id</span><span className="text-zinc-100">);</span>{"\n"}<span className="text-zinc-100">{"}"}</span>{"\n\n"}<span className="text-zinc-500">{"// Or use optional webhooks if you prefer"}</span>{"\n"}<span className="text-blue-300">app</span><span className="text-zinc-100">.</span><span className="text-yellow-300">post</span><span className="text-zinc-100">(</span><span className="text-green-400">"/webhooks"</span><span className="text-zinc-100">, </span><span className="text-purple-400">async</span> <span className="text-zinc-100">(</span><span className="text-blue-300">req</span><span className="text-zinc-100">, </span><span className="text-blue-300">res</span><span className="text-zinc-100">) =&gt; {"{"}</span>{"\n  "}<span className="text-purple-400">const</span> <span className="text-blue-300">event</span> <span className="text-zinc-100">= </span><span className="text-blue-300">paymonei</span><span className="text-zinc-100">.</span><span className="text-blue-300">webhooks</span><span className="text-zinc-100">.</span><span className="text-yellow-300">verify</span><span className="text-zinc-100">(</span><span className="text-blue-300">req</span><span className="text-zinc-100">);</span>{"\n\n  "}<span className="text-purple-400">if</span> <span className="text-zinc-100">(</span><span className="text-blue-300">event</span><span className="text-zinc-100">.</span><span className="text-blue-300">type</span> <span className="text-zinc-100">=== </span><span className="text-green-400">"payment.succeeded"</span><span className="text-zinc-100">) {"{"}</span>{"\n    "}<span className="text-purple-400">await</span> <span className="text-yellow-300">fulfillOrder</span><span className="text-zinc-100">(</span><span className="text-blue-300">event</span><span className="text-zinc-100">.</span><span className="text-blue-300">data</span><span className="text-zinc-100">.</span><span className="text-blue-300">metadata</span><span className="text-zinc-100">.</span><span className="text-blue-300">order_id</span><span className="text-zinc-100">);</span>{"\n  "}<span className="text-zinc-100">{"}"}</span>{"\n"}<span className="text-zinc-100">{"}"});</span>{"\n\n"}<span className="text-zinc-500">{"// That's it! ✨"}</span>{"\n"}<span className="text-zinc-500">{"// - No mandatory webhooks"}</span>{"\n"}<span className="text-zinc-500">{"// - Simple polling or SSE"}</span>{"\n"}<span className="text-zinc-500">{"// - Unified event format"}</span></code></pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </TabsContent>
+            </Tabs>
+          </div>
+        </section>
 
         <section className="py-24 px-2 xs:px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background via-background/95 to-muted/20">
           <div className="max-w-7xl mx-auto">

@@ -271,8 +271,8 @@ export default function PricingPage() {
               Simple, transparent pricing
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-              Start for free and scale as you grow. No credit card required. No
-              hidden fees, no surprises.
+              Start for free and scale as you grow. No credit card required.{" "}
+              <br /> <u>No hidden fees, no surprises.</u>
             </p>
           </div>
         </section>
