@@ -29,7 +29,8 @@ export const metadata: Metadata = {
   description:
     "Enterprise stablecoin payment infrastructure and API for global businesses. Process USDC payments, crypto on/off-ramps, and cross-border transactions with AI-native automation and institutional security.",
   openGraph: {
-    title: "Stablecoin Payment API & Infrastructure | Enterprise Crypto Gateway",
+    title:
+      "Stablecoin Payment API & Infrastructure | Enterprise Crypto Gateway",
     description:
       "Enterprise-grade stablecoin payment infrastructure and API. Process USDC, crypto on/off-ramps, and global payments with AI-native automation and institutional security.",
     url: "https://paymonei.com",
@@ -76,7 +77,8 @@ const structuredData = {
       "@id": "https://paymonei.com/#website",
       url: "https://paymonei.com",
       name: "Paymonei",
-      description: "Stablecoin payment API and infrastructure for global businesses",
+      description:
+        "Stablecoin payment API and infrastructure for global businesses",
       publisher: {
         "@id": "https://paymonei.com/#organization",
       },
@@ -190,7 +192,7 @@ export default function HomePage() {
                 {/* First set of logos */}
                 <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
                   <Image
-                    src="https://logo.clearbit.com/circle.com"
+                    src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/companies/circle.jpeg"
                     alt="Circle"
                     width={80}
                     height={40}
@@ -199,7 +201,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
                   <Image
-                    src="https://logo.clearbit.com/brex.com"
+                    src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/companies/brex.jpeg"
                     alt="Brex"
                     width={80}
                     height={40}
@@ -208,7 +210,16 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
                   <Image
-                    src="https://logo.clearbit.com/grab.com"
+                    src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/companies/accenture.jpeg"
+                    alt="Accenture"
+                    width={80}
+                    height={40}
+                    className="max-h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
+                  <Image
+                    src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/companies/grab.jpeg"
                     alt="Grab"
                     width={80}
                     height={40}
@@ -217,7 +228,25 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
                   <Image
-                    src="https://logo.clearbit.com/gojek.com"
+                    src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/companies/github.jpeg"
+                    alt="Github"
+                    width={80}
+                    height={40}
+                    className="max-h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
+                  <Image
+                    src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/companies/expedia.jpeg"
+                    alt="Expedia"
+                    width={80}
+                    height={40}
+                    className="max-h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
+                  <Image
+                    src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/companies/gojek.jpeg"
                     alt="Gojek"
                     width={80}
                     height={40}
@@ -226,7 +255,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
                   <Image
-                    src="https://logo.clearbit.com/traveloka.com"
+                    src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/companies/traveloka.jpeg"
                     alt="Traveloka"
                     width={80}
                     height={40}
@@ -235,16 +264,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
                   <Image
-                    src="https://logo.clearbit.com/canva.com"
-                    alt="Canva"
-                    width={80}
-                    height={40}
-                    className="max-h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300"
-                  />
-                </div>
-                <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
-                  <Image
-                    src="https://logo.clearbit.com/tokopedia.com"
+                    src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/companies/tokopedia.jpeg"
                     alt="Tokopedia"
                     width={80}
                     height={40}
@@ -253,7 +273,16 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
                   <Image
-                    src="https://logo.clearbit.com/openai.com"
+                    src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/companies/blibli.jpeg"
+                    alt="Blibli"
+                    width={80}
+                    height={40}
+                    className="max-h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
+                  <Image
+                    src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/companies/chatgpt.jpeg"
                     alt="OpenAI"
                     width={80}
                     height={40}
@@ -262,7 +291,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
                   <Image
-                    src="https://logo.clearbit.com/nus.edu.sg"
+                    src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/companies/nus.edu.jpeg"
                     alt="NUS"
                     width={80}
                     height={40}
@@ -271,7 +300,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
                   <Image
-                    src="https://logo.clearbit.com/ntu.edu.sg"
+                    src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/companies/ntu.edu.jpeg"
                     alt="NTU"
                     width={80}
                     height={40}
@@ -280,7 +309,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
                   <Image
-                    src="https://logo.clearbit.com/microsoft.com"
+                    src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/companies/microsoft.jpeg"
                     alt="Microsoft"
                     width={80}
                     height={40}
@@ -289,7 +318,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
                   <Image
-                    src="https://logo.clearbit.com/quicknode.com"
+                    src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/companies/quicknode.jpeg"
                     alt="Quicknode"
                     width={80}
                     height={40}
@@ -298,7 +327,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
                   <Image
-                    src="https://logo.clearbit.com/ripple.com"
+                    src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/companies/ripple.jpeg"
                     alt="Ripple"
                     width={80}
                     height={40}
@@ -307,7 +336,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
                   <Image
-                    src="https://logo.clearbit.com/paypal.com"
+                    src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/companies/paypal.jpeg"
                     alt="Paypal"
                     width={80}
                     height={40}
@@ -316,8 +345,8 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
                   <Image
-                    src="https://logo.clearbit.com/deliveroo.com.sg"
-                    alt="Deliveroo"
+                    src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/companies/instarem.jpeg"
+                    alt="Instarem"
                     width={80}
                     height={40}
                     className="max-h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300"
@@ -325,7 +354,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
                   <Image
-                    src="https://logo.clearbit.com/resend.com"
+                    src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/companies/resend.jpeg"
                     alt="Resend"
                     width={80}
                     height={40}
@@ -334,7 +363,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
                   <Image
-                    src="https://logo.clearbit.com/chainalysis.com"
+                    src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/companies/chainalysis.jpeg"
                     alt="Chainalysis"
                     width={80}
                     height={40}
@@ -343,7 +372,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
                   <Image
-                    src="https://logo.clearbit.com/nium.com"
+                    src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/companies/nium.jpeg"
                     alt="Nium"
                     width={80}
                     height={40}
@@ -352,7 +381,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
                   <Image
-                    src="https://logo.clearbit.com/vercel.com"
+                    src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/companies/vercel.jpeg"
                     alt="Vercel"
                     width={80}
                     height={40}
@@ -361,7 +390,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
                   <Image
-                    src="https://logo.clearbit.com/phantom.com"
+                    src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/companies/phantom.jpeg"
                     alt="Phantom"
                     width={80}
                     height={40}
@@ -370,7 +399,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
                   <Image
-                    src="https://logo.clearbit.com/shopee.com"
+                    src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/companies/shopee.jpeg"
                     alt="Shopee"
                     width={80}
                     height={40}
@@ -379,7 +408,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
                   <Image
-                    src="https://logo.clearbit.com/coinbase.com"
+                    src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/companies/coinbase.jpeg"
                     alt="Coinbase"
                     width={80}
                     height={40}
@@ -388,7 +417,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
                   <Image
-                    src="https://logo.clearbit.com/figma.com"
+                    src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/companies/figma.jpeg"
                     alt="Figma"
                     width={80}
                     height={40}
@@ -397,7 +426,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
                   <Image
-                    src="https://logo.clearbit.com/anthropic.com"
+                    src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/companies/anthropic.jpeg"
                     alt="Anthropic"
                     width={80}
                     height={40}
@@ -406,7 +435,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
                   <Image
-                    src="https://logo.clearbit.com/visa.com"
+                    src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/companies/visa.jpeg"
                     alt="Visa"
                     width={80}
                     height={40}
@@ -415,7 +444,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
                   <Image
-                    src="https://logo.clearbit.com/mastercard.com"
+                    src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/companies/mastercard.jpeg"
                     alt="Mastercard"
                     width={80}
                     height={40}
@@ -424,7 +453,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
                   <Image
-                    src="https://logo.clearbit.com/aws.amazon.com"
+                    src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/companies/aws.jpeg"
                     alt="AWS"
                     width={80}
                     height={40}
@@ -433,7 +462,16 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
                   <Image
-                    src="https://logo.clearbit.com/infura.io"
+                    src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/companies/bytedance.jpeg"
+                    alt="Bytedance"
+                    width={80}
+                    height={40}
+                    className="max-h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
+                  <Image
+                    src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/companies/infura.jpeg"
                     alt="Infura"
                     width={80}
                     height={40}
@@ -442,7 +480,16 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
                   <Image
-                    src="https://logo.clearbit.com/uber.com"
+                    src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/companies/tiket.jpeg"
+                    alt="Tiket"
+                    width={80}
+                    height={40}
+                    className="max-h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
+                  <Image
+                    src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/companies/uber.jpeg"
                     alt="Uber"
                     width={80}
                     height={40}
@@ -451,7 +498,16 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
                   <Image
-                    src="https://logo.clearbit.com/alchemy.com"
+                    src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/companies/google.jpeg"
+                    alt="Google"
+                    width={80}
+                    height={40}
+                    className="max-h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
+                  <Image
+                    src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/companies/amazon.jpeg"
                     alt="Alchemy"
                     width={80}
                     height={40}
@@ -460,16 +516,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
                   <Image
-                    src="https://logo.clearbit.com/airbnb.com"
-                    alt="Airbnb"
-                    width={80}
-                    height={40}
-                    className="max-h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300"
-                  />
-                </div>
-                <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
-                  <Image
-                    src="https://logo.clearbit.com/stripe.com"
+                    src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/companies/stripe.jpeg"
                     alt="Stripe"
                     width={80}
                     height={40}
@@ -478,7 +525,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
                   <Image
-                    src="https://logo.clearbit.com/foodpanda.com"
+                    src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/companies/foodpanda.jpeg"
                     alt="Foodpanda"
                     width={80}
                     height={40}
@@ -487,16 +534,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
                   <Image
-                    src="https://logo.clearbit.com/paypay.ne.jp"
-                    alt="PayPay"
-                    width={80}
-                    height={40}
-                    className="max-h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300"
-                  />
-                </div>
-                <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
-                  <Image
-                    src="https://logo.clearbit.com/qoala.app"
+                    src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/companies/qoala.jpeg"
                     alt="Qoala"
                     width={80}
                     height={40}
@@ -505,7 +543,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
                   <Image
-                    src="https://logo.clearbit.com/mercury.com"
+                    src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/companies/mercury.jpeg"
                     alt="Mercury"
                     width={80}
                     height={40}
@@ -514,16 +552,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
                   <Image
-                    src="https://logo.clearbit.com/glints.com"
-                    alt="Glints"
-                    width={80}
-                    height={40}
-                    className="max-h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300"
-                  />
-                </div>
-                <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
-                  <Image
-                    src="https://logo.clearbit.com/tether.to"
+                    src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/companies/tether.jpeg"
                     alt="Tether"
                     width={80}
                     height={40}
@@ -532,7 +561,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
                   <Image
-                    src="https://logo.clearbit.com/pwc.com"
+                    src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/companies/pwc.jpeg"
                     alt="PWC"
                     width={80}
                     height={40}
@@ -541,16 +570,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
                   <Image
-                    src="https://logo.clearbit.com/shopback.sg"
-                    alt="Shopback"
-                    width={80}
-                    height={40}
-                    className="max-h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300"
-                  />
-                </div>
-                <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
-                  <Image
-                    src="https://logo.clearbit.com/lazada.com"
+                    src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/companies/lazada.jpeg"
                     alt="Lazada"
                     width={80}
                     height={40}
@@ -559,7 +579,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
                   <Image
-                    src="https://logo.clearbit.com/ethereum.org"
+                    src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/companies/ethereum.jpeg"
                     alt="Ethereum"
                     width={80}
                     height={40}
@@ -568,7 +588,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
                   <Image
-                    src="https://logo.clearbit.com/supabase.com"
+                    src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/companies/supabase.jpeg"
                     alt="Supabase"
                     width={80}
                     height={40}
@@ -577,7 +597,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
                   <Image
-                    src="https://logo.clearbit.com/metamask.io"
+                    src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/companies/metamask.jpeg"
                     alt="Metamask"
                     width={80}
                     height={40}
@@ -586,16 +606,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
                   <Image
-                    src="https://logo.clearbit.com/carousell.sg"
-                    alt="Carousell"
-                    width={80}
-                    height={40}
-                    className="max-h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300"
-                  />
-                </div>
-                <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
-                  <Image
-                    src="https://logo.clearbit.com/polygon.technology"
+                    src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/companies/polygon.jpeg"
                     alt="Polygon Technology"
                     width={80}
                     height={40}
@@ -604,16 +615,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
                   <Image
-                    src="https://logo.clearbit.com/mufg.jp"
-                    alt="MUFG"
-                    width={80}
-                    height={40}
-                    className="max-h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300"
-                  />
-                </div>
-                <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
-                  <Image
-                    src="https://logo.clearbit.com/nextrans.com"
+                    src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/companies/nextrans.jpeg"
                     alt="Nextrans"
                     width={80}
                     height={40}
@@ -622,17 +624,8 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
                   <Image
-                    src="https://logo.clearbit.com/agoda.com"
+                    src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/companies/agoda.jpeg"
                     alt="Agoda"
-                    width={80}
-                    height={40}
-                    className="max-h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300"
-                  />
-                </div>
-                <div className="flex items-center justify-center min-w-[96px] h-16 mx-4">
-                  <Image
-                    src="https://logo.clearbit.com/rakuten.com"
-                    alt="Rakuten"
                     width={80}
                     height={40}
                     className="max-h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300"
