@@ -25,14 +25,14 @@ import type { Metadata } from "next";
 
 // Page-specific metadata that overrides the default
 export const metadata: Metadata = {
-  title: "Stablecoin Payment API & Infrastructure | Crypto Payment Gateway",
+  title: "Stablecoin Payment API & Infrastructure | Digital Payment Gateway",
   description:
-    "Enterprise stablecoin payment infrastructure and API for global businesses. Process USDC payments, crypto on/off-ramps, and cross-border transactions with AI-native automation and institutional security.",
+    "Enterprise stablecoin payment infrastructure and API for global businesses. Process USDC payments, stablecoin on/off-ramps, and cross-border transactions with AI-native automation and institutional security.",
   openGraph: {
     title:
-      "Stablecoin Payment API & Infrastructure | Enterprise Crypto Gateway",
+      "Stablecoin Payment API & Infrastructure | Enterprise Digital Gateway",
     description:
-      "Enterprise-grade stablecoin payment infrastructure and API. Process USDC, crypto on/off-ramps, and global payments with AI-native automation and institutional security.",
+      "Enterprise-grade stablecoin payment infrastructure and API. Process USDC, stablecoin on/off-ramps, and global payments with AI-native automation and institutional security.",
     url: "https://paymonei.com",
     images: [
       {
@@ -64,7 +64,7 @@ const structuredData = {
         height: 60,
       },
       description:
-        "Enterprise stablecoin payment infrastructure and API enabling secure crypto payments, on/off-ramps, and cross-border transactions with AI-native automation",
+        "Enterprise stablecoin payment infrastructure and API enabling secure digital asset payments, on/off-ramps, and cross-border transactions with AI-native automation",
       foundingDate: "2023",
       sameAs: [
         "https://twitter.com/paymonei",
@@ -102,7 +102,9 @@ const structuredData = {
       featureList: [
         "Stablecoin Payment API",
         "USDC Payment Processing",
-        "Crypto On/Off-Ramps",
+        "USDC On/Off-Ramps",
+        "USDT On/Off-Ramps",
+        "Stablecoin On/Off-Ramps",
         "Multi-chain Support",
         "AI Agent Payment Protocol (AP2)",
         "Institutional Wallet",
@@ -120,15 +122,15 @@ const structuredData = {
           name: "What is Paymonei's stablecoin payment API?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Paymonei's stablecoin payment API is an enterprise-grade infrastructure that enables businesses to process USDC and other stablecoin payments globally. It includes crypto on/off-ramps, multi-chain support, AI-native automation, and built-in KYC/AML compliance for seamless cross-border transactions.",
+            text: "Paymonei's stablecoin payment API is an enterprise-grade infrastructure that enables businesses to process USDC and other stablecoin payments globally. It includes digital asset on/off-ramps, multi-chain support, AI-native automation, and built-in KYC/AML compliance for seamless cross-border transactions.",
           },
         },
         {
           "@type": "Question",
-          name: "How does Paymonei's crypto payment gateway work?",
+          name: "How does Paymonei's digital payment gateway work?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Paymonei provides API infrastructure for processing stablecoin payments, converting crypto to fiat through secure on/off-ramps, and facilitating global payouts. Our platform supports USDC transactions, institutional-grade security, and integrates with licensed financial partners like Circle and Nium for settlement.",
+            text: "Paymonei provides API infrastructure for processing stablecoin payments, converting digital assets to fiat through secure on/off-ramps, and facilitating global payouts. Our platform supports USDC transactions, institutional-grade security, and integrates with licensed financial partners like Circle and Nium for settlement.",
           },
         },
         {

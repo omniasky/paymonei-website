@@ -54,6 +54,7 @@ const mobilePlatformItems = [
     items: [
       { title: "Invoicing", href: "/billing/invoicing" },
       { title: "Subscription", href: "/billing/subscription" },
+      { title: "Invoice Factoring", href: "/invoice-factoring" },
     ],
   },
 ];
@@ -61,6 +62,7 @@ const mobilePlatformItems = [
 export function Navbar({
   navLinks = [
     // { href: "#solutions", label: "Solutions" },
+    { href: "/pricing", label: "Pricing" },
     { href: "#developers", label: "Developers" },
     // { href: "#resources", label: "Resources" },
   ],

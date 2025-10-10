@@ -14,6 +14,7 @@ import {
   CreditCard,
   Receipt,
   BarChart3,
+  TrendingUp,
 } from "lucide-react";
 
 const platformItems = [
@@ -104,6 +105,12 @@ const platformItems = [
         href: "/billing/subscription",
         description: "Usage-based recurring billing",
         icon: BarChart3,
+      },
+      {
+        title: "Invoice Factoring",
+        href: "/invoice-factoring",
+        description: "Get paid instantly for invoices",
+        icon: TrendingUp,
       },
     ],
   },

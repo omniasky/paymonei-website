@@ -20,29 +20,29 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL('https://paymonei.com'),
   title: {
-    default: "Stablecoin Payment API & Infrastructure | Crypto Payment Gateway",
+    default: "Stablecoin Payment API & Infrastructure | Digital Payment Gateway",
     template: "%s | Paymonei"
   },
-  description: "AI-native payment infrastructure, enterprise stablecoin payment infrastructure and API for global businesses. Process USDC payments, stablecoins on/off-ramps, and cross-border transactions with AI-native automation and institutional security.",
+  description: "AI-native payment infrastructure for global businesses. Enterprise stablecoin payment API for USDC payments, digital asset processing, and cross-border transactions with AI-native automation and institutional security.",
   keywords: [
     // High-volume search terms (prioritized)
     "stablecoin payment API",
-    "crypto payment gateway",
+    "digital payment gateway",
     "USDC payment infrastructure",
-    "crypto payment processing",
+    "stablecoin payment processing",
     "stablecoin API",
     "blockchain payment API",
-    "crypto on ramp API",
-    "crypto off ramp solution",
+    "digital asset on-ramp API",
+    "digital asset payment solution",
 
     // Use case keywords (buyer intent)
     "cross-border payments",
     "global payment infrastructure",
     "enterprise payment API",
-    "crypto payout API",
+    "digital payout API",
     "digital asset payments",
     "international payment API",
-    "global payroll crypto",
+    "global payroll stablecoins",
     "enterprise payouts",
 
     // Technical specifications
@@ -77,8 +77,8 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://paymonei.com",
     siteName: "Paymonei",
-    title: "Stablecoin Payment API & Infrastructure | Enterprise Crypto Gateway",
-    description: "AI-native payment infrastructure, enterprise stablecoin payment infrastructure and API for global businesses. Process USDC payments, stablecoins on/off-ramps, and cross-border transactions with AI-native automation and institutional security.",
+    title: "Stablecoin Payment API & Infrastructure | Enterprise Digital Gateway",
+    description: "AI-native payment infrastructure for global businesses. Enterprise stablecoin payment API for USDC payments, digital asset processing, and cross-border transactions with AI-native automation and institutional security.",
     images: [
       {
         url: "https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/og-image.png",
@@ -92,8 +92,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@paymonei",
     creator: "@paymonei",
-    title: "Stablecoin Payment API | Crypto Gateway Infrastructure",
-    description: "AI-native payment infrastructure, enterprise stablecoin payment infrastructure and API for global businesses. Process USDC payments, stablecoins on/off-ramps, and cross-border transactions with AI-native automation and institutional security.",
+    title: "Stablecoin Payment API | Digital Gateway Infrastructure",
+    description: "AI-native payment infrastructure for global businesses. Enterprise stablecoin payment API for USDC payments, digital asset processing, and cross-border transactions with AI-native automation.",
     images: ["https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/twitter-card.png"],
   },
   robots: {
