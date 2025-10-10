@@ -47,7 +47,7 @@ export const generatePageMetadata = {
       type: "website",
       images: [
         {
-          url: "https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/homepage-og.png",
+          url: "https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/og-image.png",
           width: 1200,
           height: 630,
           alt: "Paymonei Homepage - AI Payment Infrastructure",
@@ -78,7 +78,7 @@ export const generatePageMetadata = {
       type: "website",
       images: [
         {
-          url: "https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/pricing-og.png",
+          url: "https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/og-image.png",
           width: 1200,
           height: 630,
           alt: "Paymonei Pricing Plans",
@@ -111,7 +111,7 @@ export const generatePageMetadata = {
       type: "website",
       images: [
         {
-          url: "https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/protocol-og.png",
+          url: "https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/og-image.png",
           width: 1200,
           height: 630,
           alt: "Agent Payment Protocol Documentation",
@@ -143,7 +143,7 @@ export const generatePageMetadata = {
       type: "website",
       images: [
         {
-          url: "https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/developers-og.png",
+          url: "https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/og-image.png",
           width: 1200,
           height: 630,
           alt: "Paymonei Developer Platform",
@@ -175,7 +175,7 @@ export const generatePageMetadata = {
       type: "website",
       images: [
         {
-          url: "https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/enterprise-og.png",
+          url: "https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/og-image.png",
           width: 1200,
           height: 630,
           alt: "Paymonei Enterprise Solutions",
@@ -207,7 +207,7 @@ export const generatePageMetadata = {
       type: "website",
       images: [
         {
-          url: "https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/about-og.png",
+          url: "https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/og-image.png",
           width: 1200,
           height: 630,
           alt: "About Paymonei",

@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     url: "https://paymonei.com",
     images: [
       {
-        url: "https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/homepage-og.png",
+        url: "https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/og-image.png",
         width: 1200,
         height: 630,
         alt: "Paymonei - Stablecoin Payment Infrastructure & API",
