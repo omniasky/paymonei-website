@@ -25,20 +25,20 @@ import type { Metadata } from "next";
 
 // Page-specific metadata that overrides the default
 export const metadata: Metadata = {
-  title: "Paymonei - AI Agent Payment Protocol & Infrastructure",
+  title: "Stablecoin Payment API & Infrastructure | Crypto Payment Gateway",
   description:
-    "AI-native payment protocol enabling secure agent-to-agent transactions, institutional-grade security, and unified AI workspace.",
+    "Enterprise stablecoin payment infrastructure and API for global businesses. Process USDC payments, crypto on/off-ramps, and cross-border transactions with AI-native automation and institutional security.",
   openGraph: {
-    title: "Paymonei - The Autonomous Economy Standard",
+    title: "Stablecoin Payment API & Infrastructure | Enterprise Crypto Gateway",
     description:
-      "Enable AI agents to transact seamlessly. Our proprietary protocol powers the financial nervous system for AI with institutional-grade security and unified operations.",
+      "Enterprise-grade stablecoin payment infrastructure and API. Process USDC, crypto on/off-ramps, and global payments with AI-native automation and institutional security.",
     url: "https://paymonei.com",
     images: [
       {
         url: "https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/homepage-og.png",
         width: 1200,
         height: 630,
-        alt: "Paymonei Homepage - AI Payment Infrastructure",
+        alt: "Paymonei - Stablecoin Payment Infrastructure & API",
       },
     ],
   },
@@ -63,7 +63,7 @@ const structuredData = {
         height: 60,
       },
       description:
-        "AI-native financial infrastructure enabling autonomous agent payments",
+        "Enterprise stablecoin payment infrastructure and API enabling secure crypto payments, on/off-ramps, and cross-border transactions with AI-native automation",
       foundingDate: "2023",
       sameAs: [
         "https://twitter.com/paymonei",
@@ -76,7 +76,7 @@ const structuredData = {
       "@id": "https://paymonei.com/#website",
       url: "https://paymonei.com",
       name: "Paymonei",
-      description: "The autonomous economy standard for AI agent payments",
+      description: "Stablecoin payment API and infrastructure for global businesses",
       publisher: {
         "@id": "https://paymonei.com/#organization",
       },
@@ -84,7 +84,7 @@ const structuredData = {
     {
       "@type": "SoftwareApplication",
       "@id": "https://paymonei.com/#software",
-      name: "Paymonei Agent Payment Protocol",
+      name: "Paymonei Stablecoin Payment API",
       applicationCategory: "FinanceApplication",
       operatingSystem: "Web, iOS, Android",
       offers: {
@@ -98,12 +98,14 @@ const structuredData = {
         ratingCount: "1250",
       },
       featureList: [
-        "AI Agent Payment Protocol (AP2)",
-        "Cryptographic Mandates",
+        "Stablecoin Payment API",
+        "USDC Payment Processing",
+        "Crypto On/Off-Ramps",
         "Multi-chain Support",
+        "AI Agent Payment Protocol (AP2)",
         "Institutional Wallet",
-        "AI Operations Suite",
         "KYC/AML Compliance",
+        "Cross-Border Payments",
         "Global Payroll",
         "Enterprise Payouts",
       ],
@@ -113,26 +115,26 @@ const structuredData = {
       mainEntity: [
         {
           "@type": "Question",
-          name: "What is Paymonei's Agent Payment Protocol?",
+          name: "What is Paymonei's stablecoin payment API?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Paymonei's Agent Payment Protocol (AP2) is a proprietary infrastructure that enables AI agents to execute secure, authenticated payments autonomously. It includes cryptographic mandates, multi-chain support, and built-in compliance.",
+            text: "Paymonei's stablecoin payment API is an enterprise-grade infrastructure that enables businesses to process USDC and other stablecoin payments globally. It includes crypto on/off-ramps, multi-chain support, AI-native automation, and built-in KYC/AML compliance for seamless cross-border transactions.",
           },
         },
         {
           "@type": "Question",
-          name: "How does Paymonei replace traditional business tools?",
+          name: "How does Paymonei's crypto payment gateway work?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Paymonei's AI Operations Suite replaces Google Docs, Excel, PowerPoint, and Calendar with a unified AI-powered workspace. All business operations from documents to analytics are handled in one intelligent platform.",
+            text: "Paymonei provides API infrastructure for processing stablecoin payments, converting crypto to fiat through secure on/off-ramps, and facilitating global payouts. Our platform supports USDC transactions, institutional-grade security, and integrates with licensed financial partners like Circle and Nium for settlement.",
           },
         },
         {
           "@type": "Question",
-          name: "Is Paymonei secure for institutional use?",
+          name: "Is Paymonei secure for enterprise stablecoin payments?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes, Paymonei provides institutional-grade security with military-grade encryption, zero-knowledge proofs, quantum-resistant cryptography, and full regulatory compliance for 150+ countries.",
+            text: "Yes, Paymonei provides institutional-grade security with military-grade encryption, zero-knowledge proofs, quantum-resistant cryptography, and full regulatory compliance for 150+ countries. Our non-custodial infrastructure includes AI-powered fraud detection and automated compliance monitoring.",
           },
         },
       ],
