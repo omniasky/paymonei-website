@@ -67,7 +67,7 @@ const structuredData = {
       foundingDate: "2023",
       sameAs: [
         "https://twitter.com/paymonei",
-        "https://linkedin.com/company/paymonei",
+        "https://www.linkedin.com/company/paymonei-com",
         "https://github.com/paymonei",
       ],
     },

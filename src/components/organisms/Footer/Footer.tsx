@@ -58,7 +58,7 @@ const defaultSections: FooterSection[] = [
 ];
 
 const defaultSocialLinks = {
-  linkedin: "https://linkedin.com/company/paymonei",
+  linkedin: "https://www.linkedin.com/company/paymonei-com",
   github: "https://github.com/paymonei",
 };
 
