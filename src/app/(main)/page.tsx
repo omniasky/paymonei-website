@@ -659,10 +659,9 @@ export default function HomePage() {
                 </span>
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Enabling secure, authenticated payments by AI agents on behalf
-                of users. We simplify your marketing, sales, finance and
-                procurement operations through the universal protocol for
-                autonomous transactions across payment systems.
+                Enabling secure, authenticated payments by AI agents. We
+                simplify your marketing, sales, finance and procurement
+                operations through the universal protocol of agentic payments.
               </p>
             </div>
 
@@ -970,7 +969,6 @@ export default function HomePage() {
 
         {/* Code Comparison Section - How It Works */}
         <CodeComparisonSection />
-
 
         <section className="py-24 px-2 xs:px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background via-background/95 to-muted/20">
           <div className="max-w-7xl mx-auto">

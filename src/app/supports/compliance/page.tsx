@@ -33,14 +33,13 @@ export default function CompliancePage() {
           <h3>Corporate Structure and Licensing</h3>
           <p>
             Omniasky Technology Pte Ltd is a Singapore-incorporated company that
-            owns the Paymonei brand and proprietary technology platform. PT
-            Cosgrove Teknologi Indonesia and PT Evora Vera Teknologi are
-            incorporated companies in Indonesia as technology providers,
-            licensed for contract development and consulting services. PT
-            Kreigan Digital Wesel is a company incorporated in Indonesia,
-            licensed and supervised by Bank Indonesia as a Digital Financial
-            Service Provider for fund transfer services in accordance with
-            Indonesian financial regulations.
+            owns the Paymonei brand and proprietary technology platform.
+            Cosgrove Technology Inc. a Delaware corporation, PT Cosgrove Teknologi Indonesia and PT Evora Vera Teknologi
+            are incorporated companies in Indonesia collectively as technology
+            providers. PT Kreigan Digital Wesel is a company incorporated in
+            Indonesia, licensed and supervised by Bank Indonesia as a Digital
+            Financial Service Provider for fund transfer services in accordance
+            with Indonesian financial regulations.
           </p>
 
           <h3>Licensed Financial Partners</h3>
@@ -63,9 +62,9 @@ export default function CompliancePage() {
             Europe, Asia Pacific, and Latin America, enabling comprehensive
             cross-border payment and card issuance services. Stripe, Inc. and
             its subsidiaries are licensed payment service providers operating
-            globally with regulatory authorizations including registration as
-            a Payment Institution with the Financial Conduct Authority in the
-            UK, Electronic Money Institution licenses across Europe, and money
+            globally with regulatory authorizations including registration as a
+            Payment Institution with the Financial Conduct Authority in the UK,
+            Electronic Money Institution licenses across Europe, and money
             transmitter licenses in various US states, providing comprehensive
             payment processing, card issuing, and financial infrastructure
             services worldwide.
