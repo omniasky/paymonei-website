@@ -96,7 +96,7 @@ export default function InvoiceFactoringPage() {
                 Turn Invoices Into
                 <br />
                 <span className="relative text-transparent bg-clip-text bg-gradient-to-tl from-blue-700 via-orange-700 to-blue-700">
-                  Instant Cash
+                  Early Payment
                 </span>
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
