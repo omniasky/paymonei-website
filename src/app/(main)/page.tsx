@@ -179,7 +179,7 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-foreground/90 leading-tight">
-                <span className="block">Used by Global Developers</span>
+                <span className="block">Trusted by Global Developers</span>
                 <span className="block mt-1 sm:mt-2">& Ecosystem</span>
               </h2>
             </div>
