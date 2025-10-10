@@ -426,12 +426,12 @@ export default function PricingPage() {
               Ready to get started?
             </h2>
             <p className="text-lg text-muted-foreground mb-10">
-              Join businesses using Paymonei for their infrastructure.
+              Join hundreds of users using Paymonei for their infrastructure.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="https://app.paymonei.com/signup"
-                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full text-base font-semibold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow-lg hover:shadow-xl hover:scale-105 h-14 px-10"
+                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full text-base font-semibold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-gradient-to-r from-orange-600 via-pink-600 to-orange-600 text-primary-foreground shadow-lg hover:shadow-xl hover:scale-105 h-14 px-10"
               >
                 Start Free Now
               </a>

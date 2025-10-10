@@ -38,7 +38,7 @@ export function PricingCard({
       )}
     >
       {isPopular && (
-        <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-primary text-primary-foreground text-xs font-medium rounded-full">
+        <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-gradient-to-r from-orange-600 via-pink-600 to-orange-600 text-primary-foreground text-xs font-medium rounded-full">
           Most Popular
         </div>
       )}
@@ -70,7 +70,7 @@ export function PricingCard({
         <Button
           className={cn(
             "w-full h-12 rounded-full text-base font-semibold",
-            isPopular && "bg-primary hover:bg-primary/90"
+            isPopular && "bg-gradient-to-r from-orange-600 via-pink-800 to-orange-600 hover:bg-gradient-to-l hover:from-pink-800 hover:via-orange-600 hover:to-pink-800"
           )}
           variant={isPopular ? "default" : "outline"}
           asChild

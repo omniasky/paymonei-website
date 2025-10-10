@@ -50,6 +50,125 @@ export default function A2AProtocolPage() {
     <>
       <Navbar />
       <div className="min-h-screen pt-16">
+        {/* Hero Section */}
+        <section className="relative overflow-hidden bg-white dark:bg-gray-900">
+          {/* Animated gradient background */}
+          <div className="absolute inset-0">
+            <div className="absolute inset-0 bg-gradient-to-br from-orange-50 via-white to-amber-50 dark:from-gray-900 dark:via-gray-900 dark:to-orange-950/10" />
+
+            {/* Animated gradient orbs */}
+            <div
+              className="absolute top-0 -right-4 w-72 h-72 bg-amber-200 dark:bg-amber-700 rounded-full mix-blend-multiply dark:mix-blend-normal filter blur-xl opacity-20 dark:opacity-20 animate-pulse"
+              style={{ animationDelay: "2s" }}
+            />
+            <div
+              className="absolute -bottom-8 left-20 w-72 h-72 bg-orange-200 dark:bg-orange-700 rounded-full mix-blend-multiply dark:mix-blend-normal filter blur-xl opacity-20 dark:opacity-20 animate-pulse"
+              style={{ animationDelay: "4s" }}
+            />
+          </div>
+
+          <div className="relative">
+            <div className="max-w-7xl mx-auto px-2 xs:px-4 sm:px-6 lg:px-8 pt-16 pb-12 sm:pt-20 sm:pb-16 lg:pt-24 lg:pb-20">
+              <div className="text-center">
+                {/* Badge */}
+                <div className="flex justify-center mb-6 sm:mb-8">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-amber-500/20 blur-xl animate-pulse" />
+                    <div className="relative inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-gradient-to-r from-orange-50 to-amber-50 dark:from-orange-900/50 dark:to-amber-900/50 border border-orange-200 dark:border-orange-800">
+                      <span className="relative flex h-2 w-2">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                      </span>
+                      <span className="text-xs sm:text-sm font-medium text-orange-700 dark:text-orange-300">
+                        AI Agent Payment Protocol
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Title */}
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight">
+                  <span className="block text-gray-900 dark:text-white mb-2 sm:mb-3">
+                    Beyond Workflows.
+                  </span>
+                  <span className="block">
+                    <span className="relative inline-block">
+                      <span className="relative text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-pink-600 to-orange-600">
+                        True Intelligence.
+                      </span>
+                    </span>
+                  </span>
+                </h1>
+
+                {/* Subtitle */}
+                <p className="mt-6 sm:mt-8 text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto font-normal leading-relaxed">
+                  AI agents that think, adapt, and execute complex business
+                  processes through natural conversation—just like talking to
+                  your most capable team member.
+                </p>
+
+                {/* CTA Button */}
+                <div className="mt-8 sm:mt-10 flex justify-center">
+                  <a href="https://app.paymonei.com/auth/register">
+                    <Button
+                      size="lg"
+                      className="group relative rounded-full px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 text-sm sm:text-base lg:text-lg font-semibold bg-gradient-to-r from-orange-500 to-amber-600 text-white hover:from-orange-600 hover:to-amber-700 shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300"
+                    >
+                      <span className="absolute inset-0 rounded-full bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
+                      <span className="relative flex items-center justify-center">
+                        Try Now Free
+                        <svg
+                          className="ml-2 w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth={2.5}
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M13 7l5 5m0 0l-5 5m5-5H6"
+                          />
+                        </svg>
+                      </span>
+                    </Button>
+                  </a>
+                </div>
+
+                {/* Key Features - Quick highlights */}
+                <div className="mt-12 sm:mt-16 pt-8 sm:pt-10 border-t border-gray-200 dark:border-gray-800">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
+                    <div className="flex flex-col items-center">
+                      <div className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
+                        Natural
+                      </div>
+                      <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mt-1">
+                        Conversation Interface
+                      </div>
+                    </div>
+                    <div className="flex flex-col items-center">
+                      <div className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
+                        Instant
+                      </div>
+                      <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mt-1">
+                        Payment Processing
+                      </div>
+                    </div>
+                    <div className="flex flex-col items-center">
+                      <div className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
+                        24/7
+                      </div>
+                      <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mt-1">
+                        AI Agent Support
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Merchant AI Use Cases Section */}
         <section
           id="use-cases"
@@ -58,9 +177,9 @@ export default function A2AProtocolPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-                <span className="text-foreground">Beyond Workflows.</span>
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">
-                  True Intelligence.
+                <span className="text-foreground">Intelligence Peers with</span>
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-pink-600 to-orange-600">
+                  Adaptive Thinking.
                 </span>
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -112,8 +231,8 @@ export default function A2AProtocolPage() {
                 </div>
 
                 <div className="relative">
-                  <div className="bg-card border rounded-2xl p-6 shadow-lg">
-                    <div className="space-y-4">
+                  <div className="bg-card border rounded-2xl p-6 shadow-lg min-h-[380px] flex flex-col">
+                    <div className="space-y-4 flex-1">
                       <div className="flex items-center justify-between mb-4">
                         <span className="text-sm text-muted-foreground">
                           AI Chat Interface
@@ -183,8 +302,8 @@ export default function A2AProtocolPage() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="order-2 lg:order-1">
                   <div className="relative">
-                    <div className="bg-card border rounded-2xl p-6 shadow-lg">
-                      <div className="space-y-4">
+                    <div className="bg-card border rounded-2xl p-6 shadow-lg min-h-[380px] flex flex-col">
+                      <div className="space-y-4 flex-1">
                         <div className="flex items-center justify-between mb-4">
                           <span className="text-sm text-muted-foreground">
                             AI Chat Interface
@@ -329,8 +448,8 @@ export default function A2AProtocolPage() {
                 </div>
 
                 <div className="relative">
-                  <div className="bg-card border rounded-2xl p-6 shadow-lg">
-                    <div className="space-y-4">
+                  <div className="bg-card border rounded-2xl p-6 shadow-lg min-h-[380px] flex flex-col">
+                    <div className="space-y-4 flex-1">
                       <div className="flex items-center justify-between mb-4">
                         <span className="text-sm text-muted-foreground">
                           AI Chat Interface
@@ -1300,10 +1419,10 @@ export default function A2AProtocolPage() {
                               <div className="max-w-xs">
                                 <div className="bg-muted rounded-2xl rounded-bl-md px-4 py-3">
                                   <p className="text-sm">
-                                    Perfect! I&apos;ve analyzed your requirements
-                                    and found 2 excellent remote engineers
-                                    specializing in modern landing pages and
-                                    Vercel deployment.
+                                    Perfect! I&apos;ve analyzed your
+                                    requirements and found 2 excellent remote
+                                    engineers specializing in modern landing
+                                    pages and Vercel deployment.
                                   </p>
                                   <p className="text-xs text-muted-foreground mt-2">
                                     🔍 Searching global talent pool...
@@ -1388,7 +1507,9 @@ export default function A2AProtocolPage() {
                                   </p>
                                   <div className="text-xs text-amber-700 mt-2 space-y-1">
                                     <p>🎨 Landing page design: $120</p>
-                                    <p>⚡ VibeCooding-style development: $150</p>
+                                    <p>
+                                      ⚡ VibeCooding-style development: $150
+                                    </p>
                                     <p>🚀 Vercel deployment & setup: $30</p>
                                     <p className="font-medium pt-1 border-t border-amber-200">
                                       Total: $300 (within budget!)
@@ -1468,7 +1589,8 @@ export default function A2AProtocolPage() {
                                   </p>
                                   <div className="text-xs text-purple-700 mt-2 space-y-1">
                                     <p>
-                                      🌐 Landing page: sarah-startup-v1.vercel.app
+                                      🌐 Landing page:
+                                      sarah-startup-v1.vercel.app
                                     </p>
                                     <p>📱 Mobile responsive ✓</p>
                                     <p>⚡ PageSpeed: 95/100 ✓</p>
@@ -1494,8 +1616,8 @@ export default function A2AProtocolPage() {
                               <div className="max-w-xs">
                                 <div className="bg-blue-500 text-white rounded-2xl rounded-br-md px-4 py-3">
                                   <p className="text-sm">
-                                    Amazing work! The landing page is exactly what
-                                    I envisioned. Approving completion now.
+                                    Amazing work! The landing page is exactly
+                                    what I envisioned. Approving completion now.
                                   </p>
                                 </div>
                                 <div className="flex items-center justify-end gap-2 mt-1">
@@ -1623,7 +1745,7 @@ export default function A2AProtocolPage() {
                 </div>
                 <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
                   <span className="text-foreground">Protocol</span>
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-pink-600 to-orange-600">
                     {" "}
                     Infrastructure
                   </span>
@@ -1685,8 +1807,8 @@ export default function A2AProtocolPage() {
                               Intent Resolution
                             </h4>
                             <p className="text-xs text-muted-foreground">
-                              Natural language to structured payment instructions
-                              conversion
+                              Natural language to structured payment
+                              instructions conversion
                             </p>
                           </div>
                         </div>
@@ -1710,7 +1832,9 @@ export default function A2AProtocolPage() {
                               />
                             </svg>
                           </div>
-                          <h3 className="text-lg font-semibold">Protocol Core</h3>
+                          <h3 className="text-lg font-semibold">
+                            Protocol Core
+                          </h3>
                         </div>
                         <div className="space-y-3">
                           <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-xl p-4">
@@ -1780,8 +1904,8 @@ export default function A2AProtocolPage() {
                               Multi-chain Bridge
                             </h4>
                             <p className="text-xs text-muted-foreground">
-                              Bridge protocols supports offer seamless data value
-                              transfer
+                              Bridge protocols supports offer seamless data
+                              value transfer
                             </p>
                           </div>
                           <div className="bg-card/50 backdrop-blur border border-border/50 rounded-xl p-4">
@@ -1807,7 +1931,9 @@ export default function A2AProtocolPage() {
                           <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold">
                             1
                           </div>
-                          <p className="text-xs mt-2 text-center">User Intent</p>
+                          <p className="text-xs mt-2 text-center">
+                            User Intent
+                          </p>
                         </div>
                         <div className="hidden lg:block w-full max-w-[100px] h-0.5 bg-gradient-to-r from-blue-500 to-purple-500"></div>
                         <div className="flex flex-col items-center">
@@ -1861,15 +1987,15 @@ export default function A2AProtocolPage() {
                     </div>
                     <h3 className="text-3xl sm:text-4xl font-bold mb-4">
                       <span className="text-foreground">The Autonomous</span>
-                      <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600">
+                      <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-pink-600 to-orange-600">
                         {" "}
                         Economy Standard
                       </span>
                     </h3>
                     <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
                       We didn&apos;t just improve payments—we architected the
-                      financial nervous system for AI. Where others offer routing,
-                      we deliver complete infrastructure.
+                      financial nervous system for AI. Where others offer
+                      routing, we deliver complete infrastructure.
                     </p>
                   </div>
 
@@ -1931,7 +2057,9 @@ export default function A2AProtocolPage() {
                               />
                             </svg>
                           </div>
-                          <h5 className="font-semibold mb-2">Unified Protocol</h5>
+                          <h5 className="font-semibold mb-2">
+                            Unified Protocol
+                          </h5>
                           <p className="text-sm text-muted-foreground">
                             Seamless bridge between traditional and blockchain
                             payment rails
@@ -1959,8 +2087,8 @@ export default function A2AProtocolPage() {
                           </div>
                           <h5 className="font-semibold mb-2">Agent Identity</h5>
                           <p className="text-sm text-muted-foreground">
-                            Verification and capability attestation for autonomous
-                            agents
+                            Verification and capability attestation for
+                            autonomous agents
                           </p>
                         </div>
                       </div>
@@ -1987,30 +2115,11 @@ export default function A2AProtocolPage() {
                             Intent Resolution
                           </h5>
                           <p className="text-sm text-muted-foreground">
-                            Natural language to structured payment transformation
+                            Natural language to structured payment
+                            transformation
                           </p>
                         </div>
                       </div>
-                    </div>
-
-                    {/* Bottom CTA */}
-                    <div className="mt-10 text-center">
-                      <Button className="rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-6 py-3 font-medium">
-                        Developer Docs
-                        <svg
-                          className="w-5 h-5 ml-2"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M9 5l7 7-7 7"
-                          />
-                        </svg>
-                      </Button>
                     </div>
                   </div>
                 </div>
