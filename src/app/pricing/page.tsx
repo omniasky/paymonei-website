@@ -70,14 +70,14 @@ const pricingTiers: PricingTier[] = [
   {
     title: "Free",
     description:
-      "No credit card required • Start in 5 minutes • Free up to $10K volume/month",
+      "Starter kit for new business • No credit card required • Free up to $10K processed",
     price: "$0",
     period: "forever",
     isFree: true,
     cta: "Start Free Now",
     ctaHref: "https://app.paymonei.com/signup",
     features: [
-      "Free up to $10,000/month volume",
+      "Free up to $10K processed",
       "Stablecoin payments: 1.5% MDR",
       "Adaptive FX: 1.5%",
       "Invoicing: 0.4%",
@@ -314,11 +314,9 @@ export default function PricingPage() {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 <div className="relative">
                   <div className="text-4xl mb-4">📈</div>
-                  <h3 className="font-semibold text-lg mb-2">
-                    $10K Free Volume
-                  </h3>
+                  <h3 className="font-semibold text-lg mb-2">$10K Free</h3>
                   <p className="text-sm text-muted-foreground">
-                    Process real transactions up to $10,000 every month for free
+                    Process real transactions up to $10,000 for free
                   </p>
                 </div>
               </div>
@@ -391,7 +389,7 @@ export default function PricingPage() {
                   What happens when I exceed the free tier limits?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
-                  After exceeding $10K monthly volume on the Free plan,
+                  After exceeding $10K processed sales revenue on the Free plan,
                   transaction fees will apply to any additional transactions.
                   You can continue processing with fees, or upgrade to the
                   Growth plan for better rates and unlimited volume.
