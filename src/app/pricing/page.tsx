@@ -80,7 +80,7 @@ const pricingTiers: PricingTier[] = [
       "Free up to $10K processed",
       "Stablecoin payments: 1.5% MDR",
       "Adaptive FX: 1.5%",
-      "Invoicing: 0.4%",
+      "Invoicing: 100 free/mo, then 0.4% (max $2)",
       "Card payments: 3.3% + $0.50",
       "Full API access & documentation",
       "Webhook notifications",
@@ -100,7 +100,7 @@ const pricingTiers: PricingTier[] = [
       "Unlimited transaction volume",
       "Stablecoin payments: 1% MDR",
       "Adaptive FX: 0.5-1%",
-      "Invoicing: 0.2%",
+      "Invoicing: 0.2% (max $1)",
       "Card payments: 3.3% + $0.50",
       "Priority email support",
       "Advanced analytics dashboard",
@@ -165,8 +165,8 @@ const comparisonFeatures = [
   },
   {
     name: "Invoicing",
-    free: "0.2%",
-    growth: "0.2%",
+    free: "10 free/mo, then 0.4% (max $2)",
+    growth: "0.2% (max $1)",
     enterprise: "Custom",
   },
   {
@@ -264,7 +264,7 @@ export default function PricingPage() {
           <div className="relative max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-full mb-6 backdrop-blur-sm">
               <span className="text-sm font-semibold text-primary">
-                🎉 Process up to $10K/month for FREE
+                🎉 Process up to $10K for FREE
               </span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 bg-gradient-to-br from-foreground to-foreground/70 bg-clip-text">
