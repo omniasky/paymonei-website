@@ -138,226 +138,109 @@ export default function PaymentLinksPage() {
                 </div>
               </div>
 
-              {/* Right Visual - Payment Link Preview */}
+              {/* Right Visual - AI Chat Widget */}
               <div className="relative">
-                <div className="relative bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-8 border border-gray-200 dark:border-gray-700">
-                  {/* Mock Payment Link Interface */}
-                  <div className="space-y-6">
-                    <div className="flex items-center justify-between pb-4 border-b border-gray-200 dark:border-gray-700">
-                      <div className="flex items-center gap-2">
-                        <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-amber-600 rounded-lg flex items-center justify-center">
-                          <LinkIcon className="w-5 h-5 text-white" />
-                        </div>
-                        <span className="font-semibold text-gray-900 dark:text-white">
-                          Payment Link
-                        </span>
-                      </div>
-                      <span className="text-xs text-green-600 dark:text-green-400 font-medium">
-                        Active
-                      </span>
+                <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 p-6 sm:p-8">
+                  <div className="flex items-center gap-3 pb-6 border-b border-gray-200 dark:border-gray-700">
+                    <div className="w-10 h-10 bg-gradient-to-r from-orange-500 to-amber-600 rounded-full flex items-center justify-center">
+                      <MessageSquare className="w-5 h-5 text-white" />
                     </div>
-
                     <div>
-                      <label className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 block">
-                        Your Payment Link
-                      </label>
-                      <div className="flex items-center gap-2 bg-gray-50 dark:bg-gray-900 rounded-lg p-3 border border-gray-200 dark:border-gray-700">
-                        <Globe className="w-4 h-4 text-gray-400" />
-                        <span className="text-sm font-mono text-gray-600 dark:text-gray-400 flex-1 truncate">
-                          pay.paymonei.com/xyz123
-                        </span>
-                        <button className="text-xs bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 px-3 py-1 rounded-md font-medium hover:bg-orange-200 dark:hover:bg-orange-900/50 transition-colors">
-                          Copy
-                        </button>
+                      <div className="font-semibold text-gray-900 dark:text-white">
+                        Paymonei AI Assistant
                       </div>
-                    </div>
-
-                    <div className="grid grid-cols-2 gap-4">
-                      <div>
-                        <label className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 block">
-                          Amount
-                        </label>
-                        <div className="text-2xl font-bold text-gray-900 dark:text-white">
-                          $2,500
-                        </div>
-                      </div>
-                      <div>
-                        <label className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 block">
-                          Status
-                        </label>
-                        <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                          <span className="text-sm text-gray-900 dark:text-white">
-                            Ready
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
-                      <div className="text-sm text-gray-600 dark:text-gray-400 mb-3">
-                        Share via:
-                      </div>
-                      <div className="grid grid-cols-4 gap-3">
-                        <button className="flex flex-col items-center gap-2 p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-orange-500 dark:hover:border-orange-500 hover:bg-orange-50 dark:hover:bg-orange-950/20 transition-colors">
-                          <Mail className="w-5 h-5 text-gray-600 dark:text-gray-400" />
-                          <span className="text-xs text-gray-600 dark:text-gray-400">
-                            Email
-                          </span>
-                        </button>
-                        <button className="flex flex-col items-center gap-2 p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-orange-500 dark:hover:border-orange-500 hover:bg-orange-50 dark:hover:bg-orange-950/20 transition-colors">
-                          <MessageSquare className="w-5 h-5 text-gray-600 dark:text-gray-400" />
-                          <span className="text-xs text-gray-600 dark:text-gray-400">
-                            SMS
-                          </span>
-                        </button>
-                        <button className="flex flex-col items-center gap-2 p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-orange-500 dark:hover:border-orange-500 hover:bg-orange-50 dark:hover:bg-orange-950/20 transition-colors">
-                          <Globe className="w-5 h-5 text-gray-600 dark:text-gray-400" />
-                          <span className="text-xs text-gray-600 dark:text-gray-400">
-                            Social
-                          </span>
-                        </button>
-                        <button className="flex flex-col items-center gap-2 p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-orange-500 dark:hover:border-orange-500 hover:bg-orange-50 dark:hover:bg-orange-950/20 transition-colors">
-                          <LinkIcon className="w-5 h-5 text-gray-600 dark:text-gray-400" />
-                          <span className="text-xs text-gray-600 dark:text-gray-400">
-                            Copy
-                          </span>
-                        </button>
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+                        <span className="text-sm text-gray-500">Online</span>
                       </div>
                     </div>
                   </div>
-                </div>
 
-                {/* Floating Elements */}
-                <div className="absolute -top-6 -right-6 bg-green-500 text-white rounded-full p-4 shadow-lg">
-                  <Check className="w-6 h-6" />
-                </div>
-                <div className="absolute -bottom-6 -left-6 bg-orange-500 text-white rounded-full p-4 shadow-lg">
-                  <Zap className="w-6 h-6" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* AI Agent Demo Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-800/50">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-100 dark:bg-orange-900/30 rounded-full mb-6">
-                <span className="text-sm font-semibold text-orange-700 dark:text-orange-300">
-                  AI-Powered
-                </span>
-              </div>
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-                <span className="text-gray-900 dark:text-white">
-                  Just tell our AI what you need
-                </span>
-              </h2>
-              <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-                Create payment links in seconds through natural conversation
-              </p>
-            </div>
-
-            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 p-6 sm:p-8">
-              <div className="flex items-center gap-3 pb-6 border-b border-gray-200 dark:border-gray-700">
-                <div className="w-10 h-10 bg-gradient-to-r from-orange-500 to-amber-600 rounded-full flex items-center justify-center">
-                  <MessageSquare className="w-5 h-5 text-white" />
-                </div>
-                <div>
-                  <div className="font-semibold text-gray-900 dark:text-white">
-                    Paymonei AI Assistant
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                    <span className="text-sm text-gray-500">Online</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="space-y-4 mt-6">
-                {/* Merchant Message */}
-                <div className="flex justify-end">
-                  <div className="max-w-md">
-                    <div className="bg-orange-500 text-white rounded-2xl rounded-br-md px-5 py-4 shadow-sm">
-                      <p className="text-sm sm:text-base">
-                        Hey, can you create a payment link for $200?
-                      </p>
-                      <p className="text-xs sm:text-sm opacity-90 mt-2">
-                        It&apos;s for team dinner last night. Send it to
-                        Sarah&apos;s contact details.
-                      </p>
-                    </div>
-                    <div className="flex items-center justify-end gap-2 mt-2">
-                      <span className="text-xs text-gray-500">You</span>
-                      <div className="w-6 h-6 bg-gray-300 dark:bg-gray-600 rounded-full flex items-center justify-center">
-                        <span className="text-xs font-semibold text-gray-700 dark:text-gray-200">
-                          M
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* AI Response */}
-                <div className="flex justify-start">
-                  <div className="max-w-md">
-                    <div className="bg-gray-100 dark:bg-gray-700 rounded-2xl rounded-bl-md px-5 py-4 shadow-sm">
-                      <p className="text-sm sm:text-base font-medium text-gray-900 dark:text-white mb-3">
-                        Perfect! I&apos;ve created the payment link and sent it
-                        to Sarah.
-                      </p>
-                      <div className="bg-white dark:bg-gray-800 rounded-xl p-4 border border-gray-200 dark:border-gray-600 space-y-3">
-                        <div className="flex justify-between items-center">
-                          <span className="text-xs text-gray-600 dark:text-gray-400">
-                            Amount
-                          </span>
-                          <span className="text-lg font-bold text-gray-900 dark:text-white">
-                            $200.00
-                          </span>
+                  <div className="space-y-4 mt-6">
+                    {/* Merchant Message */}
+                    <div className="flex justify-end">
+                      <div className="max-w-md">
+                        <div className="bg-orange-500 text-white rounded-2xl rounded-br-md px-5 py-4 shadow-sm">
+                          <p className="text-sm sm:text-base">
+                            Hey, can you create a payment link for $200?
+                          </p>
+                          <p className="text-xs sm:text-sm opacity-90 mt-2">
+                            It&apos;s for team dinner last night. Send it to
+                            Sarah&apos;s contact details.
+                          </p>
                         </div>
-                        <div className="flex justify-between items-center">
-                          <span className="text-xs text-gray-600 dark:text-gray-400">
-                            Description
-                          </span>
-                          <span className="text-sm text-gray-900 dark:text-white">
-                            Food Payment
-                          </span>
-                        </div>
-                        <div className="flex justify-between items-center">
-                          <span className="text-xs text-gray-600 dark:text-gray-400">
-                            Sent to
-                          </span>
-                          <span className="text-sm text-gray-900 dark:text-white">
-                            sarah@email.com
-                          </span>
-                        </div>
-                        <div className="pt-3 border-t border-gray-200 dark:border-gray-600">
-                          <div className="flex items-center gap-2 bg-gray-50 dark:bg-gray-900 rounded-lg p-2">
-                            <LinkIcon className="w-4 h-4 text-gray-400" />
-                            <span className="text-xs font-mono text-gray-600 dark:text-gray-400 flex-1 truncate">
-                              pay.paymonei.com/inv/xyz789
+                        <div className="flex items-center justify-end gap-2 mt-2">
+                          <span className="text-xs text-gray-500">You</span>
+                          <div className="w-6 h-6 bg-gray-300 dark:bg-gray-600 rounded-full flex items-center justify-center">
+                            <span className="text-xs font-semibold text-gray-700 dark:text-gray-200">
+                              M
                             </span>
-                            <button className="text-xs bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 px-2 py-1 rounded font-medium">
-                              Copy
-                            </button>
                           </div>
                         </div>
                       </div>
-                      <div className="flex items-center gap-2 mt-3">
-                        <Check className="w-4 h-4 text-green-600" />
-                        <span className="text-xs text-gray-600 dark:text-gray-400">
-                          Email sent successfully
-                        </span>
-                      </div>
                     </div>
-                    <div className="flex items-center gap-2 mt-2">
-                      <div className="w-6 h-6 bg-gradient-to-r from-orange-500 to-amber-600 rounded-full flex items-center justify-center">
-                        <span className="text-xs font-semibold text-white">
-                          AI
-                        </span>
+
+                    {/* AI Response */}
+                    <div className="flex justify-start">
+                      <div className="max-w-md">
+                        <div className="bg-gray-100 dark:bg-gray-700 rounded-2xl rounded-bl-md px-5 py-4 shadow-sm">
+                          <p className="text-sm sm:text-base font-medium text-gray-900 dark:text-white mb-3">
+                            Perfect! I&apos;ve created the payment link and sent it
+                            to Sarah.
+                          </p>
+                          <div className="bg-white dark:bg-gray-800 rounded-xl p-4 border border-gray-200 dark:border-gray-600 space-y-3">
+                            <div className="flex justify-between items-center">
+                              <span className="text-xs text-gray-600 dark:text-gray-400">
+                                Amount
+                              </span>
+                              <span className="text-lg font-bold text-gray-900 dark:text-white">
+                                $200.00
+                              </span>
+                            </div>
+                            <div className="flex justify-between items-center">
+                              <span className="text-xs text-gray-600 dark:text-gray-400">
+                                Description
+                              </span>
+                              <span className="text-sm text-gray-900 dark:text-white">
+                                Food Payment
+                              </span>
+                            </div>
+                            <div className="flex justify-between items-center">
+                              <span className="text-xs text-gray-600 dark:text-gray-400">
+                                Sent to
+                              </span>
+                              <span className="text-sm text-gray-900 dark:text-white">
+                                sarah@email.com
+                              </span>
+                            </div>
+                            <div className="pt-3 border-t border-gray-200 dark:border-gray-600">
+                              <div className="flex items-center gap-2 bg-gray-50 dark:bg-gray-900 rounded-lg p-2">
+                                <LinkIcon className="w-4 h-4 text-gray-400" />
+                                <span className="text-xs font-mono text-gray-600 dark:text-gray-400 flex-1 truncate">
+                                  pay.paymonei.com/inv/xyz789
+                                </span>
+                                <button className="text-xs bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 px-2 py-1 rounded font-medium">
+                                  Copy
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="flex items-center gap-2 mt-3">
+                            <Check className="w-4 h-4 text-green-600" />
+                            <span className="text-xs text-gray-600 dark:text-gray-400">
+                              Email sent successfully
+                            </span>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-2 mt-2">
+                          <div className="w-6 h-6 bg-gradient-to-r from-orange-500 to-amber-600 rounded-full flex items-center justify-center">
+                            <span className="text-xs font-semibold text-white">
+                              AI
+                            </span>
+                          </div>
+                          <span className="text-xs text-gray-500">Paymonei AI</span>
+                        </div>
                       </div>
-                      <span className="text-xs text-gray-500">Paymonei AI</span>
                     </div>
                   </div>
                 </div>
