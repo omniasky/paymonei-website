@@ -153,7 +153,7 @@ const comparisonFeatures = [
   },
   {
     name: "Stablecoin MDR",
-    free: "1.5%",
+    free: "1.8%",
     growth: "1%",
     enterprise: "Custom",
   },
