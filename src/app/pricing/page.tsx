@@ -13,7 +13,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Pricing - Stablecoin Payment API | Free up to $10K/month | Paymonei",
   description:
-    "Transparent stablecoin payment pricing. Free tier with $10K monthly volume, 1.5% MDR on stablecoins, 0.5-1% FX rates. Growth plan $200/mo for unlimited volume. No setup fees, no hidden costs.",
+    "Transparent stablecoin and cards payment. Free tier with $10K volume. No setup fees, no hidden costs.",
   keywords: [
     "stablecoin payment pricing",
     "digital payment gateway cost",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Paymonei Pricing - Free Stablecoin Payments up to $10K/month",
     description:
-      "Start free with $10K monthly volume. Stablecoin payments at 1.5% MDR, adaptive FX 0.5-1%. Scale with transparent pricing - no hidden fees.",
+      "Transparent stablecoin and cards payment. Free tier with $10K volume. No setup fees, no hidden costs.",
     url: "https://paymonei.com/pricing",
     siteName: "Paymonei",
     type: "website",
@@ -78,7 +78,7 @@ const pricingTiers: PricingTier[] = [
     ctaHref: "https://app.paymonei.com/signup",
     features: [
       "Free up to $10K processed",
-      "Stablecoin payments: 1.5% MDR",
+      "Stablecoin payments: 1.8% MDR",
       "Adaptive FX: 1.5%",
       "Invoicing: 100 free/mo, then 0.4% (max $2)",
       "Card payments: 3.3% + $0.50",
