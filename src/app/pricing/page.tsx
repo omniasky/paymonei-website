@@ -111,7 +111,7 @@ const pricingTiers: PricingTier[] = [
   },
   {
     title: "Enterprise",
-    description: "For high-volume businesses • >$1M+ monthly recommended",
+    description: "For high-volume businesses • >$1M+ monthly",
     price: "Custom",
     cta: "Contact Sales",
     ctaHref: "mailto:sales@paymonei.com",
