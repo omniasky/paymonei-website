@@ -79,7 +79,7 @@ const pricingTiers: PricingTier[] = [
     features: [
       "Free up to $10K processed",
       "Stablecoin payments: 1.8% MDR",
-      "Adaptive FX: 1.5%",
+      "Adaptive Pricing: 1.5%",
       "Invoicing: 100 free/mo, then 0.4% (max $2)",
       "Card payments: 3.3% + $0.50",
       "Full API access & documentation",
@@ -91,15 +91,16 @@ const pricingTiers: PricingTier[] = [
   {
     title: "Growth",
     description: "For scaling businesses • Ideal for $10K-$500K monthly volume",
-    price: "$200",
+    price: "$299",
     period: "/month",
     isPopular: true,
     cta: "Get Started",
     ctaHref: "https://app.paymonei.com/signup?plan=growth",
     features: [
       "Unlimited transaction volume",
+      "USD & EUR virtual account numbers",
       "Stablecoin payments: 1% MDR",
-      "Adaptive FX: 0.5-1%",
+      "Adaptive Pricing: 0.5-1%",
       "Invoicing: 0.2% (max $1)",
       "Card payments: 3.3% + $0.50",
       "Priority email support",
@@ -148,7 +149,7 @@ const comparisonFeatures = [
   {
     name: "Monthly Subscription Fee",
     free: "$0",
-    growth: "$200",
+    growth: "$299",
     enterprise: "Custom",
   },
   {
@@ -158,7 +159,8 @@ const comparisonFeatures = [
     enterprise: "Custom",
   },
   {
-    name: "Adaptive FX",
+    name: "Adaptive Pricing",
+    description: "Lets your customers pay in their supported local currency",
     free: "1.5%",
     growth: "0.5-1%",
     enterprise: "Custom",

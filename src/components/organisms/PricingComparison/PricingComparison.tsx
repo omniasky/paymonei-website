@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 interface ComparisonFeature {
   name: string;
+  description?: string;
   free: boolean | string;
   growth: boolean | string;
   enterprise: boolean | string;
@@ -48,7 +49,14 @@ export function PricingComparison({ features }: PricingComparisonProps) {
                   key={index}
                   className="border-b last:border-0 hover:bg-muted/30 transition-colors"
                 >
-                  <td className="py-4 px-4 text-sm">{feature.name}</td>
+                  <td className="py-4 px-4 text-sm">
+                    <div>{feature.name}</div>
+                    {feature.description && (
+                      <div className="text-xs text-muted-foreground mt-1">
+                        {feature.description}
+                      </div>
+                    )}
+                  </td>
                   <td className="py-4 px-4 text-center">{renderValue(feature.free)}</td>
                   <td className="py-4 px-4 text-center">{renderValue(feature.growth)}</td>
                   <td className="py-4 px-4 text-center">{renderValue(feature.enterprise)}</td>
