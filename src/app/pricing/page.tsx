@@ -147,7 +147,7 @@ const comparisonFeatures = [
     enterprise: "$1M+",
   },
   {
-    name: "Monthly Subscription Fee",
+    name: "Monthly Fee",
     free: "$0",
     growth: "$299",
     enterprise: "Custom",
@@ -289,7 +289,7 @@ export default function PricingPage() {
         <section className="px-4 py-12">
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="relative group text-center p-8 rounded-2xl bg-gradient-to-br from-card to-card/50 border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg overflow-hidden">
+              <div className="relative group text-center p-8 rounded-2xl bg-gradient-to-br from-card to-card/50 border border-border/50 hover:border-primary/50 transition-all duration-m hover:shadow-lg overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 <div className="relative">
                   <div className="text-4xl mb-4">💳</div>
