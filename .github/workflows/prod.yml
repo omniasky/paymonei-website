@@ -160,15 +160,16 @@ jobs:
         run: |
           echo "Updating ECS service: ${{ env.ECS_SERVICE }}"
           echo "Cluster: ${{ env.ECS_CLUSTER }}"
-          
+
           # Force new deployment with the latest image
           aws ecs update-service \
             --cluster ${{ env.ECS_CLUSTER }} \
             --service ${{ env.ECS_SERVICE }} \
+            --desired-count 1 \
             --force-new-deployment \
             --query 'service.serviceName' \
             --output text
-          
+
           echo "🚀 Deployment initiated"
 
       - name: Wait for deployment completion
