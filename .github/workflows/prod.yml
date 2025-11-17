@@ -20,7 +20,7 @@ env:
   AWS_ACCESS_KEY_ID: ${{ secrets.TERRAFORM_PROD_AWS_ACCESS_KEY }}
   AWS_SECRET_ACCESS_KEY: ${{ secrets.TERRAFORM_PROD_AWS_SECRET_KEY }}
   GITHUB_TOKEN: ${{ secrets.PROD_OMNIASKY_PAT }}
-  AWS_REGION: ap-southeast-3
+  AWS_REGION: ap-southeast-1
   ECR_REGISTRY: 482537999446.dkr.ecr.ap-southeast-1.amazonaws.com
   ECR_REPOSITORY: paymonei-paymonei-website
   ECS_CLUSTER: paymonei-cluster
