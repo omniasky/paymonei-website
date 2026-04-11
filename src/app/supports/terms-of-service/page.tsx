@@ -101,7 +101,7 @@ export default function TermsOfServicePage() {
               <div className="bg-[#F5F5F2] border border-[#EAEAE6] rounded-lg p-6 mb-12">
                 <p className="text-[13px] font-medium text-[#0C0C0C] mb-2">Important Notice</p>
                 <p className="text-[14px] text-[#555] leading-relaxed font-light">
-                  Omniasky Technology Pte Ltd and PT Evora Vera Teknologi are <strong className="font-medium text-[#333]">software companies</strong>. Neither entity is a bank, financial institution, money services business, or virtual asset service provider. All financial execution services — including payment processing, fund movement, and settlement — are provided exclusively by our licensed third-party financial execution partners on a separate contractual basis.
+                  Omniasky Technology Pte Ltd and PT Evora Vera Teknologi are technology companies. Neither entity is a bank, financial institution, money services business, or virtual asset service provider. All financial execution services — including payment processing, fund movement, and settlement — are provided exclusively by our licensed third-party financial execution partners on a separate contractual basis.
                 </p>
               </div>
 
@@ -114,7 +114,7 @@ export default function TermsOfServicePage() {
                   Technology development and platform management services are delivered by our affiliated entity, <strong>PT Evora Vera Teknologi</strong>, a limited liability company incorporated in Indonesia, acting as our authorized technology partner.
                 </p>
                 <p>
-                  These Terms apply exclusively to <strong>businesses and their duly authorized representatives</strong> (&ldquo;Merchants&rdquo;) who register for and use the Services. The Services are not designed for, marketed to, or available to private individuals acting in a personal capacity.
+                  These Terms apply exclusively to businesses and their duly authorized representatives (&ldquo;Merchants&rdquo;) who register for and use the Services. The Services are not designed for, marketed to, or available to private individuals acting in a personal capacity.
                 </p>
                 <p>
                   By accessing or using the Services, you confirm that: (a) you are acting on behalf of a lawfully registered business entity; (b) you have the authority to bind that entity to this Agreement; and (c) you have read, understood, and agree to be bound by these Terms in their entirety.
