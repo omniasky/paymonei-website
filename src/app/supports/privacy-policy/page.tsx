@@ -384,7 +384,15 @@ export default function PrivacyPolicyPage() {
                   <tbody>
                     <tr>
                       <td>Merchant account data</td>
-                      <td>Duration of account + 3 years after closure</td>
+                      <td>Duration of account + 5 years after closure</td>
+                    </tr>
+                    <tr>
+                      <td>Director and business profile data</td>
+                      <td>Duration of account + 5 years after closure (consistent with merchant account data for regulatory audit readiness)</td>
+                    </tr>
+                    <tr>
+                      <td>Identity verification records (including submitted identity documents and verification outcomes)</td>
+                      <td>Minimum 5 years after the merchant relationship ends, to support regulatory authority requests, banking partner inquiries, or legal proceedings — as stated in Section 2.2</td>
                     </tr>
                     <tr>
                       <td>Invoice and billing records</td>
