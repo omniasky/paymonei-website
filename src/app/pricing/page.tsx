@@ -58,7 +58,7 @@ const plans = [
       { label: "Platform fee", value: "$0 / month" },
       { label: "Software service fee", value: "1.8% per transaction" },
       { label: "Invoices", value: "50 free / month" },
-      { label: "Settlement tracking", value: "Included" },
+      { label: "Payment status tracking", value: "Included" },
       { label: "API access", value: "Full" },
     ],
     includes: [
@@ -83,7 +83,7 @@ const plans = [
       { label: "Platform fee", value: "$299 / month" },
       { label: "Software service fee", value: "1.0% per transaction" },
       { label: "Invoices", value: "Unlimited" },
-      { label: "Settlement tracking", value: "Included" },
+      { label: "Payment status tracking", value: "Included" },
       { label: "API access", value: "Full + priority rate limits" },
     ],
     includes: [
@@ -92,7 +92,6 @@ const plans = [
       "Advanced analytics & reporting",
       "Subscription billing workflows",
       "Priority email support",
-      "Virtual account numbers (USD & EUR)",
     ],
   },
   {
@@ -109,7 +108,7 @@ const plans = [
       { label: "Platform fee", value: "Custom" },
       { label: "Software service fee", value: "Negotiated" },
       { label: "Invoices", value: "Unlimited" },
-      { label: "Settlement tracking", value: "Included" },
+      { label: "Payment status tracking", value: "Included" },
       { label: "API access", value: "Dedicated infrastructure" },
     ],
     includes: [
@@ -162,7 +161,6 @@ const comparison = [
   { feature: "Dashboard & analytics", starter: "Basic", growth: "Advanced", enterprise: "Custom" },
   { feature: "Multi-currency support", starter: false, growth: true, enterprise: true },
   { feature: "Subscription workflows", starter: false, growth: true, enterprise: true },
-  { feature: "Virtual account numbers", starter: false, growth: true, enterprise: true },
   { feature: "Priority support", starter: false, growth: true, enterprise: true },
   { feature: "Dedicated account manager", starter: false, growth: false, enterprise: true },
   { feature: "Custom SLA", starter: false, growth: false, enterprise: true },
