@@ -69,39 +69,38 @@ export default function CheckoutPage() {
         {/* ── HERO ───────────────────────────────────────────────────────── */}
         <section className="pt-32 pb-20 px-5 sm:px-8 border-b border-[#EAEAE6]">
           <div className="max-w-7xl mx-auto lg:px-8">
-            <div className="grid lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-20 items-center min-h-[500px]">
-              {/* Left Copy */}
-              <div>
-                <p className="text-[12px] tracking-[0.14em] uppercase text-[#999] mb-6 font-medium">Checkout Orchestration</p>
-                <h1
-                  className="text-[clamp(2.4rem,4.5vw,4rem)] font-light leading-[1.08] tracking-[-0.04em] text-[#0C0C0C] mb-6"
-                  style={{ fontFamily: "'Instrument Serif', Georgia, serif" }}
-                >
-                  The checkout experience.<br />
-                  <span className="italic text-[#666]">Built for conversion.</span>
-                </h1>
-                <p className="text-[16px] text-[#666] leading-relaxed font-light max-w-md mb-10">
-                  Deploy a high-converting, unified billing interface in minutes. Whether embedded in your app or hosted on our servers, we orchestrate the flow so your customers securely connect with our licensed execution partners.
-                </p>
+            {/* Center Copy */}
+            <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
+              <p className="text-[12px] tracking-[0.14em] uppercase text-[#999] mb-6 font-medium">Checkout Orchestration</p>
+              <h1
+                className="text-[clamp(2.8rem,5vw,4.5rem)] font-light leading-[1.08] tracking-[-0.04em] text-[#0C0C0C] mb-6"
+                style={{ fontFamily: "'Instrument Serif', Georgia, serif" }}
+              >
+                The checkout experience.<br />
+                <span className="italic text-[#666]">Built for conversion.</span>
+              </h1>
+              <p className="text-[16px] text-[#666] leading-relaxed font-light mb-10">
+                Deploy a high-converting, unified billing interface in minutes. Whether embedded in your app or hosted on our servers, we orchestrate the flow so your customers securely connect with our licensed execution partners.
+              </p>
 
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Link href="https://app.paymonei.com/auth/register">
-                    <span className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#0C0C0C] text-white text-[15px] font-medium hover:bg-[#222] transition-colors cursor-pointer">
-                      Explore checkout
-                      <Check className="w-4 h-4 opacity-70" />
-                    </span>
-                  </Link>
-                  <Link href="https://docs.paymonei.com/checkout">
-                    <span className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full border border-[#EAEAE6] bg-white text-[#555] text-[15px] font-medium hover:text-[#0C0C0C] hover:border-[#ccc] transition-colors cursor-pointer">
-                      <Code2 className="w-4 h-4 opacity-70" />
-                      Read the docs
-                    </span>
-                  </Link>
-                </div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto">
+                <Link href="https://app.paymonei.com/auth/register">
+                  <span className="inline-flex flex-1 items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#0C0C0C] text-white text-[15px] font-medium hover:bg-[#222] transition-colors cursor-pointer w-full">
+                    Explore checkout
+                    <Check className="w-4 h-4 opacity-70" />
+                  </span>
+                </Link>
+                <Link href="https://docs.paymonei.com/checkout">
+                  <span className="inline-flex flex-1 items-center justify-center gap-2 px-7 py-3.5 rounded-full border border-[#EAEAE6] bg-white text-[#555] text-[15px] font-medium hover:text-[#0C0C0C] hover:border-[#ccc] transition-colors cursor-pointer w-full">
+                    <Code2 className="w-4 h-4 opacity-70" />
+                    Read the docs
+                  </span>
+                </Link>
               </div>
+            </div>
 
-              {/* Right Interface Mockup (Based on User's Image) */}
-              <div className="relative border border-[#EAEAE6] rounded-xl bg-[#FAFAF8] shadow-sm p-4 md:p-6 overflow-hidden">
+            {/* Right Interface Mockup -> Now Full Width Below */}
+            <div className="relative border border-[#EAEAE6] rounded-xl bg-[#FAFAF8] shadow-sm p-4 md:p-6 overflow-hidden w-full">
                 <div className="bg-white rounded-lg border border-[#EAEAE6] shadow-sm overflow-hidden flex flex-col md:flex-row h-full">
                   {/* Left cart summary */}
                   <div className="flex-1 bg-[#FAFAF8] border-b md:border-b-0 md:border-r border-[#EAEAE6] p-6">
@@ -189,7 +188,6 @@ export default function CheckoutPage() {
                     </div>
                   </div>
                 </div>
-              </div>
             </div>
           </div>
         </section>
