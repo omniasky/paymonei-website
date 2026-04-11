@@ -9,7 +9,7 @@ const nav = [
     title: "Platform",
     links: [
       { label: "Invoice & Collect", href: "/billing/invoicing" },
-      { label: "Global Payouts", href: "/payments/links" },
+      { label: "Payment Links", href: "/payments/links" },
       { label: "Subscriptions", href: "/billing/subscriptions" },
       { label: "Checkout", href: "/payments/checkout" },
       { label: "Pricing", href: "/pricing" },
@@ -64,7 +64,7 @@ export function Footer() {
             </Link>
 
             <p className="text-[15px] text-[#777] leading-relaxed font-light max-w-xs">
-              Business payment software for invoices, collections, and global payouts — built for companies that operate across borders.
+              Business payment software for invoices, billing, and checkout workflows — built for companies that operate across borders.
             </p>
 
             {/* Social */}

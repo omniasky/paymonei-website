@@ -51,7 +51,7 @@ const mobilePlatformItems = [
     items: [
       { title: "Invoicing", href: "/billing/invoicing" },
       { title: "Subscriptions", href: "/billing/subscriptions" },
-      { title: "Invoice Factoring", href: "/invoice-factoring" },
+
     ],
   },
 ];
