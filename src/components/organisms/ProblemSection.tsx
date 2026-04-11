@@ -239,7 +239,7 @@ export function ProblemSection() {
 
   return (
     <section className="bg-white border-t border-[#EAEAE6] py-20 px-5 sm:px-8">
-      <div className="max-w-5xl mx-auto lg:px-8">
+      <div className="max-w-7xl mx-auto lg:px-8">
         <p className="text-[12px] tracking-[0.14em] uppercase text-[#999] mb-12">Why teams choose Paymonei</p>
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-[320px]">

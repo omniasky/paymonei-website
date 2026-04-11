@@ -102,7 +102,7 @@ export default function HomePage() {
 
         {/* ── LOGO STRIP ───────────────────────────────────────────── */}
         <section className="border-t border-[#EAEAE6] bg-[#FAFAF8] py-10 px-5 sm:px-8">
-          <div className="max-w-5xl mx-auto lg:px-8">
+          <div className="max-w-7xl mx-auto lg:px-8">
             <p className="text-[12px] tracking-[0.18em] uppercase text-[#BBBBB8] mb-6">
               Built on trusted global infrastructure
             </p>
@@ -131,7 +131,7 @@ export default function HomePage() {
 
         {/* ── WHAT WE DO ───────────────────────────────────────────── */}
         <section className="border-t border-[#EAEAE6] bg-[#FAFAF8] py-20 px-5 sm:px-8">
-          <div className="max-w-5xl mx-auto lg:px-8">
+          <div className="max-w-7xl mx-auto lg:px-8">
             <div className="grid md:grid-cols-2 gap-16 items-start">
               <div>
                 <p className="text-[12px] tracking-[0.14em] uppercase text-[#999] mb-5">The answer</p>
@@ -184,7 +184,7 @@ export default function HomePage() {
 
         {/* ── E2E OPERATIONS ───────────────────────────────────────── */}
         <section className="bg-white border-t border-[#EAEAE6] py-20 px-5 sm:px-8">
-          <div className="max-w-5xl mx-auto lg:px-8">
+          <div className="max-w-7xl mx-auto lg:px-8">
             {/* Header */}
             <div className="mb-14">
               <p className="text-[12px] tracking-[0.14em] uppercase text-[#999] mb-5">Platform</p>

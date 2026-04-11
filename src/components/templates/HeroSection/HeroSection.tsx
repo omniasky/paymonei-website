@@ -142,7 +142,7 @@ export function HeroSection({ primaryCta, secondaryCta }: HeroSectionProps) {
 
   return (
     <section className="relative bg-[#FAFAF8] pt-28 pb-20 px-5 sm:px-8 lg:px-0 overflow-hidden">
-      <div className="max-w-5xl mx-auto lg:px-8">
+      <div className="max-w-7xl mx-auto lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[420px]">
 
           {/* ── LEFT: Copy ───────────────────────────────────────── */}

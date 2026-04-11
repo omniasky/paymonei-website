@@ -280,7 +280,7 @@ function ApiCallButton() {
 export function CodeComparisonSection() {
   return (
     <section className="bg-[#FAFAF8] border-t border-[#EAEAE6] py-20 md:py-24 px-5 sm:px-8">
-      <div className="max-w-5xl mx-auto lg:px-8">
+      <div className="max-w-7xl mx-auto lg:px-8">
         {/* Section Header */}
         <div className="mb-12">
           <p className="text-[12px] tracking-[0.14em] uppercase text-[#999] mb-5">

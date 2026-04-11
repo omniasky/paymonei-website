@@ -46,7 +46,7 @@ const nav = [
 export function Footer() {
   return (
     <footer className="bg-[#F5F4F0] border-t border-[#EAEAE6]">
-      <div className="max-w-5xl mx-auto px-5 sm:px-8 lg:px-8 pt-16 pb-10">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-8 pt-16 pb-10">
 
         {/* Top row: logo + nav */}
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
