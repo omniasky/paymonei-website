@@ -50,7 +50,7 @@ const mobilePlatformItems = [
     category: "Billing",
     items: [
       { title: "Invoicing", href: "/billing/invoicing" },
-      { title: "Subscription", href: "/billing/subscription" },
+      { title: "Subscriptions", href: "/billing/subscriptions" },
       { title: "Invoice Factoring", href: "/invoice-factoring" },
     ],
   },

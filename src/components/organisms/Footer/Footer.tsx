@@ -10,7 +10,7 @@ const nav = [
     links: [
       { label: "Invoice & Collect", href: "/billing/invoicing" },
       { label: "Global Payouts", href: "/payments/links" },
-      { label: "Payroll", href: "/billing/subscription" },
+      { label: "Subscriptions", href: "/billing/subscriptions" },
       { label: "Checkout", href: "/payments/checkout" },
       { label: "Pricing", href: "/pricing" },
     ],

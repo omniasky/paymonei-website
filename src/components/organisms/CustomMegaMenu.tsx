@@ -26,8 +26,8 @@ const platformItems = [
         icon: Receipt,
       },
       {
-        title: "Subscription",
-        href: "/billing/subscription",
+        title: "Subscriptions",
+        href: "/billing/subscriptions",
         description: "Recurring billing with metered pricing",
         icon: BarChart3,
       },
