@@ -23,7 +23,7 @@ const toc = [
   { id: "introduction", label: "1. Introduction & Scope" },
   { id: "information-we-collect", label: "2. Information We Collect" },
   { id: "how-we-use", label: "3. How We Use Your Information" },
-  { id: "blockchain", label: "3a. Blockchain & Digital Currency" },
+  { id: "blockchain", label: "3a. Public Blockchain Data" },
   { id: "how-we-share", label: "4. How We Share Information" },
   { id: "cookies", label: "5. Cookies & Tracking" },
   { id: "security-retention", label: "6. Security & Retention" },
@@ -141,8 +141,7 @@ export default function PrivacyPolicyPage() {
                 </p>
                 <p>As part of this process, we share the identification information you provide with our third-party verification partners:</p>
                 <ul>
-                  <li><strong>Didit.me</strong> — for identity verification of directors and authorized representatives of businesses incorporated outside Indonesia.</li>
-                  <li><strong>Verihubs</strong> — for identity verification of directors and authorized representatives of businesses incorporated in Indonesia.</li>
+                  <li><strong>Identity verification providers</strong> — for identity verification of directors and authorized representatives.</li>
                 </ul>
                 <p>
                   These providers perform identity document verification and biometric liveness checks on our behalf under their own data processing terms. Biometric processing (facial comparison, liveness detection) is executed on the verification partner’s infrastructure. We retain the submitted identity information and verification records — including verification reference identifiers and, where required to satisfy regulatory audit trail obligations, copies of submitted identity documents — for the duration of the merchant relationship and for a minimum of five (5) years thereafter, in order to respond to requests from regulatory authorities, banking partners, or licensed financial execution partners.
@@ -185,7 +184,7 @@ export default function PrivacyPolicyPage() {
                       <td>Performance of contract (with merchant)</td>
                     </tr>
                     <tr>
-                      <td>Verifying the identity of authorized business representatives during merchant onboarding via Didit.me or Verihubs</td>
+                      <td>Verifying the identity of authorized business representatives during merchant onboarding</td>
                       <td>Legitimate interest (platform integrity and fraud prevention)</td>
                     </tr>
                     <tr>
@@ -236,15 +235,15 @@ export default function PrivacyPolicyPage() {
               </Section>
 
               {/* ── Block 3.5: Blockchain Data ── */}
-              <Section id="blockchain" title="3a. Blockchain &amp; Digital Currency Data">
+              <Section id="blockchain" title="3a. Public Blockchain Data">
                 <p>
-                  Where merchants activate blockchain-based payment options — such as USDC stablecoin payments processed via Circle — payment transactions are executed by our licensed financial execution partners on public blockchain networks. Paymonei does not initiate, sign, or broadcast blockchain transactions directly.
+                  Where merchants activate blockchain-based settlement options through our platform, payment transactions are executed by our licensed financial execution partners on public blockchain networks. Paymonei does not initiate, sign, or broadcast blockchain transactions directly.
                 </p>
                 <p>
-                  Transaction data recorded on-chain — including public wallet addresses and transaction amounts — is publicly accessible, immutable, and maintained by the relevant blockchain network. This data is outside our ability to modify, delete, or restrict. The right to erasure (where applicable under privacy law) cannot be applied to data recorded on a public blockchain.
+                  Transaction data recorded on-chain — including public wallet addresses and transaction amounts — is publicly accessible, immutable, and maintained by the relevant blockchain network. This data is outside our ability to modify, delete, or restrict. The right to erasure (where applicable under privacy law) cannot be applied to data recorded on a public blockchain, as this is an inherent characteristic of public blockchain protocols.
                 </p>
                 <CalloutBox>
-                  Paymonei does not operate or control any public blockchain network. On-chain data resulting from payment activity is governed by the terms and privacy practices of our licensed execution partners (e.g., Circle) and the relevant blockchain protocol. If you have concerns about blockchain data privacy, please refer to the privacy documentation of the relevant execution partner.
+                  Paymonei does not operate or control any public blockchain network. On-chain data resulting from payment activity is governed by the terms and privacy practices of our licensed execution partners and the relevant blockchain protocol. If you have concerns about on-chain data, please refer to the privacy documentation of the relevant execution partner.
                 </CalloutBox>
                 <p>
                   We do not analyse, profile, or aggregate public blockchain data for our own commercial or marketing purposes.
@@ -268,7 +267,7 @@ export default function PrivacyPolicyPage() {
                       <td>To route payment workflow instructions and enable transaction execution under their own regulatory licences. AML/CFT compliance is fulfilled by these partners, not Paymonei.</td>
                     </tr>
                     <tr>
-                      <td><strong>Identity Verification Partners</strong><br/><span style={{fontSize:"13px",color:"#777"}}>Didit.me (global), Verihubs (Indonesia)</span></td>
+                      <td><strong>Identity Verification Partners</strong></td>
                       <td>To verify the identity of business representatives during merchant onboarding for platform access control purposes.</td>
                     </tr>
                     <tr>
@@ -276,15 +275,15 @@ export default function PrivacyPolicyPage() {
                       <td>To share device and network context signals (IP address, user agent, device fingerprint) for fraud scoring, threat intelligence, and platform abuse prevention.</td>
                     </tr>
                     <tr>
-                      <td><strong>Cloud Infrastructure & Technology Providers</strong><br/><span style={{fontSize:"13px",color:"#777"}}>AWS, Vercel, and managed service providers</span></td>
-                      <td>To host, operate, and maintain our software infrastructure. Data is stored regionally as described in Section 4.4.</td>
+                      <td><strong>Cloud Infrastructure & Technology Providers</strong></td>
+                      <td>To host, operate, and maintain our software infrastructure.</td>
                     </tr>
                     <tr>
                       <td><strong>Analytics Vendors</strong></td>
                       <td>To analyse platform usage, feature adoption, and software performance. We use only privacy-respecting analytics tools. IP addresses used for analytics are anonymised at collection.</td>
                     </tr>
                     <tr>
-                      <td><strong>Affiliated Group Entities</strong><br/><span style={{fontSize:"13px",color:"#777"}}>PT Evora Vera Teknologi (Indonesia)</span></td>
+                      <td><strong>Affiliated Group Entities</strong></td>
                       <td>To deliver technology development and platform management services as our authorized technology partner, under an intra-group data sharing agreement.</td>
                     </tr>
                     <tr>
@@ -314,47 +313,35 @@ export default function PrivacyPolicyPage() {
 
                 <h3>4.2 Identity Verification Partners</h3>
                 <p>
-                  We share authorized representative and director identity information with the following verification providers during merchant onboarding, for platform access control purposes:
+                  We share authorized representative and director identity information with verification providers during merchant onboarding, for platform access control purposes. We share only the minimum information required to complete verification. We retain the verification outcome and reference identifier only.
                 </p>
-                <ul>
-                  <li><strong>Didit.me</strong> — identity and document verification for non-Indonesian merchants. Didit.me processes identity document images and liveness data under their own privacy policy.</li>
-                  <li><strong>Verihubs</strong> — identity and document verification for Indonesian merchants. Verihubs processes identity document images and liveness data in accordance with Indonesian data protection law.</li>
-                </ul>
-                <p>We share only the minimum information required to complete verification. We retain the verification outcome and reference identifier only.</p>
 
                 <h3>4.3 Cloud Infrastructure & Service Providers</h3>
                 <p>We use the following categories of third-party providers to operate our software infrastructure:</p>
                 <ul>
-                  <li><strong>Cloud hosting:</strong> Amazon Web Services, Vercel</li>
-                  <li><strong>Database:</strong> Managed database providers (AWS RDS)</li>
+                  <li><strong>Cloud hosting</strong></li>
+                  <li><strong>Database:</strong> Managed database providers</li>
                   <li><strong>Monitoring & observability:</strong> Logging and error tracking tools</li>
                   <li><strong>Email delivery:</strong> Transactional email providers (for invoice dispatch)</li>
                 </ul>
                 <p>All providers are bound by data processing agreements and, where applicable, standard contractual clauses.</p>
 
-                <h3>4.3 Data Residency & Regional Storage</h3>
+                <h3>4.4 Data Residency & Regional Storage</h3>
                 <p>
-                  We apply regional data storage to ensure personal data is held in proximity to the users it relates to and in compliance with applicable local data localisation requirements:
-                </p>
-                <ul>
-                  <li><strong>Global merchants and transaction participants:</strong> Data is stored on Amazon Web Services in the Singapore region (ap-southeast-1).</li>
-                  <li><strong>Indonesian merchants and transaction participants:</strong> Data is stored on Amazon Web Services in the Indonesia region (ap-southeast-3, Jakarta) in alignment with applicable Indonesian data localisation guidelines under UU PDP (Law No. 27 of 2022).</li>
-                </ul>
-                <p>
-                  Cross-region data transfers occur only where technically necessary for system reliability and redundancy. All such transfers are encrypted in transit using TLS 1.2 or higher.
+                  We apply regional data storage to ensure personal data is held in proximity to the users it relates to and in compliance with applicable local data localisation requirements. Cross-region data transfers occur only where technically necessary for system reliability and redundancy. All such transfers are encrypted in transit using TLS 1.2 or higher.
                 </p>
 
-                <h3>4.4 Intra-Group Processing</h3>
+                <h3>4.5 Intra-Group Processing</h3>
                 <p>
-                  Omniasky Technology Pte Ltd (Singapore) and PT Evora Vera Teknologi (Indonesia) operate as affiliated entities within the same group. Data is shared between them solely to deliver and support the Paymonei software product. Both entities apply the data protection standards described in this Policy and are bound by a formal intra-group data sharing agreement.
+                  Our affiliated entities operate within the same group. Data is shared between them solely to deliver and support the Paymonei software product. Both entities apply the data protection standards described in this Policy and are bound by a formal intra-group data sharing agreement.
                 </p>
 
-                <h3>4.5 Legal Disclosure</h3>
+                <h3>4.6 Legal Disclosure</h3>
                 <p>
                   We may disclose personal data to competent authorities, courts, or regulators where we are required to do so by applicable law, a valid legal order, or where we have a good-faith belief that disclosure is necessary to prevent harm. We will notify affected users where legally permitted to do so.
                 </p>
 
-                <h3>4.6 Business Transfers</h3>
+                <h3>4.7 Business Transfers</h3>
                 <p>
                   In the event of a merger, acquisition, or sale of substantially all assets, personal data may be transferred as part of that transaction. We will inform users via notice on our website or by email before data is transferred and becomes subject to a different privacy policy.
                 </p>
@@ -404,7 +391,7 @@ export default function PrivacyPolicyPage() {
                     </tr>
                     <tr>
                       <td>Invoice and billing records</td>
-                      <td>7 years (driven by Singapore corporate tax requirements)</td>
+                      <td>7 years (driven by corporate tax requirements)</td>
                     </tr>
                     <tr>
                       <td>Transaction participant session data</td>
@@ -466,7 +453,10 @@ export default function PrivacyPolicyPage() {
                   </Link>
                 </div>
                 <p className="text-[14px] text-[#777] mt-6 font-light">
-                  We may update this Privacy Policy periodically. Material changes will be communicated via email to registered merchants or via a notice on our website. The &ldquo;Effective date&rdquo; at the top of this page reflects the date of the most recent revision.
+                  We may update this Privacy Policy periodically to reflect changes in our practices, technology, legal requirements, or business operations. Where changes are material, we will provide at least 14 days&rsquo; advance notice via email to registered merchants and via a prominent notice on our website prior to the revised Policy taking effect. The &ldquo;Effective date&rdquo; at the top of this page reflects the date of the most recent revision.
+                </p>
+                <p className="text-[14px] text-[#777] mt-4 font-light">
+                  Your continued access to or use of the Services after the effective date of any revised Policy constitutes your acceptance of the updated terms. If you do not agree with a revised Policy, you must discontinue use of the Services before the effective date and notify us at <Link href="mailto:privacy@paymonei.com" className="text-[#0C0C0C] underline underline-offset-2 hover:opacity-70">privacy@paymonei.com</Link>.
                 </p>
               </Section>
 
