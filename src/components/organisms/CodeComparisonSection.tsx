@@ -279,57 +279,42 @@ function ApiCallButton() {
 
 export function CodeComparisonSection() {
   return (
-    <section className="py-20 md:py-28 px-2 xs:px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background via-muted/5 to-background">
-      <div className="max-w-7xl mx-auto">
+    <section className="bg-[#FAFAF8] border-t border-[#EAEAE6] py-20 md:py-24 px-5 sm:px-8">
+      <div className="max-w-5xl mx-auto lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full mb-6">
-            <svg
-              className="w-4 h-4 text-primary"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M13 10V3L4 14h7v7l9-11h-7z"
-              />
-            </svg>
-            <span className="text-sm font-semibold text-primary uppercase tracking-wider">
-              How It Works
-            </span>
-          </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            From Complex to{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-orange-600 to-amber-600">
-              Simple
-            </span>
+        <div className="mb-12">
+          <p className="text-[12px] tracking-[0.14em] uppercase text-[#999] mb-5">
+            How it works
+          </p>
+          <h2
+            className="text-[clamp(1.8rem,3.5vw,2.8rem)] font-light leading-tight tracking-[-0.03em] text-[#0C0C0C] max-w-lg"
+            style={{ fontFamily: "'Instrument Serif', Georgia, serif" }}
+          >
+            From Complex to Simple
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Transform complex billing for AI credits, in-app features, and subscriptions into simple API calls.
+          <p className="mt-4 text-[15px] text-[#777] max-w-md leading-relaxed font-light">
+            Replace fragmented payment integrations with a single, clean API surface.
           </p>
         </div>
 
         {/* Code Comparisons */}
         <Tabs defaultValue="payments" className="w-full">
-          <TabsList className="grid w-full max-w-3xl mx-auto grid-cols-1 md:grid-cols-3 h-auto gap-2 bg-muted/30 p-2 rounded-xl mb-12">
+          <TabsList className="flex flex-wrap gap-1 bg-transparent p-0 mb-10 border-b border-[#EAEAE6]">
             <TabsTrigger
               value="payments"
-              className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground py-3 px-4 text-sm md:text-base font-medium rounded-lg transition-all"
+              className="px-4 py-2.5 text-sm font-medium rounded-none border-b-2 border-transparent data-[state=active]:border-[#0C0C0C] data-[state=active]:text-[#0C0C0C] text-[#999] hover:text-[#555] transition-colors bg-transparent shadow-none"
             >
               Handle Payments
             </TabsTrigger>
             <TabsTrigger
               value="tracking"
-              className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground py-3 px-4 text-sm md:text-base font-medium rounded-lg transition-all"
+              className="px-4 py-2.5 text-sm font-medium rounded-none border-b-2 border-transparent data-[state=active]:border-[#0C0C0C] data-[state=active]:text-[#0C0C0C] text-[#999] hover:text-[#555] transition-colors bg-transparent shadow-none"
             >
               Track Usage & Billing
             </TabsTrigger>
             <TabsTrigger
               value="webhooks"
-              className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground py-3 px-4 text-sm md:text-base font-medium rounded-lg transition-all"
+              className="px-4 py-2.5 text-sm font-medium rounded-none border-b-2 border-transparent data-[state=active]:border-[#0C0C0C] data-[state=active]:text-[#0C0C0C] text-[#999] hover:text-[#555] transition-colors bg-transparent shadow-none"
             >
               Webhooks Optional
             </TabsTrigger>
@@ -337,12 +322,8 @@ export function CodeComparisonSection() {
 
           {/* Tab 1: Handle Payments */}
           <TabsContent value="payments" className="mt-0">
-            <div className="relative">
-              <div className="mb-8 text-center">
-                <p className="text-muted-foreground">
-                  Handle checkouts, line items, and subscription changes with one simple hook
-                </p>
-              </div>
+            <div>
+              <p className="mb-6 text-[13px] text-[#999] font-light">Handle checkouts, line items, and subscription changes with a single hook</p>
 
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <CodeBlock
@@ -363,13 +344,8 @@ export function CodeComparisonSection() {
 
           {/* Tab 2: Track Usage & Billing Limits */}
           <TabsContent value="tracking" className="mt-0">
-            <div className="relative">
-              <div className="mb-8 text-center">
-                <p className="text-muted-foreground">
-                  Monitor transaction volumes and manage billing cycles
-                  automatically
-                </p>
-              </div>
+            <div>
+              <p className="mb-6 text-[13px] text-[#999] font-light">Monitor usage and manage billing cycles automatically</p>
 
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <CodeBlock
@@ -390,12 +366,8 @@ export function CodeComparisonSection() {
 
           {/* Tab 3: Webhooks Optional */}
           <TabsContent value="webhooks" className="mt-0">
-            <div className="relative">
-              <div className="mb-8 text-center">
-                <p className="text-muted-foreground">
-                  Check AI credit limits in real-time before processing requests
-                </p>
-              </div>
+            <div>
+              <p className="mb-6 text-[13px] text-[#999] font-light">Real-time limit validation — no webhook plumbing required</p>
 
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <CodeBlock

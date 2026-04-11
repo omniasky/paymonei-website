@@ -6,160 +6,78 @@ import { createPortal } from "react-dom";
 import { ChevronDown } from "lucide-react";
 import {
   Brain,
-  Bot,
   FileText,
   Link2,
   CreditCard,
   Receipt,
   BarChart3,
-  TrendingUp,
+  Wand2,
 } from "lucide-react";
 
 const platformItems = [
   {
-    category: "Business",
-    description: "Powered by Hugogen.com",
-    items: [
-      {
-        title: "Hugogen (Soon)",
-        href: "/business/hugogen",
-        description: "Next-gen LLM that outperforms GPT",
-        icon: Brain,
-      },
-      {
-        title: "AI Agent Protocol",
-        href: "/a2a-protocols",
-        description: "Deploy autonomous business agents",
-        icon: Bot,
-      },
-      {
-        title: "AI Workspaces",
-        href: "/ai-workspaces",
-        description: "AI-powered operations workspace",
-        icon: FileText,
-      },
-    ],
-  },
-  {
-    category: "Global Payments",
-    description: "Instant payment solutions",
-    items: [
-      {
-        title: "Payment Links",
-        href: "/payments/links",
-        description: "Share & collect payments instantly",
-        icon: Link2,
-      },
-      {
-        title: "Checkout",
-        href: "/payments/checkout",
-        description: "Custom payment experiences",
-        icon: CreditCard,
-      },
-    ],
-    // subCategory: {
-    //   category: "Billing",
-    //   description: "Automated billing solutions",
-    //   items: [
-    //     {
-    //       title: "Invoicing",
-    //       href: "/billing/invoicing",
-    //       description: "Smart one-time invoicing",
-    //       icon: Receipt,
-    //     },
-    //     {
-    //       title: "Subscription",
-    //       href: "/billing/subscription",
-    //       description: "Usage-based recurring billing",
-    //       icon: BarChart3,
-    //     },
-    //   ],
-    // },
-  },
-  {
     category: "Billing",
-    description: "Automated billing solutions",
+    description: "Invoicing and subscription software",
     items: [
       {
         title: "Invoicing",
         href: "/billing/invoicing",
-        description: "Smart one-time invoicing",
+        description: "Send invoices in any currency, any country",
         icon: Receipt,
       },
       {
         title: "Subscription",
         href: "/billing/subscription",
-        description: "Usage-based recurring billing",
+        description: "Recurring billing with metered pricing",
         icon: BarChart3,
-      },
-      {
-        title: "Invoice Factoring",
-        href: "/invoice-factoring",
-        description: "Get paid instantly for invoices",
-        icon: TrendingUp,
       },
     ],
   },
-  // {
-  //   category: "Onchain",
-  //   description: "Blockchain infrastructure",
-  //   items: [
-  //     {
-  //       title: "Stablecoin",
-  //       href: "/onchain/stablecoin",
-  //       description: "Licensed & compliant stablecoins",
-  //       icon: Coins,
-  //     },
-  //     {
-  //       title: "Ramp",
-  //       href: "/onchain/ramp",
-  //       description: "Regulated fiat-crypto gateway",
-  //       icon: ArrowUpDown,
-  //     },
-  //     {
-  //       title: "Wallets",
-  //       href: "/onchain/wallets",
-  //       description: "Institutional-grade MPC wallets",
-  //       icon: Wallet,
-  //     },
-  //     {
-  //       title: "Bridge",
-  //       href: "/onchain/bridge",
-  //       description: "Cross-chain asset transfers",
-  //       icon: Link2,
-  //     },
-  //   ],
-  // },
-  // {
-  //   category: "Compliance",
-  //   description: "Risk and compliance tools",
-  //   items: [
-  //     {
-  //       title: "Identity",
-  //       href: "/compliance/identity",
-  //       description: "Instant KYC/KYB verification",
-  //       icon: User,
-  //     },
-  //     {
-  //       title: "KYT",
-  //       href: "/compliance/kyt",
-  //       description: "Real-time transaction monitoring",
-  //       icon: Search,
-  //     },
-  //     {
-  //       title: "Wallet Screening",
-  //       href: "/compliance/screening",
-  //       description: "Crypto address sanctions screening",
-  //       icon: Shield,
-  //     },
-  //     {
-  //       title: "Tracers",
-  //       href: "/compliance/tracers",
-  //       description: "Advanced transaction analysis",
-  //       icon: Activity,
-  //     },
-  //   ],
-  // },
+  {
+    category: "Payments",
+    description: "Payment links and checkout",
+    items: [
+      {
+        title: "Payment Links",
+        href: "/payments/links",
+        description: "No-code payment page, any currency",
+        icon: Link2,
+      },
+      {
+        title: "Checkout",
+        href: "/payments/checkout",
+        description: "In-product checkout, no redirect",
+        icon: CreditCard,
+      },
+    ],
+  },
+  {
+    category: "Business Tools",
+    description: "From Hugogen.com",
+    items: [
+      {
+        title: "AI Workspaces",
+        href: "https://hugogen.com/workspaces?utm_source=paymonei&utm_medium=navbar&utm_campaign=ai_workspaces",
+        description: "Workspace for business operations",
+        icon: FileText,
+        external: true,
+      },
+      {
+        title: "Agentic Designer",
+        href: "https://hugogen.com/studio?utm_source=paymonei&utm_medium=navbar&utm_campaign=agentic_designer",
+        description: "Design studio with AI generation",
+        icon: Wand2,
+        external: true,
+      },
+      {
+        title: "Hugogen",
+        href: "https://hugogen.com?utm_source=paymonei&utm_medium=navbar&utm_campaign=hugogen",
+        description: "Business AI built for operations teams",
+        icon: Brain,
+        external: true,
+      },
+    ],
+  },
 ] as PlatformCategory[];
 
 interface MegaMenuItemProps {
@@ -167,6 +85,7 @@ interface MegaMenuItemProps {
   href: string;
   description: string;
   icon: React.ElementType;
+  external?: boolean;
 }
 
 interface PlatformItem {
@@ -174,6 +93,7 @@ interface PlatformItem {
   href: string;
   description: string;
   icon: React.ElementType;
+  external?: boolean;
 }
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -193,18 +113,27 @@ const MegaMenuItem: React.FC<MegaMenuItemProps> = ({
   href,
   description,
   icon: Icon,
+  external,
 }) => {
   return (
     <Link
       href={href}
-      className="flex items-center gap-3 p-3 rounded-lg hover:bg-accent transition-colors group"
+      className="flex items-center gap-3 p-2.5 rounded-lg hover:bg-[#F5F5F2] transition-colors group"
+      {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
     >
-      <div className="p-2 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors flex-shrink-0">
-        <Icon className="h-4 w-4 text-primary" />
+      <div className="p-2 bg-[#F0F0EC] rounded-lg group-hover:bg-[#EAEAE6] transition-colors flex-shrink-0">
+        <Icon className="h-3.5 w-3.5 text-[#555]" />
       </div>
       <div className="flex-1 min-w-0">
-        <div className="text-sm font-medium text-foreground">{title}</div>
-        <p className="text-[10px] text-muted-foreground line-clamp-1 mt-0.5">
+        <div className="flex items-center gap-1">
+          <span className="text-sm font-medium text-[#0C0C0C]">{title}</span>
+          {external && (
+            <svg className="w-2.5 h-2.5 text-[#BBB] shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          )}
+        </div>
+        <p className="text-[13px] text-[#555] mt-0.5">
           {description}
         </p>
       </div>
@@ -233,24 +162,24 @@ export function CustomMegaMenu() {
 
   const megaMenuContent = isOpen ? (
     <div
-      className="fixed left-0 right-0 bg-background/95 backdrop-blur-xl border-b shadow-lg z-50 hidden lg:block"
+      className="fixed left-0 right-0 bg-[#FAFAF8]/97 backdrop-blur-xl border-b border-[#EAEAE6] shadow-sm z-50 hidden lg:block"
       style={{
-        top: "60px", // Slightly overlaps with navbar
+        top: "64px",
         width: "100vw",
         marginLeft: "calc(-50vw + 50%)",
       }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="grid grid-cols-4 gap-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-7">
+        <div className="grid grid-cols-3 gap-8">
           {platformItems.map((category: PlatformCategory) => (
-            <div key={category.category} className="space-y-4">
-              <div className="pb-3 border-b border-border/50">
-                <h3 className="text-sm font-semibold text-foreground">
+            <div key={category.category} className="space-y-3">
+              <div className="pb-2.5 border-b border-[#EAEAE6]">
+                <h3 className="text-xs font-semibold tracking-[0.08em] uppercase text-[#0C0C0C]">
                   {category.category}
                 </h3>
-                <p className="text-xs text-muted-foreground mt-1">
+                <p className="text-[13px] text-[#777] mt-1">
                   {category.description}
                 </p>
               </div>
@@ -262,6 +191,7 @@ export function CustomMegaMenu() {
                     href={item.href}
                     description={item.description}
                     icon={item.icon}
+                    external={item.external}
                   />
                 ))}
               </div>

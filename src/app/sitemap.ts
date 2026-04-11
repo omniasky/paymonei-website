@@ -5,76 +5,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const currentDate = new Date().toISOString();
 
   return [
-    // Main pages
-    {
-      url: baseUrl,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 1.0,
-    },
-    {
-      url: `${baseUrl}/pricing`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/agent-protocol`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/developers`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/enterprise`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/about`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    },
+    // Main
+    { url: baseUrl, lastModified: currentDate, changeFrequency: 'weekly', priority: 1.0 },
+    { url: `${baseUrl}/pricing`, lastModified: currentDate, changeFrequency: 'monthly', priority: 0.8 },
 
-    // Support pages
-    {
-      url: `${baseUrl}/supports/terms-of-service`,
-      lastModified: currentDate,
-      changeFrequency: 'yearly',
-      priority: 0.3,
-    },
-    {
-      url: `${baseUrl}/supports/privacy-policy`,
-      lastModified: currentDate,
-      changeFrequency: 'yearly',
-      priority: 0.3,
-    },
-    {
-      url: `${baseUrl}/supports/compliance-guide`,
-      lastModified: currentDate,
-      changeFrequency: 'yearly',
-      priority: 0.4,
-    },
+    // Platform — Payments
+    { url: `${baseUrl}/payments/links`, lastModified: currentDate, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${baseUrl}/payments/checkout`, lastModified: currentDate, changeFrequency: 'weekly', priority: 0.8 },
 
-    // Auth pages (lower priority, no index for some)
-    {
-      url: `${baseUrl}/auth/login`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.2,
-    },
-    {
-      url: `${baseUrl}/auth/register`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.2,
-    },
+    // Platform — Billing
+    { url: `${baseUrl}/billing/invoicing`, lastModified: currentDate, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${baseUrl}/billing/subscription`, lastModified: currentDate, changeFrequency: 'weekly', priority: 0.8 },
+
+    // Platform — Business Tools
+    { url: `${baseUrl}/ai-workspaces`, lastModified: currentDate, changeFrequency: 'weekly', priority: 0.7 },
+
+    // Docs
+    { url: `${baseUrl}/docs`, lastModified: currentDate, changeFrequency: 'weekly', priority: 0.7 },
+
+    // Company
+    { url: `${baseUrl}/about`, lastModified: currentDate, changeFrequency: 'monthly', priority: 0.5 },
+
+    // Support & Legal
+    { url: `${baseUrl}/supports/terms-of-service`, lastModified: currentDate, changeFrequency: 'yearly', priority: 0.3 },
+    { url: `${baseUrl}/supports/privacy-policy`, lastModified: currentDate, changeFrequency: 'yearly', priority: 0.3 },
+    { url: `${baseUrl}/supports/cookie-policy`, lastModified: currentDate, changeFrequency: 'yearly', priority: 0.2 },
   ];
 }

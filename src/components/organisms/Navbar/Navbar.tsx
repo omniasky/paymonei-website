@@ -5,7 +5,6 @@ import Image from "next/image";
 import { useState } from "react";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { ThemeToggle } from "@/components/atoms/ThemeToggle";
 import { CustomMegaMenu } from "../CustomMegaMenu";
 import {
   Collapsible,
@@ -69,7 +68,7 @@ export function Navbar({
   const [platformsOpen, setPlatformsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-lg z-50 border-b">
+    <nav className="fixed top-0 w-full bg-[#FAFAF8]/90 backdrop-blur-md z-50 border-b border-[#EAEAE6]">
       <div className="max-w-7xl mx-auto px-2 xs:px-4 sm:px-6 lg:px-8">
         <div className="flex items-center h-16">
           {/* Logo on the left */}
@@ -94,7 +93,7 @@ export function Navbar({
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-muted-foreground hover:text-primary transition-colors px-3 py-2 font-medium text-sm"
+                  className="text-[#777] hover:text-[#0C0C0C] transition-colors px-3 py-2 font-light text-sm"
                 >
                   {link.label}
                 </Link>
@@ -105,27 +104,22 @@ export function Navbar({
           {/* Spacer for tablet/mobile to push right items to the right */}
           <div className="flex-1 lg:hidden"></div>
 
-          {/* Right side: Theme toggle, Login, Sign up - Desktop only */}
-          <div className="hidden lg:flex items-center space-x-2">
-            <ThemeToggle />
+          {/* Right side: Login, Sign up - Desktop only */}
+          <div className="hidden lg:flex items-center gap-2">
             <Link href="https://app.paymonei.com/auth/login">
-              <Button className="bg-gradient-to-r w-24 rounded-full from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white">
-                Login
-              </Button>
+              <span className="px-4 py-2 text-sm text-[#555] hover:text-[#0C0C0C] font-light transition-colors cursor-pointer">
+                Log in
+              </span>
             </Link>
             <Link href="https://app.paymonei.com/auth/register">
-              <Button
-                variant="outline"
-                className="rounded-full border-orange-500 text-orange-600 hover:bg-orange-50 dark:hover:bg-orange-950"
-              >
-                Sign Up
-              </Button>
+              <span className="px-4 py-2 rounded-full bg-[#0C0C0C] text-white text-sm font-medium hover:bg-[#222] transition-colors cursor-pointer">
+                Get started
+              </span>
             </Link>
           </div>
 
-          {/* Mobile/Tablet: Theme toggle and hamburger on the right */}
-          <div className="flex items-center space-x-4 lg:hidden">
-            <ThemeToggle />
+          {/* Mobile/Tablet: hamburger only */}
+          <div className="flex items-center gap-3 lg:hidden">
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
@@ -195,31 +189,23 @@ export function Navbar({
                     ))}
 
                     {/* Auth Buttons */}
-                    <div className="space-y-3 pt-4">
-                      <div>
-                        <Link
-                          href="https://app.paymonei.com/auth/login"
-                          onClick={() => setIsOpen(false)}
-                        >
-                          <Button className="w-full bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white">
-                            Login
-                          </Button>
-                        </Link>
-                      </div>
-                      <div>
-                        {" "}
-                        <Link
-                          href="/auth/register"
-                          onClick={() => setIsOpen(false)}
-                        >
-                          <Button
-                            variant="outline"
-                            className="w-full border-orange-500 text-orange-600 hover:bg-orange-50 dark:hover:bg-orange-950"
-                          >
-                            Sign Up
-                          </Button>
-                        </Link>
-                      </div>
+                    <div className="space-y-2 pt-4 border-t border-[#EAEAE6]">
+                      <Link
+                        href="https://app.paymonei.com/auth/login"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        <span className="block w-full text-center px-4 py-2.5 rounded-full border border-[#E5E5E2] text-sm text-[#555] hover:border-[#ccc] hover:text-[#0C0C0C] transition-colors">
+                          Log in
+                        </span>
+                      </Link>
+                      <Link
+                        href="https://app.paymonei.com/auth/register"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        <span className="block w-full text-center px-4 py-2.5 rounded-full bg-[#0C0C0C] text-white text-sm font-medium hover:bg-[#222] transition-colors">
+                          Get started
+                        </span>
+                      </Link>
                     </div>
                   </div>
                 </ScrollArea>
