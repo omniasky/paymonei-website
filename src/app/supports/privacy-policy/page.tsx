@@ -107,9 +107,9 @@ export default function PrivacyPolicyPage() {
                 <p>
                   Technology development and platform management services are delivered by our affiliated entity, <strong>PT Evora Vera Teknologi</strong>, a limited liability company incorporated in Indonesia, acting as our authorized technology partner.
                 </p>
-                <CalloutBox>
+                <p>
                   Neither Omniasky Technology Pte Ltd nor PT Evora Vera Teknologi is a bank, payment institution, money services business, or virtual asset service provider. We are software companies. Financial execution services are provided by our regulated, licensed partners on a separate contractual basis.
-                </CalloutBox>
+                </p>
                 <p>This Policy applies to:</p>
                 <ul>
                   <li><strong>Merchants:</strong> Businesses and authorised representatives of businesses who create a Paymonei account to access our billing and workflow software. Paymonei is a business-to-business software platform and is not intended for use by private individuals acting in a personal capacity.</li>
@@ -123,7 +123,7 @@ export default function PrivacyPolicyPage() {
 
               {/* ── Block 2: Information We Collect ── */}
               <Section id="information-we-collect" title="2. Information We Collect">
-                <h3>2.1 From Merchants (Our B2B SaaS Subscribers)</h3>
+                <h3>2.1 From Merchants (Our B2B Subscribers)</h3>
                 <p>When a business registers, configures, or operates a Paymonei account, we collect:</p>
                 <ul>
                   <li><strong>Account credentials:</strong> Name, business email address, password hash.</li>
@@ -242,17 +242,14 @@ export default function PrivacyPolicyPage() {
                 <p>
                   Transaction data recorded on-chain — including public wallet addresses and transaction amounts — is publicly accessible, immutable, and maintained by the relevant blockchain network. This data is outside our ability to modify, delete, or restrict. The right to erasure (where applicable under privacy law) cannot be applied to data recorded on a public blockchain, as this is an inherent characteristic of public blockchain protocols.
                 </p>
-                <CalloutBox>
-                  Paymonei does not operate or control any public blockchain network. On-chain data resulting from payment activity is governed by the terms and privacy practices of our licensed execution partners and the relevant blockchain protocol. If you have concerns about on-chain data, please refer to the privacy documentation of the relevant execution partner.
-                </CalloutBox>
                 <p>
-                  We do not analyse, profile, or aggregate public blockchain data for our own commercial or marketing purposes.
+                  Paymonei does not operate or control any public blockchain network. On-chain data resulting from payment activity is governed by the terms and privacy practices of our licensed execution partners and the relevant blockchain protocol. If you have concerns about on-chain data, please refer to the privacy documentation of the relevant execution partner.
                 </p>
               </Section>
 
               <Section id="how-we-share" title="4. How We Share Information">
                 <p>
-                  We do <strong>not sell, rent, or trade</strong> personal data. We share data only with the following categories of recipients, for the purposes stated:
+                  We do not sell, rent, or trade personal data. We share data only with the following categories of recipients, for the purposes stated:
                 </p>
                 <table>
                   <thead>
@@ -263,8 +260,8 @@ export default function PrivacyPolicyPage() {
                   </thead>
                   <tbody>
                     <tr>
-                      <td><strong>Licensed Financial Execution Partners</strong><br/><span style={{fontSize:"13px",color:"#777"}}>Payment institutions, banks, and regulated financial service providers</span></td>
-                      <td>To route payment workflow instructions and enable transaction execution under their own regulatory licences. AML/CFT compliance is fulfilled by these partners, not Paymonei.</td>
+                      <td><strong>Licensed Financial Execution Partners</strong><br /><span style={{ fontSize: "13px", color: "#777" }}>Payment institutions, banks, and regulated financial service providers</span></td>
+                      <td>To route payment workflow instructions and enable transaction execution under their own regulatory licences. Paymonei applies technology-layer risk monitoring; licensed partners fulfil regulated AML/CFT, sanctions screening, and transaction monitoring obligations. Both layers operate in concert to maintain platform security and compliance integrity.</td>
                     </tr>
                     <tr>
                       <td><strong>Identity Verification Partners</strong></td>
@@ -510,16 +507,6 @@ function LegalProse({ children }: { children: React.ReactNode }) {
       [&_tr:last-child_td]:border-0
     ">
       {children}
-    </div>
-  );
-}
-
-function CalloutBox({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="my-6 border-l-4 border-[#0C0C0C] pl-5 py-1">
-      <p className="text-[14px] text-[#555] leading-relaxed font-light italic">
-        {children}
-      </p>
     </div>
   );
 }
