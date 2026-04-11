@@ -111,7 +111,7 @@ export default function TermsOfServicePage() {
                   These Terms of Service (&ldquo;Terms&rdquo; or &ldquo;Agreement&rdquo;) govern access to and use of the Paymonei platform, APIs, dashboards, and hosted services (collectively, the &ldquo;Services&rdquo;) provided by <strong>Omniasky Technology Pte Ltd</strong>, a company registered in Singapore that holds the proprietary technology and intellectual property of the Paymonei platform (&ldquo;Omniasky&rdquo;, &ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;us&rdquo;).
                 </p>
                 <p>
-                  Technology development and platform management services are delivered by our affiliated entity, <strong>PT Evora Vera Teknologi</strong>, a limited liability company incorporated in Indonesia, acting as our authorized technology partner. Your contractual relationship under this Agreement is with Omniasky Technology Pte Ltd only.
+                  Technology development and platform management services are delivered by our affiliated entity, <strong>PT Evora Vera Teknologi</strong>, a limited liability company incorporated in Indonesia, acting as our authorized technology partner.
                 </p>
                 <p>
                   These Terms apply exclusively to <strong>businesses and their duly authorized representatives</strong> (&ldquo;Merchants&rdquo;) who register for and use the Services. The Services are not designed for, marketed to, or available to private individuals acting in a personal capacity.
@@ -127,7 +127,7 @@ export default function TermsOfServicePage() {
               {/* ── Block 2: Nature of the Services ── */}
               <Section id="services" title="2. Nature of the Services">
                 <p>
-                  Paymonei is a <strong>B2B software orchestration platform</strong> that provides billing automation, invoice generation, payment workflow configuration, subscription management, analytics dashboards, and API connectivity tools to registered merchant businesses.
+                  Paymonei is a B2B software orchestration platform that provides billing automation, invoice generation, payment workflow configuration, subscription management, analytics dashboards, and API connectivity tools to registered merchant businesses.
                 </p>
                 <h3>2.1 What Paymonei Provides</h3>
                 <ul>
@@ -168,7 +168,7 @@ export default function TermsOfServicePage() {
                   To create a Paymonei account, you must provide accurate, complete, and current information including: the legal entity name of your business, your business registration number, country of incorporation, nature of business, and contact information for the authorized representative registering the account.
                 </p>
                 <p>
-                  As part of merchant onboarding, identity verification of authorized business representatives and directors is conducted by our authorized third-party verification partners. This verification is a <strong>software platform access control measure</strong>. Regulated AML/CFT compliance obligations applicable to payment transactions are fulfilled by our licensed Execution Partners under their own regulatory frameworks.
+                  As part of merchant onboarding, identity verification of authorized business representatives and directors is conducted by our authorized third-party verification partners. This verification is a software platform access control measure. Regulated AML/CFT compliance obligations applicable to payment transactions are fulfilled by our licensed Execution Partners under their own regulatory frameworks.
                 </p>
                 <h3>3.3 Account Security</h3>
                 <p>
@@ -238,7 +238,7 @@ export default function TermsOfServicePage() {
               <Section id="fees" title="6. Fees, Billing & Subscription">
                 <h3>6.1 Platform Subscription Fees</h3>
                 <p>
-                  Access to the Services is subject to the platform subscription fees and pricing tiers published at <Link href="/pricing">paymonei.com/pricing</Link> (&ldquo;Fees&rdquo;). All Fees are described as <strong>software licence fees</strong> for access to the Paymonei platform. Fees are not transaction fees, payment processing fees, or any form of compensation for financial services.
+                  Access to the Services is subject to the platform subscription fees and pricing tiers published at <Link href="/pricing">paymonei.com/pricing</Link> (&ldquo;Fees&rdquo;). All Fees are described as technology service fees for access to the Paymonei platform. Fees are not transaction fees, payment processing fees, or any form of compensation for financial services.
                 </p>
                 <h3>6.2 Billing and Payment</h3>
                 <p>
@@ -262,7 +262,7 @@ export default function TermsOfServicePage() {
               <Section id="ip" title="7. Intellectual Property">
                 <h3>7.1 Ownership</h3>
                 <p>
-                  All intellectual property rights in and to the Paymonei platform, APIs, SDKs, branding, proprietary algorithms, documentation, and associated technology are owned exclusively by <strong>Omniasky Technology Pte Ltd</strong>. Nothing in this Agreement transfers ownership of any intellectual property to you.
+                  All intellectual property rights in and to the Paymonei platform, APIs, SDKs, branding, proprietary algorithms, documentation, and associated technology are owned exclusively by Omniasky Technology Pte Ltd. Nothing in this Agreement transfers ownership of any intellectual property to you.
                 </p>
                 <h3>7.2 Licence Grant</h3>
                 <p>
@@ -289,7 +289,7 @@ export default function TermsOfServicePage() {
                 </p>
                 <h3>8.1 Data Controller / Processor Relationship</h3>
                 <p>
-                  Where you use the Paymonei platform to process personal data about your own customers or third parties, you act as the <strong>data controller</strong> and Paymonei acts as your <strong>data processor</strong>. You warrant that you have a lawful basis for processing such data and for instructing us to process it on your behalf.
+                  Where you use the Paymonei platform to process personal data about your own customers or third parties, you act as the data controller and Paymonei acts as your data processor. You warrant that you have a lawful basis for processing such data and for instructing us to process it on your behalf.
                 </p>
                 <h3>8.2 Data Processing Agreement</h3>
                 <p>
@@ -317,7 +317,7 @@ export default function TermsOfServicePage() {
                   <li>Any defects in the Services will be corrected within any particular timeframe.</li>
                 </ul>
                 <p>
-                  Our security controls protect <strong>software data and workflow instructions</strong>. The security, insurance, and regulatory protection of financial funds themselves are the responsibility of our licensed Execution Partners under their respective regulatory frameworks.
+                  Our security controls protect software data and workflow instructions. The security, insurance, and regulatory protection of financial funds themselves are the responsibility of our licensed Execution Partners under their respective regulatory frameworks.
                 </p>
               </Section>
 
@@ -390,7 +390,7 @@ export default function TermsOfServicePage() {
               <Section id="governing-law" title="13. Governing Law & Dispute Resolution">
                 <h3>13.1 Governing Law</h3>
                 <p>
-                  This Agreement and any dispute or claim arising out of or in connection with it or its subject matter or formation (including non-contractual disputes or claims) shall be governed by and construed in accordance with the laws of the <strong>Republic of Singapore</strong>, without regard to its conflict of law provisions.
+                  This Agreement and any dispute or claim arising out of or in connection with it or its subject matter or formation (including non-contractual disputes or claims) shall be governed by and construed in accordance with the laws of the Republic of Singapore, without regard to its conflict of law provisions.
                 </p>
                 <h3>13.2 Good-Faith Negotiation</h3>
                 <p>
