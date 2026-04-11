@@ -105,10 +105,10 @@ export default function PrivacyPolicyPage() {
               {/* ── Block 1: Introduction & Scope ── */}
               <Section id="introduction" title="1. Introduction & Scope">
                 <p>
-                  This Privacy Policy describes how <strong>Omniasky Technology Pte Ltd</strong> (UEN: pending), a company registered in Singapore (&ldquo;Omniasky&rdquo;, &ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;us&rdquo;) collects, uses, and protects personal data when you access or use the Paymonei platform and any associated websites, APIs, dashboards, or hosted services (collectively, the &ldquo;Services&rdquo;).
+                  This Privacy Policy describes how <strong>Omniasky Technology Pte Ltd</strong>, a company registered in Singapore (&ldquo;Omniasky&rdquo;, &ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;us&rdquo;) collects, uses, and protects personal data when you access or use the Paymonei platform and any associated websites, APIs, dashboards, or hosted services (collectively, the &ldquo;Services&rdquo;).
                 </p>
                 <p>
-                  Omniasky is the intellectual property holder and data controller for Paymonei. The day-to-day software engineering and platform operations are performed by our affiliated operating entity, <strong>PT Evora Vera Teknologi</strong>, a limited liability company incorporated in Indonesia, acting as a sub-processor under Omniasky&rsquo;s data processing instructions.
+                  Omniasky is the intellectual property and management holding company for Paymonei. Technology development, platform management, and day-to-day software operations are provided by our affiliated entity, <strong>PT Evora Vera Teknologi</strong>, a limited liability company incorporated in Indonesia, acting as a sub-processor under Omniasky&rsquo;s instructions.
                 </p>
                 <CalloutBox>
                   Neither Omniasky Technology Pte Ltd nor PT Evora Vera Teknologi is a bank, payment institution, money services business, or virtual asset service provider. We are software companies. Financial execution services are provided by our regulated, licensed partners on a separate contractual basis.
