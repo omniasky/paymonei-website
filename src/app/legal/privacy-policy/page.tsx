@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: "Privacy Policy | Paymonei",
     description:
       "How Paymonei collects, uses and protects business data when you use our billing and payment orchestration software.",
-    url: "https://paymonei.com/supports/privacy-policy",
+    url: "https://paymonei.com/legal/privacy-policy",
     siteName: "Paymonei",
     type: "website",
   },

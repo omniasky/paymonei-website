@@ -36,9 +36,9 @@ const nav = [
   {
     title: "Legal",
     links: [
-      { label: "Privacy Policy", href: "/supports/privacy-policy" },
-      { label: "Terms of Service", href: "/supports/terms-of-service" },
-      { label: "Cookie Policy", href: "/supports/cookie-policy" },
+      { label: "Privacy Policy", href: "/legal/privacy-policy" },
+      { label: "Terms of Service", href: "/legal/terms-of-service" },
+      { label: "Cookie Policy", href: "/legal/cookie-policy" },
     ],
   },
 ];
@@ -132,11 +132,11 @@ export function Footer() {
             <div className="text-right space-y-1">
               <p className="text-[13px] text-[#BBB] font-light leading-relaxed">
                 Paymonei provides software tools for payment operations.{" "}
-                <Link href="/supports/terms-of-service" className="underline underline-offset-2 hover:text-[#777] transition-colors">
+                <Link href="/legal/terms-of-service" className="underline underline-offset-2 hover:text-[#777] transition-colors">
                   Terms
                 </Link>
                 {" · "}
-                <Link href="/supports/privacy-policy" className="underline underline-offset-2 hover:text-[#777] transition-colors">
+                <Link href="/legal/privacy-policy" className="underline underline-offset-2 hover:text-[#777] transition-colors">
                   Privacy
                 </Link>
               </p>

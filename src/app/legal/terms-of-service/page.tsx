@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: "Terms of Service | Paymonei",
     description:
       "Terms of Service governing access to and use of the Paymonei billing and payment orchestration software platform.",
-    url: "https://paymonei.com/supports/terms-of-service",
+    url: "https://paymonei.com/legal/terms-of-service",
     siteName: "Paymonei",
     type: "website",
   },
@@ -120,7 +120,7 @@ export default function TermsOfServicePage() {
                   By accessing or using the Services, you confirm that: (a) you are acting on behalf of a lawfully registered business entity; (b) you have the authority to bind that entity to this Agreement; and (c) you have read, understood, and agree to be bound by these Terms in their entirety.
                 </p>
                 <p>
-                  Our Privacy Policy (available at <Link href="/supports/privacy-policy">paymonei.com/supports/privacy-policy</Link>) is incorporated into this Agreement by reference. Your use of the Services is also subject to our Privacy Policy.
+                  Our Privacy Policy (available at <Link href="/legal/privacy-policy">paymonei.com/legal/privacy-policy</Link>) is incorporated into this Agreement by reference. Your use of the Services is also subject to our Privacy Policy.
                 </p>
               </Section>
 
@@ -285,7 +285,7 @@ export default function TermsOfServicePage() {
               {/* ── Block 8: Data Protection & Privacy ── */}
               <Section id="data-protection" title="8. Data Protection & Privacy">
                 <p>
-                  The collection, use, and protection of personal data in connection with your use of the Services is governed by our <Link href="/supports/privacy-policy">Privacy Policy</Link>, incorporated into this Agreement by reference.
+                  The collection, use, and protection of personal data in connection with your use of the Services is governed by our <Link href="/legal/privacy-policy">Privacy Policy</Link>, incorporated into this Agreement by reference.
                 </p>
                 <h3>8.1 Data Controller / Processor Relationship</h3>
                 <p>

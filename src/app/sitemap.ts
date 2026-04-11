@@ -26,9 +26,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Company
     { url: `${baseUrl}/about`, lastModified: currentDate, changeFrequency: 'monthly', priority: 0.5 },
 
-    // Support & Legal
-    { url: `${baseUrl}/supports/terms-of-service`, lastModified: currentDate, changeFrequency: 'yearly', priority: 0.3 },
-    { url: `${baseUrl}/supports/privacy-policy`, lastModified: currentDate, changeFrequency: 'yearly', priority: 0.3 },
-    { url: `${baseUrl}/supports/cookie-policy`, lastModified: currentDate, changeFrequency: 'yearly', priority: 0.2 },
+    // Legal
+    { url: `${baseUrl}/legal/terms-of-service`, lastModified: currentDate, changeFrequency: 'yearly', priority: 0.3 },
+    { url: `${baseUrl}/legal/privacy-policy`, lastModified: currentDate, changeFrequency: 'yearly', priority: 0.3 },
+    { url: `${baseUrl}/legal/cookie-policy`, lastModified: currentDate, changeFrequency: 'yearly', priority: 0.2 },
   ];
 }

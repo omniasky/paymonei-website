@@ -82,10 +82,10 @@ export default function NotFound() {
               <Link href="/">Home</Link>
             </Button>
             <Button variant="ghost" size="sm" asChild>
-              <Link href="/supports/terms-of-service">Terms</Link>
+              <Link href="/legal/terms-of-service">Terms</Link>
             </Button>
             <Button variant="ghost" size="sm" asChild>
-              <Link href="/supports/privacy-policy">Privacy</Link>
+              <Link href="/legal/privacy-policy">Privacy</Link>
             </Button>
             <Button variant="ghost" size="sm" asChild>
               <Link href="/supports/compliance-guide">Compliance</Link>

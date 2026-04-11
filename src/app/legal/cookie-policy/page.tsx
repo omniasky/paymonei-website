@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: "Cookie Policy | Paymonei",
     description:
       "How Paymonei uses cookies and similar tracking technologies on our platform and website — and how you can manage your preferences.",
-    url: "https://paymonei.com/supports/cookie-policy",
+    url: "https://paymonei.com/legal/cookie-policy",
     siteName: "Paymonei",
     type: "website",
   },
@@ -104,7 +104,7 @@ export default function CookiePolicyPage() {
                   This Cookie Policy explains how <strong>Omniasky Technology Pte Ltd</strong> (&ldquo;Omniasky&rdquo;, &ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;us&rdquo;) uses cookies and similar tracking technologies when you visit <strong>paymonei.com</strong>, access the Paymonei merchant dashboard, or interact with any hosted payment page powered by our software.
                 </p>
                 <p>
-                  This Policy should be read alongside our <Link href="/supports/privacy-policy">Privacy Policy</Link> and <Link href="/supports/terms-of-service">Terms of Service</Link>, which provide additional context on how we collect, use, and protect your personal data.
+                  This Policy should be read alongside our <Link href="/legal/privacy-policy">Privacy Policy</Link> and <Link href="/legal/terms-of-service">Terms of Service</Link>, which provide additional context on how we collect, use, and protect your personal data.
                 </p>
                 <p>
                   You can manage your cookie preferences at any time. Withdrawing consent is as straightforward as giving it — and will not affect your ability to access or use core Paymonei platform functionality.
@@ -352,7 +352,7 @@ export default function CookiePolicyPage() {
                   We maintain an internal Register of Processing Activities (ROPA) that lists the specific third-party providers in each category. This register is available to regulators, banking partners, and enterprise merchants upon request. We do not publish individual provider names in this public policy to maintain operational flexibility as our infrastructure evolves — with the exception that any analytics provider that independently processes personal data for its own purposes (such as certain web analytics platforms) will be named explicitly in this section when activated.
                 </p>
                 <p>
-                  All third-party providers are bound by data processing agreements consistent with the standards in our <Link href="/supports/privacy-policy">Privacy Policy</Link>. We do not engage advertising networks, social media tracking pixels, or data brokers in connection with our cookies.
+                  All third-party providers are bound by data processing agreements consistent with the standards in our <Link href="/legal/privacy-policy">Privacy Policy</Link>. We do not engage advertising networks, social media tracking pixels, or data brokers in connection with our cookies.
                 </p>
               </Section>
 
@@ -388,7 +388,7 @@ export default function CookiePolicyPage() {
                   </div>
                 </div>
                 <p className="text-[14px] text-[#777] mt-6 font-light">
-                  This Cookie Policy is published by Omniasky Technology Pte Ltd, registered in Singapore, the intellectual property and management holding company of the Paymonei platform. For related policies, see our <Link href="/supports/privacy-policy">Privacy Policy</Link> and <Link href="/supports/terms-of-service">Terms of Service</Link>.
+                  This Cookie Policy is published by Omniasky Technology Pte Ltd, registered in Singapore, the intellectual property and management holding company of the Paymonei platform. For related policies, see our <Link href="/legal/privacy-policy">Privacy Policy</Link> and <Link href="/legal/terms-of-service">Terms of Service</Link>.
                 </p>
               </Section>
 
