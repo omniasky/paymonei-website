@@ -1,34 +1,22 @@
-import { PricingGrid, PricingTier } from "@/components/organisms/PricingGrid";
-import { PricingComparison } from "@/components/organisms/PricingComparison";
+import Link from "next/link";
 import { Navbar } from "@/components/organisms/Navbar";
 import { Footer } from "@/components/organisms/Footer";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Pricing - Stablecoin Payment API | Free up to $10K/month | Paymonei",
+  title: "Pricing — Billing & Payment Operations Software | Paymonei",
   description:
-    "Transparent stablecoin and cards payment. Free tier with $10K volume. No setup fees, no hidden costs.",
+    "Straightforward pricing for billing and payment workflow software. Start free, scale when ready. No hidden fees.",
   keywords: [
-    "stablecoin payment pricing",
-    "digital payment gateway cost",
-    "USDC payment fees",
-    "payment API pricing",
-    "free payment processing",
-    "blockchain payment rates",
-    "cross-border payment fees",
-    "stablecoin transaction fees",
-    "payment infrastructure pricing",
+    "billing software pricing",
+    "invoicing software cost",
+    "payment operations software pricing",
+    "business payment software plans",
   ],
   openGraph: {
-    title: "Paymonei Pricing - Free Stablecoin Payments up to $10K/month",
+    title: "Paymonei Pricing — Billing & Payment Software",
     description:
-      "Transparent stablecoin and cards payment. Free tier with $10K volume. No setup fees, no hidden costs.",
+      "Straightforward pricing for billing and payment workflow software. Start free, scale when ready.",
     url: "https://paymonei.com/pricing",
     siteName: "Paymonei",
     type: "website",
@@ -37,415 +25,396 @@ export const metadata: Metadata = {
         url: "https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Paymonei Pricing Plans",
+        alt: "Paymonei Pricing",
       },
     ],
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Paymonei Pricing - Free Stablecoin Payments up to $10K/month",
-    description:
-      "Start free with $10K monthly volume. Transparent stablecoin payment pricing with no hidden fees.",
-    images: [
-      "https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/paymonei-og-pricing.png",
-    ],
-  },
-  alternates: {
-    canonical: "https://paymonei.com/pricing",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
+  alternates: { canonical: "https://paymonei.com/pricing" },
+  robots: { index: true, follow: true },
 };
 
-const pricingTiers: PricingTier[] = [
+// ── Pricing model ──────────────────────────────────────────────────────────
+//
+// Framing: Software platform fee + per-transaction software service fee.
+// We are NOT charging interchange, MDR, or payment processing fees.
+// The fee is for using the software layer (API calls, invoice generation,
+// workflow orchestration). The licensed infrastructure costs are absorbed
+// into the service fee, identical to how Chargebee/Maxio/Paddle price.
+//
+// This keeps us clearly in "software fee" territory, not "payment processing fee."
+
+const plans = [
   {
-    title: "Free",
-    description:
-      "Starter kit for new business • No credit card required • Free up to $10K processed",
-    price: "$0",
-    period: "forever",
-    isFree: true,
-    cta: "Start Free Now",
-    ctaHref: "https://app.paymonei.com/signup",
-    features: [
-      "Free up to $10K processed",
-      "Stablecoin payments: 1.8% MDR",
-      "Adaptive Pricing: 1.5%",
-      "Invoicing: 100 free/mo, then 0.4% (max $2)",
-      "Card payments: 3.3% + $0.50",
-      "Full API access & documentation",
+    id: "starter",
+    name: "Starter",
+    tagline: "For teams getting started",
+    price: null,
+    priceLabel: "Free",
+    priceSub: "Up to $10K in billing volume",
+    cta: "Start for free",
+    ctaHref: "https://app.paymonei.com/auth/register",
+    ctaPrimary: false,
+    fees: [
+      { label: "Platform fee", value: "$0 / month" },
+      { label: "Software service fee", value: "1.8% per transaction" },
+      { label: "Invoices", value: "50 free / month" },
+      { label: "Settlement tracking", value: "Included" },
+      { label: "API access", value: "Full" },
+    ],
+    includes: [
+      "Invoice creation & PDF export",
+      "Payment link generation",
       "Webhook notifications",
+      "Dashboard & basic analytics",
       "Community support",
-      "Standard settlement (T+3)",
     ],
   },
   {
-    title: "Growth",
-    description: "For scaling businesses • Ideal for $10K-$500K monthly volume",
-    price: "$299",
-    period: "/month",
-    isPopular: true,
-    cta: "Get Started",
-    ctaHref: "https://app.paymonei.com/signup?plan=growth",
-    features: [
-      "Unlimited transaction volume",
-      "USD & EUR virtual account numbers",
-      "Stablecoin payments: 1% MDR",
-      "Adaptive Pricing: 0.5-1%",
-      "Invoicing: 0.2% (max $1)",
-      "Card payments: 3.3% + $0.50",
+    id: "growth",
+    name: "Growth",
+    tagline: "For scaling operations",
+    price: 299,
+    priceLabel: "$299",
+    priceSub: "per month",
+    cta: "Get started",
+    ctaHref: "https://app.paymonei.com/auth/register?plan=growth",
+    ctaPrimary: true,
+    fees: [
+      { label: "Platform fee", value: "$299 / month" },
+      { label: "Software service fee", value: "1.0% per transaction" },
+      { label: "Invoices", value: "Unlimited" },
+      { label: "Settlement tracking", value: "Included" },
+      { label: "API access", value: "Full + priority rate limits" },
+    ],
+    includes: [
+      "Everything in Starter",
+      "Multi-currency invoice support",
+      "Advanced analytics & reporting",
+      "Subscription billing workflows",
       "Priority email support",
-      "Advanced analytics dashboard",
-      "Instant to T+1 settlement",
-      "Multi-currency support",
-      "Webhook notifications",
+      "Virtual account numbers (USD & EUR)",
     ],
   },
   {
-    title: "Enterprise",
-    description: "For high-volume businesses • >$1M+ monthly",
-    price: "Custom",
-    cta: "Contact Sales",
+    id: "enterprise",
+    name: "Enterprise",
+    tagline: "For high-volume businesses",
+    price: null,
+    priceLabel: "Custom",
+    priceSub: "Talk to us",
+    cta: "Contact sales",
     ctaHref: "mailto:sales@paymonei.com",
-    features: [
-      "Custom monthly subscription",
-      "Volume-based pricing discounts",
-      "Custom FX rates",
+    ctaPrimary: false,
+    fees: [
+      { label: "Platform fee", value: "Custom" },
+      { label: "Software service fee", value: "Negotiated" },
+      { label: "Invoices", value: "Unlimited" },
+      { label: "Settlement tracking", value: "Included" },
+      { label: "API access", value: "Dedicated infrastructure" },
+    ],
+    includes: [
+      "Everything in Growth",
       "Dedicated account manager",
-      "24/7 phone & chat support",
-      "Same-day settlement",
       "Custom SLA agreements",
-      "White-label solutions",
-      "Advanced fraud protection",
-      "Custom integration support",
-      "Personalized onboarding",
-      "Priority webhook delivery",
+      "White-label dashboard option",
+      "Volume-based fee schedules",
+      "24/7 support",
     ],
   },
 ];
 
-const comparisonFeatures = [
+const faqs = [
   {
-    name: "Monthly Processing Volume",
-    free: "Free up to $10K",
-    growth: "Unlimited",
-    enterprise: "Unlimited",
+    q: "What does the 'software service fee' cover?",
+    a: "The fee covers use of Paymonei's software layer — API calls, invoice generation, payment link creation, webhook delivery, and workflow orchestration. Payment execution is performed by our licensed infrastructure partners. We charge for the software, not for moving money.",
   },
   {
-    name: "Recommended Volume Range",
-    free: "Up to $10K",
-    growth: "$10K - $500K",
-    enterprise: "$1M+",
+    q: "Is there a setup fee or contract?",
+    a: "No setup fees, no contracts. Starter is free indefinitely. Growth is month-to-month. You can cancel or change plans at any time.",
   },
   {
-    name: "Monthly Fee",
-    free: "$0",
-    growth: "$299",
-    enterprise: "Custom",
+    q: "What happens after I hit $10K in billing volume on Starter?",
+    a: "The 1.8% software service fee still applies, and you can continue using the platform. There is no hard cutoff — you can upgrade to Growth for lower fees and additional workflow features when it makes sense.",
   },
   {
-    name: "Stablecoin MDR",
-    free: "1.8%",
-    growth: "1%",
-    enterprise: "Custom",
+    q: "Do you handle the actual payment processing?",
+    a: "No. Paymonei is software. We generate invoices, payment links, and coordinate workflows. The actual fund movement is executed by our licensed financial infrastructure partners. This means your contract is with a regulated institution for the financial layer.",
   },
   {
-    name: "Adaptive Pricing",
-    description: "Lets your customers pay in their supported local currency",
-    free: "1.5%",
-    growth: "0.5-1%",
-    enterprise: "Custom",
+    q: "What currencies and geographies are supported?",
+    a: "Our software supports multi-currency invoice creation and payment link generation across 150+ countries. Supported settlement currencies and local payment methods depend on the underlying infrastructure partners active in your region.",
   },
   {
-    name: "Invoicing",
-    free: "10 free/mo, then 0.4% (max $2)",
-    growth: "0.2% (max $1)",
-    enterprise: "Custom",
-  },
-  {
-    name: "Card Payments",
-    free: "3.3% + $0.50",
-    growth: "3.3% + $0.50",
-    enterprise: "Custom",
-  },
-  {
-    name: "Settlement Speed",
-    free: "T+3",
-    growth: "T+1",
-    enterprise: "Same day",
-  },
-  {
-    name: "API Access",
-    free: true,
-    growth: true,
-    enterprise: true,
-  },
-  {
-    name: "Webhook Notifications",
-    free: true,
-    growth: true,
-    enterprise: true,
-  },
-  {
-    name: "Advanced Analytics",
-    free: false,
-    growth: true,
-    enterprise: true,
-  },
-  {
-    name: "Multi-currency Support",
-    free: false,
-    growth: true,
-    enterprise: true,
-  },
-  {
-    name: "Priority Support",
-    free: false,
-    growth: true,
-    enterprise: true,
-  },
-  {
-    name: "Dedicated Account Manager",
-    free: false,
-    growth: false,
-    enterprise: true,
-  },
-  {
-    name: "Custom SLA",
-    free: false,
-    growth: false,
-    enterprise: true,
-  },
-  {
-    name: "White-label Solutions",
-    free: false,
-    growth: false,
-    enterprise: true,
+    q: "Can I add my own markup on top of Paymonei's fees?",
+    a: "Yes. Enterprise customers can configure custom fee schedules, including adding a software margin on top of the base fee for their own clients.",
   },
 ];
+
+// Comparison table rows
+const comparison = [
+  { feature: "Monthly platform fee", starter: "$0", growth: "$299", enterprise: "Custom" },
+  { feature: "Billing volume included", starter: "Up to $10K", growth: "Unlimited", enterprise: "Unlimited" },
+  { feature: "Software service fee", starter: "1.8%", growth: "1.0%", enterprise: "Negotiated" },
+  { feature: "Invoices per month", starter: "50 free", growth: "Unlimited", enterprise: "Unlimited" },
+  { feature: "Payment links", starter: true, growth: true, enterprise: true },
+  { feature: "API access", starter: true, growth: true, enterprise: true },
+  { feature: "Webhook notifications", starter: true, growth: true, enterprise: true },
+  { feature: "Dashboard & analytics", starter: "Basic", growth: "Advanced", enterprise: "Custom" },
+  { feature: "Multi-currency support", starter: false, growth: true, enterprise: true },
+  { feature: "Subscription workflows", starter: false, growth: true, enterprise: true },
+  { feature: "Virtual account numbers", starter: false, growth: true, enterprise: true },
+  { feature: "Priority support", starter: false, growth: true, enterprise: true },
+  { feature: "Dedicated account manager", starter: false, growth: false, enterprise: true },
+  { feature: "Custom SLA", starter: false, growth: false, enterprise: true },
+  { feature: "White-label option", starter: false, growth: false, enterprise: true },
+];
+
+function Check() {
+  return (
+    <svg className="w-4 h-4 text-[#0C0C0C]" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+    </svg>
+  );
+}
+
+function Dash() {
+  return <span className="text-[#DDD] text-sm">—</span>;
+}
+
+function Cell({ value }: { value: boolean | string }) {
+  if (value === true) return <div className="flex justify-center"><Check /></div>;
+  if (value === false) return <div className="flex justify-center"><Dash /></div>;
+  return <span className="text-[15px] text-[#555]">{value}</span>;
+}
 
 export default function PricingPage() {
   return (
     <>
-      <Navbar />
-      <div className="min-h-screen pt-16">
-        {/* Hero Section */}
-        <section className="relative px-4 py-16 md:py-24 overflow-hidden">
-          {/* Background Design */}
-          {/* Base gradient */}
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-background to-background" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      {/* eslint-disable-next-line @next/next/no-page-custom-font */}
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      {/* eslint-disable-next-line @next/next/no-page-custom-font */}
+      <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500&display=swap"
+        rel="stylesheet"
+      />
 
-          {/* Grid pattern */}
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:32px_32px]" />
+      <div className="min-h-screen bg-[#FAFAF8]" style={{ fontFamily: "'Geist', system-ui, sans-serif" }}>
+        <Navbar />
 
-          {/* Mesh gradient overlay */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(var(--primary-rgb,99,102,241),0.08)_0%,transparent_50%),radial-gradient(circle_at_70%_60%,rgba(var(--primary-rgb,99,102,241),0.06)_0%,transparent_50%),radial-gradient(circle_at_50%_80%,rgba(var(--primary-rgb,99,102,241),0.04)_0%,transparent_50%)]" />
-
-          {/* Animated blur orbs */}
-          <div
-            className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse"
-            style={{ animationDuration: "4s" }}
-          />
-          <div
-            className="absolute bottom-0 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse"
-            style={{ animationDuration: "6s", animationDelay: "2s" }}
-          />
-
-          {/* Top accent line */}
-          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
-
-          <div className="relative max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-full mb-6 backdrop-blur-sm">
-              <span className="text-sm font-semibold text-primary">
-                🎉 Process up to $10K for FREE
-              </span>
-            </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 bg-gradient-to-br from-foreground to-foreground/70 bg-clip-text">
-              Simple,{" "}
-              <span className="relative text-transparent bg-clip-text bg-gradient-to-tl from-blue-700 via-orange-700 to-blue-700">
-                transparent pricing
-              </span>
+        {/* ── HERO ────────────────────────────────────────────────── */}
+        <section className="pt-32 pb-16 px-5 sm:px-8 bg-[#FAFAF8]">
+          <div className="max-w-7xl mx-auto lg:px-8">
+            <p className="text-[12px] tracking-[0.14em] uppercase text-[#999] mb-6 font-medium">Pricing</p>
+            <h1
+              className="text-[clamp(2.4rem,5vw,4rem)] font-light leading-[1.08] tracking-[-0.04em] text-[#0C0C0C] max-w-2xl"
+              style={{ fontFamily: "'Instrument Serif', Georgia, serif" }}
+            >
+              Software pricing.<br />
+              <span className="italic">No surprises.</span>
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-              Start for free and scale as you grow. No credit card required.{" "}
-              <br />
-              <b className="text-zinc-900">
-                <u>No hidden fees, no surprises.</u>
-              </b>
+            <p className="mt-6 text-[16px] text-[#666] leading-relaxed font-light max-w-md">
+              You pay for the software layer. Payment execution is handled by licensed infrastructure partners — not by us.
             </p>
           </div>
         </section>
 
-        {/* Value Prop */}
-        <section className="px-4 py-12">
-          <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="relative group text-center p-8 rounded-2xl bg-gradient-to-br from-card to-card/50 border border-border/50 hover:border-primary/50 transition-all duration-m hover:shadow-lg overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="relative">
-                  <div className="text-4xl mb-4">💳</div>
-                  <h3 className="font-semibold text-lg mb-2">No Credit Card</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Start processing payments instantly without any payment
-                    method
-                  </p>
+        {/* ── PLANS ───────────────────────────────────────────────── */}
+        <section className="pb-20 px-5 sm:px-8 border-t border-[#EAEAE6]">
+          <div className="max-w-7xl mx-auto lg:px-8">
+            <div className="grid lg:grid-cols-3 gap-px bg-[#EAEAE6] mt-0">
+              {plans.map((plan) => (
+                <div
+                  key={plan.id}
+                  className="bg-[#FAFAF8] flex flex-col"
+                >
+                  {/* Plan header */}
+                  <div className="px-8 pt-10 pb-8 border-b border-[#EAEAE6]">
+                    <p className="text-[12px] tracking-[0.12em] uppercase text-[#999] font-medium mb-3">{plan.name}</p>
+                    <p className="text-[15px] text-[#777] font-light mb-6">{plan.tagline}</p>
+                    <div className="mb-1">
+                      <span
+                        className="text-[2.8rem] font-light tracking-[-0.04em] text-[#0C0C0C]"
+                        style={{ fontFamily: "'Instrument Serif', Georgia, serif" }}
+                      >
+                        {plan.priceLabel}
+                      </span>
+                    </div>
+                    <p className="text-[13px] text-[#AAA] font-light">{plan.priceSub}</p>
+                  </div>
+
+                  {/* Fee schedule */}
+                  <div className="px-8 py-7 border-b border-[#EAEAE6]">
+                    <p className="text-[11px] tracking-[0.1em] uppercase text-[#BBB] font-medium mb-4">Fee schedule</p>
+                    <div className="space-y-3">
+                      {plan.fees.map((fee) => (
+                        <div key={fee.label} className="flex items-baseline justify-between gap-4">
+                          <span className="text-[14px] text-[#777] font-light">{fee.label}</span>
+                          <span className="text-[14px] text-[#0C0C0C] font-medium shrink-0">{fee.value}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Includes */}
+                  <div className="px-8 py-7 flex-1">
+                    <p className="text-[11px] tracking-[0.1em] uppercase text-[#BBB] font-medium mb-4">Includes</p>
+                    <ul className="space-y-2.5">
+                      {plan.includes.map((item) => (
+                        <li key={item} className="flex items-start gap-2.5">
+                          <svg className="w-3.5 h-3.5 text-[#0C0C0C] shrink-0 mt-[3px]" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                          </svg>
+                          <span className="text-[14px] text-[#555] font-light leading-snug">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* CTA */}
+                  <div className="px-8 pb-10">
+                    <Link href={plan.ctaHref}>
+                      <span
+                        className={`block w-full text-center px-5 py-3 rounded-full text-sm font-medium transition-colors duration-150 cursor-pointer ${
+                          plan.ctaPrimary
+                            ? "bg-[#0C0C0C] text-white hover:bg-[#222]"
+                            : "border border-[#E5E5E2] text-[#555] hover:border-[#ccc] hover:text-[#0C0C0C] bg-white"
+                        }`}
+                      >
+                        {plan.cta}
+                      </span>
+                    </Link>
+                  </div>
                 </div>
+              ))}
+            </div>
+
+            {/* Fee note */}
+            <p className="mt-5 text-[13px] text-[#BBB] font-light leading-relaxed max-w-2xl">
+              Software service fees are charged for use of Paymonei&apos;s software layer — invoice generation, payment link creation, and workflow orchestration. Payment execution is performed by licensed third-party financial institutions.
+            </p>
+          </div>
+        </section>
+
+        {/* ── COMPARISON TABLE ─────────────────────────────────────── */}
+        <section className="py-20 px-5 sm:px-8 border-t border-[#EAEAE6] bg-white">
+          <div className="max-w-7xl mx-auto lg:px-8">
+            <p className="text-[12px] tracking-[0.14em] uppercase text-[#999] mb-5 font-medium">Compare plans</p>
+            <h2
+              className="text-[clamp(1.8rem,3.5vw,2.8rem)] font-light leading-tight tracking-[-0.03em] text-[#0C0C0C] mb-12"
+              style={{ fontFamily: "'Instrument Serif', Georgia, serif" }}
+            >
+              Everything, side by side.
+            </h2>
+
+            {/* Table */}
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse">
+                <thead>
+                  <tr className="border-b border-[#EAEAE6]">
+                    <th className="text-left py-4 pr-8 text-[13px] text-[#AAA] font-medium w-2/5">Feature</th>
+                    <th className="text-center py-4 px-4 text-[13px] font-medium text-[#0C0C0C] w-1/5">Starter</th>
+                    <th className="text-center py-4 px-4 text-[13px] font-medium text-[#0C0C0C] w-1/5">Growth</th>
+                    <th className="text-center py-4 px-4 text-[13px] font-medium text-[#0C0C0C] w-1/5">Enterprise</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {comparison.map((row, i) => (
+                    <tr
+                      key={row.feature}
+                      className={`border-b border-[#F5F5F2] ${i % 2 === 0 ? "bg-transparent" : "bg-[#FAFAF8]/50"}`}
+                    >
+                      <td className="py-3.5 pr-8 text-[15px] text-[#555] font-light">{row.feature}</td>
+                      <td className="py-3.5 px-4 text-center"><Cell value={row.starter} /></td>
+                      <td className="py-3.5 px-4 text-center"><Cell value={row.growth} /></td>
+                      <td className="py-3.5 px-4 text-center"><Cell value={row.enterprise} /></td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        {/* ── FAQ ──────────────────────────────────────────────────── */}
+        <section className="py-20 px-5 sm:px-8 border-t border-[#EAEAE6] bg-[#FAFAF8]">
+          <div className="max-w-7xl mx-auto lg:px-8">
+            <div className="grid lg:grid-cols-12 gap-16">
+              <div className="lg:col-span-4">
+                <p className="text-[12px] tracking-[0.14em] uppercase text-[#999] mb-5 font-medium">FAQ</p>
+                <h2
+                  className="text-[clamp(1.8rem,3vw,2.4rem)] font-light leading-tight tracking-[-0.03em] text-[#0C0C0C]"
+                  style={{ fontFamily: "'Instrument Serif', Georgia, serif" }}
+                >
+                  Common questions.
+                </h2>
+                <p className="mt-4 text-[15px] text-[#777] font-light leading-relaxed">
+                  Anything else? Email us at{" "}
+                  <a href="mailto:support@paymonei.com" className="text-[#0C0C0C] underline underline-offset-2">
+                    support@paymonei.com
+                  </a>
+                </p>
               </div>
-              <div className="relative group text-center p-8 rounded-2xl bg-gradient-to-br from-card to-card/50 border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="relative">
-                  <div className="text-4xl mb-4">⚡</div>
-                  <h3 className="font-semibold text-lg mb-2">
-                    Setup in 5 Minutes
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    Simple integration with our API. Start testing right away
-                  </p>
-                </div>
-              </div>
-              <div className="relative group text-center p-8 rounded-2xl bg-gradient-to-br from-card to-card/50 border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="relative">
-                  <div className="text-4xl mb-4">📈</div>
-                  <h3 className="font-semibold text-lg mb-2">$10K Free</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Process real transactions up to $10,000 for free
-                  </p>
+
+              <div className="lg:col-span-8">
+                <div className="divide-y divide-[#EAEAE6]">
+                  {faqs.map((faq) => (
+                    <details key={faq.q} className="group py-6">
+                      <summary className="flex items-start justify-between gap-4 cursor-pointer list-none">
+                        <span className="text-[16px] font-medium text-[#0C0C0C] leading-snug">{faq.q}</span>
+                        <svg
+                          className="w-4 h-4 text-[#AAA] shrink-0 mt-1 transition-transform group-open:rotate-180"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth={2}
+                          viewBox="0 0 24 24"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </summary>
+                      <p className="mt-4 text-[15px] text-[#666] font-light leading-relaxed">{faq.a}</p>
+                    </details>
+                  ))}
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Pricing Tiers */}
-        <section className="px-4 py-16 md:py-20">
-          <PricingGrid tiers={pricingTiers} />
-        </section>
-
-        {/* Comparison Table */}
-        <section className="px-4 py-16 md:py-20">
-          <PricingComparison features={comparisonFeatures} />
-        </section>
-
-        {/* FAQ Section */}
-        <section className="px-4 py-16 md:py-24 bg-muted/30">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-              Frequently asked questions
+        {/* ── CTA ──────────────────────────────────────────────────── */}
+        <section className="py-24 px-5 sm:px-8 border-t border-[#EAEAE6] bg-white">
+          <div className="max-w-7xl mx-auto lg:px-8 text-center">
+            <p className="text-[12px] tracking-[0.14em] uppercase text-[#999] mb-7 font-medium">Get started</p>
+            <h2
+              className="text-[clamp(2.2rem,5vw,4rem)] font-light leading-tight tracking-[-0.04em] text-[#0C0C0C] mx-auto mb-6"
+              style={{ fontFamily: "'Instrument Serif', Georgia, serif", maxWidth: "560px" }}
+            >
+              Start free.<br />
+              <span className="italic">Upgrade when ready.</span>
             </h2>
-
-            <Accordion type="single" collapsible className="space-y-4">
-              <AccordionItem
-                value="item-1"
-                className="bg-card border rounded-lg px-6"
-              >
-                <AccordionTrigger className="text-left font-semibold hover:no-underline">
-                  Can I switch plans later?
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">
-                  Yes, you can upgrade or downgrade your plan at any time.
-                  Changes take effect at the start of your next billing cycle.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem
-                value="item-2"
-                className="bg-card border rounded-lg px-6"
-              >
-                <AccordionTrigger className="text-left font-semibold hover:no-underline">
-                  What payment methods do you accept?
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">
-                  We accept all major credit cards, bank transfers, and
-                  stablecoin payments for your monthly subscription.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem
-                value="item-3"
-                className="bg-card border rounded-lg px-6"
-              >
-                <AccordionTrigger className="text-left font-semibold hover:no-underline">
-                  Is there a setup fee?
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">
-                  No, there are no setup fees. You only pay the monthly
-                  subscription and transaction fees based on your usage.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem
-                value="item-4"
-                className="bg-card border rounded-lg px-6"
-              >
-                <AccordionTrigger className="text-left font-semibold hover:no-underline">
-                  What happens when I exceed the free tier limits?
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">
-                  After exceeding $10K processed sales revenue on the Free plan,
-                  transaction fees will apply to any additional transactions.
-                  You can continue processing with fees, or upgrade to the
-                  Growth plan for better rates and unlimited volume.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem
-                value="item-5"
-                className="bg-card border rounded-lg px-6"
-              >
-                <AccordionTrigger className="text-left font-semibold hover:no-underline">
-                  Do you offer refunds?
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">
-                  We offer a 30-day money-back guarantee for new customers. If
-                  you&apos;re not satisfied, contact our support team for a full
-                  refund.
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="relative px-4 py-16 md:py-24 overflow-hidden">
-          {/* Background Design */}
-          <div className="absolute inset-0 bg-gradient-to-t from-primary/5 via-background to-background" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-primary/10 via-background to-background" />
-
-          <div className="relative max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to get started?
-            </h2>
-            <p className="text-lg text-muted-foreground mb-10">
-              Join hundreds of users using Paymonei for their infrastructure.
+            <p className="text-[16px] text-[#777] font-light mb-10 mx-auto" style={{ maxWidth: "380px" }}>
+              The Starter plan is free with no time limit. No credit card required.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="https://app.paymonei.com/signup"
-                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full text-base font-semibold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-gradient-to-r from-orange-600 via-pink-600 to-orange-600 text-primary-foreground shadow-lg hover:shadow-xl hover:scale-105 h-14 px-10"
-              >
-                Start Free Now
-              </a>
-              <a
-                href="mailto:sales@paymonei.com"
-                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full text-base font-semibold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border-2 border-primary bg-background hover:bg-primary/5 hover:scale-105 h-14 px-10"
-              >
-                Contact Sales
-              </a>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+              <Link href="https://app.paymonei.com/auth/register">
+                <span className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#0C0C0C] text-white text-sm font-medium hover:bg-[#1a1a1a] transition-colors duration-150 cursor-pointer">
+                  Create your account
+                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </span>
+              </Link>
+              <Link href="mailto:sales@paymonei.com">
+                <span className="inline-flex items-center px-6 py-3 rounded-full text-sm text-[#555] border border-[#E5E5E2] hover:border-[#ccc] hover:text-[#0C0C0C] bg-white transition-colors duration-150 cursor-pointer">
+                  Talk to sales
+                </span>
+              </Link>
             </div>
           </div>
         </section>
+
+        <Footer />
       </div>
-      <Footer />
     </>
   );
 }
