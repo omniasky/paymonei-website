@@ -1,293 +1,431 @@
+import type { Metadata } from "next";
 import { Navbar } from "@/components/organisms/Navbar";
 import { Footer } from "@/components/organisms/Footer";
+import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | Paymonei",
+  description:
+    "How Omniasky Technology Pte Ltd collects, uses and protects your data when you use the Paymonei billing and payment orchestration software.",
+  openGraph: {
+    title: "Privacy Policy | Paymonei",
+    description:
+      "How Omniasky Technology Pte Ltd collects, uses and protects your data when you use the Paymonei billing and payment orchestration software.",
+    url: "https://paymonei.com/supports/privacy-policy",
+    siteName: "Paymonei",
+    type: "website",
+  },
+};
+
+// ─── Section data ────────────────────────────────────────────────────────────
+
+const toc = [
+  { id: "introduction", label: "1. Introduction & Scope" },
+  { id: "information-we-collect", label: "2. Information We Collect" },
+  { id: "how-we-use", label: "3. How We Use Your Information" },
+  { id: "how-we-share", label: "4. How We Share Information" },
+  { id: "cookies", label: "5. Cookies & Tracking" },
+  { id: "security-retention", label: "6. Security & Retention" },
+  { id: "your-rights", label: "7. Your Privacy Rights" },
+  { id: "contact", label: "8. Contact & DPO" },
+];
+
+// ─── Page ─────────────────────────────────────────────────────────────────────
 
 export default function PrivacyPolicyPage() {
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900">
-      <Navbar />
+    <>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      {/* eslint-disable-next-line @next/next/no-page-custom-font */}
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      {/* eslint-disable-next-line @next/next/no-page-custom-font */}
+      <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+      />
 
-      <div className="max-w-4xl mx-auto px-6 py-24 text-xs">
-        <p>
-          <b>Paymonei Platform - Privacy Policy</b>
-          <br />
-          <b>Last Updated: September 19, 2025</b>
-        </p>
-        <br />
-        <div className="space-y-4">
-          <p>
-            Cosgrove Technology Inc., PT Cosgrove Teknologi Indonesia and PT
-            Evora Vera Teknologi (collectively, &quot;Paymonei&quot;,
-            &quot;Company&quot;, &quot;we&quot;, &quot;us&quot;, or
-            &quot;our&quot;) are committed to protecting your privacy. This
-            Privacy Policy explains how we collect, use, disclose, and safeguard
-            your information when you use our Paymonei platform and related
-            services (the &quot;Services&quot;). This Policy applies to all
-            information collected through our Services, as well as any related
-            services, sales, marketing, or events.
-          </p>
-          <p>
-            Please read this Privacy Policy carefully. By using our Services,
-            you agree to the collection and use of information in accordance
-            with this policy. If you do not agree with the terms of this privacy
-            policy, please do not access the Services.
-          </p>
+      <div className="min-h-screen bg-[#FAFAF8]" style={{ fontFamily: "'Geist', system-ui, sans-serif" }}>
+        <Navbar />
 
-          <h3 className="font-bold">1. Information We Collect</h3>
-          <p>
-            We collect information that you provide to us, information that is
-            automatically collected, and information from third parties. The
-            types of personal information (&quot;Personal Data&quot;) we may
-            collect include:
-          </p>
+        {/* ── HERO ─────────────────────────────────────────────────────── */}
+        <section className="pt-32 pb-16 px-5 sm:px-8 border-b border-[#EAEAE6]">
+          <div className="max-w-7xl mx-auto lg:px-8">
+            <p className="text-[12px] tracking-[0.14em] uppercase text-[#999] mb-5 font-medium">Legal</p>
+            <h1
+              className="text-[clamp(2.4rem,4vw,3.5rem)] font-light leading-[1.1] tracking-[-0.04em] text-[#0C0C0C] mb-5"
+              style={{ fontFamily: "'Instrument Serif', Georgia, serif" }}
+            >
+              Privacy Policy
+            </h1>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-3 text-[13px] text-[#999] font-light">
+              <span>Effective date: <strong className="text-[#555] font-medium">11 April 2026</strong></span>
+              <span className="hidden sm:block opacity-30">·</span>
+              <span>Data Controller: <strong className="text-[#555] font-medium">Omniasky Technology Pte Ltd</strong></span>
+              <span className="hidden sm:block opacity-30">·</span>
+              <Link href="mailto:privacy@paymonei.com" className="text-[#0C0C0C] underline underline-offset-2 hover:opacity-70 transition-opacity">
+                privacy@paymonei.com
+              </Link>
+            </div>
+          </div>
+        </section>
 
-          <h4>1.1. Information You Provide to Us</h4>
-          <ul className="list-disc list-inside">
-            <li>
-              Personal Identification Information: Your full name, date of
-              birth, physical address, email address, phone number, and
-              nationality.
-            </li>
-            <li>
-              Formal Identification Information: Government-issued
-              identification numbers (e.g., Passport, Driver&apos;s License),
-              and other documents requested for our Know-Your-Customer
-              (&quot;KYC&quot;) and Know-Your-Business (&quot;KYB&quot;)
-              verification processes, including photographs or
-              &quot;selfies&quot; for identity confirmation.
-            </li>
-            <li>
-              Business Information: For entity accounts, we may collect business
-              name, registration details, articles of incorporation, and
-              information about beneficial owners and directors.
-            </li>
-            <li>
-              Financial Information: Bank account numbers, routing information,
-              and other payment details necessary to facilitate fiat currency
-              settlements.
-            </li>
-            <li>
-              AI Agent Configuration Data: The parameters, rules, and logic you
-              define for any AI Agents you deploy through our protocol.
-            </li>
-          </ul>
+        {/* ── BODY ─────────────────────────────────────────────────────── */}
+        <div className="max-w-7xl mx-auto lg:px-8 px-5 sm:px-8 py-16">
+          <div className="flex flex-col lg:flex-row gap-16">
 
-          <h4>1.2. Information We Collect Automatically</h4>
-          <ul className="list-disc list-inside">
-            <li>
-              Transactional Information: Information about the transactions you
-              or your AI Agents perform, including public wallet addresses,
-              transaction amounts, timestamps, and network data. Note that this
-              information is also publicly available on the blockchain.
-            </li>
-            <li>
-              Device and Usage Data: IP address, device type, operating system,
-              browser type, unique device identifiers, and information about
-              your interaction with our Services (e.g., pages viewed, features
-              used, access times).
-            </li>
-            <li>
-              Log Data: We may collect logs of activity, including access to our
-              systems, API calls, and other events for security and debugging
-              purposes.
-            </li>
-          </ul>
+            {/* Sticky TOC sidebar */}
+            <aside className="lg:w-56 shrink-0">
+              <div className="sticky top-28">
+                <p className="text-[11px] uppercase tracking-[0.14em] text-[#999] font-medium mb-4">On this page</p>
+                <nav className="flex flex-col gap-1.5">
+                  {toc.map(item => (
+                    <a
+                      key={item.id}
+                      href={`#${item.id}`}
+                      className="text-[13px] text-[#777] hover:text-[#0C0C0C] transition-colors font-light leading-snug"
+                    >
+                      {item.label}
+                    </a>
+                  ))}
+                </nav>
+              </div>
+            </aside>
 
-          <h4>1.3. Information From Third Parties</h4>
-          <ul className="list-disc list-inside">
-            <li>
-              Identity Verification Partners: We use third-party services to
-              verify your identity by comparing the information you provide with
-              public records and other third-party databases.
-            </li>
-            <li>
-              Financial Partners: Our licensed financial partners may share
-              information with us regarding the status of your fiat transactions
-              and account linkage.
-            </li>
-            <li>
-              Blockchain Data: We collect public data from blockchain networks
-              to monitor transactions and ensure the proper functioning of our
-              Services.
-            </li>
-          </ul>
+            {/* Main content */}
+            <article className="flex-1 min-w-0 max-w-3xl">
 
-          <h3 className="font-bold">2. How We Use Your Information</h3>
-          <p>
-            We use the information we collect for various purposes, grounded in
-            legitimate business needs and legal obligations:
-          </p>
-          <ul className="list-disc list-inside">
-            <li>
-              To Provide and Maintain the Services: To create and manage your
-              account, process transactions, deploy and monitor AI Agents, and
-              provide customer support.
-            </li>
-            <li>
-              For Compliance and Security: To conduct KYC/KYB checks, comply
-              with our legal and regulatory obligations (e.g., Anti-Money
-              Laundering and Counter-Terrorism Financing laws), prevent fraud,
-              and monitor for and protect against security threats.
-            </li>
-            <li>
-              To Improve Our Services: To analyze usage patterns, troubleshoot
-              issues, and develop new features and functionalities.
-            </li>
-            <li>
-              To Communicate With You: To send you transactional confirmations,
-              technical notices, security alerts, and administrative messages.
-            </li>
-            <li>
-              To Enforce Our Terms: To enforce our Terms of Service and other
-              policies.
-            </li>
-          </ul>
+              {/* ── Software-Only Shield Notice ── */}
+              <div className="bg-[#F5F5F2] border border-[#EAEAE6] rounded-lg p-6 mb-12">
+                <p className="text-[13px] font-medium text-[#0C0C0C] mb-2">Important Notice</p>
+                <p className="text-[14px] text-[#555] leading-relaxed font-light">
+                  Paymonei is a <strong className="font-medium text-[#333]">software orchestration platform</strong> that provides billing and payment workflow tools. We do not hold, transmit, or have custody of financial funds at any time. All financial transaction execution and settlement is performed exclusively by our licensed third-party financial institution partners. This means the data described in this policy relates to software access, analytics, and workflow state — not to the custody of money.
+                </p>
+              </div>
 
-          <h3 className="font-bold">
-            3. How We Share and Disclose Your Information
-          </h3>
-          <p>
-            We do not sell your Personal Data. We may share your information
-            with the following categories of third parties in specific
-            circumstances:
-          </p>
-          <ul className="list-disc list-inside">
-            <li>
-              With Our Financial Partners: We share your identification and
-              financial information with our licensed financial partners as
-              necessary to provide regulated services like fiat settlement,
-              custody, and payment processing.
-            </li>
-            <li>
-              With Service Providers: We share information with third-party
-              vendors and service providers who perform services on our behalf,
-              such as cloud hosting (e.g., AWS, Google Cloud), identity
-              verification, data analytics, and customer support. These
-              providers are contractually obligated to protect your data.
-            </li>
-            <li>
-              For Legal and Compliance Reasons: We may disclose your information
-              if we are required to do so by law, subpoena, or other legal
-              process, or if we believe in good faith that disclosure is
-              necessary to comply with regulatory inquiries, prevent harm, or
-              protect our rights or the rights of others.
-            </li>
-            <li>
-              In Connection with a Business Transfer: We may share or transfer
-              your information in connection with, or during negotiations of,
-              any merger, sale of company assets, financing, or acquisition of
-              all or a portion of our business to another company.
-            </li>
-            <li>
-              With Your Consent: We may disclose your Personal Data for any
-              other purpose with your consent.
-            </li>
-          </ul>
+              {/* ── Block 1: Introduction & Scope ── */}
+              <Section id="introduction" title="1. Introduction & Scope">
+                <p>
+                  This Privacy Policy describes how <strong>Omniasky Technology Pte Ltd</strong> (UEN: pending), a company registered in Singapore (&ldquo;Omniasky&rdquo;, &ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;us&rdquo;) collects, uses, and protects personal data when you access or use the Paymonei platform and any associated websites, APIs, dashboards, or hosted services (collectively, the &ldquo;Services&rdquo;).
+                </p>
+                <p>
+                  Omniasky is the intellectual property holder and data controller for Paymonei. The day-to-day software engineering and platform operations are performed by our affiliated operating entity, <strong>PT Evora Vera Teknologi</strong>, a limited liability company incorporated in Indonesia, acting as a sub-processor under Omniasky&rsquo;s data processing instructions.
+                </p>
+                <CalloutBox>
+                  Neither Omniasky Technology Pte Ltd nor PT Evora Vera Teknologi is a bank, payment institution, money services business, or virtual asset service provider. We are software companies. Financial execution services are provided by our regulated, licensed partners on a separate contractual basis.
+                </CalloutBox>
+                <p>This Policy applies to:</p>
+                <ul>
+                  <li><strong>Merchants:</strong> Businesses and individuals who create a Paymonei account to access our billing and workflow software.</li>
+                  <li><strong>End-Consumers:</strong> Individuals who interact with a checkout or payment link generated by our merchant customers.</li>
+                  <li><strong>Visitors:</strong> Anyone browsing paymonei.com or our subdomains.</li>
+                </ul>
+                <p>
+                  By using the Services, you confirm that you have read and understood this Policy. If you are accessing the Services on behalf of an organisation, you represent and warrant that you have authority to accept this Policy on that entity&rsquo;s behalf.
+                </p>
+              </Section>
 
-          <h3 className="font-bold">4. A Note on Blockchain Data</h3>
-          <p>
-            <strong>
-              <u>
-                Please be aware that information recorded on a public
-                blockchain, such as your public wallet address and transaction
-                details, is inherently public and permanent. This information is
-                not controlled by Paymonei and is not covered by this Privacy
-                Policy. Anyone can view this data.
-              </u>
-            </strong>
-          </p>
+              {/* ── Block 2: Information We Collect ── */}
+              <Section id="information-we-collect" title="2. Information We Collect">
+                <h3>2.1 From Merchants (Our SaaS Subscribers)</h3>
+                <p>When a business registers, configures, or operates a Paymonei account, we collect:</p>
+                <ul>
+                  <li><strong>Account credentials:</strong> Name, business email address, password hash.</li>
+                  <li><strong>Business profile data:</strong> Legal entity name, business registration country, operational addresses, and industry type — used to configure your billing software correctly.</li>
+                  <li><strong>API integration data:</strong> API keys, webhook URLs, and integration event logs so that your systems can connect to our software engine.</li>
+                  <li><strong>Dashboard usage analytics:</strong> Feature interactions, session duration, and click paths — used to improve the software product.</li>
+                  <li><strong>Support communications:</strong> Any information you voluntarily share when contacting our support team.</li>
+                </ul>
+                <CalloutBox>
+                  We do not require or store copies of government-issued identity documents, proof of address, or bank account routing numbers directly. Where our licensed partners require this data for their compliance obligations, it is collected and processed by those partners under their own regulated data handling frameworks.
+                </CalloutBox>
 
-          <h3 className="font-bold">5. Data Security and Retention</h3>
-          <ul className="list-disc list-inside">
-            <li>
-              Security. We implement and maintain industry-standard
-              administrative, physical, and technical security safeguards to
-              help protect your Personal Data from loss, theft, misuse, and
-              unauthorized access. However, no electronic transmission or
-              storage is 100% secure, and we cannot guarantee absolute security.
-            </li>
-            <li>
-              Retention. We will retain your Personal Data only for as long as
-              is necessary for the purposes set out in this Privacy Policy, and
-              to the extent necessary to comply with our legal obligations (for
-              example, we are required to retain transaction and KYC data for at
-              least five years to comply with AML regulations), resolve
-              disputes, and enforce our legal agreements.
-            </li>
-          </ul>
+                <h3>2.2 From End-Consumers (Buyers Using Hosted Links)</h3>
+                <p>When an end-consumer accesses a Paymonei-hosted checkout link or payment page generated by a merchant, we collect the minimum data needed to render and track the software workflow:</p>
+                <ul>
+                  <li><strong>Contact metadata:</strong> Name, email address, and shipping address — used to generate invoice records and confirmation emails on behalf of the merchant.</li>
+                  <li><strong>Device and network context:</strong> IP address, browser type, operating system, referrer URL — forwarded (encrypted) to our licensed execution partners for fraud-scoring purposes.</li>
+                  <li><strong>Session token:</strong> An encrypted, temporary identifier used solely to maintain checkout session state. It contains no financial credentials.</li>
+                </ul>
+                <p>
+                  We do <strong>not</strong> collect, store, or process raw payment card numbers (PANs), bank account numbers, or digital asset private keys. When a consumer selects a payment method, those credentials are submitted directly to our licensed execution partners via an encrypted channel. We receive only a tokenised reference confirming payment instruction status.
+                </p>
 
-          <h3 className="font-bold">6. International Data Transfers</h3>
-          <p>
-            Your information, including Personal Data, may be transferred to—and
-            maintained on—computers located outside of your state, province,
-            country, or other governmental jurisdiction where the data
-            protection laws may differ. We will take all steps reasonably
-            necessary to ensure that your data is treated securely and in
-            accordance with this Privacy Policy and that appropriate safeguards
-            are in place.
-          </p>
+                <h3>2.3 Automatically Collected Technical Data</h3>
+                <ul>
+                  <li><strong>Server logs:</strong> Timestamped records of API requests, response codes, and event metadata for system reliability and debugging.</li>
+                  <li><strong>Performance metrics:</strong> Latency, uptime, and error rates collected by our infrastructure monitoring tools.</li>
+                </ul>
+              </Section>
 
-          <h3 className="font-bold">7. Your Data Protection Rights</h3>
-          <p>
-            Depending on your jurisdiction, you may have the following rights
-            regarding your Personal Data:
-          </p>
-          <ul className="list-disc list-inside">
-            <li>
-              The right to access, update, or delete the information we have on
-              you.
-            </li>
-            <li>
-              The right of rectification if that information is inaccurate or
-              incomplete.
-            </li>
-            <li>
-              The right to object to our processing of your Personal Data.
-            </li>
-            <li>
-              The right to request that we restrict the processing of your
-              personal information.
-            </li>
-            <li>
-              The right to data portability for the information you provide to
-              us.
-            </li>
-            <li>
-              The right to withdraw consent at any time where we relied on your
-              consent to process your information.
-            </li>
-          </ul>
-          <p>
-            To exercise any of these rights, please contact us at{" "}
-            <a href="mailto:privacy@paymonei.com">privacy@paymonei.com</a>. We
-            may need to verify your identity before responding to your request.
-          </p>
+              {/* ── Block 3: How We Use Information ── */}
+              <Section id="how-we-use" title="3. How We Use Your Information">
+                <p>We process personal data only for the following specific, lawful purposes:</p>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Purpose</th>
+                      <th>Lawful Basis</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Generating invoice PDFs and tracking billing workflow status on behalf of merchants</td>
+                      <td>Performance of contract (with merchant)</td>
+                    </tr>
+                    <tr>
+                      <td>Powering the merchant&rsquo;s analytics dashboard and reporting tools</td>
+                      <td>Legitimate interest (product delivery)</td>
+                    </tr>
+                    <tr>
+                      <td>Sending automated dunning, reminder, and receipt emails on behalf of merchants</td>
+                      <td>Performance of contract</td>
+                    </tr>
+                    <tr>
+                      <td>Forwarding device context (IP, user agent) to execution partners for fraud scoring</td>
+                      <td>Legitimate interest (fraud prevention)</td>
+                    </tr>
+                    <tr>
+                      <td>Improving software features and fixing bugs through usage analytics</td>
+                      <td>Legitimate interest (product improvement)</td>
+                    </tr>
+                    <tr>
+                      <td>Communicating product updates, security notices, and support responses</td>
+                      <td>Performance of contract / Legitimate interest</td>
+                    </tr>
+                    <tr>
+                      <td>Complying with a court order, regulatory demand, or applicable law</td>
+                      <td>Legal obligation</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p>
+                  We do not use personal data for automated decision-making that produces legal or similarly significant effects without human review.
+                </p>
+              </Section>
 
-          <h3 className="font-bold">8. Policy Towards Children</h3>
-          <p>
-            Our Services are not directed to individuals under the age of 18. We
-            do not knowingly collect Personal Data from children under 18. If we
-            become aware that we have collected Personal Data from a child under
-            18, we will take steps to delete such information.
-          </p>
+              {/* ── Block 4: How We Share Information ── */}
+              <Section id="how-we-share" title="4. How We Share Information">
+                <p>
+                  We do <strong>not sell, rent, or trade</strong> personal data. We share data only in the following limited circumstances:
+                </p>
 
-          <h3 className="font-bold">9. Changes to This Privacy Policy</h3>
-          <p>
-            We may update this Privacy Policy from time to time. We will notify
-            you of any changes by posting the new Privacy Policy on this page
-            and updating the &quot;Last Updated&quot; date. You are advised to
-            review this Privacy Policy periodically for any changes.
-          </p>
+                <h3>4.1 Licensed Financial Execution Partners</h3>
+                <p>
+                  When a merchant or consumer initiates a payment workflow through our software, we transmit the minimum necessary data (session context, device metadata, and invoice reference) to our licensed third-party financial institution partners who are independently regulated to provide payment execution and settlement services. These partners process payment credentials and funds movement under their own regulatory licences and privacy frameworks.
+                </p>
+                <p>
+                  We contractually require all such partners to apply data protection standards no less protective than those described in this Policy.
+                </p>
 
-          <h3 className="font-bold">10. Contact Us</h3>
-          <p>
-            If you have any questions or concerns about this Privacy Policy or
-            our data practices, please contact us at:{" "}
-            <a href="mailto:privacy@paymonei.com">supports@paymonei.com</a>.
-          </p>
+                <h3>4.2 Cloud Infrastructure & Service Providers</h3>
+                <p>We use the following categories of third-party providers to operate our software infrastructure:</p>
+                <ul>
+                  <li><strong>Cloud hosting:</strong> Amazon Web Services (Singapore region), Vercel</li>
+                  <li><strong>Database:</strong> Managed database providers (AWS RDS)</li>
+                  <li><strong>Monitoring & observability:</strong> Logging and error tracking tools</li>
+                  <li><strong>Email delivery:</strong> Transactional email providers (for invoice dispatch)</li>
+                </ul>
+                <p>All providers are bound by data processing agreements and, where applicable, standard contractual clauses.</p>
+
+                <h3>4.3 Intra-Group Processing</h3>
+                <p>
+                  Omniasky Technology Pte Ltd (Singapore, Data Controller) may share data with PT Evora Vera Teknologi (Indonesia, Sub-Processor) solely to enable software engineering, platform support, and operational management of the Paymonei product. This transfer is governed by an intra-group data processing agreement consistent with Singapore&rsquo;s PDPA and Indonesia&rsquo;s PDP Law (UU PDP).
+                </p>
+
+                <h3>4.4 Legal Disclosure</h3>
+                <p>
+                  We may disclose personal data to competent authorities, courts, or regulators where we are required to do so by applicable law, a valid legal order, or where we have a good-faith belief that disclosure is necessary to prevent harm. We will notify affected users where legally permitted to do so.
+                </p>
+
+                <h3>4.5 Business Transfers</h3>
+                <p>
+                  In the event of a merger, acquisition, or sale of substantially all assets, personal data may be transferred as part of that transaction. We will inform users via notice on our website or by email before data is transferred and becomes subject to a different privacy policy.
+                </p>
+              </Section>
+
+              {/* ── Block 5: Cookies ── */}
+              <Section id="cookies" title="5. Cookies & Tracking">
+                <p>We use the following categories of cookies and tracking technologies:</p>
+                <ul>
+                  <li><strong>Strictly necessary cookies:</strong> Session authentication tokens and CSRF protection. These cannot be disabled without breaking core software functionality.</li>
+                  <li><strong>Performance cookies:</strong> Anonymous telemetry used to measure page load times and API reliability.</li>
+                  <li><strong>Analytics trackers:</strong> We may use privacy-respecting analytics tools to understand feature adoption. IP addresses used for analytics are anonymised at collection.</li>
+                </ul>
+                <p>
+                  We do not use cross-site advertising trackers or interest-based profiling. You may manage cookie preferences via your browser settings. Disabling non-essential cookies will not affect your ability to use the core software.
+                </p>
+              </Section>
+
+              {/* ── Block 6: Security & Retention ── */}
+              <Section id="security-retention" title="6. Data Security & Retention">
+                <h3>6.1 Security Measures</h3>
+                <p>
+                  We apply industry-standard technical and organisational security controls to protect personal data from unauthorised access, disclosure, alteration, or destruction:
+                </p>
+                <ul>
+                  <li>All data in transit is encrypted using TLS 1.2 or higher.</li>
+                  <li>Data at rest is encrypted using AES-256.</li>
+                  <li>Access to production systems is restricted by role-based access control and multi-factor authentication.</li>
+                  <li>We conduct periodic security reviews and code audits.</li>
+                </ul>
+                <p>
+                  Important: our security controls protect <strong>software data and instructions</strong>. The financial funds themselves are secured and insured by our licensed execution partners under their own regulatory requirements.
+                </p>
+
+                <h3>6.2 Retention Periods</h3>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Data Category</th>
+                      <th>Retention Period</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Merchant account data</td>
+                      <td>Duration of account + 3 years after closure</td>
+                    </tr>
+                    <tr>
+                      <td>Invoice and billing records</td>
+                      <td>7 years (driven by Singapore corporate tax requirements)</td>
+                    </tr>
+                    <tr>
+                      <td>End-consumer checkout session data</td>
+                      <td>90 days from checkout event</td>
+                    </tr>
+                    <tr>
+                      <td>Server log data</td>
+                      <td>30–90 days</td>
+                    </tr>
+                    <tr>
+                      <td>Support communications</td>
+                      <td>3 years from last contact</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p>
+                  When retention periods expire, data is securely deleted or anonymised. We do not retain personal data for longer than necessary solely on the basis of potential future litigation.
+                </p>
+              </Section>
+
+              {/* ── Block 7: Your Rights ── */}
+              <Section id="your-rights" title="7. Your Privacy Rights">
+                <p>
+                  Depending on your jurisdiction, you may have the following rights regarding personal data we hold about you:
+                </p>
+                <ul>
+                  <li><strong>Right to access:</strong> Request a copy of the personal data we hold about you.</li>
+                  <li><strong>Right to correction:</strong> Request that inaccurate or incomplete data be corrected.</li>
+                  <li><strong>Right to deletion (&ldquo;right to be forgotten&rdquo;):</strong> Request deletion of your data, subject to our legal retention obligations. Note that if you are an end-consumer, your data is held on behalf of the merchant — deletion requests may require us to coordinate with the merchant as data controller for that relationship.</li>
+                  <li><strong>Right to restrict processing:</strong> Request that we limit how we use your data in specific circumstances.</li>
+                  <li><strong>Right to data portability:</strong> Receive a structured, machine-readable copy of data you have provided to us.</li>
+                  <li><strong>Right to object:</strong> Object to processing based on legitimate interests.</li>
+                  <li><strong>Right to withdraw consent:</strong> Where processing is based on consent, withdraw it at any time without affecting prior processing.</li>
+                </ul>
+                <p>
+                  <strong>Singapore residents (PDPA):</strong> You may exercise access and correction rights in accordance with the Personal Data Protection Act 2012.
+                </p>
+                <p>
+                  <strong>Indonesia residents (UU PDP):</strong> You may exercise rights in accordance with Law No. 27 of 2022 on Personal Data Protection.
+                </p>
+                <p>
+                  <strong>EEA/UK residents (GDPR/UK GDPR):</strong> If you access our services from the EEA or UK, we process your data under GDPR/UK GDPR and you have all rights listed above plus the right to lodge a complaint with your national supervisory authority.
+                </p>
+                <p>
+                  To exercise any of these rights, email <Link href="mailto:privacy@paymonei.com" className="text-[#0C0C0C] underline underline-offset-2 hover:opacity-70">privacy@paymonei.com</Link>. We will respond within 30 days. We may need to verify your identity before acting on a request.
+                </p>
+              </Section>
+
+              {/* ── Block 8: Contact ── */}
+              <Section id="contact" title="8. Contact & Data Protection Officer">
+                <p>
+                  For any questions, concerns, or requests relating to this Privacy Policy or our data practices, contact us at:
+                </p>
+                <div className="bg-[#F5F5F2] border border-[#EAEAE6] rounded-lg p-6 not-prose">
+                  <div className="grid sm:grid-cols-2 gap-8">
+                    <div>
+                      <p className="text-[11px] uppercase tracking-wider text-[#999] font-medium mb-3">Data Controller</p>
+                      <p className="text-[14px] text-[#333] font-medium">Omniasky Technology Pte Ltd</p>
+                      <p className="text-[13px] text-[#777] font-light mt-1">Singapore</p>
+                      <Link href="mailto:privacy@paymonei.com" className="text-[13px] text-[#0C0C0C] underline underline-offset-2 hover:opacity-70 mt-1 block">
+                        privacy@paymonei.com
+                      </Link>
+                    </div>
+                    <div>
+                      <p className="text-[11px] uppercase tracking-wider text-[#999] font-medium mb-3">Software Operator (Sub-Processor)</p>
+                      <p className="text-[14px] text-[#333] font-medium">PT Evora Vera Teknologi</p>
+                      <p className="text-[13px] text-[#777] font-light mt-1">Indonesia</p>
+                      <Link href="mailto:privacy@paymonei.com" className="text-[13px] text-[#0C0C0C] underline underline-offset-2 hover:opacity-70 mt-1 block">
+                        privacy@paymonei.com
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+                <p className="text-[14px] text-[#777] mt-6 font-light">
+                  We may update this Privacy Policy periodically. Material changes will be communicated via email to registered merchants or via a notice on our website at least 14 days before taking effect. The &ldquo;Effective date&rdquo; at the top of this page reflects the date of the most recent revision.
+                </p>
+              </Section>
+
+            </article>
+          </div>
         </div>
-      </div>
 
-      <Footer />
+        <Footer />
+      </div>
+    </>
+  );
+}
+
+// ─── Sub-components ──────────────────────────────────────────────────────────
+
+function Section({ id, title, children }: { id: string; title: string; children: React.ReactNode }) {
+  return (
+    <section id={id} className="mb-14 scroll-mt-28">
+      <div className="border-b border-[#EAEAE6] pb-4 mb-8">
+        <h2
+          className="text-[clamp(1.4rem,2.5vw,1.8rem)] font-light tracking-[-0.02em] text-[#0C0C0C]"
+          style={{ fontFamily: "'Instrument Serif', Georgia, serif" }}
+        >
+          {title}
+        </h2>
+      </div>
+      <div
+        className="text-[15px] text-[#555] leading-[1.8] font-light space-y-4"
+        style={{
+          /* prose-like styles inline to avoid @tailwindcss/typography dependency */
+        }}
+      >
+        <LegalProse>{children}</LegalProse>
+      </div>
+    </section>
+  );
+}
+
+function LegalProse({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="
+      [&_p]:text-[15px] [&_p]:text-[#555] [&_p]:leading-[1.8] [&_p]:font-light
+      [&_h3]:text-[15px] [&_h3]:font-semibold [&_h3]:text-[#0C0C0C] [&_h3]:mt-8 [&_h3]:mb-3
+      [&_ul]:list-disc [&_ul]:list-outside [&_ul]:pl-5 [&_ul]:space-y-2
+      [&_li]:text-[15px] [&_li]:text-[#555] [&_li]:leading-[1.8] [&_li]:font-light
+      [&_strong]:text-[#333] [&_strong]:font-medium
+      [&_a]:text-[#0C0C0C] [&_a]:underline [&_a]:underline-offset-2 [&_a]:hover:opacity-70 [&_a]:transition-opacity
+      [&_table]:w-full [&_table]:border-collapse [&_table]:mt-2 [&_table]:mb-4 [&_table]:text-[14px]
+      [&_th]:text-left [&_th]:py-2.5 [&_th]:px-4 [&_th]:text-[11px] [&_th]:uppercase [&_th]:tracking-wider [&_th]:text-[#999] [&_th]:font-medium [&_th]:border-b [&_th]:border-[#EAEAE6]
+      [&_td]:py-3 [&_td]:px-4 [&_td]:text-[#555] [&_td]:border-b [&_td]:border-[#F5F5F2] [&_td]:align-top [&_td]:leading-relaxed
+      [&_tr:last-child_td]:border-0
+    ">
+      {children}
+    </div>
+  );
+}
+
+function CalloutBox({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="my-6 border-l-4 border-[#0C0C0C] pl-5 py-1">
+      <p className="text-[14px] text-[#555] leading-relaxed font-light italic">
+        {children}
+      </p>
     </div>
   );
 }
