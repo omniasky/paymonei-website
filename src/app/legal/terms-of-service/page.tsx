@@ -78,19 +78,38 @@ export default function TermsOfServicePage() {
 
             {/* Sticky TOC sidebar */}
             <aside className="lg:w-56 shrink-0">
-              <div className="sticky top-28">
-                <p className="text-[11px] uppercase tracking-[0.14em] text-[#999] font-medium mb-4">On this page</p>
-                <nav className="flex flex-col gap-1.5">
-                  {toc.map(item => (
-                    <a
-                      key={item.id}
-                      href={`#${item.id}`}
+              <div className="sticky top-28 flex flex-col gap-6">
+
+                {/* Jurisdiction switcher */}
+                <div>
+                  <p className="text-[11px] uppercase tracking-[0.14em] text-[#999] font-medium mb-3">Jurisdiction</p>
+                  <nav className="flex flex-col gap-1.5">
+                    <span className="text-[13px] text-[#0C0C0C] font-medium leading-snug">Singapore &amp; RoW</span>
+                    <Link
+                      href="/legal/terms-of-service/indonesia"
                       className="text-[13px] text-[#777] hover:text-[#0C0C0C] transition-colors font-light leading-snug"
                     >
-                      {item.label}
-                    </a>
-                  ))}
-                </nav>
+                      Indonesia (Bahasa)
+                    </Link>
+                  </nav>
+                </div>
+
+                {/* On this page */}
+                <div className="border-t border-[#EAEAE6] pt-4">
+                  <p className="text-[11px] uppercase tracking-[0.14em] text-[#999] font-medium mb-4">On this page</p>
+                  <nav className="flex flex-col gap-1.5">
+                    {toc.map(item => (
+                      <a
+                        key={item.id}
+                        href={`#${item.id}`}
+                        className="text-[13px] text-[#777] hover:text-[#0C0C0C] transition-colors font-light leading-snug"
+                      >
+                        {item.label}
+                      </a>
+                    ))}
+                  </nav>
+                </div>
+
               </div>
             </aside>
 

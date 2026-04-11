@@ -28,6 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // Legal
     { url: `${baseUrl}/legal/terms-of-service`, lastModified: currentDate, changeFrequency: 'yearly', priority: 0.3 },
+    { url: `${baseUrl}/legal/terms-of-service/indonesia`, lastModified: currentDate, changeFrequency: 'yearly', priority: 0.3 },
     { url: `${baseUrl}/legal/privacy-policy`, lastModified: currentDate, changeFrequency: 'yearly', priority: 0.3 },
     { url: `${baseUrl}/legal/cookie-policy`, lastModified: currentDate, changeFrequency: 'yearly', priority: 0.2 },
   ];
