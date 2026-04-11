@@ -136,7 +136,7 @@ export default function PrivacyPolicyPage() {
 
                 <h3>2.2 Business Verification Data</h3>
                 <p>
-                  To protect the integrity of our software platform and prevent misuse, we conduct identity verification on authorized representatives and directors of merchant businesses prior to enabling full platform access. This is a software access control measure, not a regulated financial compliance activity.
+                  To protect the integrity of our software platform and prevent misuse, we conduct identity verification on authorized representatives and directors of merchant businesses prior to enabling platform access.
                 </p>
                 <p>As part of this process, we share the identification information you provide with our third-party verification partners:</p>
                 <ul>
@@ -144,10 +144,10 @@ export default function PrivacyPolicyPage() {
                   <li><strong>Verihubs</strong> — for identity verification of directors and authorized representatives of businesses incorporated in Indonesia.</li>
                 </ul>
                 <p>
-                  These providers may process government-issued identity document images and biometric data (such as selfie comparisons) on our behalf, under their own data processing terms. We do not store raw identity document images or biometric data on our own infrastructure after verification is complete. We retain only the verification outcome (verified / not verified) and the reference identifier provided by the verification partner.
+                  These providers perform identity document verification and biometric liveness checks on our behalf under their own data processing terms. Biometric processing (facial comparison, liveness detection) is executed on the verification partner’s infrastructure. We retain the submitted identity information and verification records — including verification reference identifiers and, where required to satisfy regulatory audit trail obligations, copies of submitted identity documents — for the duration of the merchant relationship and for a minimum of five (5) years thereafter, in order to respond to requests from regulatory authorities, banking partners, or licensed financial execution partners.
                 </p>
                 <CalloutBox>
-                  Paymonei&rsquo;s identity verification is conducted solely to confirm that an authorized representative of a legitimate business is accessing our software platform. Regulated Anti-Money Laundering (AML), Counter-Terrorism Financing (CFT), sanctions screening, and ongoing transaction monitoring obligations are fulfilled by our licensed financial execution partners — not by Paymonei. We do not collect UBO (Ultimate Beneficial Owner) declarations for regulatory reporting purposes.
+                  Paymonei operates technology-layer risk controls — including transaction velocity monitoring, device and IP risk scoring, and suspicious activity pattern detection — to protect the integrity of our software platform. These controls work in concert with the regulated Anti-Money Laundering (AML), Counter-Terrorism Financing (CFT), sanctions screening, and statutory transaction monitoring obligations fulfilled by our licensed financial execution partners under their respective regulatory frameworks. We do not collect or file Ultimate Beneficial Owner (UBO) declarations for independent regulatory reporting purposes.
                 </CalloutBox>
 
                 <h3>2.3 From Transaction Participants</h3>
