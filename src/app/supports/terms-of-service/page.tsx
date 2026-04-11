@@ -471,7 +471,7 @@ export default function TermsOfServicePage() {
                   </div>
                 </div>
                 <p className="text-[14px] text-[#777] mt-6 font-light">
-                  These Terms are published by <strong className="text-[#555]">Omniasky Technology Pte Ltd</strong>, the intellectual property and management holding company of the Paymonei platform, registered in Singapore. Technology development and platform operations are delivered by our affiliated entity PT Evora Vera Teknologi, incorporated in Indonesia.
+                  These Terms are published by Omniasky Technology Pte Ltd, the intellectual property and management holding company of the Paymonei platform, registered in Singapore. Technology development and platform operations are delivered by our affiliated entity PT Evora Vera Teknologi, incorporated in Indonesia.
                 </p>
               </Section>
 
