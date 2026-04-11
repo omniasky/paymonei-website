@@ -105,10 +105,10 @@ export default function PrivacyPolicyPage() {
               {/* ── Block 1: Introduction & Scope ── */}
               <Section id="introduction" title="1. Introduction & Scope">
                 <p>
-                  This Privacy Policy describes how <strong>Omniasky Technology Pte Ltd</strong>, a company registered in Singapore (&ldquo;Omniasky&rdquo;, &ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;us&rdquo;) collects, uses, and protects personal data when you access or use the Paymonei platform and any associated websites, APIs, dashboards, or hosted services (collectively, the &ldquo;Services&rdquo;).
+                  This Privacy Policy describes how <strong>Omniasky Technology Pte Ltd</strong>, a company registered in Singapore that holds the proprietary technology and intellectual property of the Paymonei platform (&ldquo;Omniasky&rdquo;, &ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;us&rdquo;), collects, uses, and protects personal data when you access or use the Paymonei platform and any associated websites, APIs, dashboards, or hosted services (collectively, the &ldquo;Services&rdquo;).
                 </p>
                 <p>
-                  Omniasky holds the proprietary technology and intellectual property of the Paymonei platform. Technology development and platform management services are delivered by our affiliated entity, <strong>PT Evora Vera Teknologi</strong>, a limited liability company incorporated in Indonesia, acting as our authorized technology partner.
+                  Technology development and platform management services are delivered by our affiliated entity, <strong>PT Evora Vera Teknologi</strong>, a limited liability company incorporated in Indonesia, acting as our authorized technology partner.
                 </p>
                 <CalloutBox>
                   Neither Omniasky Technology Pte Ltd nor PT Evora Vera Teknologi is a bank, payment institution, money services business, or virtual asset service provider. We are software companies. Financial execution services are provided by our regulated, licensed partners on a separate contractual basis.
