@@ -219,7 +219,6 @@ export default function CookiePolicyPage() {
                 <table>
                   <thead>
                     <tr>
-                      <th>Cookie</th>
                       <th>Purpose</th>
                       <th>Provider</th>
                       <th>Duration</th>
@@ -227,16 +226,14 @@ export default function CookiePolicyPage() {
                   </thead>
                   <tbody>
                     <tr>
-                      <td><code>ph_*</code></td>
-                      <td>Product analytics: feature adoption, session behaviour, and UX improvement. Not shared with third parties for advertising.</td>
-                      <td>PostHog</td>
-                      <td>1 year</td>
+                      <td>Product analytics: tracking feature adoption, session behaviour, and UX patterns to improve the platform. Data is not shared with third parties for advertising purposes.</td>
+                      <td>Analytics service provider (first-party and/or third-party)</td>
+                      <td>Up to 1 year</td>
                     </tr>
                     <tr>
-                      <td><code>_vercel_*</code></td>
-                      <td>Infrastructure performance analytics to monitor page load reliability</td>
-                      <td>Vercel</td>
-                      <td>Session</td>
+                      <td>Infrastructure performance monitoring: tracking page load reliability, error rates, and system uptime</td>
+                      <td>Infrastructure monitoring provider</td>
+                      <td>Session – 90 days</td>
                     </tr>
                   </tbody>
                 </table>
@@ -273,7 +270,7 @@ export default function CookiePolicyPage() {
                 </p>
                 <h3>4.4 Third-Party Opt-Out</h3>
                 <p>
-                  For analytics cookies set by PostHog, you can opt out via <Link href="https://posthog.com/privacy" target="_blank" rel="noopener noreferrer">PostHog&rsquo;s privacy controls</Link>. Opting out at provider level supplements — but does not replace — your in-platform consent preference.
+                  Where we use third-party analytics services, those providers may offer their own opt-out mechanisms (such as browser add-ons or account-level privacy settings). Opting out at provider level supplements — but does not replace — your in-platform consent preference managed through our cookie banner.
                 </p>
               </Section>
 
@@ -309,7 +306,7 @@ export default function CookiePolicyPage() {
                       <td>Deleted immediately if consent is withdrawn</td>
                     </tr>
                     <tr>
-                      <td>Analytics cookies (PostHog)</td>
+                      <td>Analytics cookies (third-party service providers)</td>
                       <td>Up to 1 year</td>
                       <td>Deleted on consent withdrawal; IP anonymised at collection</td>
                     </tr>
@@ -323,29 +320,37 @@ export default function CookiePolicyPage() {
               {/* ── Block 6: Third-Party Services ── */}
               <Section id="third-party" title="6. Third-Party Services">
                 <p>
-                  The following third-party services may set cookies on paymonei.com. We do not control their cookies beyond the disclosures above. Please refer to their own policies for full details.
+                  Paymonei uses third-party services for analytics and infrastructure monitoring. These services may set cookies or use similar technologies on paymonei.com. The categories of third-party providers we currently engage are:
                 </p>
                 <table>
                   <thead>
                     <tr>
-                      <th>Provider</th>
                       <th>Category</th>
-                      <th>Privacy Policy</th>
+                      <th>Purpose</th>
+                      <th>Cookie Type</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>PostHog</td>
-                      <td>Analytics</td>
-                      <td><Link href="https://posthog.com/privacy" target="_blank" rel="noopener noreferrer">posthog.com/privacy</Link></td>
+                      <td>Product analytics provider</td>
+                      <td>Aggregated analysis of feature adoption, user flows, and platform usage to improve the software. Data is not used for advertising.</td>
+                      <td>Analytics (consent required for EEA/UK)</td>
                     </tr>
                     <tr>
-                      <td>Vercel</td>
-                      <td>Infrastructure / Performance</td>
-                      <td><Link href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">vercel.com/legal/privacy-policy</Link></td>
+                      <td>Infrastructure &amp; performance monitoring provider</td>
+                      <td>Monitoring of platform reliability, error rates, and load performance. No personal profiling.</td>
+                      <td>Performance (strictly necessary or session-only)</td>
+                    </tr>
+                    <tr>
+                      <td>Cloud hosting provider</td>
+                      <td>Hosting and delivery of the Paymonei platform and website. May set session-level technical cookies.</td>
+                      <td>Strictly Necessary</td>
                     </tr>
                   </tbody>
                 </table>
+                <p>
+                  We maintain an internal Register of Processing Activities (ROPA) that lists the specific third-party providers in each category. This register is available to regulators, banking partners, and enterprise merchants upon request. We do not publish individual provider names in this public policy to maintain operational flexibility as our infrastructure evolves — with the exception that any analytics provider that independently processes personal data for its own purposes (such as certain web analytics platforms) will be named explicitly in this section when activated.
+                </p>
                 <p>
                   All third-party providers are bound by data processing agreements consistent with the standards in our <Link href="/supports/privacy-policy">Privacy Policy</Link>. We do not engage advertising networks, social media tracking pixels, or data brokers in connection with our cookies.
                 </p>
