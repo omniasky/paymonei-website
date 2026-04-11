@@ -335,7 +335,7 @@ export default function TermsOfServicePage() {
                   <li>Regulatory actions, penalties, or compliance costs imposed on you by authorities in your jurisdiction.</li>
                 </ul>
                 <p>
-                  Our aggregate liability to you arising out of or in connection with this Agreement, from any cause whatsoever and regardless of the form of action, will at all times be limited to the greater of: (a) the total platform subscription Fees paid by you to Omniasky in the twelve (12) months immediately preceding the event giving rise to the claim; or (b) SGD five hundred (SGD 500).
+                  Our aggregate liability to you arising out of or in connection with this Agreement, from any cause whatsoever and regardless of the form of action, will at all times be limited to the greater of: (a) the total platform subscription Fees paid by you to Omniasky in the three (3) months immediately preceding the event giving rise to the claim; or (b) SGD two thousand (SGD 2,000).
                 </p>
                 <p>
                   Some jurisdictions do not permit the exclusion or limitation of certain types of liability. To the extent such laws apply, the limitations above apply only to the fullest extent permitted.
