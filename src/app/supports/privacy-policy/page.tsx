@@ -261,7 +261,7 @@ export default function PrivacyPolicyPage() {
                   <tbody>
                     <tr>
                       <td><strong>Licensed Financial Execution Partners</strong><br /><span style={{ fontSize: "13px", color: "#777" }}>Payment institutions, banks, and regulated financial service providers</span></td>
-                      <td>To route payment workflow instructions and enable transaction execution under their own regulatory licences. Paymonei applies technology-layer risk monitoring; licensed partners fulfil regulated AML/CFT, sanctions screening, and transaction monitoring obligations. Both layers operate in concert to maintain platform security and compliance integrity.</td>
+                      <td>To route payment workflow instructions and enable transaction execution under their own regulatory licences.</td>
                     </tr>
                     <tr>
                       <td><strong>Identity Verification Partners</strong></td>
@@ -302,7 +302,7 @@ export default function PrivacyPolicyPage() {
                   When a merchant or transaction participant initiates a payment workflow through our software, we transmit the minimum necessary data (session context, device metadata, and invoice reference) to our licensed third-party financial institution partners who are independently regulated to provide payment execution and settlement services. These partners process payment credentials and fund movement under their own regulatory licences and privacy frameworks.
                 </p>
                 <p>
-                  AML/CFT compliance obligations, including transaction monitoring and sanctions screening, are fulfilled by these licensed execution partners — not by Paymonei.
+                  Paymonei operates technology-layer risk monitoring that works in concert with our licensed partners&rsquo; regulated AML/CFT obligations, sanctions screening, and statutory transaction monitoring. Both layers collectively maintain platform security and compliance integrity.
                 </p>
                 <p>
                   We contractually require all such partners to apply data protection standards no less protective than those described in this Policy.
@@ -310,7 +310,7 @@ export default function PrivacyPolicyPage() {
 
                 <h3>4.2 Identity Verification Partners</h3>
                 <p>
-                  We share authorized representative and director identity information with verification providers during merchant onboarding, for platform access control purposes. We share only the minimum information required to complete verification. We retain the verification outcome and reference identifier only.
+                  We share authorized representative and director identity information with verification providers during merchant onboarding, for platform access control purposes. We share only the required information to complete verification. We retain the verification outcome and reference identifier.
                 </p>
 
                 <h3>4.3 Cloud Infrastructure & Service Providers</h3>
