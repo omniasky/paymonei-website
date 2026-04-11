@@ -77,9 +77,9 @@ function InvoiceMockup({ visible }: { visible: boolean }) {
 
         {/* Payment rails strip */}
         <div className="px-5 py-3 border-t border-[#F0F0EC] bg-[#FAFAF8] flex items-center gap-2">
-          {["SWIFT", "USDC", "Card", "ACH"].map((rail) => (
-            <span key={rail} className="text-[9px] font-medium tracking-wide text-[#888] px-2 py-0.5 rounded border border-[#E8E8E4] bg-white">
-              {rail}
+          {["Multi-rail", "Multi-currency", "Global"].map((tag) => (
+            <span key={tag} className="text-[9px] font-medium tracking-wide text-[#888] px-2 py-0.5 rounded border border-[#E8E8E4] bg-white">
+              {tag}
             </span>
           ))}
           <span className="ml-auto text-[10px] text-[#22C55E] font-medium">✓ Settled</span>
@@ -155,7 +155,7 @@ export function HeroSection({ primaryCta, secondaryCta }: HeroSectionProps) {
                 transition: "opacity 0.5s ease, transform 0.5s ease",
               }}
             >
-              Business Payment Technology
+              Business Operations Software
             </p>
 
             <h1
@@ -167,7 +167,7 @@ export function HeroSection({ primaryCta, secondaryCta }: HeroSectionProps) {
                 transition: "opacity 0.6s ease 0.08s, transform 0.6s ease 0.08s",
               }}
             >
-              The way modern businesses pay and get paid.
+              One platform for how modern businesses bill, collect, and disburse.
             </h1>
 
             <p
@@ -178,7 +178,7 @@ export function HeroSection({ primaryCta, secondaryCta }: HeroSectionProps) {
                 transition: "opacity 0.6s ease 0.16s, transform 0.6s ease 0.16s",
               }}
             >
-              Send invoices, collect payments, and payouts from one clean dashboard.
+              Create invoices, track incoming payments, and manage disbursements — from one clean dashboard.
             </p>
 
             <div

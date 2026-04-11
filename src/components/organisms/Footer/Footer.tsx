@@ -129,16 +129,21 @@ export function Footer() {
             </p>
 
             {/* Legal note — software company positioning, no licensing trigger */}
-            <p className="text-[13px] text-[#BBB] font-light max-w-sm text-right leading-relaxed">
-              Paymonei provides software tools for payment operations.{" "}
-              <Link href="/supports/terms-of-service" className="underline underline-offset-2 hover:text-[#777] transition-colors">
-                Terms
-              </Link>
-              {" · "}
-              <Link href="/supports/privacy-policy" className="underline underline-offset-2 hover:text-[#777] transition-colors">
-                Privacy
-              </Link>
-            </p>
+            <div className="text-right space-y-1">
+              <p className="text-[13px] text-[#BBB] font-light leading-relaxed">
+                Paymonei provides software tools for payment operations.{" "}
+                <Link href="/supports/terms-of-service" className="underline underline-offset-2 hover:text-[#777] transition-colors">
+                  Terms
+                </Link>
+                {" · "}
+                <Link href="/supports/privacy-policy" className="underline underline-offset-2 hover:text-[#777] transition-colors">
+                  Privacy
+                </Link>
+              </p>
+              <p className="text-[12px] text-[#CCC] font-light leading-relaxed max-w-sm ml-auto">
+                Paymonei does not hold or transmit funds. Payment execution is performed by licensed third-party financial institutions.
+              </p>
+            </div>
           </div>
         </div>
 

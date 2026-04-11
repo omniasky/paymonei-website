@@ -12,14 +12,14 @@ const slides = [
     id: "billing",
     tag: "01",
     headline: "Building SaaS billing takes 6–12 months before your first invoice ships.",
-    body: "Pricing table, subscription engine, proration logic, dunning, invoice PDF, embedded checkout — Stripe gives you a payment form, not a billing system. Most teams build it all from scratch, twice.",
+    body: "Pricing table, subscription engine, proration logic, dunning, invoice PDF, embedded checkout — most payment APIs give you a checkout form, not a billing system. Most teams build it all from scratch, twice.",
     note: "Avg. time reported by B2B SaaS teams before billing goes live",
   },
   {
     id: "checkout",
     tag: "02",
     headline: "Checkout redirects lose customers before they pay.",
-    body: "External-hosted checkout pages (like Stripe Checkout) break your product flow. Building a fully embedded checkout that stays inside your app is another 2–3 months of work — and most teams skip it.",
+    body: "External-hosted checkout pages break your product flow. Building a fully embedded checkout that stays inside your app is another 2–3 months of work — and most teams skip it.",
     note: "Conversion drops when customers leave your product to pay",
   },
   {

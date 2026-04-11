@@ -8,20 +8,20 @@ import { ProblemSection } from "@/components/organisms/ProblemSection";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Business Payment Software | Invoices, Payouts & Global Payments | Paymonei",
+  title: "Business Billing & Payment Software | Invoices, Disbursements & Global Operations | Paymonei",
   description:
-    "Paymonei is business payment software for modern companies. Send invoices, collect payments, run payroll, and manage vendor payouts — across 150+ countries from one dashboard.",
+    "Paymonei is billing and operations software for modern companies. Create invoices, track collections, and manage global disbursements — from one dashboard, across 150+ countries.",
   openGraph: {
-    title: "Business Payment Software | Paymonei",
+    title: "Business Billing & Payment Software | Paymonei",
     description:
-      "Invoices, payouts, payroll, and global payments — from one clean dashboard. Built for companies that move fast and operate across borders.",
+      "Invoices, disbursements, and global payment workflows — from one clean dashboard. Built for companies that operate across borders.",
     url: "https://paymonei.com",
     images: [
       {
         url: "https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Paymonei — Business Payment Software",
+        alt: "Paymonei — Business Billing & Payment Software",
       },
     ],
   },
@@ -36,7 +36,7 @@ const structuredData = {
       "@id": "https://paymonei.com/#organization",
       name: "Paymonei",
       url: "https://paymonei.com",
-      description: "Business payment software for invoices, payouts, payroll, and global payments.",
+      description: "Business billing and payment operations software for invoices, disbursements, and global payment workflows.",
       foundingDate: "2023",
     },
     {
@@ -46,13 +46,13 @@ const structuredData = {
       applicationCategory: "BusinessApplication",
       featureList: [
         "Invoice Management",
-        "Bill Payment Automation",
-        "Cross-border Payouts",
-        "Global Payroll",
-        "Merchant Payments",
+        "Billing Automation",
+        "Cross-border Disbursement Tracking",
+        "Workforce Payment Coordination",
+        "Merchant Billing Tools",
         "Multi-currency Support",
         "Payment Links",
-        "Stablecoin Payments",
+        "Multi-rail Payment Support",
       ],
     },
   ],
@@ -104,7 +104,7 @@ export default function HomePage() {
         <section className="border-t border-[#EAEAE6] bg-[#FAFAF8] py-10 px-5 sm:px-8">
           <div className="max-w-5xl mx-auto lg:px-8">
             <p className="text-[12px] tracking-[0.18em] uppercase text-[#BBBBB8] mb-6">
-              Trusted by teams building globally
+              Built on trusted global infrastructure
             </p>
             <div className="relative overflow-hidden">
               <div className="absolute left-0 top-0 bottom-0 w-12 z-10" style={{ background: "linear-gradient(to right, #FAFAF8, transparent)" }} />
@@ -142,7 +142,7 @@ export default function HomePage() {
                   One platform for every billing problem your product faces.
                 </h2>
                 <p className="mt-5 text-[15px] text-[#777] leading-relaxed font-light max-w-xs">
-                  Ship billing in days, not months — without stitching together five different tools or building infrastructure you&apos;ll maintain forever.
+                  Ship billing in days, not months — without stitching together five different tools or owning infrastructure your team will maintain forever.
                 </p>
               </div>
               <div className="space-y-8 pt-1">
@@ -195,7 +195,7 @@ export default function HomePage() {
                 Built for E2E Business Operations
               </h2>
               <p className="mt-4 text-[15px] text-[#777] max-w-md leading-relaxed font-light">
-                Every financial operation your business runs — from collecting to disbursing — handled in one place.
+                Every billing and payment workflow your business runs — tracked and managed from one place.
               </p>
             </div>
 
@@ -213,8 +213,8 @@ export default function HomePage() {
                     />
                   </div>
                   <div className="px-6 py-5 border-t border-[#EAEAE6]">
-                    <h3 className="text-[15px] font-medium text-[#0C0C0C]">Merchant Settlement</h3>
-                    <p className="mt-1 text-sm text-[#888] leading-relaxed font-light">Accept payments globally via links or API. Real-time settlement tracking.</p>
+                    <h3 className="text-[15px] font-medium text-[#0C0C0C]">Merchant Collections</h3>
+                    <p className="mt-1 text-sm text-[#888] leading-relaxed font-light">Create payment requests globally via links or API. Real-time status tracking.</p>
                   </div>
                 </div>
               </div>
@@ -231,8 +231,8 @@ export default function HomePage() {
                     />
                   </div>
                   <div className="px-6 py-5 border-t border-[#EAEAE6]">
-                    <h3 className="text-[15px] font-medium text-[#0C0C0C]">Enterprise Payouts</h3>
-                    <p className="mt-1 text-sm text-[#888] leading-relaxed font-light">Mass disbursements to vendors and suppliers worldwide.</p>
+                    <h3 className="text-[15px] font-medium text-[#0C0C0C]">Enterprise Disbursements</h3>
+                    <p className="mt-1 text-sm text-[#888] leading-relaxed font-light">Manage and track mass payment batches to vendors and suppliers worldwide.</p>
                   </div>
                 </div>
               </div>
@@ -244,8 +244,8 @@ export default function HomePage() {
                     <Image src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/global-payroll.png" alt="Global Payroll" fill className="object-cover" />
                   </div>
                   <div className="px-5 py-4 border-t border-[#EAEAE6]">
-                    <h3 className="text-[15px] font-medium text-[#0C0C0C]">Global Payroll</h3>
-                    <p className="mt-1 text-sm text-[#888] leading-relaxed font-light">Contractor and team payroll in 150+ countries.</p>
+                    <h3 className="text-[15px] font-medium text-[#0C0C0C]">Workforce Payments</h3>
+                    <p className="mt-1 text-sm text-[#888] leading-relaxed font-light">Disbursement coordination for contractors and teams across 150+ countries.</p>
                   </div>
                 </div>
               </div>
@@ -258,7 +258,7 @@ export default function HomePage() {
                   </div>
                   <div className="px-5 py-4 border-t border-[#EAEAE6]">
                     <h3 className="text-[15px] font-medium text-[#0C0C0C]">Smart Invoice</h3>
-                    <p className="mt-1 text-sm text-[#888] leading-relaxed font-light">Automated invoicing with multicurrency acceptance.</p>
+                    <p className="mt-1 text-sm text-[#888] leading-relaxed font-light">Automated invoicing with multi-currency support.</p>
                   </div>
                 </div>
               </div>
@@ -270,8 +270,8 @@ export default function HomePage() {
                     <Image src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/stablecoin-orchestration.png" alt="Orchestration" fill className="object-cover" />
                   </div>
                   <div className="px-5 py-4 border-t border-[#EAEAE6]">
-                    <h3 className="text-[15px] font-medium text-[#0C0C0C]">Orchestration</h3>
-                    <p className="mt-1 text-sm text-[#888] leading-relaxed font-light">Smart routing, liquidity optimization, and global scale.</p>
+                    <h3 className="text-[15px] font-medium text-[#0C0C0C]">Payment Routing</h3>
+                    <p className="mt-1 text-sm text-[#888] leading-relaxed font-light">Smart routing across global payment infrastructure at scale.</p>
                   </div>
                 </div>
               </div>
@@ -302,7 +302,7 @@ export default function HomePage() {
               <span className="italic">Your Business?</span>
             </h2>
             <p className="text-[15px] text-[#777] leading-relaxed mb-10 font-light mx-auto" style={{ maxWidth: "400px" }}>
-              Join thousands of businesses running their payments through Paymonei — faster, cleaner, and with less overhead.
+              Join businesses worldwide that manage their billing and payment operations with Paymonei — simpler, faster, with less overhead.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <Link href="https://app.paymonei.com/auth/register">

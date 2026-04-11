@@ -20,49 +20,38 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL('https://paymonei.com'),
   title: {
-    default: "Stablecoin Payment API & Infrastructure | Digital Payment Gateway",
+    default: "Business Billing & Payment Operations Software | Paymonei",
     template: "%s | Paymonei"
   },
-  description: "AI-native payment infrastructure for global businesses. Enterprise stablecoin payment API for USDC payments, digital asset processing, and cross-border transactions with AI-native automation and institutional security.",
+  description: "Paymonei is billing and payment operations software for global businesses. Create invoices, track collections, manage disbursements, and run payment workflows — from one dashboard, across 150+ countries.",
   keywords: [
-    // High-volume search terms (prioritized)
-    "stablecoin payment API",
-    "digital payment gateway",
-    "USDC payment infrastructure",
-    "stablecoin payment processing",
-    "stablecoin API",
-    "blockchain payment API",
-    "digital asset on-ramp API",
-    "digital asset payment solution",
+    // Core product category
+    "billing software",
+    "invoicing software",
+    "payment operations software",
+    "business payment software",
+    "payment workflow software",
 
     // Use case keywords (buyer intent)
-    "cross-border payments",
+    "cross-border payment management",
+    "global payment operations",
+    "enterprise billing software",
+    "disbursement management software",
+    "international invoice software",
+    "vendor payment management",
+    "multi-currency invoicing",
+
+    // API / developer
+    "payment API",
+    "billing API",
+    "invoice API",
+    "payment infrastructure software",
+    "embedded checkout",
+
+    // Multi-rail
+    "multi-rail payments",
+    "payment routing software",
     "global payment infrastructure",
-    "enterprise payment API",
-    "digital payout API",
-    "digital asset payments",
-    "international payment API",
-    "global payroll stablecoins",
-    "enterprise payouts",
-
-    // Technical specifications
-    "payment gateway API",
-    "payment infrastructure",
-    "MPC wallet",
-    "institutional wallet",
-    "blockchain infrastructure",
-
-    // Differentiation (AI features)
-    "AI agent payments",
-    "autonomous payment protocol",
-    "AI financial infrastructure",
-    "agent payment protocol",
-    "AI-native payments",
-
-    // Your protocol
-    "AP2 protocol",
-    "Agentic payment protocol",
-    "cryptographic mandates",
   ],
   authors: [{ name: "Paymonei", url: "https://paymonei.com" }],
   creator: "Paymonei",
@@ -77,14 +66,14 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://paymonei.com",
     siteName: "Paymonei",
-    title: "Stablecoin Payment API & Infrastructure | Enterprise Digital Gateway",
-    description: "AI-native payment infrastructure for global businesses. Enterprise stablecoin payment API for USDC payments, digital asset processing, and cross-border transactions with AI-native automation and institutional security.",
+    title: "Business Billing & Payment Operations Software | Paymonei",
+    description: "Billing and payment operations software for global businesses. Create invoices, track collections, manage disbursements — from one dashboard, across 150+ countries.",
     images: [
       {
         url: "https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/og-image.png",
         width: 1200,
         height: 600,
-        alt: "Paymonei - Stablecoin Payment Infrastructure & API",
+        alt: "Paymonei — Business Billing & Payment Operations Software",
       },
     ],
   },
@@ -92,8 +81,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@paymonei",
     creator: "@paymonei",
-    title: "Stablecoin Payment API | Digital Gateway Infrastructure",
-    description: "AI-native payment infrastructure for global businesses. Enterprise stablecoin payment API for USDC payments, digital asset processing, and cross-border transactions with AI-native automation.",
+    title: "Business Billing & Payment Software | Paymonei",
+    description: "Billing and payment operations software for global businesses. Create invoices, track collections, manage disbursements — from one dashboard, across 150+ countries.",
     images: ["https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/twitter-card.png"],
   },
   robots: {
