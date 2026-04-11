@@ -111,7 +111,7 @@ export default function TermsOfServicePage() {
                   These Terms of Service (&ldquo;Terms&rdquo; or &ldquo;Agreement&rdquo;) govern access to and use of the Paymonei platform, APIs, dashboards, and hosted services (collectively, the &ldquo;Services&rdquo;) provided by <strong>Omniasky Technology Pte Ltd</strong>, a company registered in Singapore that holds the proprietary technology and intellectual property of the Paymonei platform (&ldquo;Omniasky&rdquo;, &ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;us&rdquo;).
                 </p>
                 <p>
-                  Technology development and platform management services are delivered by our affiliated entity, <strong>PT Evora Vera Teknologi</strong>, a limited liability company incorporated in Indonesia, acting as our authorized technology partner. PT Evora Vera Teknologi is not a separate contracting party to this Agreement.
+                  Technology development and platform management services are delivered by our affiliated entity, <strong>PT Evora Vera Teknologi</strong>, a limited liability company incorporated in Indonesia, acting as our authorized technology partner. Your contractual relationship under this Agreement is with Omniasky Technology Pte Ltd only.
                 </p>
                 <p>
                   These Terms apply exclusively to <strong>businesses and their duly authorized representatives</strong> (&ldquo;Merchants&rdquo;) who register for and use the Services. The Services are not designed for, marketed to, or available to private individuals acting in a personal capacity.
