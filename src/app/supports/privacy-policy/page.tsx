@@ -108,7 +108,7 @@ export default function PrivacyPolicyPage() {
                   This Privacy Policy describes how <strong>Omniasky Technology Pte Ltd</strong>, a company registered in Singapore (&ldquo;Omniasky&rdquo;, &ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;us&rdquo;) collects, uses, and protects personal data when you access or use the Paymonei platform and any associated websites, APIs, dashboards, or hosted services (collectively, the &ldquo;Services&rdquo;).
                 </p>
                 <p>
-                  Omniasky is the intellectual property and management holding company for Paymonei. Technology development, platform management, and day-to-day software operations are provided by our affiliated entity, <strong>PT Evora Vera Teknologi</strong>, a limited liability company incorporated in Indonesia, acting as a sub-processor under Omniasky&rsquo;s instructions.
+                  Omniasky holds the proprietary technology and intellectual property of the Paymonei platform. Technology development and platform management services are delivered by our affiliated entity, <strong>PT Evora Vera Teknologi</strong>, a limited liability company incorporated in Indonesia, acting as our authorized technology partner.
                 </p>
                 <CalloutBox>
                   Neither Omniasky Technology Pte Ltd nor PT Evora Vera Teknologi is a bank, payment institution, money services business, or virtual asset service provider. We are software companies. Financial execution services are provided by our regulated, licensed partners on a separate contractual basis.
@@ -229,7 +229,7 @@ export default function PrivacyPolicyPage() {
 
                 <h3>4.3 Intra-Group Processing</h3>
                 <p>
-                  Omniasky Technology Pte Ltd (Singapore, Data Controller) may share data with PT Evora Vera Teknologi (Indonesia, Sub-Processor) solely to enable software engineering, platform support, and operational management of the Paymonei product. This transfer is governed by an intra-group data processing agreement consistent with Singapore&rsquo;s PDPA and Indonesia&rsquo;s PDP Law (UU PDP).
+                  Omniasky Technology Pte Ltd (Singapore) and PT Evora Vera Teknologi (Indonesia) operate as affiliated entities within the same group. Data is shared between them solely to deliver and support the Paymonei software product. Both entities apply the data protection standards described in this Policy and are bound by a formal intra-group data sharing agreement.
                 </p>
 
                 <h3>4.4 Legal Disclosure</h3>
