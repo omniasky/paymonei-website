@@ -158,7 +158,7 @@ export default function PrivacyPolicyPage() {
                   <li><strong>Session token:</strong> An encrypted, temporary identifier used solely to maintain checkout session state. It contains no financial credentials.</li>
                 </ul>
                 <p>
-                  We do <strong>not</strong> collect, store, or process raw payment card numbers (PANs), bank account numbers, or digital asset private keys. When a participant selects a payment method, those credentials are submitted directly to our licensed execution partners via an encrypted channel. We receive only a tokenised reference confirming payment instruction status.
+                  All payment instrument data is collected and processed entirely within the secure, regulated environments of our licensed financial execution partners. Paymonei&rsquo;s software initiates and monitors payment workflow state only. We do not receive, process, or retain any payment instrument credential at any point in the transaction flow. Our partners&rsquo; payment collection environments are independently certified, regulated, and audited under their respective financial licences.
                 </p>
 
                 <h3>2.4 Automatically Collected Technical Data</h3>
