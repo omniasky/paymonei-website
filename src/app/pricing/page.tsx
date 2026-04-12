@@ -128,7 +128,6 @@ const plans = [
     ],
     includes: [
       "Everything in Core",
-      "Batch disbursements (up to 1,000 recipients)",
       "Advanced analytics (24 months history)",
       "Xero & QuickBooks integration",
       "Configurable dunning schedule per subscription",
@@ -155,7 +154,6 @@ const plans = [
     includes: [
       "Everything in Growth",
       "White-label dashboard (custom domain & branding)",
-      "Unlimited batch disbursements",
       "Dedicated account manager",
       "Custom SLA (99.95% uptime commitment)",
       "Data Processing Agreement (GDPR / PDPA)",
@@ -284,11 +282,6 @@ const comparison: ComparisonRow[] = [
     feature: "Customer self-serve portal",
     tooltip: "A hosted portal where your customers can view their invoice history, download PDFs, and see subscription status. No engineering work required on your end.",
     starter: false, core: true, growth: true, enterprise: true,
-  },
-  {
-    feature: "Batch disbursements",
-    tooltip: "Upload a recipient list and send payments to multiple parties in one workflow. Useful for paying contractors, suppliers, or marketplace sellers.",
-    starter: false, core: false, growth: "Up to 1,000", enterprise: "Unlimited",
   },
   {
     feature: "Accounting software integration",
