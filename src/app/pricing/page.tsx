@@ -85,14 +85,14 @@ const plans = [
     id: "core",
     name: "Core",
     tagline: "For growing operations",
-    price: 79,
-    priceLabel: "$79",
+    price: 59,
+    priceLabel: "$59",
     priceSub: "per month, cancel anytime",
     cta: "Get started",
     ctaHref: "https://app.paymonei.com/auth/register?plan=core",
     ctaPrimary: false,
     fees: [
-      { label: "Platform fee", value: "$79 / month" },
+      { label: "Platform fee", value: "$59 / month" },
       { label: "Software service fee", value: "1.2% on all volume" },
       { label: "Invoices", value: "Unlimited" },
       { label: "Entities", value: "Up to 3" },
@@ -177,7 +177,7 @@ const faqs = [
     a: "No setup fees, no contracts. Starter is free indefinitely. Core and Growth are month-to-month with no minimum commitment. You can cancel or change plans at any time.",
   },
   {
-    q: "What is the difference between Core ($79) and Growth ($249)?",
+    q: "What is the difference between Core ($59) and Growth ($249)?",
     a: "Core unlocks subscription billing, customer portal, dunning automation, webhook management, and multi-currency invoicing. Growth adds 24-month analytics history, Xero/QuickBooks accounting integrations, 10 entities, and a dedicated onboarding call.",
   },
   {
@@ -212,7 +212,7 @@ const comparison: ComparisonRow[] = [
   {
     feature: "Monthly platform fee",
     tooltip: "Fixed monthly cost. No contracts or minimums.",
-    starter: "$0", core: "$79", growth: "$249", enterprise: "Custom",
+    starter: "$0", core: "$59", growth: "$249", enterprise: "Custom",
   },
   {
     feature: "Software service fee",
