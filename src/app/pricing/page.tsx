@@ -157,7 +157,7 @@ const faqs = [
   },
   {
     q: "Why is the Starter plan free up to $10K / month?",
-    a: "We want businesses to build real invoice history and verify that Paymonei fits their workflow before committing to a paid plan. The $10K threshold covers the vast majority of early-stage businesses. Most grow into the Core plan naturally once they need multiple entities or deeper analytics.",
+    a: "We want businesses to build real invoice history and verify that Paymonei fits their workflow before committing to a paid plan. The $10K threshold resets every month — bill under $10K in any given month and pay nothing. Above $10K, a 1.5% software fee applies to the excess. Most businesses grow into the Core plan once they need multiple entities or deeper analytics — not because of the fee.",
   },
   {
     q: "Is there a setup fee or contract?",
@@ -203,8 +203,8 @@ const comparison: ComparisonRow[] = [
   },
   {
     feature: "Software service fee",
-    tooltip: "Charged on your billing volume. Covers the software, not the payment itself.",
-    starter: "0% up to $10K", core: "1.2%", growth: "0.9%", enterprise: "Custom",
+    tooltip: "Charged monthly on your billing volume. Starter: 0% on the first $10K billed each month, then 1.5% above that. Core: 1.2% on all volume. Growth: 0.9% on all volume.",
+    starter: "0% up to $10K / mo, then 1.5%", core: "1.2%", growth: "0.9%", enterprise: "Custom",
   },
   {
     feature: "Invoices per month",
