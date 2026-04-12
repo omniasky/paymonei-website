@@ -512,6 +512,95 @@ export default function PricingPage() {
           </div>
         </section>
 
+        {/* ── PAYMENT EXECUTION FEES ───────────────────────────────── */}
+        <section className="py-20 px-5 sm:px-8 border-t border-[#EAEAE6] bg-[#FAFAF8]">
+          <div className="max-w-7xl mx-auto lg:px-8">
+            <p className="text-[12px] tracking-[0.14em] uppercase text-[#999] mb-5 font-medium">Payment execution fees</p>
+            <h2
+              className="text-[clamp(1.8rem,3.5vw,2.8rem)] font-light leading-tight tracking-[-0.03em] text-[#0C0C0C] mb-4"
+              style={{ fontFamily: "'Instrument Serif', Georgia, serif" }}
+            >
+              Charged by our partners,<br />not by us.
+            </h2>
+            <p className="text-[15px] text-[#666] font-light leading-relaxed mb-12 max-w-xl">
+              When your clients pay by card or bank transfer, the fees below are charged by our licensed financial execution partners at checkout. Paymonei does not collect or profit from these fees.
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              {/* Global */}
+              <div className="border border-[#EAEAE6] bg-white p-8">
+                <p className="text-[11px] tracking-[0.12em] uppercase text-[#999] font-medium mb-1">Global</p>
+                <p className="text-[14px] text-[#AAA] font-light mb-7">Singapore, US, EU and 150+ countries</p>
+                <table className="w-full">
+                  <thead>
+                    <tr className="border-b border-[#EAEAE6]">
+                      <th className="text-left text-[11px] tracking-[0.08em] uppercase text-[#BBB] font-medium py-2.5 pr-4">Method</th>
+                      <th className="text-right text-[11px] tracking-[0.08em] uppercase text-[#BBB] font-medium py-2.5">Fee</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-[#F5F5F2]">
+                      <td className="py-3.5 pr-4 text-[14px] text-[#555] font-light">Credit & debit card (Visa, Mastercard, JCB)</td>
+                      <td className="py-3.5 text-right text-[14px] text-[#0C0C0C] font-medium whitespace-nowrap">~3.4% + $0.37</td>
+                    </tr>
+                    <tr className="border-b border-[#F5F5F2]">
+                      <td className="py-3.5 pr-4 text-[14px] text-[#555] font-light">USDC / USDT (stablecoin)</td>
+                      <td className="py-3.5 text-right text-[14px] text-[#0C0C0C] font-medium whitespace-nowrap">~$0.01 network fee</td>
+                    </tr>
+                    <tr>
+                      <td className="py-3.5 pr-4 text-[14px] text-[#555] font-light">SWIFT / bank transfer</td>
+                      <td className="py-3.5 text-right text-[14px] text-[#0C0C0C] font-medium whitespace-nowrap">Varies by bank</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              {/* Indonesia */}
+              <div className="border border-[#EAEAE6] bg-white p-8">
+                <div className="flex items-center gap-2 mb-1">
+                  <p className="text-[11px] tracking-[0.12em] uppercase text-[#999] font-medium">Indonesia</p>
+                  <span className="text-[13px]">🇮🇩</span>
+                </div>
+                <p className="text-[14px] text-[#AAA] font-light mb-7">Via PT Evora Digital Indonesia</p>
+                <table className="w-full">
+                  <thead>
+                    <tr className="border-b border-[#EAEAE6]">
+                      <th className="text-left text-[11px] tracking-[0.08em] uppercase text-[#BBB] font-medium py-2.5 pr-4">Method</th>
+                      <th className="text-right text-[11px] tracking-[0.08em] uppercase text-[#BBB] font-medium py-2.5">Fee</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-[#F5F5F2]">
+                      <td className="py-3.5 pr-4 text-[14px] text-[#555] font-light">Credit & debit card (Visa, Mastercard, JCB)</td>
+                      <td className="py-3.5 text-right text-[14px] text-[#0C0C0C] font-medium whitespace-nowrap">2.90% + Rp 2,000</td>
+                    </tr>
+                    <tr className="border-b border-[#F5F5F2]">
+                      <td className="py-3.5 pr-4 text-[14px] text-[#555] font-light">American Express</td>
+                      <td className="py-3.5 text-right text-[14px] text-[#0C0C0C] font-medium whitespace-nowrap">3.9% + Rp 2,000</td>
+                    </tr>
+                    <tr className="border-b border-[#F5F5F2]">
+                      <td className="py-3.5 pr-4 text-[14px] text-[#555] font-light">Virtual Account ≥ Rp 2,000,000</td>
+                      <td className="py-3.5 text-right text-[14px] text-[#0C0C0C] font-medium whitespace-nowrap">50 free / mo, then Rp 4,000</td>
+                    </tr>
+                    <tr className="border-b border-[#F5F5F2]">
+                      <td className="py-3.5 pr-4 text-[14px] text-[#555] font-light">Virtual Account &lt; Rp 2,000,000</td>
+                      <td className="py-3.5 text-right text-[14px] text-[#0C0C0C] font-medium whitespace-nowrap">Rp 4,000</td>
+                    </tr>
+                    <tr>
+                      <td className="py-3.5 pr-4 text-[14px] text-[#555] font-light">USDC / USDT (stablecoin)</td>
+                      <td className="py-3.5 text-right text-[14px] text-[#0C0C0C] font-medium whitespace-nowrap">~Rp 150 network fee</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <p className="mt-6 text-[12px] text-[#BBB] font-light leading-relaxed max-w-2xl">
+              Payment execution fees are set by our licensed financial infrastructure partners and are subject to change without notice. Paymonei does not control, collect, or profit from these fees. Rates shown are indicative and may vary by merchant category, transaction volume, or applicable local regulations. Paymonei is not a payment processor, bank, or financial institution.
+            </p>
+          </div>
+        </section>
+
         {/* ── FAQ ──────────────────────────────────────────────────── */}
         <section className="py-20 px-5 sm:px-8 border-t border-[#EAEAE6] bg-[#FAFAF8]">
           <div className="max-w-7xl mx-auto lg:px-8">
