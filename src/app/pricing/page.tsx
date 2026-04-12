@@ -4,7 +4,7 @@ import { Footer } from "@/components/organisms/Footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Pricing — Billing & Payment Operations Software | Paymonei",
+  title: "Pricing: Billing & Payment Operations Software | Paymonei",
   description:
     "Straightforward pricing for billing and payment workflow software. Start free, scale when ready. No hidden fees.",
   keywords: [
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "business payment software plans",
   ],
   openGraph: {
-    title: "Paymonei Pricing — Billing & Payment Software",
+    title: "Paymonei Pricing: Billing & Payment Software",
     description:
       "Straightforward pricing for billing and payment workflow software. Start free, scale when ready.",
     url: "https://paymonei.com/pricing",
@@ -35,13 +35,15 @@ export const metadata: Metadata = {
 
 // ── Pricing model ──────────────────────────────────────────────────────────
 //
-// Framing: Software platform fee + per-transaction software service fee.
+// Framing: Software platform fee + per-volume software service fee.
 // We are NOT charging interchange, MDR, or payment processing fees.
 // The fee is for using the software layer (API calls, invoice generation,
-// workflow orchestration). The licensed infrastructure costs are absorbed
-// into the service fee, identical to how Chargebee/Maxio/Paddle price.
+// subscription orchestration, webhook delivery, workflow automation).
+// Licensed infrastructure costs are absorbed by execution partners.
 //
-// This keeps us clearly in "software fee" territory, not "payment processing fee."
+// Free tier: 0% software fee on first $10K/month billing volume.
+// Above $10K: 1.5% software fee (still "software fee", not "processing fee").
+// Legally consistent with ToS §6 and the Chargebee/Maxio billing model.
 
 const plans = [
   {
@@ -50,48 +52,78 @@ const plans = [
     tagline: "For teams getting started",
     price: null,
     priceLabel: "Free",
-    priceSub: "Up to $10K in billing volume",
+    priceSub: "No time limit. No credit card.",
     cta: "Start for free",
     ctaHref: "https://app.paymonei.com/auth/register",
     ctaPrimary: false,
     fees: [
       { label: "Platform fee", value: "$0 / month" },
-      { label: "Software service fee", value: "1.8% per transaction" },
-      { label: "Invoices", value: "50 free / month" },
-      { label: "Payment status tracking", value: "Included" },
+      { label: "Software service fee", value: "0% up to $10K / month" },
+      { label: "Above $10K / month", value: "1.5% software fee" },
+      { label: "Invoices", value: "Unlimited" },
       { label: "API access", value: "Full" },
     ],
     includes: [
-      "Invoice creation & PDF export",
-      "Payment link generation",
-      "Webhook notifications",
-      "Dashboard & basic analytics",
+      "Unlimited invoice creation & PDF export",
+      "Unlimited payment links",
+      "Hosted payment page per invoice",
+      "Basic AR dashboard (current month)",
+      "Wallet connect (1 wallet)",
       "Community support",
+    ],
+  },
+  {
+    id: "core",
+    name: "Core",
+    tagline: "For growing operations",
+    price: 79,
+    priceLabel: "$79",
+    priceSub: "per month, cancel anytime",
+    cta: "Get started",
+    ctaHref: "https://app.paymonei.com/auth/register?plan=core",
+    ctaPrimary: false,
+    fees: [
+      { label: "Platform fee", value: "$79 / month" },
+      { label: "Software service fee", value: "1.2% on all volume" },
+      { label: "Invoices", value: "Unlimited" },
+      { label: "Entities", value: "Up to 3" },
+      { label: "API access", value: "Full" },
+    ],
+    includes: [
+      "Everything in Starter",
+      "Subscription & recurring billing",
+      "Customer self-serve portal",
+      "Dunning & payment retry automation",
+      "Multi-currency invoicing",
+      "Webhook management",
+      "6 months analytics history",
+      "Priority email support",
     ],
   },
   {
     id: "growth",
     name: "Growth",
-    tagline: "For scaling operations",
-    price: 299,
-    priceLabel: "$299",
-    priceSub: "per month",
+    tagline: "For established businesses",
+    price: 249,
+    priceLabel: "$249",
+    priceSub: "per month, cancel anytime",
     cta: "Get started",
     ctaHref: "https://app.paymonei.com/auth/register?plan=growth",
     ctaPrimary: true,
     fees: [
-      { label: "Platform fee", value: "$299 / month" },
-      { label: "Software service fee", value: "1.0% per transaction" },
+      { label: "Platform fee", value: "$249 / month" },
+      { label: "Software service fee", value: "0.9% on all volume" },
       { label: "Invoices", value: "Unlimited" },
-      { label: "Payment status tracking", value: "Included" },
+      { label: "Entities", value: "Up to 10" },
       { label: "API access", value: "Full + priority rate limits" },
     ],
     includes: [
-      "Everything in Starter",
-      "Multi-currency invoice support",
-      "Advanced analytics & reporting",
-      "Subscription billing workflows",
-      "Priority email support",
+      "Everything in Core",
+      "Batch disbursements (up to 1,000 recipients)",
+      "Advanced analytics (24 months history)",
+      "Xero & QuickBooks integration",
+      "Configurable dunning schedule per subscription",
+      "Dedicated onboarding call",
     ],
   },
   {
@@ -106,18 +138,20 @@ const plans = [
     ctaPrimary: false,
     fees: [
       { label: "Platform fee", value: "Custom" },
-      { label: "Software service fee", value: "Negotiated" },
+      { label: "Software service fee", value: "Negotiated (0.4–0.7%)" },
       { label: "Invoices", value: "Unlimited" },
-      { label: "Payment status tracking", value: "Included" },
+      { label: "Entities", value: "Unlimited" },
       { label: "API access", value: "Dedicated infrastructure" },
     ],
     includes: [
       "Everything in Growth",
+      "White-label dashboard (custom domain & branding)",
+      "Unlimited batch disbursements",
       "Dedicated account manager",
-      "Custom SLA agreements",
-      "White-label dashboard option",
-      "Volume-based fee schedules",
-      "24/7 support",
+      "Custom SLA (99.95% uptime commitment)",
+      "Data Processing Agreement (GDPR / PDPA)",
+      "24/7 Slack & phone support",
+      "Volume-based software fee schedules",
     ],
   },
 ];
@@ -125,46 +159,65 @@ const plans = [
 const faqs = [
   {
     q: "What does the 'software service fee' cover?",
-    a: "The fee covers use of Paymonei's software layer — API calls, invoice generation, payment link creation, webhook delivery, and workflow orchestration. Payment execution is performed by our licensed infrastructure partners. We charge for the software, not for moving money.",
+    a: "The fee covers use of Paymonei's software layer: API calls, invoice generation, payment link creation, webhook delivery, subscription orchestration, and workflow automation. Payment execution is performed by our licensed infrastructure partners. We charge for the software, not for moving money.",
+  },
+  {
+    q: "Why is the Starter plan free up to $10K / month?",
+    a: "We want businesses to build real invoice history and verify that Paymonei fits their workflow before committing to a paid plan. The $10K threshold covers the vast majority of early-stage businesses. Most grow into the Core plan naturally once subscription billing or multi-currency invoicing becomes a priority.",
   },
   {
     q: "Is there a setup fee or contract?",
-    a: "No setup fees, no contracts. Starter is free indefinitely. Growth is month-to-month. You can cancel or change plans at any time.",
+    a: "No setup fees, no contracts. Starter is free indefinitely. Core and Growth are month-to-month with no minimum commitment. You can cancel or change plans at any time.",
   },
   {
-    q: "What happens after I hit $10K in billing volume on Starter?",
-    a: "The 1.8% software service fee still applies, and you can continue using the platform. There is no hard cutoff — you can upgrade to Growth for lower fees and additional workflow features when it makes sense.",
+    q: "What is the difference between Core ($79) and Growth ($249)?",
+    a: "Core unlocks subscription billing, customer portal, dunning automation, webhook management, and multi-currency invoicing. Everything you need for operational billing. Growth adds batch disbursements (up to 1,000 recipients), 24-month analytics history, Xero/QuickBooks accounting integrations, and a dedicated onboarding call.",
   },
   {
     q: "Do you handle the actual payment processing?",
-    a: "No. Paymonei is software. We generate invoices, payment links, and coordinate workflows. The actual fund movement is executed by our licensed financial infrastructure partners. This means your contract is with a regulated institution for the financial layer.",
+    a: "No. Paymonei is software. We generate invoices, payment links, and coordinate billing workflows. The actual movement of funds is executed by our licensed financial infrastructure partners. Your contract for financial services is with a regulated institution, not with us.",
   },
   {
     q: "What currencies and geographies are supported?",
-    a: "Our software supports multi-currency invoice creation and payment link generation across 150+ countries. Supported settlement currencies and local payment methods depend on the underlying infrastructure partners active in your region.",
+    a: "Our software supports multi-currency invoice creation (USD, USDC, USDT, SGD, IDR, EUR) and payment link generation across 150+ countries. Supported settlement currencies and local payment methods depend on the underlying licensed infrastructure partners active in your region.",
   },
   {
-    q: "Can I add my own markup on top of Paymonei's fees?",
-    a: "Yes. Enterprise customers can configure custom fee schedules, including adding a software margin on top of the base fee for their own clients.",
+    q: "Can I accept stablecoin payments (USDC / USDT)?",
+    a: "Yes. Merchants can enable USDC and USDT as payment options on their invoices and payment pages. Settlement is handled by our licensed infrastructure partners. Paymonei does not provide cryptocurrency exchange or custody services.",
+  },
+  {
+    q: "What is the working capital eligibility feature?",
+    a: "Merchants with consistent verified invoice activity may become eligible for working capital facilities from our licensed lending partners (Aspire, Funding Societies, Validus Capital). This is an opt-in referral. Paymonei does not assess creditworthiness or make lending decisions. You are referred directly to a licensed lender.",
+  },
+  {
+    q: "Can I add my own markup for Enterprise clients?",
+    a: "Yes. Enterprise customers can configure custom software fee schedules, including a margin layer for their own clients. This is a software configuration. It does not change the regulatory nature of the underlying payment execution.",
   },
 ];
 
-// Comparison table rows
+// Comparison table: 4-column (Starter / Core / Growth / Enterprise)
 const comparison = [
-  { feature: "Monthly platform fee", starter: "$0", growth: "$299", enterprise: "Custom" },
-  { feature: "Billing volume included", starter: "Up to $10K", growth: "Unlimited", enterprise: "Unlimited" },
-  { feature: "Software service fee", starter: "1.8%", growth: "1.0%", enterprise: "Negotiated" },
-  { feature: "Invoices per month", starter: "50 free", growth: "Unlimited", enterprise: "Unlimited" },
-  { feature: "Payment links", starter: true, growth: true, enterprise: true },
-  { feature: "API access", starter: true, growth: true, enterprise: true },
-  { feature: "Webhook notifications", starter: true, growth: true, enterprise: true },
-  { feature: "Dashboard & analytics", starter: "Basic", growth: "Advanced", enterprise: "Custom" },
-  { feature: "Multi-currency support", starter: false, growth: true, enterprise: true },
-  { feature: "Subscription workflows", starter: false, growth: true, enterprise: true },
-  { feature: "Priority support", starter: false, growth: true, enterprise: true },
-  { feature: "Dedicated account manager", starter: false, growth: false, enterprise: true },
-  { feature: "Custom SLA", starter: false, growth: false, enterprise: true },
-  { feature: "White-label option", starter: false, growth: false, enterprise: true },
+  { feature: "Monthly platform fee",                   starter: "$0",              core: "$79",          growth: "$249",                enterprise: "Custom" },
+  { feature: "Software service fee",                   starter: "0% up to $10K",   core: "1.2%",         growth: "0.9%",                enterprise: "Negotiated" },
+  { feature: "Invoices per month",                     starter: "Unlimited",        core: "Unlimited",    growth: "Unlimited",           enterprise: "Unlimited" },
+  { feature: "Payment links",                          starter: "Unlimited",        core: "Unlimited",    growth: "Unlimited",           enterprise: "Unlimited" },
+  { feature: "Entities (business profiles)",           starter: "1",               core: "3",            growth: "10",                  enterprise: "Unlimited" },
+  { feature: "Invoice builder & PDF export",           starter: true,              core: true,           growth: true,                  enterprise: true },
+  { feature: "Hosted payment page per invoice",        starter: true,              core: true,           growth: true,                  enterprise: true },
+  { feature: "Stablecoin payments (USDC / USDT)",      starter: true,              core: true,           growth: true,                  enterprise: true },
+  { feature: "API access & webhooks",                  starter: true,              core: true,           growth: true,                  enterprise: true },
+  { feature: "AR dashboard & invoice aging",           starter: "Current month",   core: "6 months",     growth: "24 months",           enterprise: "Unlimited" },
+  { feature: "Multi-currency invoicing",               starter: false,             core: true,           growth: true,                  enterprise: true },
+  { feature: "Subscription & recurring billing",       starter: false,             core: true,           growth: true,                  enterprise: true },
+  { feature: "Dunning & payment retry",                starter: false,             core: "Standard",     growth: "Configurable",        enterprise: "Configurable" },
+  { feature: "Customer self-serve portal",             starter: false,             core: true,           growth: true,                  enterprise: true },
+  { feature: "Batch disbursements",                    starter: false,             core: false,          growth: "Up to 1,000",         enterprise: "Unlimited" },
+  { feature: "Xero & QuickBooks integration",          starter: false,             core: false,          growth: true,                  enterprise: true },
+  { feature: "Working capital referral eligibility",   starter: true,              core: true,           growth: true,                  enterprise: true },
+  { feature: "White-label (custom domain & branding)", starter: false,             core: false,          growth: false,                 enterprise: true },
+  { feature: "Dedicated account manager",              starter: false,             core: false,          growth: false,                 enterprise: true },
+  { feature: "Custom SLA & DPA",                       starter: false,             core: false,          growth: false,                 enterprise: true },
+  { feature: "Support",                                starter: "Community",       core: "Email",        growth: "Email + onboarding",  enterprise: "24/7 Slack & phone" },
 ];
 
 function Check() {
@@ -176,13 +229,14 @@ function Check() {
 }
 
 function Dash() {
-  return <span className="text-[#DDD] text-sm">—</span>;
+  return <span className="text-[#DDD] text-sm">&ndash;</span>;
 }
 
-function Cell({ value }: { value: boolean | string }) {
+function Cell({ value }: { value: boolean | string | undefined }) {
+  if (value === undefined) return <div className="flex justify-center"><Dash /></div>;
   if (value === true) return <div className="flex justify-center"><Check /></div>;
   if (value === false) return <div className="flex justify-center"><Dash /></div>;
-  return <span className="text-[15px] text-[#555]">{value}</span>;
+  return <span className="text-[14px] text-[#555]">{value}</span>;
 }
 
 export default function PricingPage() {
@@ -212,7 +266,7 @@ export default function PricingPage() {
               <span className="italic">No surprises.</span>
             </h1>
             <p className="mt-6 text-[16px] text-[#666] leading-relaxed font-light max-w-md">
-              You pay for the software layer. Payment execution is handled by licensed infrastructure partners — not by us.
+              You pay for the software layer. Payment execution is handled by licensed infrastructure partners, not by us.
             </p>
           </div>
         </section>
@@ -220,7 +274,7 @@ export default function PricingPage() {
         {/* ── PLANS ───────────────────────────────────────────────── */}
         <section className="pb-20 px-5 sm:px-8 border-t border-[#EAEAE6]">
           <div className="max-w-7xl mx-auto lg:px-8">
-            <div className="grid lg:grid-cols-3 gap-px bg-[#EAEAE6] mt-0">
+            <div className="grid lg:grid-cols-4 gap-px bg-[#EAEAE6] mt-0">
               {plans.map((plan) => (
                 <div
                   key={plan.id}
@@ -289,7 +343,7 @@ export default function PricingPage() {
 
             {/* Fee note */}
             <p className="mt-5 text-[13px] text-[#BBB] font-light leading-relaxed max-w-2xl">
-              Software service fees are charged for use of Paymonei&apos;s software layer — invoice generation, payment link creation, and workflow orchestration. Payment execution is performed by licensed third-party financial institutions.
+              Software service fees are charged for use of Paymonei&apos;s software layer: invoice generation, payment link creation, subscription orchestration, and workflow automation. Payment execution is performed by licensed third-party financial institutions. Paymonei is not a payment processor, bank, or financial institution.
             </p>
           </div>
         </section>
@@ -310,10 +364,11 @@ export default function PricingPage() {
               <table className="w-full border-collapse">
                 <thead>
                   <tr className="border-b border-[#EAEAE6]">
-                    <th className="text-left py-4 pr-8 text-[13px] text-[#AAA] font-medium w-2/5">Feature</th>
-                    <th className="text-center py-4 px-4 text-[13px] font-medium text-[#0C0C0C] w-1/5">Starter</th>
-                    <th className="text-center py-4 px-4 text-[13px] font-medium text-[#0C0C0C] w-1/5">Growth</th>
-                    <th className="text-center py-4 px-4 text-[13px] font-medium text-[#0C0C0C] w-1/5">Enterprise</th>
+                    <th className="text-left py-4 pr-6 text-[13px] text-[#AAA] font-medium w-[32%]">Feature</th>
+                    <th className="text-center py-4 px-3 text-[13px] font-medium text-[#0C0C0C] w-[17%]">Starter</th>
+                    <th className="text-center py-4 px-3 text-[13px] font-medium text-[#0C0C0C] w-[17%]">Core</th>
+                    <th className="text-center py-4 px-3 text-[13px] font-medium text-[#0C0C0C] w-[17%]">Growth</th>
+                    <th className="text-center py-4 px-3 text-[13px] font-medium text-[#0C0C0C] w-[17%]">Enterprise</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -322,10 +377,11 @@ export default function PricingPage() {
                       key={row.feature}
                       className={`border-b border-[#F5F5F2] ${i % 2 === 0 ? "bg-transparent" : "bg-[#FAFAF8]/50"}`}
                     >
-                      <td className="py-3.5 pr-8 text-[15px] text-[#555] font-light">{row.feature}</td>
-                      <td className="py-3.5 px-4 text-center"><Cell value={row.starter} /></td>
-                      <td className="py-3.5 px-4 text-center"><Cell value={row.growth} /></td>
-                      <td className="py-3.5 px-4 text-center"><Cell value={row.enterprise} /></td>
+                      <td className="py-3.5 pr-6 text-[14px] text-[#555] font-light">{row.feature}</td>
+                      <td className="py-3.5 px-3 text-center"><Cell value={row.starter} /></td>
+                      <td className="py-3.5 px-3 text-center"><Cell value={row.core} /></td>
+                      <td className="py-3.5 px-3 text-center"><Cell value={row.growth} /></td>
+                      <td className="py-3.5 px-3 text-center"><Cell value={row.enterprise} /></td>
                     </tr>
                   ))}
                 </tbody>
