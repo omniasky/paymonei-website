@@ -217,6 +217,11 @@ const comparison: ComparisonRow[] = [
     starter: "1", core: "3", growth: "10", enterprise: "Unlimited",
   },
   {
+    feature: "Customers & contacts",
+    tooltip: "The number of clients and contacts you can store across all entities. Unlimited on all plans.",
+    starter: "Unlimited", core: "Unlimited", growth: "Unlimited", enterprise: "Unlimited",
+  },
+  {
     feature: "Invoice builder & PDF export",
     tooltip: "Build invoices with line items and get a PDF automatically.",
     starter: true, core: true, growth: true, enterprise: true,
@@ -307,7 +312,7 @@ function Dash() {
 
 function ComingSoon() {
   return (
-    <span className="inline-flex items-center rounded-full bg-[#F5F0FF] px-2 py-0.5 text-[10px] font-medium tracking-wide text-[#7C3AED]">
+    <span className="inline-flex items-center rounded-sm bg-[#F1F1EF] px-1.5 py-0.5 text-[10px] font-medium tracking-wide text-[#787774]">
       Soon
     </span>
   );
