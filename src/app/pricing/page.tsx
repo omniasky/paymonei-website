@@ -65,14 +65,8 @@ const plans = [
     cta: "Start for free",
     ctaHref: "https://app.paymonei.com/auth/register",
     ctaPrimary: false,
-    fees: [
-      { label: "Platform fee", value: "$0 / month" },
-      { label: "Software service fee", value: "0% up to $10K / month" },
-      { label: "Above $10K / month", value: "1.5% software fee" },
-      { label: "Invoices", value: "Unlimited" },
-      { label: "Entities", value: "1" },
-      { label: "API access", value: "Full" },
-    ],
+    softwareFee: "0% up to $10K / mo",
+    entities: "1 entity",
     includes: [
       "Unlimited invoices & PDF export",
       "Unlimited payment links",
@@ -96,13 +90,8 @@ const plans = [
     cta: "Get started",
     ctaHref: "https://app.paymonei.com/auth/register?plan=core",
     ctaPrimary: false,
-    fees: [
-      { label: "Platform fee", value: "$59 / month" },
-      { label: "Software service fee", value: "1.2% on all volume" },
-      { label: "Invoices", value: "Unlimited" },
-      { label: "Entities", value: "Up to 3" },
-      { label: "API access", value: "Full" },
-    ],
+    softwareFee: "1.2% software fee",
+    entities: "Up to 3 entities",
     includes: [
       "Everything in Starter",
       "Up to 3 entities",
@@ -121,13 +110,8 @@ const plans = [
     cta: "Get started",
     ctaHref: "https://app.paymonei.com/auth/register?plan=growth",
     ctaPrimary: true,
-    fees: [
-      { label: "Platform fee", value: "$249 / month" },
-      { label: "Software service fee", value: "0.9% on all volume" },
-      { label: "Invoices", value: "Unlimited" },
-      { label: "Entities", value: "Up to 10" },
-      { label: "API access", value: "Full + priority rate limits" },
-    ],
+    softwareFee: "0.9% software fee",
+    entities: "Up to 10 entities",
     includes: [
       "Everything in Core",
       "Up to 10 entities",
@@ -147,13 +131,8 @@ const plans = [
     cta: "Contact sales",
     ctaHref: "mailto:sales@paymonei.com",
     ctaPrimary: false,
-    fees: [
-      { label: "Platform fee", value: "Custom" },
-      { label: "Software service fee", value: "Custom" },
-      { label: "Invoices", value: "Unlimited" },
-      { label: "Entities", value: "Unlimited" },
-      { label: "API access", value: "Dedicated infrastructure" },
-    ],
+    softwareFee: "Custom rate",
+    entities: "Unlimited entities",
     includes: [
       "Everything in Growth",
       "White-label dashboard (custom domain & branding)",
@@ -395,19 +374,17 @@ export default function PricingPage() {
                         {plan.priceLabel}
                       </span>
                     </div>
-                    <p className="text-[13px] text-[#AAA] font-light">{plan.priceSub}</p>
-                  </div>
-
-                  {/* Fee schedule */}
-                  <div className="px-8 py-7 border-b border-[#EAEAE6]">
-                    <p className="text-[11px] tracking-[0.1em] uppercase text-[#BBB] font-medium mb-4">Fee schedule</p>
-                    <div className="space-y-3">
-                      {plan.fees.map((fee) => (
-                        <div key={fee.label} className="flex items-baseline justify-between gap-4">
-                          <span className="text-[14px] text-[#777] font-light">{fee.label}</span>
-                          <span className="text-[14px] text-[#0C0C0C] font-medium shrink-0">{fee.value}</span>
-                        </div>
-                      ))}
+                    <p className="text-[13px] text-[#AAA] font-light mb-5">{plan.priceSub}</p>
+                    {/* Key specs: 2 lines only */}
+                    <div className="flex flex-col gap-1 pt-4 border-t border-[#EAEAE6]">
+                      <p className="text-[13px] text-[#555]">
+                        <span className="text-[#AAA] font-light">Fee </span>
+                        <span className="font-medium">{plan.softwareFee}</span>
+                      </p>
+                      <p className="text-[13px] text-[#555]">
+                        <span className="text-[#AAA] font-light">Entities </span>
+                        <span className="font-medium">{plan.entities}</span>
+                      </p>
                     </div>
                   </div>
 
