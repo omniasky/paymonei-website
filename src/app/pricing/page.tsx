@@ -277,6 +277,11 @@ const comparison: ComparisonRow[] = [
     starter: true, core: true, growth: true, enterprise: true,
   },
   {
+    feature: "Client & vendor messaging",
+    tooltip: "Chat directly with clients or vendors tied to a specific invoice or transaction. No more back-and-forth emails. Coming soon.",
+    starter: "Coming soon", core: "Coming soon", growth: "Coming soon", enterprise: "Coming soon",
+  },
+  {
     feature: "Accounting",
     tooltip: "Built-in accounting and automated bookkeeping. Coming soon.",
     starter: "Coming soon", core: "Coming soon", growth: "Coming soon", enterprise: "Coming soon",
