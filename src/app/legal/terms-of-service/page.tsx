@@ -212,21 +212,27 @@ export default function TermsOfServicePage() {
                   <li>The actions of your employees, contractors, and authorized users who access the Services under your account.</li>
                 </ul>
                 <h3>4.2 Prohibited Uses</h3>
-                <p>You agree not to use the Services — and not to permit any third party to use the Services — in connection with any of the following prohibited activities:</p>
+                <p>You agree not to use the Services, and not to permit any third party to use the Services, in connection with any of the following prohibited activities:</p>
                 <ul>
-                  <li><strong>Illegal activities:</strong> Any activity that violates applicable laws or regulations, including fraud, money laundering, terrorist financing, tax evasion, or sanctions violations.</li>
-                  <li><strong>Adult content and services:</strong> Adult entertainment, pornographic content, escort services, or sexually explicit material.</li>
-                  <li><strong>Online gambling and wagering:</strong> Online casinos, sports betting, lottery services, or any form of wagering where money or value is at risk, unless appropriately licensed and pre-approved by us in writing.</li>
-                  <li><strong>Controlled substances:</strong> Sale or distribution of illegal drugs, controlled substances, or prescription medications without proper regulatory authorization.</li>
-                  <li><strong>Weapons and firearms:</strong> Sale or transfer of firearms, ammunition, explosives, or related accessories.</li>
-                  <li><strong>Financial pyramid and fraud schemes:</strong> Pyramid schemes, Ponzi schemes, unregistered securities offerings, or investment fraud.</li>
-                  <li><strong>Sanctioned activities:</strong> Any business, transaction, or counterparty involving individuals, entities, or jurisdictions subject to comprehensive international economic sanctions.</li>
-                  <li><strong>Money transmission services:</strong> Operating as an unlicensed money transmitter, currency exchange, or similar service using Paymonei&rsquo;s platform as infrastructure.</li>
-                  <li><strong>Platform abuse:</strong> Attempting to reverse-engineer, circumvent security measures, introduce malware, or impose an unreasonable load on our infrastructure.</li>
-                  <li><strong>Misrepresentation:</strong> Providing false, misleading, or materially inaccurate information to us, to Execution Partners, or to your own customers.</li>
+                  <li><strong>Illegal activities:</strong> Any activity that violates applicable laws or regulations, including fraud, money laundering, terrorism financing, proliferation financing of weapons of mass destruction, tax evasion, bribery, or corruption.</li>
+                  <li><strong>Sanctions violations:</strong> Any business, transaction, or counterparty involving individuals, entities, or jurisdictions subject to comprehensive economic sanctions administered by the United Nations, OFAC (US), EU, UK OFSI, MAS (Singapore), OJK, PPATK (Indonesia), or any equivalent authority.</li>
+                  <li><strong>Intellectual property infringement and counterfeit goods:</strong> Sale, distribution, or facilitation of access to pirated software, unlicensed music, film, or other copyrighted material without authorisation from the rights holder; products or services that infringe or facilitate infringement of third-party trademarks, copyrights, trade secrets, or other proprietary or privacy rights; counterfeit or unauthorised branded goods.</li>
+                  <li><strong>Adult content and escort services:</strong> Pornographic material, sexually explicit content, escort or companionship services, or any material or service of an adult sexual nature.</li>
+                  <li><strong>Online gambling and wagering:</strong> Online casinos, sports betting exchanges, lottery services, or any activity in which money or value is wagered, unless you hold the applicable licence and have obtained our prior written approval.</li>
+                  <li><strong>Controlled substances and narcotics:</strong> Sale, distribution, import, or export of illegal drugs, narcotics, controlled substances, or prescription medicines without proper regulatory authorisation.</li>
+                  <li><strong>Weapons and firearms:</strong> Sale, distribution, import, or export of firearms, ammunition, explosives, or related accessories, except by appropriately licensed dealers with our prior written approval.</li>
+                  <li><strong>Pyramid and investment fraud:</strong> Pyramid schemes, Ponzi schemes, unregistered securities offerings, or any form of investment fraud.</li>
+                  <li><strong>Counterfeit financial instruments:</strong> Fraudulent cheques, duplicate or cloned payment instruments, counterfeit currency, unauthorised stored value instruments, or other fraudulent financial documents.</li>
+                  <li><strong>Unlicensed virtual asset services:</strong> Operating a virtual asset exchange, token issuance platform, stablecoin service, digital asset custodian, or any Virtual Asset Service Provider (VASP) business without valid registration or licensing from MAS, OJK, or the applicable regulatory authority in your jurisdiction. Entities holding a valid MAS or OJK registration or licence for virtual asset services may apply for prior written approval from us before using the Services for that activity.</li>
+                  <li><strong>Unlicensed money transmission:</strong> Operating as an unlicensed money transmitter, currency exchange, or similar financial service using the Paymonei platform as infrastructure, where such operation requires a regulatory licence you do not hold.</li>
+                  <li><strong>Platform abuse:</strong> Attempting to reverse-engineer, circumvent security measures, introduce malware, or impose unreasonable load on our infrastructure.</li>
+                  <li><strong>Misrepresentation:</strong> Providing materially false, misleading, or inaccurate information to us, to our Execution Partners, or to your own customers.</li>
                 </ul>
                 <p>
-                  We reserve the right to suspend or terminate access immediately and without prior notice if we determine, in our reasonable discretion, that your use of the Services falls within any prohibited category above.
+                  We reserve the right to suspend or terminate access immediately and without prior notice if we determine, in our reasonable discretion, that your use of the Services falls within or is associated with any prohibited category above.
+                </p>
+                <p>
+                  The above list may be updated from time to time to reflect changes in applicable law or restrictions imposed by our Execution Partners, without prior notice to you. If you are uncertain whether your business activity is prohibited, or if you believe your activity qualifies for a prior-approval exception noted above, please contact us at <Link href="mailto:legal@paymonei.com">legal@paymonei.com</Link> before using the Services for that activity.
                 </p>
               </Section>
 
