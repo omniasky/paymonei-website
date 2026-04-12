@@ -84,7 +84,7 @@ export default function TermsOfServicePage() {
                 <div>
                   <p className="text-[11px] uppercase tracking-[0.14em] text-[#999] font-medium mb-3">Jurisdiction</p>
                   <nav className="flex flex-col gap-1.5">
-                    <span className="text-[13px] text-[#0C0C0C] font-medium leading-snug">English (International)</span>
+                    <span className="text-[13px] text-[#0C0C0C] font-medium leading-snug">Rest of World (RoW)</span>
                     <Link
                       href="/legal/terms-of-service/indonesia"
                       className="text-[13px] text-[#777] hover:text-[#0C0C0C] transition-colors font-light leading-snug"
