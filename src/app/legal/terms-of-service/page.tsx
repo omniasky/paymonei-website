@@ -342,19 +342,47 @@ export default function TermsOfServicePage() {
 
               {/* ── Block 10: Limitation of Liability ── */}
               <Section id="liability" title="10. Limitation of Liability">
+                <h3>10.1 Exclusion of Consequential Damages</h3>
                 <p>
-                  TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT WILL OMNIASKY TECHNOLOGY PTE LTD, ITS DIRECTORS, EMPLOYEES, AUTHORIZED TECHNOLOGY PARTNERS, OR AGENTS BE LIABLE TO YOU OR ANY THIRD PARTY FOR ANY:
+                  TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT WILL OMNIASKY TECHNOLOGY PTE LTD, ITS DIRECTORS, EMPLOYEES, AUTHORIZED TECHNOLOGY PARTNERS, OR AGENTS BE LIABLE TO YOU OR ANY THIRD PARTY FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO:
                 </p>
                 <ul>
-                  <li>Indirect, incidental, special, consequential, or punitive damages.</li>
-                  <li>Loss of profit, revenue, business opportunities, or goodwill.</li>
-                  <li>Loss or corruption of data.</li>
-                  <li>Losses arising from the failure, delay, or error of any licensed Execution Partner in processing a payment transaction.</li>
-                  <li>Losses arising from blockchain network events, smart contract failures, or on-chain transaction irreversibility.</li>
-                  <li>Regulatory actions, penalties, or compliance costs imposed on you by authorities in your jurisdiction.</li>
+                  <li>Loss of profit, revenue, business opportunities, goodwill, or anticipated savings.</li>
+                  <li>Loss of reputation or business interruption.</li>
+                  <li>Loss or corruption of data or documentation.</li>
+                  <li>Losses arising from the failure, delay, restriction, or error of any licensed Execution Partner in processing, settling, or declining a payment transaction.</li>
+                  <li>Losses arising from blockchain network events, smart contract failures, or the irreversible nature of on-chain transactions.</li>
+                  <li>Regulatory actions, penalties, fines, or compliance costs imposed on you by any authority in any jurisdiction.</li>
                 </ul>
+                <h3>10.2 Specific Liability Exclusions</h3>
+                <p>Without prejudice to the foregoing, Omniasky Technology Pte Ltd shall have no liability whatsoever arising from or in connection with:</p>
+                <ul>
+                  <li>Overpayments, erroneous payments, chargebacks, or unauthorized transactions caused by you or your end users or customers.</li>
+                  <li>Fraud, dishonesty, or wilful misconduct by you, your merchants, employees, directors, officers, agents, or any person acting on your behalf.</li>
+                  <li>Unauthorized access to or use of your account, API keys, or access tokens, including through lost or stolen credentials.</li>
+                  <li>Your failure to implement or maintain security controls, or to install patches or updates made available by us where such updates would have prevented the loss.</li>
+                  <li>Your failure to comply with any provision of this Agreement, applicable law, or the terms of any Execution Partner.</li>
+                  <li>Any decision by a licensed Execution Partner to decline, restrict, freeze, or terminate services to you, including for compliance or regulatory reasons.</li>
+                  <li>Your use of the Services in conjunction with unauthorized or incompatible third-party software or hardware.</li>
+                  <li>Your failure to obtain or maintain any licence, permit, or regulatory approval required for your business activities.</li>
+                  <li>Any intellectual property infringement committed by you in connection with your use of the Services.</li>
+                  <li>Losses caused by events of Force Majeure as described in Section 14.5.</li>
+                </ul>
+                <h3>10.3 Aggregate Liability Cap</h3>
                 <p>
                   Our aggregate liability to you arising out of or in connection with this Agreement, from any cause whatsoever and regardless of the form of action, will at all times be limited to the greater of: (a) the total platform subscription Fees paid by you to Omniasky in the three (3) months immediately preceding the event giving rise to the claim; or (b) SGD two thousand (SGD 2,000).
+                </p>
+                <h3>10.4 Recovery</h3>
+                <p>
+                  If we suffer losses caused by your actions or omissions that give rise to a liability under this Agreement, we may: (a) set off such amounts against any credits, refunds, or amounts otherwise payable to you; or (b) issue a written demand for repayment of such amounts, which you shall pay within seven (7) calendar days of receipt.
+                </p>
+                <h3>10.5 Notice of Claims</h3>
+                <p>
+                  Each party must notify the other in writing within five (5) business days of becoming aware of any claim or circumstance that may give rise to a claim under this Agreement. Failure to provide timely notice does not forfeit the notifying party&rsquo;s rights but may reduce recoverable amounts if the delay materially prejudiced the other party&rsquo;s ability to defend or mitigate.
+                </p>
+                <h3>10.6 Exceptions</h3>
+                <p>
+                  The limitations and exclusions in this Section 10 do not apply to: (a) liability for death or personal injury caused by our gross negligence or wilful misconduct; or (b) any other liability that cannot be limited or excluded by applicable law.
                 </p>
                 <p>
                   Some jurisdictions do not permit the exclusion or limitation of certain types of liability. To the extent such laws apply, the limitations above apply only to the fullest extent permitted.
@@ -363,19 +391,30 @@ export default function TermsOfServicePage() {
 
               {/* ── Block 11: Indemnification ── */}
               <Section id="indemnification" title="11. Indemnification">
+                <h3>11.1 Our Indemnification of You</h3>
                 <p>
-                  You agree to defend, indemnify, and hold harmless Omniasky Technology Pte Ltd, PT Evora Vera Teknologi, and each of their respective directors, officers, employees, and agents (collectively, &ldquo;Indemnified Parties&rdquo;) from and against any and all claims, damages, losses, liabilities, costs, and expenses (including reasonable legal fees) arising out of or relating to:
+                  Subject to your compliance with this Agreement, Omniasky Technology Pte Ltd will defend and indemnify you and your directors, officers, and employees (&ldquo;Your Indemnified Parties&rdquo;) against any third-party claim alleging that the Paymonei platform, as provided by us, infringes a third party&rsquo;s intellectual property rights, patent, or trade secret. If such a claim arises or is reasonably anticipated, we may at our option: (i) obtain the rights for you to continue using the Services; (ii) modify or replace the affected element to remove the infringement; or (iii) if neither option is commercially practicable, terminate this Agreement with reasonable notice.
+                </p>
+                <p>
+                  Our obligations under Section 11.1 do not apply if the alleged infringement arises from: (a) your modification of the Services; (b) your use of the Services in combination with unauthorized third-party products; (c) your continued use after we have provided a non-infringing alternative; or (d) your failure to install security patches or updates we have provided.
+                </p>
+                <h3>11.2 Your Indemnification of Us</h3>
+                <p>
+                  You agree to defend, indemnify, and hold harmless Omniasky Technology Pte Ltd, PT Evora Vera Teknologi, and each of their respective directors, officers, employees, and agents (collectively, &ldquo;Our Indemnified Parties&rdquo;) from and against any and all claims, damages, losses, liabilities, costs, and expenses (including reasonable legal fees and court costs) arising out of or relating to:
                 </p>
                 <ul>
                   <li>Your access to or use of the Services.</li>
                   <li>Your breach of any provision of this Agreement.</li>
                   <li>Any inaccurate, false, or misleading information you provide to us or to our Execution Partners.</li>
                   <li>Your violation of any applicable law or regulation in connection with your use of the Services.</li>
+                  <li>Fraud, dishonesty, or wilful misconduct by you, your employees, directors, officers, agents, or any person acting on your behalf.</li>
                   <li>Your violation of the rights of any third party, including your own customers.</li>
                   <li>Your failure to obtain or maintain any licence or regulatory approval required for your underlying business activities.</li>
+                  <li>Any intellectual property infringement committed by you in connection with your use of the Services.</li>
                 </ul>
+                <h3>11.3 Indemnification Procedure</h3>
                 <p>
-                  We reserve the right, at our own expense, to assume exclusive control of any matter otherwise subject to indemnification by you. You agree to cooperate fully with our defence of any such claim.
+                  The party seeking indemnification (&ldquo;Indemnified Party&rdquo;) must: (a) notify the indemnifying party in writing within five (5) business days of becoming aware of the claim; (b) grant the indemnifying party sole control of the defence and settlement, provided that the Indemnified Party&rsquo;s prior written consent is required for any settlement that imposes obligations on the Indemnified Party or includes an admission of liability; and (c) provide reasonable cooperation and information in support of the defence. Failure to provide timely notice does not forfeit indemnification rights except to the extent the delay materially prejudices the indemnifying party&rsquo;s ability to defend.
                 </p>
               </Section>
 

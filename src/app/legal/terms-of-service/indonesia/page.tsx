@@ -342,19 +342,47 @@ export default function TermsOfServiceIndonesiaPage() {
 
               {/* ── Bagian 10: Batasan Tanggung Gugat ── */}
               <Section id="tanggung-gugat" title="10. Batasan Tanggung Gugat">
+                <h3>10.1 Pengecualian Kerugian Tidak Langsung</h3>
                 <p>
-                  SEJAUH YANG DIIZINKAN OLEH HUKUM YANG BERLAKU, DALAM KEADAAN APA PUN PT EVORA VERA TEKNOLOGI, DIREKTUR, KARYAWAN, MITRA TEKNOLOGI RESMI, ATAU AGENNYA TIDAK AKAN BERTANGGUNG GUGAT KEPADA ANDA ATAU PIHAK KETIGA MANA PUN ATAS:
+                  SEJAUH YANG DIIZINKAN OLEH HUKUM YANG BERLAKU, DALAM KEADAAN APA PUN PT EVORA VERA TEKNOLOGI, DIREKTUR, KARYAWAN, MITRA TEKNOLOGI RESMI, ATAU AGENNYA TIDAK AKAN BERTANGGUNG GUGAT KEPADA ANDA ATAU PIHAK KETIGA MANA PUN ATAS KERUGIAN TIDAK LANGSUNG, INSIDENTAL, KHUSUS, KONSEKUENSIAL, PATUT DICONTOH, ATAU HUKUMAN, TERMASUK NAMUN TIDAK TERBATAS PADA:
                 </p>
                 <ul>
-                  <li>Kerugian tidak langsung, insidental, khusus, konsekuensial, atau hukuman.</li>
-                  <li>Kehilangan keuntungan, pendapatan, peluang bisnis, atau nama baik.</li>
-                  <li>Kehilangan atau kerusakan data.</li>
-                  <li>Kerugian yang timbul akibat kegagalan, keterlambatan, atau kesalahan Mitra Eksekusi berlisensi dalam memproses transaksi pembayaran.</li>
+                  <li>Kehilangan keuntungan, pendapatan, peluang bisnis, nama baik, atau penghematan yang diantisipasi.</li>
+                  <li>Kehilangan reputasi atau gangguan bisnis.</li>
+                  <li>Kehilangan atau kerusakan data atau dokumentasi.</li>
+                  <li>Kerugian yang timbul akibat kegagalan, keterlambatan, pembatasan, atau penolakan Mitra Eksekusi berlisensi dalam memproses, menyelesaikan, atau menolak transaksi pembayaran.</li>
                   <li>Kerugian yang timbul akibat peristiwa jaringan blockchain, kegagalan kontrak pintar, atau sifat ireversibel transaksi on-chain.</li>
-                  <li>Tindakan regulasi, denda, atau biaya kepatuhan yang dikenakan kepada Anda oleh otoritas yang berwenang.</li>
+                  <li>Tindakan regulasi, denda, atau biaya kepatuhan yang dikenakan kepada Anda oleh otoritas mana pun.</li>
                 </ul>
+                <h3>10.2 Pengecualian Tanggung Gugat Khusus</h3>
+                <p>Tanpa mengesampingkan ketentuan di atas, PT Evora Vera Teknologi tidak bertanggung jawab atas kerugian yang timbul akibat atau sehubungan dengan:</p>
+                <ul>
+                  <li>Kelebihan pembayaran, kesalahan pembayaran, chargeback, atau transaksi tidak sah yang disebabkan oleh Anda atau pengguna akhir maupun pelanggan Anda.</li>
+                  <li>Penipuan, ketidakjujuran, atau perbuatan buruk oleh Anda, merchant Anda, karyawan, direktur, pejabat, agen, atau pihak mana pun yang bertindak atas nama Anda.</li>
+                  <li>Akses atau penggunaan tidak sah atas akun, kunci API, atau token akses Anda, termasuk melalui kredensial yang hilang atau dicuri.</li>
+                  <li>Kegagalan Anda untuk menerapkan atau mempertahankan pengendalian keamanan, atau memasang pembaruan (patch) maupun peningkatan (upgrade) yang kami sediakan apabila pembaruan tersebut dapat mencegah kerugian.</li>
+                  <li>Kegagalan Anda untuk mematuhi ketentuan Perjanjian ini, hukum yang berlaku, atau syarat dari Mitra Eksekusi mana pun.</li>
+                  <li>Keputusan Mitra Eksekusi berlisensi untuk menolak, membatasi, membekukan, atau mengakhiri layanan kepada Anda, termasuk karena alasan kepatuhan atau regulasi.</li>
+                  <li>Penggunaan Layanan oleh Anda bersama dengan perangkat lunak atau perangkat keras pihak ketiga yang tidak diizinkan atau tidak kompatibel.</li>
+                  <li>Kegagalan Anda untuk memperoleh atau mempertahankan lisensi, izin, atau persetujuan regulasi yang diperlukan untuk kegiatan usaha Anda.</li>
+                  <li>Pelanggaran kekayaan intelektual yang dilakukan oleh Anda sehubungan dengan penggunaan Layanan.</li>
+                  <li>Kerugian yang disebabkan oleh keadaan kahar sebagaimana diuraikan dalam Bagian 14.5.</li>
+                </ul>
+                <h3>10.3 Batas Tanggung Gugat Agregat</h3>
                 <p>
                   Tanggung gugat agregat kami kepada Anda yang timbul dari atau sehubungan dengan Perjanjian ini, dari sebab apa pun dan terlepas dari bentuk tindakannya, senantiasa dibatasi pada jumlah yang lebih besar dari: (a) total Biaya berlangganan platform yang telah Anda bayarkan kepada PT Evora dalam tiga (3) bulan sebelum kejadian yang menimbulkan klaim; atau (b) IDR tiga puluh juta (IDR 30.000.000).
+                </p>
+                <h3>10.4 Mekanisme Pemulihan</h3>
+                <p>
+                  Apabila kami menderita kerugian yang disebabkan oleh tindakan atau kelalaian Anda yang menimbulkan kewajiban berdasarkan Perjanjian ini, kami dapat: (a) memperhitungkan jumlah tersebut terhadap kredit, pengembalian dana, atau jumlah lain yang terutang kepada Anda; atau (b) menerbitkan pemberitahuan tertulis untuk meminta pengembalian jumlah tersebut, dan Anda wajib mengembalikannya dalam tujuh (7) hari kalender sejak penerimaan pemberitahuan.
+                </p>
+                <h3>10.5 Kewajiban Pemberitahuan Klaim</h3>
+                <p>
+                  Setiap pihak wajib memberitahu pihak lainnya secara tertulis dalam waktu lima (5) hari kerja setelah mengetahui adanya klaim atau keadaan yang dapat menimbulkan klaim berdasarkan Perjanjian ini. Kegagalan memberikan pemberitahuan tepat waktu tidak menggugurkan hak para pihak, namun dapat mengurangi jumlah yang dapat dipulihkan apabila keterlambatan tersebut secara material merugikan kemampuan pihak lain untuk membela diri atau memitigasi kerugian.
+                </p>
+                <h3>10.6 Pengecualian dari Pembatasan</h3>
+                <p>
+                  Pembatasan dan pengecualian dalam Bagian 10 ini tidak berlaku untuk: (a) kewajiban atas kematian atau cedera fisik yang disebabkan oleh kelalaian berat atau perbuatan yang disengaja dari pihak kami; atau (b) kewajiban lain yang tidak dapat dibatasi atau dikecualikan berdasarkan hukum yang berlaku.
                 </p>
                 <p>
                   Beberapa yurisdiksi tidak mengizinkan pengecualian atau pembatasan jenis tanggung jawab tertentu. Sejauh hukum tersebut berlaku, pembatasan di atas berlaku hanya sejauh yang diizinkan.
@@ -363,19 +391,30 @@ export default function TermsOfServiceIndonesiaPage() {
 
               {/* ── Bagian 11: Ganti Rugi ── */}
               <Section id="ganti-rugi" title="11. Ganti Rugi">
+                <h3>11.1 Ganti Rugi dari PT Evora</h3>
                 <p>
-                  Anda setuju untuk membela, memberikan ganti rugi, dan membebaskan PT Evora Vera Teknologi, Omniasky Technology Pte Ltd, dan masing-masing direktur, pejabat, karyawan, dan agen mereka (secara kolektif, &ldquo;Pihak yang Diberi Ganti Rugi&rdquo;) dari dan terhadap seluruh klaim, kerugian, kehilangan, tanggung jawab, biaya, dan pengeluaran (termasuk biaya hukum yang wajar) yang timbul dari atau berkaitan dengan:
+                  Tunduk pada kepatuhan Anda terhadap Perjanjian ini, PT Evora Vera Teknologi akan membela dan memberikan ganti rugi kepada Anda serta direktur, pejabat, dan karyawan Anda (&ldquo;Penerima Ganti Rugi Anda&rdquo;) terhadap klaim pihak ketiga yang menyatakan bahwa platform Paymonei, sebagaimana disediakan oleh kami, melanggar hak kekayaan intelektual, paten, rahasia dagang, atau hak proprietary pihak ketiga lainnya. Apabila klaim tersebut timbul atau secara wajar diperkirakan akan timbul, kami dapat, berdasarkan pilihan kami: (i) memperoleh hak agar Anda tetap dapat menggunakan Layanan; (ii) memodifikasi atau mengganti elemen yang terdampak sehingga tidak lagi melanggar; atau (iii) apabila kedua pilihan tersebut tidak layak secara komersial, mengakhiri Perjanjian ini dengan pemberitahuan yang wajar.
+                </p>
+                <p>
+                  Kewajiban ganti rugi kami berdasarkan Bagian 11.1 ini tidak berlaku apabila dugaan pelanggaran timbul dari: (a) modifikasi atas Layanan yang dilakukan oleh Anda; (b) penggunaan Layanan oleh Anda bersama dengan produk pihak ketiga yang tidak diizinkan; (c) kelanjutan penggunaan oleh Anda setelah kami menyediakan alternatif yang tidak melanggar; atau (d) kegagalan Anda untuk memasang pembaruan keamanan atau patch yang kami sediakan.
+                </p>
+                <h3>11.2 Ganti Rugi dari Anda</h3>
+                <p>
+                  Anda setuju untuk membela, melindungi, dan memberikan ganti rugi, atas biaya Anda sendiri, kepada PT Evora Vera Teknologi, Omniasky Technology Pte Ltd, dan masing-masing direktur, pejabat, karyawan, dan agen mereka (secara kolektif, &ldquo;Penerima Ganti Rugi Kami&rdquo;) dari dan terhadap seluruh gugatan, klaim, proses hukum, tindakan berdasarkan peraturan, dan kerugian terkait (termasuk biaya penasihat hukum dan profesional, biaya pengadilan, serta biaya penyelesaian sengketa lainnya) yang diderita atau timbul sejauh didasarkan pada atau timbul dari:
                 </p>
                 <ul>
                   <li>Akses atau penggunaan Anda atas Layanan.</li>
                   <li>Pelanggaran Anda terhadap ketentuan Perjanjian ini.</li>
                   <li>Informasi yang tidak akurat, palsu, atau menyesatkan yang Anda berikan kepada kami atau kepada Mitra Eksekusi kami.</li>
                   <li>Pelanggaran Anda terhadap hukum atau peraturan yang berlaku sehubungan dengan penggunaan Layanan Anda.</li>
+                  <li>Penipuan, ketidakjujuran, atau perbuatan yang disengaja oleh Anda, karyawan, direktur, pejabat, agen, atau pihak mana pun yang bertindak untuk dan atas nama Anda.</li>
                   <li>Pelanggaran Anda terhadap hak pihak ketiga mana pun, termasuk pelanggan Anda sendiri.</li>
                   <li>Kegagalan Anda untuk memperoleh atau mempertahankan lisensi atau persetujuan regulasi yang diperlukan untuk kegiatan usaha Anda.</li>
+                  <li>Pelanggaran kekayaan intelektual yang dilakukan oleh Anda sehubungan dengan penggunaan Layanan.</li>
                 </ul>
+                <h3>11.3 Prosedur Ganti Rugi</h3>
                 <p>
-                  Kami berhak, atas biaya kami sendiri, untuk mengambil alih kendali eksklusif atas setiap perkara yang seharusnya menjadi subjek ganti rugi oleh Anda. Anda setuju untuk bekerja sama sepenuhnya dalam pembelaan kami atas klaim tersebut.
+                  Pihak yang meminta ganti rugi (&ldquo;Pihak Penerima Ganti Rugi&rdquo;) wajib: (a) memberitahu pihak pemberi ganti rugi secara tertulis dalam waktu tiga (3) hari kerja setelah mengetahui klaim tersebut; (b) memberikan kendali tunggal atas pembelaan dan penyelesaian kepada pihak pemberi ganti rugi, dengan ketentuan bahwa Pihak Penerima Ganti Rugi harus memberikan persetujuan tertulis sebelumnya atas penyelesaian apa pun yang membebankan kewajiban kepada Pihak Penerima Ganti Rugi atau mencakup pengakuan kewajiban; dan (c) memberikan kerja sama dan informasi yang wajar dalam mendukung pembelaan. Kegagalan memberikan pemberitahuan tepat waktu tidak menggugurkan hak atas ganti rugi, kecuali apabila keterlambatan tersebut secara material merugikan kemampuan pembelaan pihak pemberi ganti rugi.
                 </p>
               </Section>
 
