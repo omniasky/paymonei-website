@@ -436,6 +436,9 @@ export default function PricingPage() {
             <p className="mt-5 text-[13px] text-[#BBB] font-light leading-relaxed max-w-2xl">
               Software service fees are charged for use of Paymonei&apos;s software layer: invoice generation, payment link creation, subscription orchestration, and workflow automation. Payment execution is performed by licensed third-party financial institutions. Paymonei is not a payment processor, bank, or financial institution.
             </p>
+            <p className="mt-3 text-[13px] text-[#BBB] font-light leading-relaxed max-w-2xl">
+              When customers pay by credit or debit card, payment processing fees charged by our licensed execution partners apply separately and are shown itemised at checkout. Stablecoin payments (USDC, USDT) incur only the software service fee above, plus applicable blockchain network fees (typically under $1).
+            </p>
           </div>
         </section>
 
