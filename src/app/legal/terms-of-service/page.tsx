@@ -418,7 +418,7 @@ export default function TermsOfServicePage() {
                 </p>
                 <h3>8.1 Data Controller / Processor Relationship</h3>
                 <p>
-                  Where you use the Paymonei platform to process personal data about your own customers or third parties, you act as the data controller and Paymonei acts as your data processor. You warrant that you have a lawful basis for processing such data and for instructing us to process it on your behalf.
+                  Where you use the Paymonei platform to process personal data about your own customers or third parties, you act as the data controller and Paymonei acts as your data processor. You warrant that you have a lawful basis for processing such data and for instructing us to process it on your behalf. Processing of personal data is subject to applicable data protection law, including the Singapore Personal Data Protection Act 2012 (PDPA), the General Data Protection Regulation (GDPR) where applicable, and the privacy laws of each jurisdiction in which you operate.
                 </p>
                 <h3>8.2 Data Processing Agreement</h3>
                 <p>
@@ -562,7 +562,7 @@ export default function TermsOfServicePage() {
                 </ul>
                 <h3>11.3 Indemnification Procedure</h3>
                 <p>
-                  The party seeking indemnification (&ldquo;Indemnified Party&rdquo;) must: (a) notify the indemnifying party in writing within five (5) business days of becoming aware of the claim; (b) grant the indemnifying party sole control of the defence and settlement, provided that the Indemnified Party&rsquo;s prior written consent is required for any settlement that imposes obligations on the Indemnified Party or includes an admission of liability; and (c) provide reasonable cooperation and information in support of the defence. Failure to provide timely notice does not forfeit indemnification rights except to the extent the delay materially prejudices the indemnifying party&rsquo;s ability to defend.
+                  The party seeking indemnification (&ldquo;Indemnified Party&rdquo;) must: (a) notify the indemnifying party in writing within three (3) business days of becoming aware of the claim; (b) grant the indemnifying party sole control of the defence and settlement, provided that the Indemnified Party&rsquo;s prior written consent is required for any settlement that imposes obligations on the Indemnified Party or includes an admission of liability; and (c) provide reasonable cooperation and information in support of the defence. Failure to provide timely notice does not forfeit indemnification rights except to the extent the delay materially prejudices the indemnifying party&rsquo;s ability to defend.
                 </p>
               </Section>
 
@@ -644,7 +644,7 @@ export default function TermsOfServicePage() {
                 </p>
                 <h3>14.8 Language</h3>
                 <p>
-                  This Agreement is made in the English language. In the event of any conflict between an English version and any translation, the English version shall prevail.
+                  This Agreement is made in the English language and constitutes the binding legal document for international merchants operating outside the Republic of Indonesia. In the event of any conflict between this English version and any translation, this English version shall prevail. For merchants incorporated or primarily operating in Indonesia, the Indonesian-language Syarat dan Ketentuan (available at <Link href="/legal/terms-of-service/indonesia">paymonei.com/legal/terms-of-service/indonesia</Link>) is the governing document and the contracting entity is PT Evora Vera Teknologi.
                 </p>
               </Section>
 
@@ -677,7 +677,7 @@ export default function TermsOfServicePage() {
                   </div>
                 </div>
                 <p className="text-[14px] text-[#777] mt-6 font-light">
-                  These Terms are published by Omniasky Technology Pte Ltd, the intellectual property and management holding company of the Paymonei platform, registered in Singapore. Technology development and platform operations are delivered by our affiliated entity PT Evora Vera Teknologi, incorporated in Indonesia.
+                  These Terms are published by Omniasky Technology Pte Ltd, the intellectual property owner and international contracting entity of the Paymonei platform, incorporated in Singapore. Technology development and platform operations in Indonesia are delivered by our affiliated entity PT Evora Vera Teknologi, incorporated in Indonesia, under an intercompany technology licence agreement.
                 </p>
               </Section>
 
