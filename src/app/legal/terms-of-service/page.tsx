@@ -259,8 +259,23 @@ export default function TermsOfServicePage() {
                 <p>
                   We reserve the right to suspend or terminate access immediately and without prior notice if we determine, in our reasonable discretion, that your use of the Services falls within or is associated with any prohibited category above.
                 </p>
+                <h3>4.3 System Security Obligations</h3>
                 <p>
-                  The above list may be updated from time to time to reflect changes in applicable law or restrictions imposed by our Execution Partners, without prior notice to you. If you are uncertain whether your business activity is prohibited, or if you believe your activity qualifies for a prior-approval exception noted above, please contact us at <Link href="mailto:legal@paymonei.com">legal@paymonei.com</Link> before using the Services for that activity.
+                  You must at all times maintain and comply with all reasonable and appropriate security measures to protect your own computer systems and the data stored in or transmitted through them (&ldquo;Your Computer Systems&rdquo;), including systems that capture, store, or transmit end-user data to Paymonei or our Execution Partners. For the avoidance of doubt, &ldquo;Your Computer Systems&rdquo; means any computer systems operated by or on your behalf that capture or store end-user data, or transmit end-user data to us. These obligations include compliance with all applicable laws, rules, regulations, and, where applicable, the security requirements of card networks.
+                </p>
+                <p>You agree to implement, at minimum, the following security practices as appropriate for your business:</p>
+                <ul>
+                  <li>Restrict access to the Services to trusted users only through appropriate IP access controls;</li>
+                  <li>Rotate API access keys regularly in accordance with industry standards and applicable regulatory requirements;</li>
+                  <li>Enable two-factor authentication (2FA) on your Paymonei dashboard account;</li>
+                  <li>Protect all API keys, PINs, passwords, and other authentication credentials used to access the Services or transact through the API; and</li>
+                  <li>Where applicable, enable platform-level transaction security features available in the Paymonei dashboard.</li>
+                </ul>
+                <p>
+                  We may from time to time recommend additional best practices for security and fraud prevention. You are responsible for independently reviewing all such recommendations and determining whether they are adequate and appropriate for your specific business. It is your responsibility, not ours, to implement security procedures and controls beyond those listed above. We make no representation and give no guarantee that any security recommendations we provide will be effective for your specific situation.
+                </p>
+                <p>
+                  Upon our request, you agree to provide us with reasonable evidence of your compliance with the security obligations in this clause. Failure to provide such evidence to our reasonable satisfaction may result in suspension of the Services or termination of this Agreement.
                 </p>
               </Section>
 
@@ -416,6 +431,22 @@ export default function TermsOfServicePage() {
                 <h3>9.6 Fund Security</h3>
                 <p>
                   Our security controls protect software data, API credentials, and workflow instructions transmitted through the platform. The security, insurance, regulatory protection, and safeguarding of financial funds are the sole responsibility of our licensed Execution Partners under their respective regulatory frameworks.
+                </p>
+                <h3>9.7 No Fraud Guarantee</h3>
+                <p>
+                  We do not represent, warrant, or guarantee that you, your business, or your end users will never be the victim of fraud. We and our affiliates have no liability to you for any financial or non-financial losses, direct or indirect losses, or other consequences of fraud. We shall not and do not indemnify you against any losses caused by fraud, irrespective of: (a) whether you have complied with the security obligations in Section 4.3 of these Terms; and/or (b) whether you have followed any best practice recommendations or security controls recommended by us.
+                </p>
+                <h3>9.8 Fraud Investigation Assistance</h3>
+                <p>
+                  We may, at our discretion, assist you in any investigation by law enforcement authorities in connection with the recovery of funds lost to fraud. You agree that any such assistance does not and shall not be construed as an assumption of responsibility, liability, or obligation by us in connection with such fraud or loss.
+                </p>
+                <h3>9.9 Fraud Signal Data</h3>
+                <p>
+                  We may provide you with subjective data or signals regarding the likelihood that a particular transaction may be fraudulent, which may require action or review by you. We may also take into account your actions or inactions in response to such signals when generating future fraud assessments. You acknowledge and agree that: (a) you are solely and fully responsible for any action you choose to take (or not take) in response to such data; (b) we make no representation or warranty that any fraud signal data will accurately detect fraud in all cases; and (c) we are not liable for any losses arising from fraudulent transactions that are not detected by, or that occur despite, any fraud signal data provided to you.
+                </p>
+                <h3>9.10 Response to Fraud Reports from External Parties</h3>
+                <p>
+                  If we receive information from a payment channel partner, regulator, law enforcement authority, end user, or member of the public indicating suspected fraudulent, deceptive, or unlawful activity by you or any end user associated with your account, we may — in addition to any other rights we have under this Agreement — require you to: (i) conduct a periodic or incidental review of the relevant transactions or end users; (ii) provide information or take action, remedy, or resolution steps in connection with the reported activity; (iii) submit a written remediation plan to address the reported activity along with an overall risk mitigation strategy, within a reasonable timeframe determined on a case-by-case basis; and (iv) keep us informed of the implementation of such plan. Failure to comply with any of these requirements may result in suspension or termination of the Services.
                 </p>
               </Section>
 

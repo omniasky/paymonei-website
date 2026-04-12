@@ -262,6 +262,24 @@ export default function TermsOfServiceIndonesiaPage() {
                 <p>
                   Daftar di atas dapat diperbarui dari waktu ke waktu untuk mencerminkan perubahan hukum yang berlaku atau pembatasan yang diberlakukan oleh Mitra Eksekusi kami, tanpa pemberitahuan terlebih dahulu kepada Anda. Apabila Anda tidak yakin apakah kegiatan usaha Anda termasuk yang dilarang, atau apabila Anda berkeyakinan bahwa kegiatan Anda memenuhi syarat untuk pengecualian dengan persetujuan sebelumnya sebagaimana disebutkan di atas, silakan hubungi kami di <Link href="mailto:legal@paymonei.com">legal@paymonei.com</Link> sebelum menggunakan Layanan untuk kegiatan tersebut.
                 </p>
+                <h3>4.3 Kewajiban Keamanan Sistem</h3>
+                <p>
+                  Anda wajib setiap saat memelihara dan mematuhi semua langkah keamanan yang layak dan tepat untuk melindungi sistem komputer Anda sendiri dan data yang tersimpan di dalamnya atau yang ditransmisikan melaluinya (&ldquo;Sistem Komputer Anda&rdquo;), termasuk sistem yang menangkap, menyimpan, atau mentransmisikan data pengguna akhir kepada Paymonei atau Mitra Eksekusi kami. Untuk menghindari keraguan, &ldquo;Sistem Komputer Anda&rdquo; berarti sistem komputer yang dioperasikan oleh atau atas nama Anda yang menangkap atau menyimpan data pengguna akhir, atau mentransmisikan data pengguna akhir kepada kami. Kewajiban ini mencakup kepatuhan terhadap semua hukum, aturan, dan peraturan yang berlaku, serta, apabila relevan, persyaratan keamanan jaringan kartu.
+                </p>
+                <p>Anda setuju untuk menerapkan, paling sedikit, praktik keamanan berikut sesuai dengan kebutuhan usaha Anda:</p>
+                <ul>
+                  <li>Membatasi akses ke Layanan hanya untuk pengguna terpercaya melalui kontrol akses IP yang sesuai;</li>
+                  <li>Mengganti kunci akses API secara berkala sesuai dengan standar industri dan persyaratan peraturan yang berlaku;</li>
+                  <li>Mengaktifkan autentikasi dua faktor (2FA) pada akun dasbor Paymonei Anda;</li>
+                  <li>Melindungi semua kunci API, PIN, kata sandi, dan kredensial autentikasi lainnya yang digunakan untuk mengakses Layanan atau bertransaksi melalui API; dan</li>
+                  <li>Apabila berlaku, mengaktifkan fitur keamanan transaksi di tingkat platform yang tersedia di dasbor Paymonei.</li>
+                </ul>
+                <p>
+                  Kami dapat dari waktu ke waktu merekomendasikan praktik terbaik tambahan untuk keamanan dan pencegahan penipuan. Anda bertanggung jawab untuk secara mandiri meninjau semua rekomendasi tersebut dan menentukan apakah rekomendasi tersebut memadai dan sesuai untuk usaha spesifik Anda. Adalah tanggung jawab Anda, bukan kami, untuk menerapkan prosedur dan kontrol keamanan di luar yang tercantum di atas. Kami tidak memberikan pernyataan dan tidak menjamin bahwa rekomendasi keamanan yang kami berikan akan efektif untuk situasi spesifik Anda.
+                </p>
+                <p>
+                  Atas permintaan kami, Anda setuju untuk memberikan kepada kami bukti yang wajar atas kepatuhan Anda terhadap kewajiban keamanan dalam klausul ini. Kegagalan memberikan bukti tersebut sesuai kepuasan wajar kami dapat mengakibatkan penangguhan Layanan atau pengakhiran Perjanjian ini.
+                </p>
               </Section>
 
               {/* ── Bagian 5: Mitra Eksekusi Berlisensi ── */}
@@ -416,6 +434,22 @@ export default function TermsOfServiceIndonesiaPage() {
                 <h3>9.6 Keamanan Dana</h3>
                 <p>
                   Kontrol keamanan kami melindungi data perangkat lunak, kredensial API, dan instruksi alur kerja yang ditransmisikan melalui platform. Keamanan, asuransi, perlindungan regulasi, dan pengamanan dana keuangan merupakan tanggung jawab tunggal Mitra Eksekusi berlisensi kami berdasarkan kerangka regulasi mereka masing-masing.
+                </p>
+                <h3>9.7 Tidak Ada Jaminan Bebas Penipuan</h3>
+                <p>
+                  Kami tidak menyatakan, menjamin, atau memberikan garansi bahwa Anda, usaha Anda, atau pengguna akhir Anda tidak akan pernah menjadi korban penipuan. Kami dan afiliasi kami tidak memiliki tanggung jawab kepada Anda atas segala kerugian finansial maupun non-finansial, kerugian langsung maupun tidak langsung, atau konsekuensi lain dari penipuan. Kami tidak dan tidak akan memberikan ganti rugi kepada Anda atas kerugian apa pun yang disebabkan oleh penipuan, terlepas dari: (a) apakah Anda telah memenuhi kewajiban keamanan dalam Bagian 4.3 Syarat ini; dan/atau (b) apakah Anda telah mengikuti rekomendasi praktik terbaik atau kontrol keamanan yang kami sarankan.
+                </p>
+                <h3>9.8 Bantuan Investigasi Penipuan</h3>
+                <p>
+                  Kami dapat, atas kebijakan kami sendiri, membantu Anda dalam penyelidikan apa pun oleh otoritas penegak hukum sehubungan dengan pemulihan dana yang hilang akibat penipuan. Anda setuju bahwa bantuan tersebut tidak dan tidak boleh ditafsirkan sebagai asumsi tanggung jawab, kewajiban, atau beban oleh kami sehubungan dengan penipuan atau kerugian tersebut.
+                </p>
+                <h3>9.9 Data Sinyal Penipuan</h3>
+                <p>
+                  Kami dapat memberikan kepada Anda data atau sinyal subjektif mengenai kemungkinan bahwa suatu transaksi tertentu mungkin merupakan transaksi penipuan, yang mungkin memerlukan tindakan atau peninjauan oleh Anda. Kami juga dapat mempertimbangkan tindakan atau kelalaian Anda dalam merespons sinyal tersebut ketika menghasilkan penilaian penipuan di masa mendatang. Anda mengakui dan setuju bahwa: (a) Anda sepenuhnya dan secara pribadi bertanggung jawab atas tindakan apa pun yang Anda pilih untuk dilakukan (atau tidak dilakukan) sehubungan dengan data tersebut; (b) kami tidak memberikan pernyataan atau jaminan bahwa data sinyal penipuan apa pun akan secara akurat mendeteksi penipuan dalam segala hal; dan (c) kami tidak bertanggung jawab atas kerugian apa pun yang timbul dari transaksi penipuan yang tidak terdeteksi oleh, atau yang terjadi meskipun telah ada, data sinyal penipuan yang diberikan kepada Anda.
+                </p>
+                <h3>9.10 Respons terhadap Laporan Penipuan dari Pihak Eksternal</h3>
+                <p>
+                  Apabila kami menerima informasi dari mitra saluran pembayaran, regulator, otoritas penegak hukum, pengguna akhir, atau anggota masyarakat yang mengindikasikan dugaan aktivitas penipuan, kecurangan, atau melanggar hukum oleh Anda atau pengguna akhir mana pun yang terkait dengan akun Anda, kami dapat, selain dari hak lain yang mungkin kami miliki berdasarkan Perjanjian ini, meminta Anda untuk: (i) melakukan tinjauan berkala atau insidental atas transaksi atau pengguna akhir yang relevan; (ii) memberikan informasi atau mengambil tindakan, remediasi, atau langkah penyelesaian sehubungan dengan aktivitas yang dilaporkan; (iii) menyampaikan rencana remediasi tertulis untuk menangani aktivitas yang dilaporkan beserta strategi manajemen risiko secara keseluruhan, dalam jangka waktu yang wajar berdasarkan kasus per kasus; dan (iv) terus memberi tahu kami tentang pelaksanaan rencana tersebut. Kegagalan mematuhi persyaratan ini dapat mengakibatkan penangguhan atau pengakhiran Layanan.
                 </p>
               </Section>
 
