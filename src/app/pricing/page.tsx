@@ -178,7 +178,7 @@ const faqs = [
   },
   {
     q: "What is the difference between Core ($79) and Growth ($249)?",
-    a: "Core unlocks subscription billing, customer portal, dunning automation, webhook management, and multi-currency invoicing. Everything you need for operational billing. Growth adds batch disbursements (up to 1,000 recipients), 24-month analytics history, Xero/QuickBooks accounting integrations, and a dedicated onboarding call.",
+    a: "Core unlocks subscription billing, customer portal, dunning automation, webhook management, and multi-currency invoicing. Growth adds 24-month analytics history, Xero/QuickBooks accounting integrations, 10 entities, and a dedicated onboarding call.",
   },
   {
     q: "Do you handle the actual payment processing?",
@@ -211,102 +211,102 @@ type ComparisonRow = {
 const comparison: ComparisonRow[] = [
   {
     feature: "Monthly platform fee",
-    tooltip: "Fixed subscription cost charged per month. No minimum commitment on Core or Growth.",
+    tooltip: "Fixed monthly cost. No contracts or minimums.",
     starter: "$0", core: "$79", growth: "$249", enterprise: "Custom",
   },
   {
     feature: "Software service fee",
-    tooltip: "A percentage fee on billing volume processed through the platform. This covers API usage, invoice generation, and workflow orchestration. It is a software fee, not a payment processing fee.",
+    tooltip: "Charged on your billing volume. Covers the software, not the payment itself.",
     starter: "0% up to $10K", core: "1.2%", growth: "0.9%", enterprise: "Custom",
   },
   {
     feature: "Invoices per month",
-    tooltip: "Number of invoices you can create and send each calendar month.",
+    tooltip: "Unlimited on all plans. No caps, ever.",
     starter: "Unlimited", core: "Unlimited", growth: "Unlimited", enterprise: "Unlimited",
   },
   {
     feature: "Payment links",
-    tooltip: "Shareable links that let your customers pay a fixed amount in their preferred method. No invoice required.",
+    tooltip: "Send a link, get paid. No invoice needed.",
     starter: "Unlimited", core: "Unlimited", growth: "Unlimited", enterprise: "Unlimited",
   },
   {
     feature: "Entities (business profiles)",
-    tooltip: "Each entity is a separate business or legal entity with its own invoices, contacts, and settings. Useful for holding groups and multi-brand operations.",
+    tooltip: "Separate billing accounts for each company or brand you operate.",
     starter: "1", core: "3", growth: "10", enterprise: "Unlimited",
   },
   {
     feature: "Invoice builder & PDF export",
-    tooltip: "Create itemised invoices with line items, due dates, and currency selection. Each invoice generates a professional PDF with your business details.",
+    tooltip: "Build invoices with line items and get a PDF automatically.",
     starter: true, core: true, growth: true, enterprise: true,
   },
   {
     feature: "Hosted payment page per invoice",
-    tooltip: "Each invoice gets a public-facing payment page your customer can open without logging in. Supports multiple payment methods and updates invoice status automatically.",
+    tooltip: "Every invoice gets its own payment URL your client can open directly.",
     starter: true, core: true, growth: true, enterprise: true,
   },
   {
     feature: "Stablecoin payment acceptance",
-    tooltip: "Let customers pay invoices and payment links using stablecoins. Settlement is handled by our licensed infrastructure partners. Paymonei does not custody or exchange digital assets.",
+    tooltip: "Accept USDC or USDT on invoices. No crypto expertise needed.",
     starter: true, core: true, growth: true, enterprise: true,
   },
   {
     feature: "API access & webhooks",
-    tooltip: "Full REST API access to create invoices, payment links, and manage contacts programmatically. Webhooks deliver real-time event notifications to your systems.",
+    tooltip: "Full API to build on top of Paymonei. Webhooks notify your systems in real time.",
     starter: true, core: true, growth: true, enterprise: true,
   },
   {
     feature: "AR dashboard & invoice aging",
-    tooltip: "Accounts receivable overview showing outstanding, overdue, and collected amounts. The aging report groups invoices by how long they have been unpaid.",
+    tooltip: "See what's paid, what's overdue, and how long invoices have been outstanding.",
     starter: "Current month", core: "6 months", growth: "24 months", enterprise: "Unlimited",
   },
   {
     feature: "Multi-currency invoicing",
-    tooltip: "Issue invoices in different currencies per transaction. The invoice currency is decoupled from your settlement currency, which is managed by your execution partners.",
+    tooltip: "Invoice clients in USD, EUR, SGD, IDR, or USDC from the same account.",
     starter: false, core: true, growth: true, enterprise: true,
   },
   {
     feature: "Subscription & recurring billing",
-    tooltip: "Create billing plans and attach customers to them. Invoices are generated and sent automatically on each billing cycle (weekly, monthly, or annual).",
+    tooltip: "Set up billing plans. Invoices go out automatically on your schedule.",
     starter: false, core: true, growth: true, enterprise: true,
   },
   {
     feature: "Dunning & payment retry",
-    tooltip: "Automated follow-up sequence when a subscription payment fails or an invoice is overdue. Standard: fixed retry schedule. Configurable: custom retry intervals per subscription.",
+    tooltip: "Auto-retry failed payments and send reminders so you get paid without chasing.",
     starter: false, core: "Standard", growth: "Configurable", enterprise: "Configurable",
   },
   {
     feature: "Customer self-serve portal",
-    tooltip: "A hosted portal where your customers can view their invoice history, download PDFs, and see subscription status. No engineering work required on your end.",
+    tooltip: "Your clients can view invoices and check payment status without contacting you.",
     starter: false, core: true, growth: true, enterprise: true,
   },
   {
     feature: "Accounting software integration",
-    tooltip: "Sync paid invoices and transaction data directly into your accounting software. Eliminates manual data entry and keeps your books up to date.",
+    tooltip: "Paid invoices sync to your accounting tool automatically. No manual entry.",
     starter: false, core: false, growth: true, enterprise: true,
   },
   {
     feature: "Working capital referral eligibility",
-    tooltip: "Merchants with verified accounts and consistent invoice activity may be introduced to licensed lending partners for working capital or trade finance facilities. Opt-in only. Paymonei does not make lending decisions.",
+    tooltip: "Consistent invoice history may qualify you for a working capital introduction. Opt-in only.",
     starter: true, core: true, growth: true, enterprise: true,
   },
   {
     feature: "White-label (custom domain & branding)",
-    tooltip: "Replace Paymonei branding with your own. Hosted payment pages and customer portal display your logo and domain. Available on Enterprise only.",
+    tooltip: "Payment pages and portals show your logo and domain, not Paymonei's.",
     starter: false, core: false, growth: false, enterprise: true,
   },
   {
     feature: "Dedicated account manager",
-    tooltip: "A named point of contact at Paymonei who manages your account, assists with onboarding, and handles escalations.",
+    tooltip: "A named person at Paymonei who handles your account and escalations.",
     starter: false, core: false, growth: false, enterprise: true,
   },
   {
     feature: "Custom SLA & DPA",
-    tooltip: "Service Level Agreement with defined uptime and response commitments. Data Processing Agreement covering GDPR, PDPA, and UU PDP obligations for your jurisdiction.",
+    tooltip: "Signed uptime guarantees and data processing agreements for your compliance needs.",
     starter: false, core: false, growth: false, enterprise: true,
   },
   {
     feature: "Support",
-    tooltip: "Community: documentation and community forum. Email: priority response from our support team. Onboarding call: a live session to get your account configured. Slack & phone: around-the-clock direct access.",
+    tooltip: "Community docs on Starter. Priority email on Core. Onboarding call on Growth. 24/7 Slack and phone on Enterprise.",
     starter: "Community", core: "Email", growth: "Email + onboarding call", enterprise: "24/7 Slack & phone",
   },
 ];
