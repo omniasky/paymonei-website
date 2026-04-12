@@ -1,9 +1,19 @@
+"use client";
+
 import Link from "next/link";
 import { Navbar } from "@/components/organisms/Navbar";
 import { Footer } from "@/components/organisms/Footer";
-import type { Metadata } from "next";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
-export const metadata: Metadata = {
+// Note: metadata is exported from the layout or a sibling server component.
+// This page uses "use client" for Radix tooltip interactivity.
+// Keeping the metadata object here as a reference for copy/paste into layout.
+const _metadataRef = {
   title: "Pricing: Billing & Payment Operations Software | Paymonei",
   description:
     "Straightforward pricing for billing and payment workflow software. Start free, scale when ready. No hidden fees.",
@@ -32,18 +42,17 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://paymonei.com/pricing" },
   robots: { index: true, follow: true },
 };
+void _metadataRef; // suppress unused warning
 
-// ── Pricing model ──────────────────────────────────────────────────────────
+// ── Pricing model (comments only; no runtime effect) ────────────────────────
 //
 // Framing: Software platform fee + per-volume software service fee.
 // We are NOT charging interchange, MDR, or payment processing fees.
-// The fee is for using the software layer (API calls, invoice generation,
-// subscription orchestration, webhook delivery, workflow automation).
 // Licensed infrastructure costs are absorbed by execution partners.
 //
 // Free tier: 0% software fee on first $10K/month billing volume.
-// Above $10K: 1.5% software fee (still "software fee", not "processing fee").
-// Legally consistent with ToS §6 and the Chargebee/Maxio billing model.
+// Above $10K: 1.5% software fee (software fee, not a processing fee).
+// Legally consistent with ToS and the Chargebee/Maxio billing model.
 
 const plans = [
   {
@@ -138,7 +147,7 @@ const plans = [
     ctaPrimary: false,
     fees: [
       { label: "Platform fee", value: "Custom" },
-      { label: "Software service fee", value: "Negotiated (0.4–0.7%)" },
+      { label: "Software service fee", value: "Custom" },
       { label: "Invoices", value: "Unlimited" },
       { label: "Entities", value: "Unlimited" },
       { label: "API access", value: "Dedicated infrastructure" },
@@ -187,7 +196,7 @@ const faqs = [
   },
   {
     q: "What is the working capital eligibility feature?",
-    a: "Merchants with consistent verified invoice activity may become eligible for working capital facilities from our licensed lending partners (Aspire, Funding Societies, Validus Capital). This is an opt-in referral. Paymonei does not assess creditworthiness or make lending decisions. You are referred directly to a licensed lender.",
+    a: "Merchants with a verified account and consistent invoice activity may become eligible for working capital facilities through our licensed lending partners. This is an opt-in referral service. Paymonei does not assess creditworthiness or make lending decisions. You are introduced directly to a licensed financial institution.",
   },
   {
     q: "Can I add my own markup for Enterprise clients?",
@@ -196,28 +205,121 @@ const faqs = [
 ];
 
 // Comparison table: 4-column (Starter / Core / Growth / Enterprise)
-const comparison = [
-  { feature: "Monthly platform fee",                   starter: "$0",              core: "$79",          growth: "$249",                enterprise: "Custom" },
-  { feature: "Software service fee",                   starter: "0% up to $10K",   core: "1.2%",         growth: "0.9%",                enterprise: "Negotiated" },
-  { feature: "Invoices per month",                     starter: "Unlimited",        core: "Unlimited",    growth: "Unlimited",           enterprise: "Unlimited" },
-  { feature: "Payment links",                          starter: "Unlimited",        core: "Unlimited",    growth: "Unlimited",           enterprise: "Unlimited" },
-  { feature: "Entities (business profiles)",           starter: "1",               core: "3",            growth: "10",                  enterprise: "Unlimited" },
-  { feature: "Invoice builder & PDF export",           starter: true,              core: true,           growth: true,                  enterprise: true },
-  { feature: "Hosted payment page per invoice",        starter: true,              core: true,           growth: true,                  enterprise: true },
-  { feature: "Stablecoin payments (USDC / USDT)",      starter: true,              core: true,           growth: true,                  enterprise: true },
-  { feature: "API access & webhooks",                  starter: true,              core: true,           growth: true,                  enterprise: true },
-  { feature: "AR dashboard & invoice aging",           starter: "Current month",   core: "6 months",     growth: "24 months",           enterprise: "Unlimited" },
-  { feature: "Multi-currency invoicing",               starter: false,             core: true,           growth: true,                  enterprise: true },
-  { feature: "Subscription & recurring billing",       starter: false,             core: true,           growth: true,                  enterprise: true },
-  { feature: "Dunning & payment retry",                starter: false,             core: "Standard",     growth: "Configurable",        enterprise: "Configurable" },
-  { feature: "Customer self-serve portal",             starter: false,             core: true,           growth: true,                  enterprise: true },
-  { feature: "Batch disbursements",                    starter: false,             core: false,          growth: "Up to 1,000",         enterprise: "Unlimited" },
-  { feature: "Xero & QuickBooks integration",          starter: false,             core: false,          growth: true,                  enterprise: true },
-  { feature: "Working capital referral eligibility",   starter: true,              core: true,           growth: true,                  enterprise: true },
-  { feature: "White-label (custom domain & branding)", starter: false,             core: false,          growth: false,                 enterprise: true },
-  { feature: "Dedicated account manager",              starter: false,             core: false,          growth: false,                 enterprise: true },
-  { feature: "Custom SLA & DPA",                       starter: false,             core: false,          growth: false,                 enterprise: true },
-  { feature: "Support",                                starter: "Community",       core: "Email",        growth: "Email + onboarding",  enterprise: "24/7 Slack & phone" },
+type ComparisonRow = {
+  feature: string;
+  tooltip: string;
+  starter: boolean | string;
+  core: boolean | string;
+  growth: boolean | string;
+  enterprise: boolean | string;
+};
+
+const comparison: ComparisonRow[] = [
+  {
+    feature: "Monthly platform fee",
+    tooltip: "Fixed subscription cost charged per month. No minimum commitment on Core or Growth.",
+    starter: "$0", core: "$79", growth: "$249", enterprise: "Custom",
+  },
+  {
+    feature: "Software service fee",
+    tooltip: "A percentage fee on billing volume processed through the platform. This covers API usage, invoice generation, and workflow orchestration. It is a software fee, not a payment processing fee.",
+    starter: "0% up to $10K", core: "1.2%", growth: "0.9%", enterprise: "Custom",
+  },
+  {
+    feature: "Invoices per month",
+    tooltip: "Number of invoices you can create and send each calendar month.",
+    starter: "Unlimited", core: "Unlimited", growth: "Unlimited", enterprise: "Unlimited",
+  },
+  {
+    feature: "Payment links",
+    tooltip: "Shareable links that let your customers pay a fixed amount in their preferred method. No invoice required.",
+    starter: "Unlimited", core: "Unlimited", growth: "Unlimited", enterprise: "Unlimited",
+  },
+  {
+    feature: "Entities (business profiles)",
+    tooltip: "Each entity is a separate business or legal entity with its own invoices, contacts, and settings. Useful for holding groups and multi-brand operations.",
+    starter: "1", core: "3", growth: "10", enterprise: "Unlimited",
+  },
+  {
+    feature: "Invoice builder & PDF export",
+    tooltip: "Create itemised invoices with line items, due dates, and currency selection. Each invoice generates a professional PDF with your business details.",
+    starter: true, core: true, growth: true, enterprise: true,
+  },
+  {
+    feature: "Hosted payment page per invoice",
+    tooltip: "Each invoice gets a public-facing payment page your customer can open without logging in. Supports multiple payment methods and updates invoice status automatically.",
+    starter: true, core: true, growth: true, enterprise: true,
+  },
+  {
+    feature: "Stablecoin payment acceptance",
+    tooltip: "Let customers pay invoices and payment links using stablecoins. Settlement is handled by our licensed infrastructure partners. Paymonei does not custody or exchange digital assets.",
+    starter: true, core: true, growth: true, enterprise: true,
+  },
+  {
+    feature: "API access & webhooks",
+    tooltip: "Full REST API access to create invoices, payment links, and manage contacts programmatically. Webhooks deliver real-time event notifications to your systems.",
+    starter: true, core: true, growth: true, enterprise: true,
+  },
+  {
+    feature: "AR dashboard & invoice aging",
+    tooltip: "Accounts receivable overview showing outstanding, overdue, and collected amounts. The aging report groups invoices by how long they have been unpaid.",
+    starter: "Current month", core: "6 months", growth: "24 months", enterprise: "Unlimited",
+  },
+  {
+    feature: "Multi-currency invoicing",
+    tooltip: "Issue invoices in different currencies per transaction. The invoice currency is decoupled from your settlement currency, which is managed by your execution partners.",
+    starter: false, core: true, growth: true, enterprise: true,
+  },
+  {
+    feature: "Subscription & recurring billing",
+    tooltip: "Create billing plans and attach customers to them. Invoices are generated and sent automatically on each billing cycle (weekly, monthly, or annual).",
+    starter: false, core: true, growth: true, enterprise: true,
+  },
+  {
+    feature: "Dunning & payment retry",
+    tooltip: "Automated follow-up sequence when a subscription payment fails or an invoice is overdue. Standard: fixed retry schedule. Configurable: custom retry intervals per subscription.",
+    starter: false, core: "Standard", growth: "Configurable", enterprise: "Configurable",
+  },
+  {
+    feature: "Customer self-serve portal",
+    tooltip: "A hosted portal where your customers can view their invoice history, download PDFs, and see subscription status. No engineering work required on your end.",
+    starter: false, core: true, growth: true, enterprise: true,
+  },
+  {
+    feature: "Batch disbursements",
+    tooltip: "Upload a recipient list and send payments to multiple parties in one workflow. Useful for paying contractors, suppliers, or marketplace sellers.",
+    starter: false, core: false, growth: "Up to 1,000", enterprise: "Unlimited",
+  },
+  {
+    feature: "Accounting software integration",
+    tooltip: "Sync paid invoices and transaction data directly into your accounting software. Eliminates manual data entry and keeps your books up to date.",
+    starter: false, core: false, growth: true, enterprise: true,
+  },
+  {
+    feature: "Working capital referral eligibility",
+    tooltip: "Merchants with verified accounts and consistent invoice activity may be introduced to licensed lending partners for working capital or trade finance facilities. Opt-in only. Paymonei does not make lending decisions.",
+    starter: true, core: true, growth: true, enterprise: true,
+  },
+  {
+    feature: "White-label (custom domain & branding)",
+    tooltip: "Replace Paymonei branding with your own. Hosted payment pages and customer portal display your logo and domain. Available on Enterprise only.",
+    starter: false, core: false, growth: false, enterprise: true,
+  },
+  {
+    feature: "Dedicated account manager",
+    tooltip: "A named point of contact at Paymonei who manages your account, assists with onboarding, and handles escalations.",
+    starter: false, core: false, growth: false, enterprise: true,
+  },
+  {
+    feature: "Custom SLA & DPA",
+    tooltip: "Service Level Agreement with defined uptime and response commitments. Data Processing Agreement covering GDPR, PDPA, and UU PDP obligations for your jurisdiction.",
+    starter: false, core: false, growth: false, enterprise: true,
+  },
+  {
+    feature: "Support",
+    tooltip: "Community: documentation and community forum. Email: priority response from our support team. Onboarding call: a live session to get your account configured. Slack & phone: around-the-clock direct access.",
+    starter: "Community", core: "Email", growth: "Email + onboarding call", enterprise: "24/7 Slack & phone",
+  },
 ];
 
 function Check() {
@@ -360,6 +462,7 @@ export default function PricingPage() {
             </h2>
 
             {/* Table */}
+            <TooltipProvider delayDuration={200}>
             <div className="overflow-x-auto">
               <table className="w-full border-collapse">
                 <thead>
@@ -377,7 +480,32 @@ export default function PricingPage() {
                       key={row.feature}
                       className={`border-b border-[#F5F5F2] ${i % 2 === 0 ? "bg-transparent" : "bg-[#FAFAF8]/50"}`}
                     >
-                      <td className="py-3.5 pr-6 text-[14px] text-[#555] font-light">{row.feature}</td>
+                      <td className="py-3.5 pr-6 text-[14px] text-[#555] font-light">
+                        <span className="flex items-center gap-1.5">
+                          {row.feature}
+                          <Tooltip>
+                            <TooltipTrigger asChild>
+                              <button
+                                type="button"
+                                aria-label={`Info: ${row.feature}`}
+                                className="shrink-0 text-[#CCC] hover:text-[#888] transition-colors duration-150 focus:outline-none"
+                              >
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                  <circle cx="12" cy="12" r="10" />
+                                  <line x1="12" y1="16" x2="12" y2="12" />
+                                  <line x1="12" y1="8" x2="12.01" y2="8" />
+                                </svg>
+                              </button>
+                            </TooltipTrigger>
+                            <TooltipContent
+                              side="right"
+                              className="max-w-[260px] text-[12px] leading-relaxed bg-[#0C0C0C] text-white border-0"
+                            >
+                              {row.tooltip}
+                            </TooltipContent>
+                          </Tooltip>
+                        </span>
+                      </td>
                       <td className="py-3.5 px-3 text-center"><Cell value={row.starter} /></td>
                       <td className="py-3.5 px-3 text-center"><Cell value={row.core} /></td>
                       <td className="py-3.5 px-3 text-center"><Cell value={row.growth} /></td>
@@ -387,6 +515,7 @@ export default function PricingPage() {
                 </tbody>
               </table>
             </div>
+            </TooltipProvider>
           </div>
         </section>
 
