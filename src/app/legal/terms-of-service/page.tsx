@@ -187,7 +187,7 @@ export default function TermsOfServicePage() {
                   To create a Paymonei account, you must provide accurate, complete, and current information including: the legal entity name of your business, your business registration number, country of incorporation, nature of business, and contact information for the authorized representative registering the account.
                 </p>
                 <p>
-                  As part of merchant onboarding, identity verification of authorized business representatives and directors is conducted by our authorized third-party verification partners. This verification is a software platform access control measure. Regulated AML/CFT compliance obligations applicable to payment transactions are fulfilled by our licensed Execution Partners under their own regulatory frameworks.
+                  As part of merchant onboarding, identity verification of authorized business representatives and directors is conducted by our authorized third-party verification partners. Statutory AML/CFT reporting obligations applicable to payment transactions — including regulated transaction reporting to applicable financial authorities such as MAS — are fulfilled by our licensed Execution Partners under their own regulatory frameworks. Paymonei separately operates technology-layer risk controls, including merchant KYB screening, sanctions list checks, and prohibited merchant category enforcement, as described in Section 5.
                 </p>
                 <h3>3.3 Account Security</h3>
                 <p>

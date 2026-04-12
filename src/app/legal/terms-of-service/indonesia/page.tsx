@@ -187,7 +187,7 @@ export default function TermsOfServiceIndonesiaPage() {
                   Untuk membuat akun Paymonei, Anda harus menyediakan informasi yang akurat, lengkap, dan terkini, termasuk: nama entitas hukum usaha Anda, nomor induk berusaha atau nomor registrasi usaha, negara pendirian, jenis usaha, dan informasi kontak perwakilan resmi yang mendaftarkan akun.
                 </p>
                 <p>
-                  Sebagai bagian dari proses orientasi merchant, verifikasi identitas perwakilan usaha resmi dan direktur dilakukan oleh mitra verifikasi pihak ketiga yang kami tunjuk. Verifikasi ini merupakan langkah kontrol akses platform perangkat lunak. Kewajiban kepatuhan AML/CFT yang berlaku atas transaksi pembayaran dipenuhi oleh Mitra Eksekusi berlisensi kami berdasarkan kerangka regulasi mereka masing-masing.
+                  Sebagai bagian dari proses orientasi merchant, verifikasi identitas perwakilan usaha resmi dan direktur dilakukan oleh mitra verifikasi pihak ketiga yang kami tunjuk. Kewajiban pelaporan AML/CFT yang bersifat regulatoris atas transaksi pembayaran, termasuk kewajiban pelaporan transaksi kepada otoritas berwenang seperti PPATK, dipenuhi oleh Mitra Eksekusi berlisensi kami berdasarkan kerangka regulasi mereka masing-masing. PT Evora mengoperasikan pengendalian risiko di tingkat teknologi secara terpisah, termasuk verifikasi merchant (KYB), pemeriksaan daftar sanksi, dan pembatasan kategori merchant berisiko tinggi sebagaimana diuraikan dalam Bagian 5.
                 </p>
                 <h3>3.3 Keamanan Akun</h3>
                 <p>
