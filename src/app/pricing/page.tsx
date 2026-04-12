@@ -148,8 +148,12 @@ const plans = [
 
 const faqs = [
   {
-    q: "What does the 'software service fee' cover?",
-    a: "The fee covers use of Paymonei's software layer: API calls, invoice generation, payment link creation, webhook delivery, subscription orchestration, and workflow automation. Payment execution is performed by our licensed infrastructure partners. We charge for the software, not for moving money.",
+    q: "What does the software service fee cover?",
+    a: "It covers the software itself: creating invoices, generating payment links, running subscription billing, sending dunning reminders, and delivering webhooks. We charge for the software layer. The actual movement of money is handled by licensed financial partners — we are not a payment processor or financial institution.",
+  },
+  {
+    q: "What does a payment actually cost my client?",
+    a: "It depends on how your client pays. On a $1,000 invoice using the Starter plan:\n\nStablecoin (USDC/USDT): $0 software fee (under $10K/month) + ~$0.01 blockchain gas. Your client pays $1,000.01 effectively nothing extra.\n\nCredit or debit card: $0 software fee + ~$34 card processing fee from our execution partner (approx. 3.4% + $0.37). Total cost: ~$34 on a $1,000 invoice.\n\nCard processing fees are charged by our licensed payment execution partners, not by Paymonei. They appear itemised at checkout. Stablecoin payments avoid card processing entirely.",
   },
   {
     q: "Why is the Starter plan free up to $10K / month?",
@@ -430,17 +434,9 @@ export default function PricingPage() {
                   </div>
                 </div>
               ))}
-            </div>
-
-            {/* Fee note */}
-            <p className="mt-5 text-[13px] text-[#BBB] font-light leading-relaxed max-w-2xl">
-              Software service fees are charged for use of Paymonei&apos;s software layer: invoice generation, payment link creation, subscription orchestration, and workflow automation. Payment execution is performed by licensed third-party financial institutions. Paymonei is not a payment processor, bank, or financial institution.
-            </p>
-            <p className="mt-3 text-[13px] text-[#BBB] font-light leading-relaxed max-w-2xl">
-              When customers pay by credit or debit card, payment processing fees charged by our licensed execution partners apply separately and are shown itemised at checkout. Stablecoin payments (USDC, USDT) incur only the software service fee above, plus applicable blockchain network fees (typically under $1).
-            </p>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* ── COMPARISON TABLE ─────────────────────────────────────── */}
         <section className="py-20 px-5 sm:px-8 border-t border-[#EAEAE6] bg-white">
