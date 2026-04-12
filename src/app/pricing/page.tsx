@@ -511,18 +511,18 @@ export default function PricingPage() {
           </div>
         </section>
 
-        {/* ── PAYMENT EXECUTION FEES ───────────────────────────────── */}
+        {/* ── STANDARD NETWORK & BANK FEES ─────────────────────────── */}
         <section className="py-20 px-5 sm:px-8 border-t border-[#EAEAE6] bg-[#FAFAF8]">
           <div className="max-w-7xl mx-auto lg:px-8">
-            <p className="text-[12px] tracking-[0.14em] uppercase text-[#999] mb-5 font-medium">Payment execution fees</p>
+            <p className="text-[12px] tracking-[0.14em] uppercase text-[#999] mb-5 font-medium">Standard network &amp; bank fees</p>
             <h2
               className="text-[clamp(1.8rem,3.5vw,2.8rem)] font-light leading-tight tracking-[-0.03em] text-[#0C0C0C] mb-4"
               style={{ fontFamily: "'Instrument Serif', Georgia, serif" }}
             >
-              Charged by our partners,<br />not by us.
+              Not charged<br />by Paymonei.
             </h2>
             <p className="text-[15px] text-[#666] font-light leading-relaxed mb-12 max-w-xl">
-              When your clients pay by card or bank transfer, the fees below are charged by our licensed execution partners at checkout.
+              Paying by card, bank transfer, or digital wallet involves fees set by card networks (Visa, Mastercard), Bank Indonesia (for QRIS), and local banking infrastructure. These rates are standard across the industry — Paymonei does not set, collect, or earn from them.
             </p>
 
             <div className="grid md:grid-cols-2 gap-6">
@@ -593,7 +593,7 @@ export default function PricingPage() {
             </div>
 
             <p className="mt-6 text-[12px] text-[#BBB] font-light leading-relaxed max-w-2xl">
-              Payment execution fees are set by our licensed financial infrastructure partners and are subject to change without notice. Rates shown are indicative and may vary by merchant category, transaction volume, or applicable local regulations. Paymonei is not a payment processor, bank, or financial institution.
+              Rates are set by card networks (Visa, Mastercard), Bank Indonesia, and local banking infrastructure. They are subject to change without notice and may vary by merchant category, transaction volume, card type, or applicable local regulations. Paymonei is not a payment processor, bank, or financial institution and does not set or collect these fees.
             </p>
           </div>
         </section>
