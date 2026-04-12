@@ -315,23 +315,49 @@ export default function TermsOfServiceIndonesiaPage() {
               <Section id="kekayaan-intelektual" title="7. Kekayaan Intelektual">
                 <h3>7.1 Kepemilikan</h3>
                 <p>
-                  Seluruh hak kekayaan intelektual atas platform Paymonei, API, SDK, merek, algoritma proprietary, dokumentasi, dan teknologi terkait dimiliki secara eksklusif oleh Omniasky Technology Pte Ltd. Tidak ada dalam Perjanjian ini yang mengalihkan kepemilikan kekayaan intelektual apa pun kepada Anda. PT Evora Vera Teknologi beroperasi berdasarkan perjanjian lisensi teknologi dengan Omniasky dan tidak mengalihkan hak kepemilikan kekayaan intelektual kepada Merchant.
+                  Seluruh hak kekayaan intelektual atas platform Paymonei, API, SDK, merek, algoritma proprietary, dokumentasi, turunannya, dan seluruh teknologi terkait (&ldquo;KI Kami&rdquo;) dimiliki secara eksklusif oleh Omniasky Technology Pte Ltd. Tidak ada dalam Perjanjian ini yang mengalihkan, menyerahkan, atau memberikan kepemilikan kekayaan intelektual apa pun kepada Anda, baik secara tersirat, melalui prinsip estoppel, maupun dengan cara lain apa pun. PT Evora Vera Teknologi beroperasi berdasarkan perjanjian lisensi teknologi dengan Omniasky dan tidak mengalihkan hak kepemilikan kekayaan intelektual apa pun kepada Merchant.
                 </p>
-                <h3>7.2 Pemberian Lisensi</h3>
+                <h3>7.2 Pemberian Lisensi API dan Layanan</h3>
                 <p>
-                  Tunduk pada kepatuhan Anda terhadap Syarat ini dan pembayaran Biaya yang berlaku, kami memberikan kepada Anda lisensi terbatas, non-eksklusif, tidak dapat dialihkan, tidak dapat disublisensikan, dan dapat dicabut untuk mengakses serta menggunakan Layanan semata-mata untuk operasi bisnis internal Anda selama masa berlangganan aktif Anda.
+                  Tunduk pada kepatuhan Anda terhadap Syarat ini dan pembayaran Biaya yang berlaku, kami memberikan kepada Anda lisensi terbatas, pribadi, non-eksklusif, tidak dapat dialihkan, tidak dapat disublisensikan, dan dapat dicabut untuk:
                 </p>
-                <h3>7.3 Pembatasan</h3>
+                <ul>
+                  <li>Menginstal dan menggunakan API kami pada mesin yang dipelihara di fasilitas yang dimiliki, di bawah penguasaan, atau disewa oleh Anda, sebanyak yang sewajarnya diperlukan untuk menggunakan Layanan dengan tujuan melakukan transaksi dengan pengguna akhir Anda;</li>
+                  <li>Mengakses dan menggunakan Dokumentasi semata-mata untuk tujuan penggunaan API dan Layanan; dan</li>
+                  <li>Membuat salinan cadangan arsip API dan Dokumentasi semata-mata untuk tujuan pengarsipan, dengan ketentuan bahwa seluruh pemberitahuan hak cipta dan proprietary direproduksi secara utuh pada setiap salinan.</li>
+                </ul>
+                <h3>7.3 Lisensi Merek Dagang</h3>
+                <p>
+                  Tunduk pada Syarat ini, kami memberikan Anda lisensi terbatas, bebas royalti, non-eksklusif, dan tidak dapat dialihkan untuk menampilkan merek dagang dan merek jasa kami (&ldquo;Materi Merek&rdquo;) semata-mata untuk tujuan mengidentifikasi integrasi Anda dengan, atau penggunaan Anda atas, Paymonei dalam materi pemasaran dan antarmuka produk Anda sendiri. Anda setuju untuk:
+                </p>
+                <ul>
+                  <li>Mengubah, atas biaya Anda sendiri, Materi Merek apa pun yang menurut penilaian sepihak kami digunakan secara tidak tepat, menyesatkan, atau merendahkan;</li>
+                  <li>Segera menghentikan penggunaan Materi Merek apa pun atas permintaan tertulis dari kami; dan</li>
+                  <li>Tidak menambahkan, menghapus, atau memodifikasi Materi Merek atau Dokumentasi yang disediakan oleh kami tanpa persetujuan tertulis kami sebelumnya.</li>
+                </ul>
+                <p>Lisensi merek dagang ini secara otomatis berakhir dan dicabut seketika setelah pengakhiran atau berakhirnya Perjanjian ini karena alasan apa pun.</p>
+                <h3>7.4 Pembatasan atas KI Kami</h3>
                 <p>Anda tidak boleh, dan tidak boleh mengizinkan pihak ketiga mana pun untuk:</p>
                 <ul>
-                  <li>Menyalin, memodifikasi, mengadaptasi, merekayasa balik, mendekompilasi, atau membongkar bagian mana pun dari Layanan.</li>
-                  <li>Memberi label putih (white-label), menjual kembali, atau mensublisensikan Layanan tanpa persetujuan tertulis kami sebelumnya.</li>
-                  <li>Menggunakan Layanan untuk membangun produk atau layanan yang bersaing dengan Paymonei.</li>
-                  <li>Menghapus, mengubah, atau mengaburkan pemberitahuan proprietary, merek, atau label apa pun dalam Layanan.</li>
+                  <li>Menggunakan, mereproduksi, mendistribusikan, atau mengizinkan pihak lain menggunakan, mereproduksi, atau mendistribusikan KI Kami untuk tujuan selain yang secara tegas ditetapkan dalam Syarat ini;</li>
+                  <li>Menyediakan KI Kami kepada pihak ketiga yang tidak berwenang;</li>
+                  <li>Menyewakan, melease, menggunakan secara time-sharing, mengoperasikan sebagai biro layanan, atau menyediakan KI Kami melalui layanan interaktif, layanan pemrosesan jarak jauh, atau pengaturan serupa lainnya;</li>
+                  <li>Memberi label putih (white-label), menjual kembali, atau mensublisensikan Layanan tanpa persetujuan tertulis kami sebelumnya;</li>
+                  <li>Menggunakan Layanan untuk membangun produk atau layanan yang bersaing dengan Paymonei;</li>
+                  <li>Menghapus, mengubah, atau mengaburkan pemberitahuan proprietary, merek, atau label apa pun dalam Layanan; atau</li>
+                  <li>Secara langsung maupun tidak langsung memodifikasi, merekayasa balik, mendekompilasi, membongkar, atau mencoba memperoleh kode sumber dari KI Kami.</li>
                 </ul>
-                <h3>7.4 Data Merchant</h3>
+                <h3>7.5 Konsekuensi Pelanggaran KI</h3>
+                <p>
+                  Apabila Anda melanggar ketentuan apa pun dalam Bagian 7 ini, kami berhak mengambil segala tindakan yang kami anggap perlu untuk melindungi kepentingan kami, termasuk namun tidak terbatas pada penangguhan dan/atau penghentian Layanan secara seketika tanpa pemberitahuan sebelumnya. Anda setuju untuk bertanggung jawab penuh, serta memberikan ganti rugi dan membebaskan kami dari seluruh kerugian, kerusakan, klaim, proses hukum, tuntutan, biaya, dan kewajiban yang timbul dari atau sehubungan dengan pelanggaran tersebut.
+                </p>
+                <h3>7.6 Data Merchant</h3>
                 <p>
                   Anda mempertahankan kepemilikan atas seluruh data bisnis yang Anda unggah, kirimkan, atau hasilkan melalui penggunaan Layanan (&ldquo;Data Merchant&rdquo;). Anda memberikan kepada kami lisensi terbatas untuk memproses Data Merchant semata-mata sejauh yang diperlukan untuk menyediakan Layanan. Kami dapat menggunakan data penggunaan platform yang diagregasi dan dianonimkan untuk tujuan peningkatan produk dan analitik, asalkan data tersebut tidak dapat secara wajar digunakan untuk mengidentifikasi Anda.
+                </p>
+                <h3>7.7 Persetujuan Merek Merchant</h3>
+                <p>
+                  Anda mengakui dan menyetujui bahwa dengan menggunakan Layanan, Anda memberikan kepada kami lisensi non-eksklusif, bebas royalti, dan berlaku di seluruh dunia untuk menggunakan nama usaha, logo, dan nama dagang Anda di platform, situs web, halaman mitra kami, serta dalam materi pemasaran kami, semata-mata untuk tujuan mengidentifikasi Anda sebagai merchant Paymonei dan untuk tujuan pemasaran dan promosi yang sah lainnya. Kami akan menggunakan materi merek Anda sesuai dengan panduan merek yang wajar yang telah Anda komunikasikan kepada kami secara tertulis. Anda dapat mencabut persetujuan ini kapan saja dengan mengirimkan permintaan tertulis ke <Link href="mailto:legal@paymonei.com">legal@paymonei.com</Link>.
                 </p>
               </Section>
 

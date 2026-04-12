@@ -315,23 +315,49 @@ export default function TermsOfServicePage() {
               <Section id="ip" title="7. Intellectual Property">
                 <h3>7.1 Ownership</h3>
                 <p>
-                  All intellectual property rights in and to the Paymonei platform, APIs, SDKs, branding, proprietary algorithms, documentation, and associated technology are owned exclusively by Omniasky Technology Pte Ltd. Nothing in this Agreement transfers ownership of any intellectual property to you.
+                  All intellectual property rights in and to the Paymonei platform, APIs, SDKs, branding, proprietary algorithms, documentation, derivatives thereof, and all associated technology (&ldquo;Our IP&rdquo;) are owned exclusively by Omniasky Technology Pte Ltd. Nothing in this Agreement transfers, assigns, or conveys any ownership of any intellectual property to you, whether by implication, estoppel, or otherwise.
                 </p>
-                <h3>7.2 Licence Grant</h3>
+                <h3>7.2 API and Services Licence Grant</h3>
                 <p>
-                  Subject to your compliance with these Terms and payment of applicable Fees, we grant you a limited, non-exclusive, non-transferable, non-sublicensable, revocable licence to access and use the Services solely for your internal business operations during the term of your active subscription.
+                  Subject to your compliance with these Terms and payment of applicable Fees, we grant you a limited, personal, non-exclusive, non-transferable, non-sublicensable, revocable licence to:
                 </p>
-                <h3>7.3 Restrictions</h3>
+                <ul>
+                  <li>Install and use our APIs on machines maintained at facilities owned, controlled, or leased by you, as reasonably necessary to use the Services for the purpose of conducting transactions with your end users;</li>
+                  <li>Access and use the Documentation solely for the purpose of using the APIs and Services; and</li>
+                  <li>Make archival backup copies of the APIs and Documentation strictly for archival purposes only, provided all copyright and proprietary notices are reproduced intact on each copy.</li>
+                </ul>
+                <h3>7.3 Trademark Licence</h3>
+                <p>
+                  Subject to these Terms, we grant you a limited, royalty-free, non-exclusive, non-transferable licence to display our trademarks and service marks (&ldquo;Brand Materials&rdquo;) solely for the purpose of identifying your integration with, or use of, Paymonei in your own marketing materials and product interfaces. You agree to:
+                </p>
+                <ul>
+                  <li>Modify, at your own cost, any Brand Materials that we, in our sole discretion, determine are used in an inappropriate, misleading, or demeaning manner;</li>
+                  <li>Cease use of any Brand Materials immediately upon written request from us; and</li>
+                  <li>Not add, remove, or modify any Brand Materials or Documentation provided by us without our prior written consent.</li>
+                </ul>
+                <p>This trademark licence automatically terminates and is immediately revoked upon termination or expiry of this Agreement for any reason.</p>
+                <h3>7.4 Restrictions on Our IP</h3>
                 <p>You may not, and may not permit any third party to:</p>
                 <ul>
-                  <li>Copy, modify, adapt, reverse-engineer, decompile, or disassemble any part of the Services.</li>
-                  <li>White-label, resell, or sublicense the Services without our prior written consent.</li>
-                  <li>Use the Services to build a product or service that competes with Paymonei.</li>
-                  <li>Remove, alter, or obscure any proprietary notices, branding, or labels within the Services.</li>
+                  <li>Use, reproduce, distribute, or permit others to use, reproduce, or distribute any of Our IP for purposes other than those expressly set out in these Terms;</li>
+                  <li>Make Our IP available to any unauthorised third party;</li>
+                  <li>Rent, lease, timeshare, operate as a service bureau, or otherwise make Our IP available through interactive services, remote processing services, or any similar arrangement;</li>
+                  <li>White-label, resell, or sublicense the Services without our prior written consent;</li>
+                  <li>Use the Services to build a product or service that competes with Paymonei;</li>
+                  <li>Remove, alter, or obscure any proprietary notices, branding, or labels within the Services; or</li>
+                  <li>Directly or indirectly modify, reverse-engineer, decompile, disassemble, or attempt to derive the source code of any of Our IP.</li>
                 </ul>
-                <h3>7.4 Merchant Data</h3>
+                <h3>7.5 Consequences of IP Breach</h3>
+                <p>
+                  In the event you breach any provision of this Section 7, we are entitled to take all measures we deem necessary to protect our interests, including but not limited to immediate suspension and/or termination of the Services without prior notice. You agree to be fully liable for, and to indemnify and hold us harmless from, all losses, damages, claims, legal proceedings, demands, costs, and liabilities arising from or in connection with any such breach.
+                </p>
+                <h3>7.6 Merchant Data</h3>
                 <p>
                   You retain ownership of all business data you upload, submit, or generate through your use of the Services (&ldquo;Merchant Data&rdquo;). You grant us a limited licence to process Merchant Data solely as necessary to provide the Services. We may use aggregated, anonymised platform usage data for product improvement and analytics purposes, provided such data cannot reasonably be used to identify you.
+                </p>
+                <h3>7.7 Merchant Brand Consent</h3>
+                <p>
+                  You acknowledge and agree that, by using the Services, you grant us a non-exclusive, royalty-free, worldwide licence to use your business name, logo, and trade name on our platform, website, partner pages, and in our marketing materials, solely for the purposes of identifying you as a Paymonei merchant and for other lawful marketing and promotional purposes. We will use your brand materials in accordance with any reasonable brand guidelines you have communicated to us in writing. You may revoke this consent at any time by sending a written request to <Link href="mailto:legal@paymonei.com">legal@paymonei.com</Link>.
                 </p>
               </Section>
 
