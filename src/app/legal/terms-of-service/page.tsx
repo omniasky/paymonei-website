@@ -300,6 +300,38 @@ export default function TermsOfServicePage() {
                 <p>
                   Our Execution Partners may impose separate eligibility requirements, merchant category restrictions, transaction limits, or additional verification requirements as a condition of providing their services. We are not liable for any Execution Partner&rsquo;s decision to decline, restrict, or terminate services to you.
                 </p>
+                <h3>5.5 Anti-Money Laundering and Counter-Terrorism Financing (AML/CFT) Framework</h3>
+                <p>
+                  The Services operate within a compliance framework designed to be consistent with applicable anti-money laundering and counter-terrorism financing laws, including: the Indonesian Law on Prevention and Eradication of Money Laundering (Undang-Undang Nomor 8 Tahun 2010 tentang Pencegahan dan Pemberantasan Tindak Pidana Pencucian Uang, &ldquo;UU TPPU&rdquo;) and the Law on Prevention and Eradication of Terrorism Financing (UU No. 9 Tahun 2013, &ldquo;UU TPPT&rdquo;); the Singapore Corruption, Drug Trafficking and Other Serious Crimes (Confiscation of Benefits) Act (CDSA) and the Terrorism (Suppression of Financing) Act (TSOFA); and the Financial Action Task Force (FATF) Recommendations as implemented in each applicable jurisdiction.
+                </p>
+                <p>
+                  For the avoidance of doubt: Paymonei is a software technology provider and does not constitute a reporting institution, designated non-financial business or profession (DNFBP), or AML-obligated entity under the above laws. Statutory AML/CFT reporting obligations, including the filing of Suspicious Transaction Reports (STR / LTKM) and Cash Transaction Reports (CTR / LTKT), are fulfilled exclusively by our licensed Execution Partners as obligated entities under their respective regulatory licences. Paymonei operates independent technology-layer risk controls, including merchant KYB screening, real-time sanctions list checks, and prohibited merchant category enforcement, which function alongside, but are not a substitute for, the regulated obligations of our Execution Partners.
+                </p>
+                <h3>5.6 Merchant AML/CFT Obligations</h3>
+                <p>You represent, warrant, and agree on a continuing basis that:</p>
+                <ul>
+                  <li>You have in place, and will maintain throughout the term, written AML/CFT policies and procedures appropriate to the nature, scale, and risk profile of your business, in compliance with all applicable laws and regulations in each jurisdiction where you operate;</li>
+                  <li>You will conduct, and will continue to conduct, appropriate customer due diligence (CDD), enhanced due diligence (EDD) where required, and know-your-customer (KYC) verification on your own end-customers and counterparties before and during the course of any transaction processed through the Services;</li>
+                  <li>You will monitor transactions processed through the Services for patterns or indicators of money laundering, terrorism financing, fraud, or other financial crime, and will take appropriate action including filing reports with applicable financial intelligence units or law enforcement authorities as required under applicable law;</li>
+                  <li>You will retain all records, documents, and data required to be maintained by applicable AML/CFT laws for the statutory retention periods applicable in your jurisdiction; and</li>
+                  <li>You will immediately notify us at <Link href="mailto:legal@paymonei.com">legal@paymonei.com</Link> if you become aware of: (i) any investigation, inquiry, or proceedings by any financial intelligence unit, law enforcement authority, or regulatory body relating to your account or transaction activity on the Services; or (ii) any material change in the AML/CFT risk profile of your business.</li>
+                </ul>
+                <h3>5.7 Paymonei&rsquo;s Rights on AML/CFT Grounds</h3>
+                <p>Without prejudice to any other rights under this Agreement, and in addition to our rights under Section 12, we reserve the right at any time and without prior notice to:</p>
+                <ul>
+                  <li>Suspend, restrict, or terminate your access to any or all of the Services if we determine, in our reasonable discretion, that your account, business, or transactions present indicators of money laundering, terrorism financing, proliferation financing, sanctions exposure, or other financial crime risk;</li>
+                  <li>Place a temporary hold on payment processing or funds routing instructions through the platform pending completion of enhanced due diligence, investigation, or receipt of additional documentation from you;</li>
+                  <li>Request, and you agree to provide within five (5) business days, any additional information, documentation, or certifications that we or our Execution Partners require in connection with AML/CFT, KYB, or sanctions compliance obligations;</li>
+                  <li>Disclose your account information, business details, transaction data, and other information to: (i) our licensed Execution Partners; (ii) applicable financial intelligence units and law enforcement authorities (including PPATK, MAS, or equivalent bodies in any jurisdiction); and (iii) any other regulatory authority, to the extent required or permitted by applicable law; and</li>
+                  <li>Cooperate fully with any investigation, audit, or inquiry by any financial intelligence unit, regulatory authority, or law enforcement body relating to your use of the Services.</li>
+                </ul>
+                <p>
+                  We have no obligation to disclose to you the reason for any suspension, restriction, investigation, or disclosure made pursuant to this Section 5.7. We shall have no liability to you for any losses, damages, or claims arising from actions taken in good faith pursuant to this Section.
+                </p>
+                <h3>5.8 No Tipping Off</h3>
+                <p>
+                  Without prejudice to your obligations under applicable law, you agree not to disclose, communicate, or otherwise tip off any person &mdash; including any of your customers, employees, directors, agents, or business partners &mdash; that: (i) Paymonei or any of our Execution Partners has filed, is filing, or is considering filing a suspicious transaction report or equivalent report with any financial intelligence unit or law enforcement authority in connection with your account or any transaction; (ii) information relating to your account or transactions has been or may be disclosed to any financial intelligence unit, law enforcement authority, or regulatory body; or (iii) an investigation, inquiry, or proceeding is pending or contemplated in connection with your account or any transaction processed through the Services. Breach of this clause shall be grounds for immediate termination of this Agreement and may constitute a criminal offence under applicable law.
+                </p>
               </Section>
 
               {/* ── Block 6: Fees, Billing & Subscription ── */}

@@ -303,6 +303,38 @@ export default function TermsOfServiceIndonesiaPage() {
                 <p>
                   Mitra Eksekusi kami dapat menetapkan persyaratan kelayakan, pembatasan kategori merchant, batas transaksi, atau persyaratan verifikasi tambahan sebagai syarat penyediaan layanan mereka. Kami tidak bertanggung jawab atas keputusan Mitra Eksekusi untuk menolak, membatasi, atau mengakhiri layanan kepada Anda.
                 </p>
+                <h3>5.5 Kerangka Anti Pencucian Uang dan Pencegahan Pendanaan Terorisme (APU/PPT)</h3>
+                <p>
+                  Layanan beroperasi dalam kerangka kepatuhan yang dirancang untuk konsisten dengan peraturan perundang-undangan APU/PPT yang berlaku, termasuk: Undang-Undang Nomor 8 Tahun 2010 tentang Pencegahan dan Pemberantasan Tindak Pidana Pencucian Uang (&ldquo;UU TPPU&rdquo;) dan Undang-Undang Nomor 9 Tahun 2013 tentang Pencegahan dan Pemberantasan Tindak Pidana Pendanaan Terorisme (&ldquo;UU TPPT&rdquo;) beserta seluruh peraturan pelaksanaannya; Corruption, Drug Trafficking and Other Serious Crimes (Confiscation of Benefits) Act (CDSA) dan Terrorism (Suppression of Financing) Act (TSOFA) Singapura; serta Rekomendasi Financial Action Task Force (FATF) sebagaimana diimplementasikan di setiap yurisdiksi yang berlaku.
+                </p>
+                <p>
+                  Untuk menghindari keraguan: Paymonei adalah penyedia teknologi perangkat lunak dan bukan merupakan pihak pelapor, entitas bisnis dan profesi bukan keuangan yang ditunjuk (DNFBP), atau entitas yang diwajibkan memenuhi kewajiban pelaporan APU/PPT berdasarkan undang-undang di atas. Kewajiban pelaporan APU/PPT yang bersifat regulatoris, termasuk penyampaian Laporan Transaksi Keuangan Mencurigakan (LTKM) dan Laporan Transaksi Keuangan Tunai (LTKT), dipenuhi secara eksklusif oleh Mitra Eksekusi berlisensi kami sebagai pihak pelapor yang diwajibkan berdasarkan lisensi regulatoris masing-masing. Paymonei mengoperasikan kontrol risiko di tingkat teknologi secara independen, termasuk verifikasi merchant (KYB), pemeriksaan daftar sanksi secara real-time, dan pembatasan kategori merchant berisiko tinggi, yang berfungsi seiring dengan, namun bukan pengganti, kewajiban regulatoris Mitra Eksekusi kami.
+                </p>
+                <h3>5.6 Kewajiban APU/PPT Merchant</h3>
+                <p>Anda menyatakan, menjamin, dan menyetujui secara berkelanjutan bahwa:</p>
+                <ul>
+                  <li>Anda telah memiliki dan akan mempertahankan sepanjang masa berlakunya Perjanjian ini kebijakan dan prosedur APU/PPT tertulis yang sesuai dengan sifat, skala, dan profil risiko usaha Anda, sesuai dengan semua hukum dan peraturan yang berlaku di setiap yurisdiksi tempat Anda beroperasi;</li>
+                  <li>Anda akan melakukan dan akan terus melakukan identifikasi dan verifikasi pelanggan (Know Your Customer/KYC), uji tuntas nasabah (Customer Due Diligence/CDD), dan uji tuntas yang diperkuat (Enhanced Due Diligence/EDD) jika diperlukan, terhadap pengguna akhir dan mitra bisnis Anda sendiri, sebelum dan selama berlangsungnya setiap transaksi yang diproses melalui Layanan;</li>
+                  <li>Anda akan memantau transaksi yang diproses melalui Layanan untuk mendeteksi pola atau indikasi pencucian uang, pendanaan terorisme, penipuan, atau kejahatan keuangan lainnya, dan akan mengambil tindakan yang tepat termasuk menyampaikan laporan kepada PPATK atau otoritas penegak hukum yang berwenang sebagaimana diwajibkan oleh hukum yang berlaku;</li>
+                  <li>Anda akan menyimpan seluruh catatan, dokumen, dan data yang wajib disimpan berdasarkan peraturan APU/PPT yang berlaku selama jangka waktu penyimpanan yang ditetapkan oleh peraturan di yurisdiksi Anda; dan</li>
+                  <li>Anda akan segera memberitahu kami di <Link href="mailto:legal@paymonei.com">legal@paymonei.com</Link> apabila Anda mengetahui: (i) adanya penyidikan, penyelidikan, atau proses hukum oleh unit intelijen keuangan, otoritas penegak hukum, atau badan regulasi yang berkaitan dengan akun atau aktivitas transaksi Anda di Layanan; atau (ii) perubahan material pada profil risiko APU/PPT usaha Anda.</li>
+                </ul>
+                <h3>5.7 Hak Paymonei atas Dasar APU/PPT</h3>
+                <p>Tanpa mengesampingkan hak lain berdasarkan Perjanjian ini, dan sebagai tambahan atas hak kami berdasarkan Bagian 12, kami berhak sewaktu-waktu dan tanpa pemberitahuan sebelumnya untuk:</p>
+                <ul>
+                  <li>Menangguhkan, membatasi, atau mengakhiri akses Anda ke sebagian atau seluruh Layanan apabila kami menentukan, berdasarkan kebijakan kami yang wajar, bahwa akun, usaha, atau transaksi Anda menunjukkan indikasi pencucian uang, pendanaan terorisme, pendanaan proliferasi, paparan sanksi, atau risiko kejahatan keuangan lainnya;</li>
+                  <li>Menempatkan penahanan sementara atas pemrosesan pembayaran atau instruksi perutean dana melalui platform yang tertunda sampai selesainya uji tuntas yang diperkuat, penyelidikan, atau diterimanya dokumentasi tambahan dari Anda;</li>
+                  <li>Meminta, dan Anda setuju untuk menyediakan dalam waktu lima (5) hari kerja, informasi tambahan, dokumentasi, atau sertifikasi apa pun yang kami atau Mitra Eksekusi kami perlukan sehubungan dengan kewajiban kepatuhan APU/PPT, KYB, atau sanksi;</li>
+                  <li>Mengungkapkan informasi akun, detail usaha, data transaksi, dan informasi lainnya kepada: (i) Mitra Eksekusi berlisensi kami; (ii) unit intelijen keuangan dan otoritas penegak hukum yang berwenang (termasuk PPATK, MAS, atau badan setara di yurisdiksi mana pun); dan (iii) otoritas regulasi lainnya, sejauh diwajibkan atau diizinkan oleh hukum yang berlaku; dan</li>
+                  <li>Bekerja sama sepenuhnya dengan penyelidikan, audit, atau permintaan apa pun dari unit intelijen keuangan, otoritas regulasi, atau badan penegak hukum yang berkaitan dengan penggunaan Layanan oleh Anda.</li>
+                </ul>
+                <p>
+                  Kami tidak berkewajiban untuk mengungkapkan kepada Anda alasan atas penangguhan, pembatasan, penyelidikan, atau pengungkapan yang dilakukan berdasarkan Bagian 5.7 ini. Kami tidak bertanggung jawab kepada Anda atas kerugian, kerusakan, atau klaim apa pun yang timbul dari tindakan yang diambil dengan itikad baik berdasarkan Bagian ini.
+                </p>
+                <h3>5.8 Larangan Membocorkan Informasi (No Tipping Off)</h3>
+                <p>
+                  Tanpa mengesampingkan kewajiban Anda berdasarkan hukum yang berlaku, Anda setuju untuk tidak mengungkapkan, mengkomunikasikan, atau dengan cara lain apa pun membocorkan informasi kepada pihak mana pun, termasuk pelanggan, karyawan, direktur, agen, atau mitra bisnis Anda, bahwa: (i) Paymonei atau Mitra Eksekusi kami telah, sedang, atau mempertimbangkan untuk menyampaikan laporan transaksi keuangan mencurigakan (LTKM) atau laporan setara kepada PPATK, unit intelijen keuangan lainnya, atau otoritas penegak hukum sehubungan dengan akun atau transaksi Anda; (ii) informasi terkait akun atau transaksi Anda telah atau mungkin akan diungkapkan kepada unit intelijen keuangan, otoritas penegak hukum, atau badan regulasi; atau (iii) suatu penyidikan, penyelidikan, atau proses hukum sedang atau akan dilakukan sehubungan dengan akun atau transaksi yang diproses melalui Layanan. Pelanggaran klausul ini merupakan dasar untuk pengakhiran Perjanjian ini secara seketika dan dapat merupakan tindak pidana berdasarkan hukum yang berlaku, termasuk UU TPPU.
+                </p>
               </Section>
 
               {/* ── Bagian 6: Biaya, Penagihan, dan Langganan ── */}
