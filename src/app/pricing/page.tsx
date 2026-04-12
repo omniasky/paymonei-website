@@ -529,8 +529,7 @@ export default function PricingPage() {
             <div className="grid md:grid-cols-2 gap-6">
               {/* Global */}
               <div className="border border-[#EAEAE6] bg-white p-8">
-                <p className="text-[11px] tracking-[0.12em] uppercase text-[#999] font-medium mb-1">Global</p>
-                <p className="text-[14px] text-[#AAA] font-light mb-7">Singapore, US, EU and 150+ countries</p>
+                <p className="text-[11px] tracking-[0.12em] uppercase text-[#999] font-medium mb-6">Global</p>
                 <table className="w-full">
                   <thead>
                     <tr className="border-b border-[#EAEAE6]">
@@ -557,11 +556,10 @@ export default function PricingPage() {
 
               {/* Indonesia */}
               <div className="border border-[#EAEAE6] bg-white p-8">
-                <div className="flex items-center gap-2 mb-1">
+                <div className="flex items-center gap-2 mb-6">
                   <p className="text-[11px] tracking-[0.12em] uppercase text-[#999] font-medium">Indonesia</p>
                   <span className="text-[13px]">🇮🇩</span>
                 </div>
-                <p className="text-[14px] text-[#AAA] font-light mb-7">Via PT Evora Digital Indonesia</p>
                 <table className="w-full">
                   <thead>
                     <tr className="border-b border-[#EAEAE6]">
@@ -579,16 +577,16 @@ export default function PricingPage() {
                       <td className="py-3.5 text-right text-[14px] text-[#0C0C0C] font-medium whitespace-nowrap">3.9% + Rp 2,000</td>
                     </tr>
                     <tr className="border-b border-[#F5F5F2]">
+                      <td className="py-3.5 pr-4 text-[14px] text-[#555] font-light">QRIS</td>
+                      <td className="py-3.5 text-right text-[14px] text-[#0C0C0C] font-medium whitespace-nowrap">0.7%</td>
+                    </tr>
+                    <tr className="border-b border-[#F5F5F2]">
                       <td className="py-3.5 pr-4 text-[14px] text-[#555] font-light">Virtual Account ≥ Rp 2,000,000</td>
                       <td className="py-3.5 text-right text-[14px] text-[#0C0C0C] font-medium whitespace-nowrap">50 free / mo, then Rp 4,000</td>
                     </tr>
-                    <tr className="border-b border-[#F5F5F2]">
+                    <tr>
                       <td className="py-3.5 pr-4 text-[14px] text-[#555] font-light">Virtual Account &lt; Rp 2,000,000</td>
                       <td className="py-3.5 text-right text-[14px] text-[#0C0C0C] font-medium whitespace-nowrap">Rp 4,000</td>
-                    </tr>
-                    <tr>
-                      <td className="py-3.5 pr-4 text-[14px] text-[#555] font-light">USDC / USDT (stablecoin)</td>
-                      <td className="py-3.5 text-right text-[14px] text-[#0C0C0C] font-medium whitespace-nowrap">~Rp 150 network fee</td>
                     </tr>
                   </tbody>
                 </table>
