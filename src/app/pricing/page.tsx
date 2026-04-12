@@ -69,6 +69,7 @@ const plans = [
     entities: "1 entity",
     includes: [
       "Unlimited invoices & PDF export",
+      "Unlimited quotes & estimates",
       "Unlimited payment links",
       "Hosted payment page per invoice",
       "Multi-currency invoicing",
@@ -204,6 +205,11 @@ const comparison: ComparisonRow[] = [
   {
     feature: "Invoices per month",
     tooltip: "Unlimited on all plans. No caps, ever.",
+    starter: "Unlimited", core: "Unlimited", growth: "Unlimited", enterprise: "Unlimited",
+  },
+  {
+    feature: "Quotes & estimates",
+    tooltip: "Send a price proposal before committing to an invoice. Client accepts, it converts to an invoice automatically.",
     starter: "Unlimited", core: "Unlimited", growth: "Unlimited", enterprise: "Unlimited",
   },
   {
