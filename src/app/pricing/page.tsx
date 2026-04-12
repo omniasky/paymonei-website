@@ -523,7 +523,7 @@ export default function PricingPage() {
               Charged by our partners,<br />not by us.
             </h2>
             <p className="text-[15px] text-[#666] font-light leading-relaxed mb-12 max-w-xl">
-              When your clients pay by card or bank transfer, the fees below are charged by our licensed financial execution partners at checkout. Paymonei does not collect or profit from these fees.
+              When your clients pay by card or bank transfer, the fees below are charged by our licensed financial execution partners at checkout.
             </p>
 
             <div className="grid md:grid-cols-2 gap-6">
@@ -548,7 +548,7 @@ export default function PricingPage() {
                     </tr>
                     <tr>
                       <td className="py-3.5 pr-4 text-[14px] text-[#555] font-light">SWIFT / bank transfer</td>
-                      <td className="py-3.5 text-right text-[14px] text-[#0C0C0C] font-medium whitespace-nowrap">Varies by bank</td>
+                      <td className="py-3.5 text-right text-[14px] text-[#0C0C0C] font-medium whitespace-nowrap">Varies</td>
                     </tr>
                   </tbody>
                 </table>
@@ -594,7 +594,7 @@ export default function PricingPage() {
             </div>
 
             <p className="mt-6 text-[12px] text-[#BBB] font-light leading-relaxed max-w-2xl">
-              Payment execution fees are set by our licensed financial infrastructure partners and are subject to change without notice. Paymonei does not control, collect, or profit from these fees. Rates shown are indicative and may vary by merchant category, transaction volume, or applicable local regulations. Paymonei is not a payment processor, bank, or financial institution.
+              Payment execution fees are set by our licensed financial infrastructure partners and are subject to change without notice. Rates shown are indicative and may vary by merchant category, transaction volume, or applicable local regulations. Paymonei is not a payment processor, bank, or financial institution.
             </p>
           </div>
         </section>
