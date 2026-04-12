@@ -84,7 +84,7 @@ export default function TermsOfServicePage() {
                 <div>
                   <p className="text-[11px] uppercase tracking-[0.14em] text-[#999] font-medium mb-3">Jurisdiction</p>
                   <nav className="flex flex-col gap-1.5">
-                    <span className="text-[13px] text-[#0C0C0C] font-medium leading-snug">Singapore &amp; RoW</span>
+                    <span className="text-[13px] text-[#0C0C0C] font-medium leading-snug">English (International)</span>
                     <Link
                       href="/legal/terms-of-service/indonesia"
                       className="text-[13px] text-[#777] hover:text-[#0C0C0C] transition-colors font-light leading-snug"
@@ -120,17 +120,20 @@ export default function TermsOfServicePage() {
               <div className="bg-[#F5F5F2] border border-[#EAEAE6] rounded-lg p-6 mb-12">
                 <p className="text-[13px] font-medium text-[#0C0C0C] mb-2">Important Notice</p>
                 <p className="text-[14px] text-[#555] leading-relaxed font-light">
-                  Omniasky Technology Pte Ltd and PT Evora Vera Teknologi are technology companies. Neither entity is a bank, financial institution, money services business, or virtual asset service provider. All financial execution services — including payment processing, fund movement, and settlement — are provided exclusively by our licensed third-party financial execution partners on a separate contractual basis.
+                  <strong>Omniasky Technology Pte Ltd</strong> (Singapore) is the contracting entity and intellectual property owner of the Paymonei platform for international merchants. <strong>PT Evora Vera Teknologi</strong> (Indonesia) is Omniasky&rsquo;s authorized technology and operations partner in Indonesia. Neither entity is a bank, financial institution, money services business, or virtual asset service provider. All financial execution services — including payment processing, fund movement, and settlement — are provided exclusively by our licensed third-party Execution Partners under their own regulatory licences and frameworks.
                 </p>
               </div>
 
               {/* ── Block 1: Introduction & Parties ── */}
               <Section id="introduction" title="1. Introduction & Parties">
                 <p>
-                  These Terms of Service (&ldquo;Terms&rdquo; or &ldquo;Agreement&rdquo;) govern access to and use of the Paymonei platform, APIs, dashboards, and hosted services (collectively, the &ldquo;Services&rdquo;) provided by <strong>Omniasky Technology Pte Ltd</strong>, a company registered in Singapore that holds the proprietary technology and intellectual property of the Paymonei platform (&ldquo;Omniasky&rdquo;, &ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;us&rdquo;).
+                  These Terms of Service (&ldquo;Terms&rdquo; or &ldquo;Agreement&rdquo;) govern access to and use of the Paymonei platform, APIs, dashboards, and hosted services (collectively, the &ldquo;Services&rdquo;) provided by <strong>Omniasky Technology Pte Ltd</strong> (&ldquo;Omniasky&rdquo;, &ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;us&rdquo;), a private limited company incorporated in Singapore (UEN: [Registration Number]), which owns the intellectual property, technology, and proprietary platform of Paymonei.
                 </p>
                 <p>
-                  Technology development and platform management services are delivered by our affiliated entity, <strong>PT Evora Vera Teknologi</strong>, a limited liability company incorporated in Indonesia, acting as our authorized technology partner.
+                  This version of the Terms applies to merchants incorporated, registered, or primarily operating outside the territory of the Republic of Indonesia (&ldquo;International Merchants&rdquo;). If your business is incorporated or primarily operates in Indonesia, the Indonesian Syarat dan Ketentuan (available at <Link href="/legal/terms-of-service/indonesia">paymonei.com/legal/terms-of-service/indonesia</Link>) applies instead, and the contracting entity is PT Evora Vera Teknologi.
+                </p>
+                <p>
+                  Technology development, platform delivery, and operational support services for the Paymonei platform are provided by <strong>PT Evora Vera Teknologi</strong> (&ldquo;PT Evora&rdquo;), a limited liability company incorporated under the laws of the Republic of Indonesia, acting as Omniasky&rsquo;s authorized technology and operations partner under an intercompany technology licence agreement. PT Evora is not a party to this Agreement between Omniasky and you, and assumes no direct contractual obligation to international merchants under these Terms.
                 </p>
                 <p>
                   These Terms apply exclusively to businesses and their duly authorized representatives (&ldquo;Merchants&rdquo;) who register for and use the Services. The Services are not designed for, marketed to, or available to private individuals acting in a personal capacity.

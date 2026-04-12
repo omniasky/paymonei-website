@@ -88,7 +88,7 @@ export default function TermsOfServiceIndonesiaPage() {
                       href="/legal/terms-of-service"
                       className="text-[13px] text-[#777] hover:text-[#0C0C0C] transition-colors font-light leading-snug"
                     >
-                      Singapore &amp; RoW
+                      English (International)
                     </Link>
                     <span className="text-[13px] text-[#0C0C0C] font-medium leading-snug">Indonesia (Bahasa)</span>
                   </nav>
