@@ -325,18 +325,37 @@ export default function TermsOfServiceIndonesiaPage() {
 
               {/* ── Bagian 9: Penafian Jaminan ── */}
               <Section id="penafian" title="9. Penafian Jaminan">
+                <h3>9.1 Dasar &ldquo;Sebagaimana Adanya&rdquo;</h3>
                 <p>
-                  LAYANAN DISEDIAKAN ATAS DASAR &ldquo;SEBAGAIMANA ADANYA&rdquo; DAN &ldquo;SEBAGAIMANA TERSEDIA&rdquo;. SEJAUH YANG DIIZINKAN OLEH HUKUM YANG BERLAKU, PT EVORA VERA TEKNOLOGI, OMNIASKY TECHNOLOGY PTE LTD, AFILIASI, PEJABAT, DAN PEMBERI LISENSI MEREKA SECARA TEGAS MENAFIKAN SELURUH JAMINAN, BAIK TERSURAT MAUPUN TERSIRAT, TERMASUK NAMUN TIDAK TERBATAS PADA JAMINAN TERSIRAT MENGENAI KELAYAKAN UNTUK DIPERDAGANGKAN, KESESUAIAN UNTUK TUJUAN TERTENTU, DAN TIDAK ADANYA PELANGGARAN.
+                  KECUALI DINYATAKAN SECARA TEGAS DALAM PERJANJIAN INI, LAYANAN DISEDIAKAN ATAS DASAR &ldquo;SEBAGAIMANA ADANYA&rdquo; DAN &ldquo;SEBAGAIMANA TERSEDIA&rdquo; DENGAN SEGALA KEKURANGAN DAN TANPA PERNYATAAN ATAU JAMINAN DALAM BENTUK APA PUN. SEJAUH YANG DIIZINKAN OLEH HUKUM YANG BERLAKU, PT EVORA VERA TEKNOLOGI, OMNIASKY TECHNOLOGY PTE LTD, AFILIASI, PEJABAT, DAN PEMBERI LISENSI MEREKA SECARA TEGAS MENAFIKAN SELURUH JAMINAN, BAIK TERSURAT MAUPUN TERSIRAT, TERMASUK NAMUN TIDAK TERBATAS PADA JAMINAN TERSIRAT MENGENAI KELAYAKAN UNTUK DIPERDAGANGKAN, KESESUAIAN UNTUK TUJUAN TERTENTU, HAK KEPEMILIKAN, DAN TIDAK ADANYA PELANGGARAN, SERTA JAMINAN TERSIRAT APA PUN YANG TIMBUL DARI JALANNYA TRANSAKSI ATAU PELAKSANAANNYA.
                 </p>
                 <p>Kami tidak memberikan jaminan atau pernyataan bahwa:</p>
                 <ul>
                   <li>Layanan akan memenuhi persyaratan bisnis spesifik Anda.</li>
                   <li>Layanan akan berjalan tanpa gangguan, tepat waktu, aman, atau bebas dari kesalahan setiap saat.</li>
                   <li>Transaksi pembayaran tertentu yang Anda ajukan akan berhasil dieksekusi atau diselesaikan; eksekusi transaksi merupakan tanggung jawab Mitra Eksekusi yang berlaku.</li>
+                  <li>Data yang ditransmisikan melalui Layanan akan ditransmisikan secara aman tanpa disadap oleh pihak ketiga.</li>
                   <li>Cacat pada Layanan akan diperbaiki dalam jangka waktu tertentu.</li>
                 </ul>
+                <h3>9.2 Bukan Lembaga Keuangan</h3>
                 <p>
-                  Kontrol keamanan kami melindungi data perangkat lunak dan instruksi alur kerja. Keamanan, asuransi, dan perlindungan regulasi atas dana keuangan itu sendiri merupakan tanggung jawab Mitra Eksekusi berlisensi kami berdasarkan kerangka regulasi mereka masing-masing.
+                  Anda mengakui bahwa PT Evora Vera Teknologi maupun Omniasky Technology Pte Ltd bukan bank, lembaga jasa keuangan (LJK), bisnis jasa keuangan, atau lembaga keuangan berlisensi. Kami semata-mata bertanggung jawab atas penyampaian perangkat lunak dan konektivitas data. Kami memfasilitasi perutean instruksi alur pembayaran Anda ke Mitra Eksekusi berlisensi kami dan tidak bertanggung jawab atas tindakan, kelalaian, kesalahan, atau kegagalan pihak ketiga mana pun, termasuk namun tidak terbatas pada: (a) pengoperasian jaringan, sistem perbankan, atau infrastruktur keuangan; (b) keputusan Mitra Eksekusi untuk menolak, menunda, membatasi, atau membalik suatu transaksi; atau (c) gangguan pada sistem atau layanan pihak ketiga mana pun.
+                </p>
+                <h3>9.3 Penipuan dan Keakuratan Transaksi</h3>
+                <p>
+                  Anda mengakui dan menegaskan bahwa kami tidak bertanggung jawab untuk mengenali apakah suatu transaksi, instruksi pembayaran, faktur, atau pesanan tertentu adalah akurat, sah, atau khas dari usaha Anda. Anda sepenuhnya bertanggung jawab untuk: (a) memeriksa transaksi yang dilakukan oleh pengguna akhir atau pelanggan Anda terhadap penipuan, kesalahan, atau aktivitas yang mencurigakan; (b) melakukan pemeriksaan yang wajar atas transaksi yang tampak tidak biasa, dalam jumlah yang tidak lazim besar, atau diarahkan ke tujuan yang tidak biasa, sebelum memenuhi atau menyelesaikannya; dan (c) menghubungi pengguna akhir Anda mengenai transaksi yang mencurigakan atau salah sebagaimana diperlukan. Anda menanggung seluruh risiko penipuan, chargeback, dan transaksi tidak sah sehubungan dengan penggunaan Layanan Anda. Kami tidak bertanggung jawab atas kerugian yang timbul dari transaksi yang bersifat penipuan atau keliru.
+                </p>
+                <h3>9.4 Produk Merchant dan Hubungan dengan Pelanggan</h3>
+                <p>
+                  Kami tidak membuat pernyataan, jaminan, atau keterangan apa pun mengenai sifat, kualitas, keaslian, kesesuaian, atau aspek lain dari produk atau jasa yang Anda tawarkan kepada pengguna akhir atau pelanggan Anda. Anda sepenuhnya bertanggung jawab atas: (a) kualitas, keabsahan, dan pengiriman produk serta jasa Anda; (b) layanan pelanggan, pengembalian dana, pengembalian barang, dan kewajiban purna jual Anda; dan (c) mengkomunikasikan kepada pengguna akhir Anda syarat, ketentuan, dan tujuan dari setiap transaksi. Kami berhak mengakhiri Layanan seketika apabila terdapat alasan yang wajar untuk meyakini bahwa Anda terlibat dalam transaksi ilegal dengan pengguna akhir, dan kami tidak memiliki tanggung jawab atau kewajiban apa pun sehubungan dengan transaksi tersebut atau kepada pihak mana pun yang terdampak.
+                </p>
+                <h3>9.5 Kewajiban Perpajakan</h3>
+                <p>
+                  Kami tidak memberikan pernyataan atau jaminan mengenai keakuratan tarif pajak atau perhitungan pajak yang berlaku yang mungkin dihasilkan oleh atau melalui Layanan. Anda sepenuhnya bertanggung jawab untuk menentukan, memungut, dan membayar seluruh pajak yang berlaku atas penjualan produk atau jasa Anda, termasuk namun tidak terbatas pada Pajak Pertambahan Nilai (PPN), pajak penghasilan, pajak pemotongan, pungutan wajib, atau kewajiban fiskal lainnya yang berlaku di yurisdiksi Anda.
+                </p>
+                <h3>9.6 Keamanan Dana</h3>
+                <p>
+                  Kontrol keamanan kami melindungi data perangkat lunak, kredensial API, dan instruksi alur kerja yang ditransmisikan melalui platform. Keamanan, asuransi, perlindungan regulasi, dan pengamanan dana keuangan merupakan tanggung jawab tunggal Mitra Eksekusi berlisensi kami berdasarkan kerangka regulasi mereka masing-masing.
                 </p>
               </Section>
 

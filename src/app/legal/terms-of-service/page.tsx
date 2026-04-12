@@ -325,18 +325,37 @@ export default function TermsOfServicePage() {
 
               {/* ── Block 9: Disclaimers ── */}
               <Section id="warranties" title="9. Disclaimers of Warranties">
+                <h3>9.1 As-Is Basis</h3>
                 <p>
-                  THE SERVICES ARE PROVIDED ON AN &ldquo;AS-IS&rdquo; AND &ldquo;AS-AVAILABLE&rdquo; BASIS. TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, OMNIASKY TECHNOLOGY PTE LTD, ITS AFFILIATES, OFFICERS, AND LICENSORS EXPRESSLY DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+                  EXCEPT AS EXPRESSLY STATED IN THIS AGREEMENT, THE SERVICES ARE PROVIDED ON AN &ldquo;AS-IS&rdquo; AND &ldquo;AS-AVAILABLE&rdquo; BASIS, WITH ALL FAULTS AND WITHOUT ANY REPRESENTATION OR WARRANTY OF ANY KIND. TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, OMNIASKY TECHNOLOGY PTE LTD, ITS AFFILIATES, OFFICERS, AND LICENSORS EXPRESSLY DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT, AND ANY WARRANTY ARISING FROM COURSE OF DEALING OR COURSE OF PERFORMANCE.
                 </p>
                 <p>We make no warranty or representation that:</p>
                 <ul>
                   <li>The Services will meet your specific business requirements.</li>
                   <li>The Services will be uninterrupted, timely, secure, or error-free at all times.</li>
-                  <li>Any particular payment transaction submitted by you will be successfully executed or settled — transaction execution is solely the responsibility of the applicable Execution Partner.</li>
+                  <li>Any particular payment transaction submitted by you will be successfully executed or settled &mdash; transaction execution is solely the responsibility of the applicable Execution Partner.</li>
+                  <li>Data transmitted through the Services will be transmitted securely without interception by third parties.</li>
                   <li>Any defects in the Services will be corrected within any particular timeframe.</li>
                 </ul>
+                <h3>9.2 Not a Financial Institution</h3>
                 <p>
-                  Our security controls protect software data and workflow instructions. The security, insurance, and regulatory protection of financial funds themselves are the responsibility of our licensed Execution Partners under their respective regulatory frameworks.
+                  You acknowledge that neither Omniasky Technology Pte Ltd nor PT Evora Vera Teknologi is a bank, payment institution, money services business, or licensed financial institution. We are solely responsible for the delivery of software tools and data connectivity. We facilitate the routing of your payment workflow instructions to our licensed Execution Partners and are not responsible for the acts, omissions, errors, or failures of any third party, including but not limited to: (a) the operation of networks, banking systems, or financial infrastructure; (b) any decision by an Execution Partner to decline, delay, restrict, or reverse a transaction; or (c) interruptions to any third-party system or service.
+                </p>
+                <h3>9.3 Transaction Fraud and Accuracy</h3>
+                <p>
+                  You acknowledge and agree that we are not responsible for identifying whether any particular transaction, payment instruction, invoice, or order is accurate, legitimate, or typical of your business. You are solely responsible for: (a) screening transactions initiated by your end users or customers for fraud, error, or suspicious activity; (b) conducting reasonable due diligence on transactions that appear unusual, atypically large, or directed to unusual destinations before fulfilling or completing them; and (c) contacting your end users regarding suspicious or erroneous transactions as appropriate. You bear all risk of fraud, chargebacks, and unauthorized transactions in connection with your use of the Services. We are not liable for losses arising from fraudulent or erroneous transactions.
+                </p>
+                <h3>9.4 Merchant Products and Customer Relationships</h3>
+                <p>
+                  We make no representation, warranty, or guarantee regarding the nature, quality, authenticity, suitability, or any other aspect of the products or services you offer to your end users or customers. You are solely responsible for: (a) the quality, legality, and delivery of your products and services; (b) your customer support, refunds, returns, and after-sale obligations; and (c) communicating to your end users the terms, conditions, and purpose of any transaction. We reserve the right to terminate the Services immediately upon reasonable grounds to believe you are engaged in unlawful transactions with end users, and we bear no liability or obligation in connection with such transactions or to any party arising from them.
+                </p>
+                <h3>9.5 Tax Obligations</h3>
+                <p>
+                  We make no representation or warranty regarding the accuracy of any tax rates or applicable tax calculations that may be generated by or through the Services. You are solely responsible for determining, collecting, and remitting all applicable taxes on your sales of products or services, including but not limited to goods and services tax, value-added tax, withholding tax, or any other statutory levy applicable in your jurisdiction.
+                </p>
+                <h3>9.6 Fund Security</h3>
+                <p>
+                  Our security controls protect software data, API credentials, and workflow instructions transmitted through the platform. The security, insurance, regulatory protection, and safeguarding of financial funds are the sole responsibility of our licensed Execution Partners under their respective regulatory frameworks.
                 </p>
               </Section>
 
