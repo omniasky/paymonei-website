@@ -196,10 +196,6 @@ const faqs = [
     q: "What is the working capital eligibility feature?",
     a: "Merchants with a verified account and consistent invoice activity may become eligible for working capital facilities through our licensed lending partners. This is an opt-in referral service. Paymonei does not assess creditworthiness or make lending decisions. You are introduced directly to a licensed financial institution.",
   },
-  {
-    q: "Can I add my own markup for Enterprise clients?",
-    a: "Yes. Enterprise customers can configure custom software fee schedules, including a margin layer for their own clients. This is a software configuration. It does not change the regulatory nature of the underlying payment execution.",
-  },
 ];
 
 // Comparison table: 4-column (Starter / Core / Growth / Enterprise)
