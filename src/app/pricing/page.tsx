@@ -427,11 +427,10 @@ export default function PricingPage() {
                   <div className="px-8 pb-10">
                     <Link href={plan.ctaHref}>
                       <span
-                        className={`block w-full text-center px-5 py-3 rounded-full text-sm font-medium transition-colors duration-150 cursor-pointer ${
-                          plan.ctaPrimary
+                        className={`block w-full text-center px-5 py-3 rounded-full text-sm font-medium transition-colors duration-150 cursor-pointer ${plan.ctaPrimary
                             ? "bg-[#0C0C0C] text-white hover:bg-[#222]"
                             : "border border-[#E5E5E2] text-[#555] hover:border-[#ccc] hover:text-[#0C0C0C] bg-white"
-                        }`}
+                          }`}
                       >
                         {plan.cta}
                       </span>
@@ -439,9 +438,9 @@ export default function PricingPage() {
                   </div>
                 </div>
               ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
         {/* ── COMPARISON TABLE ─────────────────────────────────────── */}
         <section className="py-20 px-5 sm:px-8 border-t border-[#EAEAE6] bg-white">
@@ -456,58 +455,58 @@ export default function PricingPage() {
 
             {/* Table */}
             <TooltipProvider delayDuration={200}>
-            <div className="overflow-x-auto">
-              <table className="w-full border-collapse">
-                <thead>
-                  <tr className="border-b border-[#EAEAE6]">
-                    <th className="text-left py-4 pr-6 text-[13px] text-[#AAA] font-medium w-[32%]">Feature</th>
-                    <th className="text-center py-4 px-3 text-[13px] font-medium text-[#0C0C0C] w-[17%]">Starter</th>
-                    <th className="text-center py-4 px-3 text-[13px] font-medium text-[#0C0C0C] w-[17%]">Core</th>
-                    <th className="text-center py-4 px-3 text-[13px] font-medium text-[#0C0C0C] w-[17%]">Growth</th>
-                    <th className="text-center py-4 px-3 text-[13px] font-medium text-[#0C0C0C] w-[17%]">Enterprise</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {comparison.map((row, i) => (
-                    <tr
-                      key={row.feature}
-                      className={`border-b border-[#F5F5F2] ${i % 2 === 0 ? "bg-transparent" : "bg-[#FAFAF8]/50"}`}
-                    >
-                      <td className="py-3.5 pr-6 text-[14px] text-[#555] font-light">
-                        <span className="flex items-center gap-1.5">
-                          {row.feature}
-                          <Tooltip>
-                            <TooltipTrigger asChild>
-                              <button
-                                type="button"
-                                aria-label={`Info: ${row.feature}`}
-                                className="shrink-0 text-[#CCC] hover:text-[#888] transition-colors duration-150 focus:outline-none"
-                              >
-                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                  <circle cx="12" cy="12" r="10" />
-                                  <line x1="12" y1="16" x2="12" y2="12" />
-                                  <line x1="12" y1="8" x2="12.01" y2="8" />
-                                </svg>
-                              </button>
-                            </TooltipTrigger>
-                            <TooltipContent
-                              side="right"
-                              className="max-w-[260px] text-[12px] leading-relaxed bg-[#0C0C0C] text-white border-0"
-                            >
-                              {row.tooltip}
-                            </TooltipContent>
-                          </Tooltip>
-                        </span>
-                      </td>
-                      <td className="py-3.5 px-3 text-center"><Cell value={row.starter} /></td>
-                      <td className="py-3.5 px-3 text-center"><Cell value={row.core} /></td>
-                      <td className="py-3.5 px-3 text-center"><Cell value={row.growth} /></td>
-                      <td className="py-3.5 px-3 text-center"><Cell value={row.enterprise} /></td>
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse">
+                  <thead>
+                    <tr className="border-b border-[#EAEAE6]">
+                      <th className="text-left py-4 pr-6 text-[13px] text-[#AAA] font-medium w-[32%]">Feature</th>
+                      <th className="text-center py-4 px-3 text-[13px] font-medium text-[#0C0C0C] w-[17%]">Starter</th>
+                      <th className="text-center py-4 px-3 text-[13px] font-medium text-[#0C0C0C] w-[17%]">Core</th>
+                      <th className="text-center py-4 px-3 text-[13px] font-medium text-[#0C0C0C] w-[17%]">Growth</th>
+                      <th className="text-center py-4 px-3 text-[13px] font-medium text-[#0C0C0C] w-[17%]">Enterprise</th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+                  </thead>
+                  <tbody>
+                    {comparison.map((row, i) => (
+                      <tr
+                        key={row.feature}
+                        className={`border-b border-[#F5F5F2] ${i % 2 === 0 ? "bg-transparent" : "bg-[#FAFAF8]/50"}`}
+                      >
+                        <td className="py-3.5 pr-6 text-[14px] text-[#555] font-light">
+                          <span className="flex items-center gap-1.5">
+                            {row.feature}
+                            <Tooltip>
+                              <TooltipTrigger asChild>
+                                <button
+                                  type="button"
+                                  aria-label={`Info: ${row.feature}`}
+                                  className="shrink-0 text-[#CCC] hover:text-[#888] transition-colors duration-150 focus:outline-none"
+                                >
+                                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <line x1="12" y1="16" x2="12" y2="12" />
+                                    <line x1="12" y1="8" x2="12.01" y2="8" />
+                                  </svg>
+                                </button>
+                              </TooltipTrigger>
+                              <TooltipContent
+                                side="right"
+                                className="max-w-[260px] text-[12px] leading-relaxed bg-[#0C0C0C] text-white border-0"
+                              >
+                                {row.tooltip}
+                              </TooltipContent>
+                            </Tooltip>
+                          </span>
+                        </td>
+                        <td className="py-3.5 px-3 text-center"><Cell value={row.starter} /></td>
+                        <td className="py-3.5 px-3 text-center"><Cell value={row.core} /></td>
+                        <td className="py-3.5 px-3 text-center"><Cell value={row.growth} /></td>
+                        <td className="py-3.5 px-3 text-center"><Cell value={row.enterprise} /></td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </TooltipProvider>
           </div>
         </section>
@@ -523,7 +522,7 @@ export default function PricingPage() {
               Charged by our partners,<br />not by us.
             </h2>
             <p className="text-[15px] text-[#666] font-light leading-relaxed mb-12 max-w-xl">
-              When your clients pay by card or bank transfer, the fees below are charged by our licensed financial execution partners at checkout.
+              When your clients pay by card or bank transfer, the fees below are charged by our licensed execution partners at checkout.
             </p>
 
             <div className="grid md:grid-cols-2 gap-6">
