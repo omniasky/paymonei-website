@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 const toc = [
   { id: "introduction", label: "1. Introduction & Parties" },
   { id: "services", label: "2. Nature of the Services" },
-  { id: "eligibility", label: "3. Merchant Eligibility & Registration" },
+  { id: "eligibility", label: "3. Merchant Eligibility & Representations" },
   { id: "obligations", label: "4. Merchant Obligations & Acceptable Use" },
   { id: "execution-partners", label: "5. Licensed Execution Partners" },
   { id: "fees", label: "6. Fees, Billing & Subscription" },
@@ -173,7 +173,7 @@ export default function TermsOfServicePage() {
               </Section>
 
               {/* ── Block 3: Merchant Eligibility & Registration ── */}
-              <Section id="eligibility" title="3. Merchant Eligibility & Account Registration">
+              <Section id="eligibility" title="3. Merchant Eligibility, Registration & Representations">
                 <h3>3.1 Eligibility Requirements</h3>
                 <p>To register for and use the Services, you must:</p>
                 <ul>
@@ -196,6 +196,34 @@ export default function TermsOfServicePage() {
                 <h3>3.4 Accuracy of Information</h3>
                 <p>
                   You represent and warrant that all information you provide during registration and throughout your use of the Services is accurate, complete, and not misleading. You agree to promptly update your account information if any material change occurs. We reserve the right to suspend or terminate access if we determine that information provided is inaccurate or has become materially inaccurate.
+                </p>
+                <h3>3.5 Merchant Representations and Warranties</h3>
+                <p>By entering into this Agreement and on a continuing basis throughout the term, you represent and warrant to us that:</p>
+                <ul>
+                  <li><strong>Authority and binding obligation:</strong> You have all necessary rights, powers, and authority to execute this Agreement and perform your obligations under it. This Agreement constitutes a valid, legal, and binding obligation enforceable against you in accordance with its terms, and does not violate or conflict with any other agreement by which you are bound.</li>
+                  <li><strong>Regulatory compliance and licences:</strong> You comply with, and will continue to comply with, all applicable laws, rules, and regulations in every jurisdiction in which you operate. You have obtained, and will maintain throughout the term, all licences, permits, regulatory approvals, and governmental authorisations required to conduct your underlying business and to use the Services.</li>
+                  <li><strong>Business change notification:</strong> You will notify us in writing within five (5) business days of any material change to your business type, principal products or services offered, business model, or any change that may affect our risk assessment of your account. Failure to provide timely notice renders you solely responsible for all consequences and losses arising from such change.</li>
+                  <li><strong>Intellectual property:</strong> You have full right and authority to sell or distribute the products and services for which you use the Services. None of your products or services infringe the intellectual property rights — including trademarks, copyrights, patents, or trade secrets — of any third party, and they do not contain content that violates any applicable law or regulation.</li>
+                  <li><strong>End-user consent and disclosure:</strong> Before transmitting any end-user data to us or to our Execution Partners, you have provided all required disclosures to, and obtained all necessary consents from, each relevant end-user regarding the collection, use, and disclosure of their personal data, in compliance with applicable data protection law including the PDPA (Singapore) and/or applicable privacy regulations in each jurisdiction where you operate.</li>
+                  <li><strong>Anti-bribery and anti-corruption:</strong> Neither you nor any of your affiliates, officers, directors, employees, agents, or partners have offered, promised, given, or authorised — and will not offer, promise, give, or authorise — any payment, gift, or other thing of value, directly or indirectly, to any government official or public authority for the purpose of influencing any official act or decision, or obtaining any improper advantage. You have conducted, and will continue to conduct, your business in compliance with all applicable anti-bribery and anti-corruption laws.</li>
+                  <li><strong>AML/CFT compliance:</strong> Your operations comply with all applicable financial records, reporting, and anti-money laundering and counter-terrorism financing laws in Singapore, Indonesia, and all other jurisdictions where you operate or transact. There is no pending or threatened indictment, lawsuit, or proceeding against you alleging violation of any applicable AML/CFT law.</li>
+                  <li><strong>Sanctions — continuing representation:</strong> You are not, and will not become during the term, incorporated in, controlled by, or acting for the benefit of any person, entity, or jurisdiction subject to comprehensive economic sanctions administered by the United Nations, OFAC (US), the European Union, UK OFSI, MAS (Singapore), OJK, PPATK (Indonesia), or the FATF high-risk country list. You are not listed, and will not be listed, on any Specially Designated Nationals list, Consolidated Sanctions List, or equivalent list maintained by any of the above authorities.</li>
+                  <li><strong>No exploitation of system vulnerabilities:</strong> You will not use the Services to perform, facilitate, or enable any unlawful, fraudulent, or deceptive purpose, nor will you exploit any vulnerability, gap, or weakness in any system — whether ours or a third party&rsquo;s — to obtain an improper advantage. You agree to indemnify us from all claims, costs, expenses, losses, and liabilities arising from any such conduct.</li>
+                  <li><strong>Lawful purpose:</strong> Your use of the Services is solely for legitimate, lawful business and transactional purposes consistent with all applicable laws and these Terms.</li>
+                </ul>
+                <h3>3.6 Paymonei&rsquo;s Limited Warranties</h3>
+                <p>We represent and warrant to you that:</p>
+                <ul>
+                  <li>We comply with, and will continue to comply with, all applicable laws and regulations, and have obtained and will maintain all licences, permits, and governmental approvals required for the provision of the Services.</li>
+                  <li>The Services and APIs provided under this Agreement will materially conform to the specifications set out in the applicable Documentation, as may be updated from time to time at our sole discretion.</li>
+                  <li>Paymonei does not store, process, or transmit raw payment card data (card numbers, CVVs, or expiry dates). All card payment processing is performed exclusively by our licensed Execution Partners, who maintain their own Payment Card Industry Data Security Standard (PCI-DSS) certifications and are subject to card network rules under their own regulatory frameworks. Paymonei is entirely outside PCI-DSS scope.</li>
+                  <li>We will not use or disclose your end-users&rsquo; non-public personal data except: (i) as reasonably necessary to provide the Services to you; (ii) to provide general fraud screening and transaction risk services without disclosing individually identifiable end-user information; or (iii) as described, permitted, or required by our Privacy Policy or applicable law.</li>
+                </ul>
+                <p>
+                  <strong>Remedy for warranty breach.</strong> If any part of the Services materially fails to conform to the warranties in clause 3.6 above, and you report the non-conformance to us, we will, at our discretion: (i) use commercially reasonable efforts to remediate the non-conformance at no additional charge to you; or (ii) refund the fees paid by you for the non-conforming Services in the ninety (90) days immediately preceding the date you reported the non-conformance. The remedies set out in this clause are your sole and exclusive remedies, and our entire liability, for any breach of the warranties in clause 3.6.
+                </p>
+                <p>
+                  <strong>Warranty exclusions.</strong> The warranties in clause 3.6 and the remedies above do not apply if: (i) the Services are used in material deviation from this Agreement, these Terms, or the applicable Documentation; (ii) any part of the Services has been modified without our prior written consent; or (iii) a defect is caused by your own equipment malfunction, third-party software, or third-party services not provided by us.
                 </p>
               </Section>
 

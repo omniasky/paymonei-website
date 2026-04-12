@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 const toc = [
   { id: "pendahuluan", label: "1. Pendahuluan dan Para Pihak" },
   { id: "layanan", label: "2. Sifat Layanan" },
-  { id: "kelayakan", label: "3. Kelayakan Merchant dan Pendaftaran" },
+  { id: "kelayakan", label: "3. Kelayakan Merchant dan Pernyataan" },
   { id: "kewajiban", label: "4. Kewajiban Merchant dan Penggunaan yang Diizinkan" },
   { id: "mitra-eksekusi", label: "5. Mitra Eksekusi Berlisensi" },
   { id: "biaya", label: "6. Biaya, Penagihan, dan Langganan" },
@@ -173,7 +173,7 @@ export default function TermsOfServiceIndonesiaPage() {
               </Section>
 
               {/* ── Bagian 3: Kelayakan Merchant dan Pendaftaran ── */}
-              <Section id="kelayakan" title="3. Kelayakan Merchant dan Pendaftaran Akun">
+              <Section id="kelayakan" title="3. Kelayakan Merchant, Pendaftaran, dan Pernyataan Jaminan">
                 <h3>3.1 Persyaratan Kelayakan</h3>
                 <p>Untuk mendaftar dan menggunakan Layanan, Anda harus:</p>
                 <ul>
@@ -196,6 +196,34 @@ export default function TermsOfServiceIndonesiaPage() {
                 <h3>3.4 Keakuratan Informasi</h3>
                 <p>
                   Anda menyatakan dan menjamin bahwa seluruh informasi yang Anda berikan saat pendaftaran dan selama penggunaan Layanan adalah akurat, lengkap, dan tidak menyesatkan. Anda setuju untuk segera memperbarui informasi akun apabila terjadi perubahan material. Kami berhak menangguhkan atau mengakhiri akses apabila kami menentukan bahwa informasi yang diberikan tidak akurat atau telah menjadi tidak akurat secara material.
+                </p>
+                <h3>3.5 Pernyataan dan Jaminan Merchant</h3>
+                <p>Dengan menandatangani Perjanjian ini dan secara berkelanjutan selama masa berlakunya, Anda menyatakan dan menjamin kepada kami bahwa:</p>
+                <ul>
+                  <li><strong>Kewenangan dan kewajiban yang mengikat:</strong> Anda memiliki semua hak, kuasa, dan kewenangan yang diperlukan untuk melaksanakan Perjanjian ini dan menunaikan kewajiban Anda berdasarkannya. Perjanjian ini merupakan kewajiban yang sah, berlaku, dan mengikat yang dapat ditegakkan terhadap Anda sesuai dengan ketentuannya, serta tidak melanggar atau bertentangan dengan perjanjian lain yang mengikat Anda.</li>
+                  <li><strong>Kepatuhan regulasi dan perizinan:</strong> Anda telah mematuhi dan akan terus mematuhi semua hukum, aturan, dan peraturan yang berlaku di setiap yurisdiksi tempat Anda beroperasi. Anda telah memperoleh dan akan mempertahankan sepanjang masa berlakunya Perjanjian ini semua izin usaha, izin regulasi, dan otorisasi pemerintah yang diperlukan untuk menjalankan usaha inti Anda dan menggunakan Layanan.</li>
+                  <li><strong>Pemberitahuan perubahan usaha:</strong> Anda akan memberitahu kami secara tertulis dalam waktu lima (5) hari kerja apabila terjadi perubahan material pada jenis usaha, produk atau jasa utama yang ditawarkan, model bisnis, atau perubahan lain yang dapat memengaruhi penilaian risiko kami atas akun Anda. Kelalaian memberikan pemberitahuan tepat waktu menjadikan Anda sepenuhnya bertanggung jawab atas segala konsekuensi dan kerugian yang timbul dari perubahan tersebut.</li>
+                  <li><strong>Kekayaan intelektual:</strong> Anda memiliki hak dan kewenangan penuh untuk menjual atau mendistribusikan produk dan jasa yang menjadi alasan Anda menggunakan Layanan. Tidak ada produk atau jasa Anda yang melanggar hak kekayaan intelektual pihak ketiga mana pun, termasuk merek dagang, hak cipta, paten, atau rahasia dagang, dan tidak mengandung konten yang melanggar hukum atau peraturan yang berlaku.</li>
+                  <li><strong>Persetujuan dan pengungkapan pengguna akhir:</strong> Sebelum menyerahkan data pengguna akhir kepada kami atau kepada Mitra Eksekusi kami, Anda telah memberikan semua pengungkapan yang diperlukan kepada, dan memperoleh semua persetujuan yang diperlukan dari, setiap pengguna akhir terkait mengenai pengumpulan, penggunaan, dan pengungkapan data pribadi mereka, sesuai dengan hukum perlindungan data yang berlaku termasuk UU No. 27 Tahun 2022 tentang Perlindungan Data Pribadi (UU PDP) dan/atau peraturan privasi yang berlaku di setiap yurisdiksi tempat Anda beroperasi.</li>
+                  <li><strong>Anti-penyuapan dan anti-korupsi:</strong> Anda maupun afiliasi, pejabat, direktur, karyawan, agen, atau mitra Anda tidak pernah, dan tidak akan, menawarkan, menjanjikan, memberikan, atau mengotorisasi pembayaran, hadiah, atau hal lain yang bernilai, secara langsung maupun tidak langsung, kepada pejabat pemerintah atau otoritas publik mana pun dengan tujuan memengaruhi suatu tindakan atau keputusan resmi, atau memperoleh keuntungan yang tidak semestinya. Anda telah menjalankan dan akan terus menjalankan usaha Anda sesuai dengan semua peraturan perundangan anti-penyuapan dan anti-korupsi yang berlaku.</li>
+                  <li><strong>Kepatuhan APU/PPT:</strong> Operasional Anda telah atau akan selalu dilakukan sesuai dengan persyaratan pencatatan, pelaporan keuangan, dan undang-undang pemberantasan pencucian uang serta pendanaan terorisme yang berlaku di Indonesia, Singapura, dan seluruh yurisdiksi lain tempat Anda beroperasi atau bertransaksi. Tidak ada dakwaan, gugatan, atau persidangan yang sedang atau akan diajukan terhadap Anda yang berkaitan dengan pelanggaran undang-undang APU/PPT yang berlaku.</li>
+                  <li><strong>Sanksi sebagai pernyataan berkelanjutan:</strong> Anda tidak, dan tidak akan selama masa berlakunya Perjanjian ini, terdaftar di, dikendalikan oleh, atau bertindak untuk kepentingan orang, entitas, atau yurisdiksi yang dikenakan sanksi ekonomi komprehensif yang dikelola oleh Perserikatan Bangsa-Bangsa, OFAC (AS), Uni Eropa, UK OFSI, MAS (Singapura), OJK, PPATK (Indonesia), atau daftar negara berisiko tinggi FATF. Anda tidak tercantum, dan tidak akan tercantum, dalam daftar Specially Designated Nationals, Consolidated Sanctions List, atau daftar setara yang dikelola oleh otoritas-otoritas tersebut.</li>
+                  <li><strong>Larangan mengeksploitasi celah sistem:</strong> Anda tidak akan menggunakan Layanan untuk melakukan, memfasilitasi, atau memungkinkan tujuan yang melanggar hukum, curang, atau menipu, dan tidak akan mengeksploitasi kerentanan, celah, atau kelemahan sistem mana pun, baik milik kami maupun pihak ketiga, untuk memperoleh keuntungan yang tidak semestinya. Anda setuju untuk memberikan ganti rugi kepada kami atas seluruh klaim, biaya, pengeluaran, kerugian, dan kewajiban yang timbul dari tindakan tersebut.</li>
+                  <li><strong>Penggunaan yang sah:</strong> Penggunaan Layanan oleh Anda semata-mata untuk tujuan usaha dan transaksi yang sah dan sesuai dengan hukum yang berlaku serta Syarat dan Ketentuan ini.</li>
+                </ul>
+                <h3>3.6 Jaminan Terbatas Paymonei</h3>
+                <p>Kami menyatakan dan menjamin kepada Anda bahwa:</p>
+                <ul>
+                  <li>Kami telah mematuhi dan akan terus mematuhi semua hukum dan peraturan yang berlaku, serta telah memperoleh dan akan mempertahankan semua izin, lisensi, dan otorisasi pemerintah yang diperlukan untuk penyediaan Layanan.</li>
+                  <li>Layanan dan API yang diberikan berdasarkan Perjanjian ini akan secara material sesuai dengan spesifikasi yang tercantum dalam Dokumentasi yang berlaku, sebagaimana dapat diubah dari waktu ke waktu atas kebijakan kami sendiri.</li>
+                  <li>Paymonei tidak menyimpan, memproses, atau mentransmisikan data kartu pembayaran mentah (nomor kartu, CVV, atau tanggal kedaluwarsa). Seluruh pemrosesan kartu pembayaran dilakukan secara eksklusif oleh Mitra Eksekusi berlisensi kami, yang mempertahankan sertifikasi Standar Keamanan Data Industri Kartu Pembayaran (PCI-DSS) mereka sendiri dan tunduk pada aturan jaringan kartu berdasarkan kerangka regulasi mereka masing-masing. Paymonei sepenuhnya berada di luar lingkup PCI-DSS.</li>
+                  <li>Kami tidak akan menggunakan atau mengungkapkan data pribadi non-publik pengguna akhir Anda kecuali: (i) sebagaimana diperlukan secara wajar untuk menyediakan Layanan kepada Anda; (ii) untuk menyediakan layanan pemeriksaan penipuan dan risiko transaksi secara umum tanpa mengungkapkan informasi pengguna akhir yang dapat diidentifikasi secara pribadi; atau (iii) sebagaimana diuraikan, diizinkan, atau diwajibkan oleh Kebijakan Privasi kami atau hukum yang berlaku.</li>
+                </ul>
+                <p>
+                  <strong>Upaya pemulihan atas pelanggaran jaminan.</strong> Apabila bagian mana pun dari Layanan secara material tidak sesuai dengan jaminan dalam klausul 3.6 di atas, dan Anda melaporkan ketidaksesuaian tersebut kepada kami, kami akan, atas kebijakan kami sendiri: (i) menggunakan upaya komersial yang wajar untuk memperbaiki ketidaksesuaian tanpa biaya tambahan kepada Anda; atau (ii) mengembalikan biaya yang telah Anda bayarkan untuk Layanan yang tidak sesuai dalam sembilan puluh (90) hari sebelum tanggal Anda melaporkan ketidaksesuaian tersebut. Upaya pemulihan yang diatur dalam klausul ini merupakan satu-satunya upaya pemulihan Anda dan seluruh tanggung jawab kami sehubungan dengan pelanggaran jaminan dalam klausul 3.6.
+                </p>
+                <p>
+                  <strong>Pengecualian jaminan.</strong> Jaminan dalam klausul 3.6 dan upaya pemulihan di atas tidak berlaku apabila: (i) Layanan digunakan secara menyimpang secara material dari Perjanjian ini, Syarat dan Ketentuan ini, atau Dokumentasi yang berlaku; (ii) bagian mana pun dari Layanan telah dimodifikasi tanpa persetujuan tertulis kami sebelumnya; atau (iii) cacat pada Layanan disebabkan oleh kerusakan peralatan Anda sendiri, perangkat lunak pihak ketiga, atau layanan pihak ketiga yang tidak disediakan oleh kami.
                 </p>
               </Section>
 
