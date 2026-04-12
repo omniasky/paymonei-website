@@ -370,7 +370,7 @@ export default function TermsOfServicePage() {
                 </ul>
                 <h3>10.3 Aggregate Liability Cap</h3>
                 <p>
-                  Our aggregate liability to you arising out of or in connection with this Agreement, from any cause whatsoever and regardless of the form of action, will at all times be limited to the greater of: (a) the total platform subscription Fees paid by you to Omniasky in the three (3) months immediately preceding the event giving rise to the claim; or (b) SGD two thousand (SGD 2,000).
+                  Our aggregate liability to you arising out of or in connection with this Agreement, from any cause whatsoever and regardless of the form of action, will at all times be limited to the total platform subscription Fees paid by you to Omniasky in the three (3) months immediately preceding the event giving rise to the claim.
                 </p>
                 <h3>10.4 Recovery</h3>
                 <p>

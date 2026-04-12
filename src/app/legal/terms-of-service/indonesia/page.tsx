@@ -370,7 +370,7 @@ export default function TermsOfServiceIndonesiaPage() {
                 </ul>
                 <h3>10.3 Batas Tanggung Gugat Agregat</h3>
                 <p>
-                  Tanggung gugat agregat kami kepada Anda yang timbul dari atau sehubungan dengan Perjanjian ini, dari sebab apa pun dan terlepas dari bentuk tindakannya, senantiasa dibatasi pada jumlah yang lebih besar dari: (a) total Biaya berlangganan platform yang telah Anda bayarkan kepada PT Evora dalam tiga (3) bulan sebelum kejadian yang menimbulkan klaim; atau (b) IDR tiga puluh juta (IDR 30.000.000).
+                  Tanggung gugat agregat kami kepada Anda yang timbul dari atau sehubungan dengan Perjanjian ini, dari sebab apa pun dan terlepas dari bentuk tindakannya, senantiasa dibatasi pada total Biaya berlangganan platform yang telah Anda bayarkan kepada PT Evora dalam tiga (3) bulan sebelum kejadian yang menimbulkan klaim.
                 </p>
                 <h3>10.4 Mekanisme Pemulihan</h3>
                 <p>
