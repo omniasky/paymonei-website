@@ -70,15 +70,20 @@ const plans = [
       { label: "Software service fee", value: "0% up to $10K / month" },
       { label: "Above $10K / month", value: "1.5% software fee" },
       { label: "Invoices", value: "Unlimited" },
+      { label: "Entities", value: "1" },
       { label: "API access", value: "Full" },
     ],
     includes: [
-      "Unlimited invoice creation & PDF export",
+      "Unlimited invoices & PDF export",
       "Unlimited payment links",
       "Hosted payment page per invoice",
-      "Basic AR dashboard (current month)",
-      "Wallet connect (1 wallet)",
-      "Community support",
+      "Multi-currency invoicing",
+      "Subscription & recurring billing",
+      "Dunning & payment retry (standard)",
+      "Customer self-serve portal",
+      "Stablecoin payment acceptance",
+      "AR dashboard (current month)",
+      "Email ticket support",
     ],
   },
   {
@@ -100,13 +105,10 @@ const plans = [
     ],
     includes: [
       "Everything in Starter",
-      "Subscription & recurring billing",
-      "Customer self-serve portal",
-      "Dunning & payment retry automation",
-      "Multi-currency invoicing",
+      "Up to 3 entities",
+      "6 months AR & revenue analytics",
       "Webhook management",
-      "6 months analytics history",
-      "Priority email support",
+      "Priority email ticket support",
     ],
   },
   {
@@ -128,10 +130,11 @@ const plans = [
     ],
     includes: [
       "Everything in Core",
-      "Advanced analytics (24 months history)",
-      "Xero & QuickBooks integration",
-      "Configurable dunning schedule per subscription",
-      "Dedicated onboarding call",
+      "Up to 10 entities",
+      "Advanced analytics (24 months)",
+      "Configurable dunning per subscription",
+      "Accounting (coming soon)",
+      "Account manager",
     ],
   },
   {
@@ -170,7 +173,7 @@ const faqs = [
   },
   {
     q: "Why is the Starter plan free up to $10K / month?",
-    a: "We want businesses to build real invoice history and verify that Paymonei fits their workflow before committing to a paid plan. The $10K threshold covers the vast majority of early-stage businesses. Most grow into the Core plan naturally once subscription billing or multi-currency invoicing becomes a priority.",
+    a: "We want businesses to build real invoice history and verify that Paymonei fits their workflow before committing to a paid plan. The $10K threshold covers the vast majority of early-stage businesses. Most grow into the Core plan naturally once they need multiple entities or deeper analytics.",
   },
   {
     q: "Is there a setup fee or contract?",
@@ -178,7 +181,7 @@ const faqs = [
   },
   {
     q: "What is the difference between Core ($59) and Growth ($249)?",
-    a: "Core unlocks subscription billing, customer portal, dunning automation, webhook management, and multi-currency invoicing. Growth adds 24-month analytics history, Xero/QuickBooks accounting integrations, 10 entities, and a dedicated onboarding call.",
+    a: "Core adds up to 3 entities, 6 months of AR analytics, and webhook management on top of the free Starter features. Growth scales to 10 entities, 24 months of analytics, configurable dunning per subscription, an account manager, and access to our built-in accounting tools when available.",
   },
   {
     q: "Do you handle the actual payment processing?",
@@ -186,7 +189,7 @@ const faqs = [
   },
   {
     q: "What currencies and geographies are supported?",
-    a: "Our software supports multi-currency invoice creation (USD, USDC, USDT, SGD, IDR, EUR) and payment link generation across 150+ countries. Supported settlement currencies and local payment methods depend on the underlying licensed infrastructure partners active in your region.",
+    a: "Our software supports multi-currency invoice creation and payment link generation across 150+ countries. Supported settlement currencies and local payment methods depend on the underlying licensed infrastructure partners active in your region.",
   },
   {
     q: "Can I accept stablecoin payments (USDC / USDT)?",
@@ -261,28 +264,28 @@ const comparison: ComparisonRow[] = [
   },
   {
     feature: "Multi-currency invoicing",
-    tooltip: "Invoice clients in USD, EUR, SGD, IDR, or USDC from the same account.",
-    starter: false, core: true, growth: true, enterprise: true,
+    tooltip: "Invoice clients in multiple currencies from the same account.",
+    starter: true, core: true, growth: true, enterprise: true,
   },
   {
     feature: "Subscription & recurring billing",
     tooltip: "Set up billing plans. Invoices go out automatically on your schedule.",
-    starter: false, core: true, growth: true, enterprise: true,
+    starter: true, core: true, growth: true, enterprise: true,
   },
   {
     feature: "Dunning & payment retry",
     tooltip: "Auto-retry failed payments and send reminders so you get paid without chasing.",
-    starter: false, core: "Standard", growth: "Configurable", enterprise: "Configurable",
+    starter: "Standard", core: "Standard", growth: "Configurable", enterprise: "Configurable",
   },
   {
     feature: "Customer self-serve portal",
     tooltip: "Your clients can view invoices and check payment status without contacting you.",
-    starter: false, core: true, growth: true, enterprise: true,
+    starter: true, core: true, growth: true, enterprise: true,
   },
   {
-    feature: "Accounting software integration",
-    tooltip: "Paid invoices sync to your accounting tool automatically. No manual entry.",
-    starter: false, core: false, growth: true, enterprise: true,
+    feature: "Accounting",
+    tooltip: "Built-in accounting and automated bookkeeping. Coming soon.",
+    starter: "Coming soon", core: "Coming soon", growth: "Coming soon", enterprise: "Coming soon",
   },
   {
     feature: "Working capital referral eligibility",
@@ -295,9 +298,9 @@ const comparison: ComparisonRow[] = [
     starter: false, core: false, growth: false, enterprise: true,
   },
   {
-    feature: "Dedicated account manager",
+    feature: "Account manager",
     tooltip: "A named person at Paymonei who handles your account and escalations.",
-    starter: false, core: false, growth: false, enterprise: true,
+    starter: false, core: false, growth: true, enterprise: true,
   },
   {
     feature: "Custom SLA & DPA",
@@ -306,8 +309,8 @@ const comparison: ComparisonRow[] = [
   },
   {
     feature: "Support",
-    tooltip: "Community docs on Starter. Priority email on Core. Onboarding call on Growth. 24/7 Slack and phone on Enterprise.",
-    starter: "Community", core: "Email", growth: "Email + onboarding call", enterprise: "24/7 Slack & phone",
+    tooltip: "Email ticket on Starter. Priority email ticket on Core. Email and account manager on Growth. Dedicated account manager on Enterprise.",
+    starter: "Email ticket", core: "Priority email ticket", growth: "Email + account manager", enterprise: "Dedicated account manager",
   },
 ];
 
@@ -323,10 +326,19 @@ function Dash() {
   return <span className="text-[#DDD] text-sm">&ndash;</span>;
 }
 
+function ComingSoon() {
+  return (
+    <span className="inline-flex items-center rounded-full bg-[#F5F0FF] px-2 py-0.5 text-[10px] font-medium tracking-wide text-[#7C3AED]">
+      Soon
+    </span>
+  );
+}
+
 function Cell({ value }: { value: boolean | string | undefined }) {
   if (value === undefined) return <div className="flex justify-center"><Dash /></div>;
   if (value === true) return <div className="flex justify-center"><Check /></div>;
   if (value === false) return <div className="flex justify-center"><Dash /></div>;
+  if (value === "Coming soon") return <div className="flex justify-center"><ComingSoon /></div>;
   return <span className="text-[14px] text-[#555]">{value}</span>;
 }
 
