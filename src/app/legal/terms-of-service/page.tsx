@@ -35,6 +35,7 @@ const toc = [
   { id: "governing-law", label: "13. Governing Law & Disputes" },
   { id: "general", label: "14. General Provisions" },
   { id: "contact", label: "15. Contact" },
+  { id: "esign-consent", label: "16. Electronic Communications Consent" },
 ];
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
@@ -678,6 +679,40 @@ export default function TermsOfServicePage() {
                 </div>
                 <p className="text-[14px] text-[#777] mt-6 font-light">
                   These Terms are published by Omniasky Technology Pte Ltd, the intellectual property owner and international contracting entity of the Paymonei platform, incorporated in Singapore. Technology development and platform operations in Indonesia are delivered by our affiliated entity PT Evora Vera Teknologi, incorporated in Indonesia, under an intercompany technology licence agreement.
+                </p>
+              </Section>
+              {/* ── Block 16: Electronic Communications Consent ── */}
+              <Section id="esign-consent" title="16. Electronic Communications Consent">
+                <p>
+                  In this Section, &ldquo;Communications&rdquo; means all agreements, terms of service, policy updates, fee schedules, privacy notices, legal notices, account statements, invoices, and other information we provide to you, or that you submit or agree to, in connection with your use of the Services.
+                </p>
+                <h3>16.1 Consent to Electronic Communications</h3>
+                <p>
+                  By creating a Paymonei account and accepting these Terms, you expressly agree to receive all Communications from us in electronic form, including by email to your registered address, through your account dashboard, or by posting on our website. You acknowledge that electronic Communications satisfy any legal requirement that such Communications be in writing, to the extent permitted by the Electronic Transactions Act (Cap. 88) of Singapore and the applicable electronic transactions or information technology laws of your jurisdiction.
+                </p>
+                <h3>16.2 Your Contact Information Obligations</h3>
+                <p>
+                  You are responsible for maintaining a valid, current, and accessible email address and contact information associated with your account at all times. You must ensure that Communications sent to your registered email address are not filtered or blocked by your systems, email providers, or network configurations. We are not liable for any failure to receive or act on Communications where you have not maintained current contact information or where Communications have been blocked or filtered by your systems or service providers.
+                </p>
+                <h3>16.3 Updating Your Contact Information</h3>
+                <p>
+                  You must promptly update your registered email address and contact information through your account settings or by notifying us at <Link href="mailto:legal@paymonei.com">legal@paymonei.com</Link> if your contact details change. We will not be responsible for missed or undelivered Communications resulting from outdated or inaccurate contact information.
+                </p>
+                <h3>16.4 Withdrawal of Consent</h3>
+                <p>
+                  You may withdraw your consent to receive electronic Communications at any time by providing written notice to <Link href="mailto:legal@paymonei.com">legal@paymonei.com</Link>. Withdrawal of consent will be effective after a reasonable processing period. Because electronic delivery of Communications is integral to the operation of the platform, we reserve the right to restrict or terminate your access to the Services upon withdrawal of this consent. Withdrawal of consent does not affect the validity or legality of any Communications delivered electronically prior to the withdrawal taking effect.
+                </p>
+                <h3>16.5 System Requirements</h3>
+                <p>
+                  To receive, access, and retain electronic Communications, you require: (a) a computer or mobile device with internet access; (b) a current web browser (Chrome 109 or higher, Firefox 115 or higher, Safari 15 or higher, or Edge 126 or higher, or equivalent); (c) a valid, active email address; and (d) software capable of opening and reading PDF documents. By accepting these Terms, you confirm that your systems meet these requirements. We may update these requirements periodically and will notify you of any material changes.
+                </p>
+                <h3>16.6 Paper Copies</h3>
+                <p>
+                  Upon written request to <Link href="mailto:legal@paymonei.com">legal@paymonei.com</Link>, we may at our discretion provide certain Communications in paper form. We do not undertake to routinely provide paper copies of all Communications. You may also print or download any electronic Communication directly from your account dashboard or from our website at your own convenience.
+                </p>
+                <h3>16.7 Changes to Electronic Communications Terms</h3>
+                <p>
+                  We reserve the right to modify the terms of this Section 16 from time to time. We will provide notice of material changes in accordance with Section 14.2 of these Terms. Your continued use of the Services after the effective date of any such change constitutes your acceptance of the revised electronic communications terms.
                 </p>
               </Section>
 

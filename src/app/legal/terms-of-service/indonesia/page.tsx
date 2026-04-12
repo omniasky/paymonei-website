@@ -35,6 +35,7 @@ const toc = [
   { id: "hukum-berlaku", label: "13. Hukum yang Berlaku dan Penyelesaian Sengketa" },
   { id: "ketentuan-umum", label: "14. Ketentuan Umum" },
   { id: "kontak", label: "15. Kontak" },
+  { id: "persetujuan-elektronik", label: "16. Persetujuan Komunikasi Elektronik" },
 ];
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
@@ -678,6 +679,40 @@ export default function TermsOfServiceIndonesiaPage() {
                 </div>
                 <p className="text-[14px] text-[#777] mt-6 font-light">
                   Syarat dan Ketentuan ini diterbitkan oleh PT Evora Vera Teknologi, perseroan terbatas yang didirikan di Indonesia, selaku mitra teknologi dan operasional resmi Paymonei di Indonesia. Teknologi platform Paymonei dimiliki oleh Omniasky Technology Pte Ltd, terdaftar di Singapura.
+                </p>
+              </Section>
+              {/* ── Bagian 16: Persetujuan Komunikasi Elektronik ── */}
+              <Section id="persetujuan-elektronik" title="16. Persetujuan Komunikasi Elektronik">
+                <p>
+                  Dalam Bagian ini, &ldquo;Komunikasi&rdquo; berarti seluruh perjanjian, syarat dan ketentuan, pembaruan kebijakan, jadwal biaya, pemberitahuan privasi, pemberitahuan hukum, laporan akun, faktur, dan informasi lainnya yang kami berikan kepada Anda, atau yang Anda ajukan atau setujui, sehubungan dengan penggunaan Layanan Anda.
+                </p>
+                <h3>16.1 Persetujuan terhadap Komunikasi Elektronik</h3>
+                <p>
+                  Dengan membuat akun Paymonei dan menerima Syarat ini, Anda secara tegas menyetujui untuk menerima seluruh Komunikasi dari kami dalam bentuk elektronik, termasuk melalui email ke alamat terdaftar Anda, melalui dasbor akun Anda, atau melalui pemberitahuan di situs web kami. Anda mengakui bahwa Komunikasi elektronik memenuhi persyaratan hukum apa pun bahwa Komunikasi tersebut harus dilakukan secara tertulis, sejauh yang diizinkan oleh Undang-Undang Nomor 11 Tahun 2008 tentang Informasi dan Transaksi Elektronik (UU ITE) sebagaimana telah diubah dengan Undang-Undang Nomor 19 Tahun 2016, dan hukum transaksi elektronik yang berlaku di yurisdiksi Anda.
+                </p>
+                <h3>16.2 Kewajiban Informasi Kontak Anda</h3>
+                <p>
+                  Anda bertanggung jawab untuk selalu mempertahankan alamat email dan informasi kontak yang valid, terkini, dan dapat diakses yang terkait dengan akun Anda. Anda harus memastikan bahwa Komunikasi yang dikirim ke alamat email terdaftar Anda tidak disaring atau diblokir oleh sistem, penyedia email, atau konfigurasi jaringan Anda. Kami tidak bertanggung jawab atas kegagalan menerima atau menindaklanjuti Komunikasi apabila Anda tidak mempertahankan informasi kontak yang terkini atau apabila Komunikasi telah diblokir atau disaring oleh sistem atau penyedia layanan Anda.
+                </p>
+                <h3>16.3 Pembaruan Informasi Kontak Anda</h3>
+                <p>
+                  Anda wajib segera memperbarui alamat email terdaftar dan informasi kontak Anda melalui pengaturan akun Anda atau dengan memberitahu kami di <Link href="mailto:legal@paymonei.com">legal@paymonei.com</Link> apabila data kontak Anda berubah. Kami tidak bertanggung jawab atas Komunikasi yang terlewat atau tidak tersampaikan akibat informasi kontak yang usang atau tidak akurat.
+                </p>
+                <h3>16.4 Penarikan Persetujuan</h3>
+                <p>
+                  Anda dapat menarik persetujuan Anda untuk menerima Komunikasi elektronik kapan saja dengan memberikan pemberitahuan tertulis kepada <Link href="mailto:legal@paymonei.com">legal@paymonei.com</Link>. Penarikan persetujuan akan berlaku setelah periode pemrosesan yang wajar. Karena pengiriman Komunikasi secara elektronik merupakan bagian integral dari operasional platform, kami berhak membatasi atau mengakhiri akses Anda ke Layanan atas penarikan persetujuan ini. Penarikan persetujuan tidak memengaruhi keabsahan atau legalitas Komunikasi yang telah disampaikan secara elektronik sebelum penarikan tersebut berlaku.
+                </p>
+                <h3>16.5 Persyaratan Sistem</h3>
+                <p>
+                  Untuk menerima, mengakses, dan menyimpan Komunikasi elektronik, Anda memerlukan: (a) komputer atau perangkat mobile dengan akses internet; (b) browser web terkini (Chrome versi 109 atau lebih tinggi, Firefox versi 115 atau lebih tinggi, Safari versi 15 atau lebih tinggi, atau Edge versi 126 atau lebih tinggi, atau yang setara); (c) alamat email yang valid dan aktif; dan (d) perangkat lunak yang mampu membuka dan membaca dokumen PDF. Dengan menerima Syarat ini, Anda mengonfirmasi bahwa sistem Anda memenuhi persyaratan ini. Kami dapat memperbarui persyaratan ini secara berkala dan akan memberitahu Anda mengenai perubahan yang material.
+                </p>
+                <h3>16.6 Salinan Dokumen Fisik</h3>
+                <p>
+                  Atas permintaan tertulis kepada <Link href="mailto:legal@paymonei.com">legal@paymonei.com</Link>, kami dapat atas kebijakan kami menyediakan Komunikasi tertentu dalam bentuk fisik. Kami tidak berkewajiban untuk secara rutin menyediakan salinan fisik dari seluruh Komunikasi. Anda juga dapat mencetak atau mengunduh Komunikasi elektronik apa pun langsung dari dasbor akun Anda atau dari situs web kami sesuai kebutuhan.
+                </p>
+                <h3>16.7 Perubahan pada Ketentuan Komunikasi Elektronik</h3>
+                <p>
+                  Kami berhak mengubah ketentuan Bagian 16 ini dari waktu ke waktu. Kami akan memberikan pemberitahuan atas perubahan material sesuai dengan Bagian 14.2 Syarat ini. Penggunaan Layanan Anda yang berkelanjutan setelah tanggal efektif perubahan tersebut merupakan penerimaan Anda atas ketentuan komunikasi elektronik yang telah direvisi.
                 </p>
               </Section>
 
