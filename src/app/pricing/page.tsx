@@ -159,7 +159,7 @@ const faqs = [
   },
   {
     q: "What currencies and geographies are supported?",
-    a: "Paymonei supports multi-currency invoice creation and payment link generation across 150+ countries. Available settlement currencies and local payment methods depend on the payment infrastructure active in your region.\n\nPaymonei does not provide services to individuals, entities, or jurisdictions subject to applicable sanctions programmes, including those maintained by OFAC (US), UN Security Council, EU, or equivalent authorities. Use of Paymonei in sanctioned jurisdictions is prohibited.",
+    a: "Paymonei supports multi-currency invoice creation and payment link generation across 150+ countries. \n\nPaymonei does not provide services to jurisdictions subject to applicable sanctions programmes, including those maintained by OFAC (US), UN Security Council, EU, or equivalent authorities. Use of Paymonei in sanctioned jurisdictions is prohibited.",
   },
   {
     q: "Can I accept stablecoin payments (USDC / USDT)?",
