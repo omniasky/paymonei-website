@@ -158,38 +158,38 @@ export default function HomePage() {
 
             {/* Bento grid */}
             <div className="grid lg:grid-cols-12 gap-3">
-              {/* Merchant Collections */}
+              {/* Global Invoicing */}
               <div className="lg:col-span-6">
-                <div className="group overflow-hidden rounded-2xl border border-[#EAEAE6] bg-[#FAFAF8] hover:border-[#D5D5D0] transition-colors duration-200">
-                  <div className="h-56 lg:h-72 relative p-4">
+                <div className="group flex flex-col h-full overflow-hidden rounded-2xl border border-[#EAEAE6] bg-[#FAFAF8] hover:border-[#D5D5D0] transition-colors duration-200">
+                  <div className="h-56 lg:h-72 relative p-4 shrink-0">
                     <Image
                       src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/merchant-settlement.png"
-                      alt="Merchant Collections"
+                      alt="Global Invoicing"
                       fill
                       className="object-contain"
                     />
                   </div>
-                  <div className="px-6 py-5 border-t border-[#EAEAE6]">
-                    <h3 className="text-[15px] font-medium text-[#0C0C0C]">Merchant Collections</h3>
-                    <p className="mt-1 text-[15px] text-[#777] leading-relaxed font-light">Create invoices and payment links globally. Track collection status in real time.</p>
+                  <div className="px-6 py-5 border-t border-[#EAEAE6] flex-1">
+                    <h3 className="text-[15px] font-medium text-[#0C0C0C]">Global Invoicing</h3>
+                    <p className="mt-1 text-[15px] text-[#777] leading-relaxed font-light">Issue invoices universally. Track your entire Accounts Receivable aging and status in real time.</p>
                   </div>
                 </div>
               </div>
 
-              {/* Business Disbursements */}
+              {/* Accounts Payable */}
               <div className="lg:col-span-6">
-                <div className="group overflow-hidden rounded-2xl border border-[#EAEAE6] bg-[#FAFAF8] hover:border-[#D5D5D0] transition-colors duration-200">
-                  <div className="h-56 lg:h-72 relative p-4">
+                <div className="group flex flex-col h-full overflow-hidden rounded-2xl border border-[#EAEAE6] bg-[#FAFAF8] hover:border-[#D5D5D0] transition-colors duration-200">
+                  <div className="h-56 lg:h-72 relative p-4 shrink-0">
                     <Image
                       src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/enterprise-payouts.png"
-                      alt="Business Payouts"
+                      alt="Accounts Payable"
                       fill
                       className="object-contain"
                     />
                   </div>
-                  <div className="px-6 py-5 border-t border-[#EAEAE6]">
-                    <h3 className="text-[15px] font-medium text-[#0C0C0C]">Business Payouts</h3>
-                    <p className="mt-1 text-[15px] text-[#777] leading-relaxed font-light">Manage and track outbound payment batches to vendors and suppliers worldwide.</p>
+                  <div className="px-6 py-5 border-t border-[#EAEAE6] flex-1">
+                    <h3 className="text-[15px] font-medium text-[#0C0C0C]">Accounts Payable</h3>
+                    <p className="mt-1 text-[15px] text-[#777] leading-relaxed font-light">Manage and track outbound vendor billing batches to suppliers worldwide.</p>
                   </div>
                 </div>
               </div>
@@ -202,7 +202,7 @@ export default function HomePage() {
                   </div>
                   <div className="px-5 py-4 border-t border-[#EAEAE6] flex-1">
                     <h3 className="text-[15px] font-medium text-[#0C0C0C]">Workforce Coordination</h3>
-                    <p className="mt-1 text-[15px] text-[#777] leading-relaxed font-light">Coordinate contractor and team payments across 150+ countries from one dashboard.</p>
+                    <p className="mt-1 text-[15px] text-[#777] leading-relaxed font-light">Coordinate contractor invoicing and approval cycles across multiple regions from one dashboard.</p>
                   </div>
                 </div>
               </div>
@@ -215,20 +215,20 @@ export default function HomePage() {
                   </div>
                   <div className="px-5 py-4 border-t border-[#EAEAE6] flex-1">
                     <h3 className="text-[15px] font-medium text-[#0C0C0C]">Smart Invoice</h3>
-                    <p className="mt-1 text-[15px] text-[#777] leading-relaxed font-light">Automated invoicing with multi-currency support and PDF export.</p>
+                    <p className="mt-1 text-[15px] text-[#777] leading-relaxed font-light">Automated invoicing software featuring localized language, multi-currency presentation, and seamless PDF exports.</p>
                   </div>
                 </div>
               </div>
 
-              {/* Multi-rail Billing */}
+              {/* Adaptable Statements */}
               <div className="lg:col-span-4">
                 <div className="group flex flex-col overflow-hidden rounded-2xl border border-[#EAEAE6] bg-[#FAFAF8] hover:border-[#D5D5D0] transition-colors duration-200 h-full">
                   <div className="h-44 relative shrink-0 p-4">
-                    <Image src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/stablecoin-orchestration.png" alt="Multi-rail Billing" fill className="object-contain" />
+                    <Image src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/stablecoin-orchestration.png" alt="Adaptable Statements" fill className="object-contain" />
                   </div>
                   <div className="px-5 py-4 border-t border-[#EAEAE6] flex-1">
-                    <h3 className="text-[15px] font-medium text-[#0C0C0C]">Multi-rail Billing</h3>
-                    <p className="mt-1 text-[15px] text-[#777] leading-relaxed font-light">Support card, local payment methods, and stablecoin on the same invoice. Let clients choose.</p>
+                    <h3 className="text-[15px] font-medium text-[#0C0C0C]">Adaptable Statements</h3>
+                    <p className="mt-1 text-[15px] text-[#777] leading-relaxed font-light">Present statements instantly with localized tax handling, custom metadata, and unified client ledgers.</p>
                   </div>
                 </div>
               </div>
