@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Invoicing Software — Automated Billing | Paymonei",
+  title: "Invoicing Software | Automated Billing | Paymonei",
   description:
     "Generate, send, and reconcile professional invoices instantly. Intuitive billing software designed to accelerate your operational workflow.",
   keywords: [
@@ -23,10 +23,14 @@ export const metadata: Metadata = {
     "invoice generator",
     "smart invoices",
     "multi-currency invoices",
-    "business billing platform",
+    "enterprise billing platform",
+    "accounts receivable software",
+    "global AR automation",
+    "API-driven invoicing",
+    "vendor billing platform",
   ],
   openGraph: {
-    title: "Invoicing Software — Automated Billing | Paymonei",
+    title: "Invoicing Software | Automated Billing | Paymonei",
     description:
       "Generate, send, and reconcile professional invoices instantly. Intuitive billing software designed to accelerate your operational workflow.",
     url: "https://paymonei.com/billing/invoicing",
@@ -43,11 +47,12 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Invoicing Software — Automated Billing | Paymonei",
+    title: "Invoicing Software | Automated Billing | Paymonei",
     description:
       "Generate, send, and reconcile professional invoices instantly. Intuitive billing software designed to accelerate your operational workflow.",
     images: ["https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/og-image.png"],
   },
+  alternates: { canonical: "https://paymonei.com/billing/invoicing" },
 };
 
 export default function InvoicingPage() {
@@ -79,7 +84,7 @@ export default function InvoicingPage() {
                 <span className="italic text-[#666]">Built for speed.</span>
               </h1>
               <p className="text-[16px] text-[#666] leading-relaxed font-light mb-10">
-                Generate, dispatch, and track professional invoices in seconds. Our billing engine handles the operational workflow, while integrated payment buttons smoothly route customers to our licensed execution partners.
+                Generate, dispatch, and track professional invoices in seconds. Our billing engine handles the operational workflow, while smart checkout links automatically reconcile your accounts receivable upon settlement.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto">
