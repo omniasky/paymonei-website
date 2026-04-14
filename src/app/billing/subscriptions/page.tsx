@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Subscription Management Software — Recurring Billing | Paymonei",
+  title: "Subscription Management Software | Recurring Billing | Paymonei",
   description:
     "Orchestrate complex recurring operations seamlessly. Flexible subscription management software with native dunning and proration logic.",
   keywords: [
@@ -24,9 +24,13 @@ export const metadata: Metadata = {
     "subscription engine",
     "proration software",
     "SaaS billing",
+    "enterprise subscription management",
+    "automated recurring billing",
+    "B2B subscription software",
+    "subscription billing API",
   ],
   openGraph: {
-    title: "Subscription Management Software — Recurring Billing | Paymonei",
+    title: "Subscription Management Software | Recurring Billing | Paymonei",
     description:
       "Orchestrate complex recurring operations seamlessly. Flexible subscription management software with native dunning and proration logic.",
     url: "https://paymonei.com/billing/subscriptions",
@@ -43,11 +47,12 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Subscription Management Software — Recurring Billing | Paymonei",
+    title: "Subscription Management Software | Recurring Billing | Paymonei",
     description:
       "Orchestrate complex recurring operations seamlessly. Flexible subscription management software with native dunning and proration logic.",
     images: ["https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/og-image.png"],
   },
+  alternates: { canonical: "https://paymonei.com/billing/subscriptions" },
 };
 
 export default function SubscriptionsPage() {
@@ -79,7 +84,7 @@ export default function SubscriptionsPage() {
                 <span className="italic text-[#666]">Engineered for scale.</span>
               </h1>
               <p className="text-[16px] text-[#666] leading-relaxed font-light mb-10">
-                Configure flexible, dynamic subscription models without heavy engineering. We handle the complex orchestration—from proration to dunning—while securely delegating the actual transaction execution to our licensed networks.
+                Configure flexible, dynamic subscription models without heavy engineering. We handle the complex orchestration from proration to dunning, while smart webhooks securely sync the final calculations to your internal ledgers.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto">
@@ -115,7 +120,7 @@ export default function SubscriptionsPage() {
                       <p className="text-[11px] uppercase tracking-wider text-[#999] mb-3 font-medium">Current Plan</p>
                       <div className="flex items-center justify-between border border-[#EAEAE6] bg-white rounded-md p-4">
                         <div>
-                          <p className="text-[14px] font-medium text-[#0C0C0C]">Pro Tier — Annual</p>
+                          <p className="text-[14px] font-medium text-[#0C0C0C]">Pro Tier | Annual</p>
                           <p className="text-[12px] text-[#777] mt-0.5">Renews Oct 12, 2026</p>
                         </div>
                         <div className="text-right">
