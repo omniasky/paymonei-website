@@ -25,8 +25,8 @@ const slides = [
   {
     id: "expansion",
     tag: "03",
-    headline: "Every new market restart your localization roadmap.",
-    body: "Multi-currency pricing, local bank formats, country-specific tax rules, and regional payment methods — launch in three countries and you've re-built your billing infrastructure three times.",
+    headline: "Every new market restarts your localization roadmap.",
+    body: "Multi-currency pricing, local bank formats, country-specific tax rules, and regional payment methods. Launch in three countries and you have re-built your billing layer three times.",
     note: "New market entry cost without a unified billing layer",
   },
 ];

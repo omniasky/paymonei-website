@@ -201,77 +201,77 @@ export default function HomePage() {
 
             {/* Bento grid */}
             <div className="grid lg:grid-cols-12 gap-3">
-              {/* Merchant Settlement — wide */}
+              {/* Merchant Collections */}
               <div className="lg:col-span-6">
                 <div className="group overflow-hidden rounded-2xl border border-[#EAEAE6] bg-[#FAFAF8] hover:border-[#D5D5D0] transition-colors duration-200">
                   <div className="h-56 lg:h-72 relative">
                     <Image
                       src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/merchant-settlement.png"
-                      alt="Merchant Settlement"
+                      alt="Merchant Collections"
                       fill
-                      className="object-cover"
+                      className="object-cover object-top"
                     />
                   </div>
                   <div className="px-6 py-5 border-t border-[#EAEAE6]">
                     <h3 className="text-[15px] font-medium text-[#0C0C0C]">Merchant Collections</h3>
-                    <p className="mt-1 text-sm text-[#888] leading-relaxed font-light">Create payment requests globally via links or API. Real-time status tracking.</p>
+                    <p className="mt-1 text-sm text-[#888] leading-relaxed font-light">Create invoices and payment links globally. Track collection status in real time.</p>
                   </div>
                 </div>
               </div>
 
-              {/* Enterprise Payouts — wide */}
+              {/* Business Disbursements */}
               <div className="lg:col-span-6">
                 <div className="group overflow-hidden rounded-2xl border border-[#EAEAE6] bg-[#FAFAF8] hover:border-[#D5D5D0] transition-colors duration-200">
                   <div className="h-56 lg:h-72 relative">
                     <Image
                       src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/enterprise-payouts.png"
-                      alt="Enterprise Payouts"
+                      alt="Business Disbursements"
                       fill
-                      className="object-cover"
+                      className="object-cover object-top"
                     />
                   </div>
                   <div className="px-6 py-5 border-t border-[#EAEAE6]">
-                    <h3 className="text-[15px] font-medium text-[#0C0C0C]">Enterprise Disbursements</h3>
-                    <p className="mt-1 text-sm text-[#888] leading-relaxed font-light">Manage and track mass payment batches to vendors and suppliers worldwide.</p>
+                    <h3 className="text-[15px] font-medium text-[#0C0C0C]">Business Disbursements</h3>
+                    <p className="mt-1 text-sm text-[#888] leading-relaxed font-light">Manage and track outbound payment batches to vendors and suppliers worldwide.</p>
                   </div>
                 </div>
               </div>
 
-              {/* Global Payroll */}
+              {/* Workforce Coordination */}
               <div className="lg:col-span-4">
-                <div className="group overflow-hidden rounded-2xl border border-[#EAEAE6] bg-[#FAFAF8] hover:border-[#D5D5D0] transition-colors duration-200">
-                  <div className="h-44 relative">
-                    <Image src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/global-payroll.png" alt="Global Payroll" fill className="object-cover" />
+                <div className="group flex flex-col overflow-hidden rounded-2xl border border-[#EAEAE6] bg-[#FAFAF8] hover:border-[#D5D5D0] transition-colors duration-200 h-full">
+                  <div className="h-44 relative shrink-0">
+                    <Image src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/global-payroll.png" alt="Workforce Coordination" fill className="object-cover object-top" />
                   </div>
-                  <div className="px-5 py-4 border-t border-[#EAEAE6]">
-                    <h3 className="text-[15px] font-medium text-[#0C0C0C]">Workforce Payments</h3>
-                    <p className="mt-1 text-sm text-[#888] leading-relaxed font-light">Disbursement coordination for contractors and teams across 150+ countries.</p>
+                  <div className="px-5 py-4 border-t border-[#EAEAE6] flex-1">
+                    <h3 className="text-[15px] font-medium text-[#0C0C0C]">Workforce Coordination</h3>
+                    <p className="mt-1 text-sm text-[#888] leading-relaxed font-light">Coordinate contractor and team payments across 150+ countries from one dashboard.</p>
                   </div>
                 </div>
               </div>
 
               {/* Smart Invoice */}
               <div className="lg:col-span-4">
-                <div className="group overflow-hidden rounded-2xl border border-[#EAEAE6] bg-[#FAFAF8] hover:border-[#D5D5D0] transition-colors duration-200">
-                  <div className="h-44 relative">
-                    <Image src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/invoice-payment.png" alt="Smart Invoice" fill className="object-cover" />
+                <div className="group flex flex-col overflow-hidden rounded-2xl border border-[#EAEAE6] bg-[#FAFAF8] hover:border-[#D5D5D0] transition-colors duration-200 h-full">
+                  <div className="h-44 relative shrink-0">
+                    <Image src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/invoice-payment.png" alt="Smart Invoice" fill className="object-cover object-top" />
                   </div>
-                  <div className="px-5 py-4 border-t border-[#EAEAE6]">
+                  <div className="px-5 py-4 border-t border-[#EAEAE6] flex-1">
                     <h3 className="text-[15px] font-medium text-[#0C0C0C]">Smart Invoice</h3>
-                    <p className="mt-1 text-sm text-[#888] leading-relaxed font-light">Automated invoicing with multi-currency support.</p>
+                    <p className="mt-1 text-sm text-[#888] leading-relaxed font-light">Automated invoicing with multi-currency support and PDF export.</p>
                   </div>
                 </div>
               </div>
 
-              {/* Orchestration */}
+              {/* Multi-rail Billing */}
               <div className="lg:col-span-4">
-                <div className="group overflow-hidden rounded-2xl border border-[#EAEAE6] bg-[#FAFAF8] hover:border-[#D5D5D0] transition-colors duration-200">
-                  <div className="h-44 relative">
-                    <Image src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/stablecoin-orchestration.png" alt="Orchestration" fill className="object-cover" />
+                <div className="group flex flex-col overflow-hidden rounded-2xl border border-[#EAEAE6] bg-[#FAFAF8] hover:border-[#D5D5D0] transition-colors duration-200 h-full">
+                  <div className="h-44 relative shrink-0">
+                    <Image src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/stablecoin-orchestration.png" alt="Multi-rail Billing" fill className="object-cover object-top" />
                   </div>
-                  <div className="px-5 py-4 border-t border-[#EAEAE6]">
-                    <h3 className="text-[15px] font-medium text-[#0C0C0C]">Payment Routing</h3>
-                    <p className="mt-1 text-sm text-[#888] leading-relaxed font-light">Smart routing across global payment infrastructure at scale.</p>
+                  <div className="px-5 py-4 border-t border-[#EAEAE6] flex-1">
+                    <h3 className="text-[15px] font-medium text-[#0C0C0C]">Multi-rail Billing</h3>
+                    <p className="mt-1 text-sm text-[#888] leading-relaxed font-light">Support card, bank transfer, and stablecoin on the same invoice. Let clients choose.</p>
                   </div>
                 </div>
               </div>
