@@ -4,7 +4,7 @@ import { Footer } from "@/components/organisms/Footer";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | Paymonei",
+  title: { absolute: "Terms of Service | Paymonei" },
   description:
     "Terms of Service governing access to and use of the Paymonei billing and payment orchestration software platform.",
   openGraph: {

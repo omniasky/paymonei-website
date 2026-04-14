@@ -4,7 +4,7 @@ import { Footer } from "@/components/organisms/Footer";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Cookie Policy | Paymonei",
+  title: { absolute: "Cookie Policy | Paymonei" },
   description:
     "How Paymonei uses cookies and similar tracking technologies on our platform and website — and how you can manage your preferences.",
   openGraph: {

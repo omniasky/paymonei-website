@@ -4,7 +4,7 @@ import { Footer } from "@/components/organisms/Footer";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Syarat dan Ketentuan | Paymonei",
+  title: { absolute: "Syarat dan Ketentuan | Paymonei" },
   description:
     "Syarat dan Ketentuan yang mengatur akses dan penggunaan platform perangkat lunak penagihan dan orkestrasi pembayaran Paymonei untuk merchant di Indonesia.",
   openGraph: {

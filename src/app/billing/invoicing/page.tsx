@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Invoicing Software | Automated Billing | Paymonei",
+  title: { absolute: "Invoicing Software | Automated Billing | Paymonei" },
   description:
     "Generate, send, and reconcile professional invoices instantly. Intuitive billing software designed to accelerate your operational workflow.",
   keywords: [

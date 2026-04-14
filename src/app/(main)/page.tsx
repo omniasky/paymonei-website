@@ -9,7 +9,7 @@ import { AnswerSection } from "@/components/organisms/AnswerSection";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Business Billing & AR Automation Software | Paymonei",
+  title: { absolute: "Business Billing & AR Automation Software | Paymonei" },
   description:
     "Paymonei is the billing and accounts receivable software for global businesses. Automate invoices, track AR aging, and organize vendor billing from one dashboard.",
   openGraph: {

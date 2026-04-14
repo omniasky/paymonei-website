@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Subscription Management Software | Recurring Billing | Paymonei",
+  title: { absolute: "Subscription Management Software | Recurring Billing | Paymonei" },
   description:
     "Orchestrate complex recurring operations seamlessly. Flexible subscription management software with native dunning and proration logic.",
   keywords: [

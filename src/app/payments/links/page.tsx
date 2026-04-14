@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Payment Links | Billing Operations Software | Paymonei",
+  title: { absolute: "Payment Links | Billing Operations Software | Paymonei" },
   description:
     "Generate secure payment request links in seconds. Accelerate accounts receivable with automated checkout workflows.",
   keywords: [

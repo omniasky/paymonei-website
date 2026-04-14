@@ -14,7 +14,7 @@ import {
 // This page uses "use client" for Radix tooltip interactivity.
 // Keeping the metadata object here as a reference for copy/paste into layout.
 const _metadataRef = {
-  title: "Pricing: Billing & Payment Operations Software | Paymonei",
+  title: { absolute: "Pricing: Billing & Payment Operations Software | Paymonei" },
   description:
     "Straightforward pricing for billing and payment workflow software. Start free, scale when ready. No hidden fees.",
   keywords: [

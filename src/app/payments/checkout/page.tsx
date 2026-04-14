@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Checkout Orchestration | Unified Billing UI | Paymonei",
+  title: { absolute: "Checkout Orchestration | Unified Billing UI | Paymonei" },
   description:
     "Embed a conversion-optimized checkout experience into your app. Unified SaaS billing orchestration, handled seamlessly.",
   keywords: [
