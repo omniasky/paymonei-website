@@ -15,21 +15,21 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Checkout Orchestration — Unified Billing UI | Paymonei",
+  title: "Checkout Orchestration | Unified Billing UI | Paymonei",
   description:
-    "Embed a conversion-optimized checkout experience into your app. Unified multi-rail orchestration, handled seamlessly.",
+    "Embed a conversion-optimized checkout experience into your app. Unified SaaS billing orchestration, handled seamlessly.",
   keywords: [
-    "checkout software",
-    "embedded checkout",
-    "hosted checkout page",
-    "payment orchestration checkout",
-    "no-code checkout UI",
-    "unified billing interface",
+    "embedded checkout software",
+    "hosted checkout UI",
+    "AR automation checkout",
+    "no-code billing interface",
+    "unified checkout component",
+    "SaaS checkout provider",
   ],
   openGraph: {
-    title: "Checkout Orchestration — Unified Billing UI | Paymonei",
+    title: "Checkout Orchestration | Unified Billing UI | Paymonei",
     description:
-      "Embed a conversion-optimized checkout experience into your app. Unified multi-rail orchestration, handled seamlessly.",
+      "Embed a conversion-optimized checkout experience into your app. Unified SaaS billing orchestration, handled seamlessly.",
     url: "https://paymonei.com/payments/checkout",
     siteName: "Paymonei",
     type: "website",
@@ -44,11 +44,12 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Checkout Orchestration — Unified Billing UI | Paymonei",
+    title: "Checkout Orchestration | Unified Billing UI | Paymonei",
     description:
-      "Embed a conversion-optimized checkout experience into your app. Unified multi-rail orchestration, handled seamlessly.",
+      "Embed a conversion-optimized checkout experience into your app. Unified SaaS billing orchestration, handled seamlessly.",
     images: ["https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/og-image.png"],
   },
+  alternates: { canonical: "https://paymonei.com/payments/checkout" },
 };
 
 export default function CheckoutPage() {
@@ -80,7 +81,7 @@ export default function CheckoutPage() {
                 <span className="italic text-[#666]">Built for conversion.</span>
               </h1>
               <p className="text-[16px] text-[#666] leading-relaxed font-light mb-10">
-                Deploy a high-converting, unified billing interface in minutes. Whether embedded in your app or hosted on our servers, we orchestrate the flow so your customers securely connect with our licensed execution partners.
+                Deploy a high-converting, unified billing interface in minutes. Whether embedded in your app or hosted on our servers, we orchestrate the flow so your clients securely sync accounts receivable data directly to your ledgers.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto">
@@ -181,7 +182,7 @@ export default function CheckoutPage() {
                     <div className="flex items-center justify-between p-4 rounded-lg border border-[#EAEAE6] opacity-60">
                       <div className="flex items-center gap-3">
                         <ShieldCheck className="w-4 h-4 text-[#777]" />
-                        <span className="text-[14px] font-medium text-[#333]">Stablecoin</span>
+                        <span className="text-[14px] font-medium text-[#333]">External Portal</span>
                       </div>
                       <span className="text-[10px] uppercase tracking-wider font-medium text-[#999] bg-[#EAEAE6] px-2 py-0.5 rounded">Upcoming</span>
                     </div>
@@ -211,7 +212,7 @@ export default function CheckoutPage() {
                 </div>
                 <h3 className="text-[20px] font-medium text-[#0C0C0C] mb-3">Hosted Checkout</h3>
                 <p className="text-[15px] leading-relaxed text-[#666] font-light mb-6">
-                  Redirect customers to a secure, Paymonei-hosted URL. It&apos;s the fastest way to orchestrate a billing workflow—no frontend to build, fully compliant, and constantly optimized.
+                  Redirect customers to a secure, Paymonei-hosted URL. It&apos;s the fastest way to orchestrate a billing workflow via no-code components, remaining fully compliant and constantly optimized.
                 </p>
                 <div className="mt-auto">
                   <span className="text-[13px] font-medium text-[#0C0C0C] border-b border-[#0C0C0C] pb-0.5">Setup in minutes →</span>
@@ -276,7 +277,7 @@ export default function CheckoutPage() {
                 <ShieldCheck className="w-5 h-5 text-[#777] mb-6" />
                 <h3 className="text-[16px] font-medium text-[#0C0C0C] mb-3">Fraud & Context</h3>
                 <p className="text-[14px] leading-relaxed text-[#777] font-light">
-                  Our software captures necessary KYC context and securely hands it to execution partners.
+                  Our checkout component surfaces vital invoicing context and syncs it securely to your CRM.
                 </p>
               </div>
 
@@ -284,7 +285,7 @@ export default function CheckoutPage() {
                 <CheckCircle2 className="w-5 h-5 text-[#777] mb-6" />
                 <h3 className="text-[16px] font-medium text-[#0C0C0C] mb-3">One-click compatible</h3>
                 <p className="text-[14px] leading-relaxed text-[#777] font-light">
-                  Surface saved methods securely through vaulted tokens provided by licensed networks.
+                  Surface saved methods securely through vaulted tokens provided by your designated gateways.
                 </p>
               </div>
             </div>
