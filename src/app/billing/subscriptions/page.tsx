@@ -108,7 +108,7 @@ export default function SubscriptionsPage() {
                     <span className="text-[11px] uppercase tracking-wider text-[#555] font-medium">Active Subscription</span>
                   </div>
                 </div>
-                
+
                 <div className="p-6 grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-6">
                   <div className="space-y-6">
                     <div>
@@ -124,7 +124,7 @@ export default function SubscriptionsPage() {
                         </div>
                       </div>
                     </div>
-                    
+
                     <div>
                       <div className="flex items-center justify-between mb-3">
                         <p className="text-[11px] uppercase tracking-wider text-[#999] font-medium">Metered Usage (Current Billing Period)</p>
@@ -154,14 +154,14 @@ export default function SubscriptionsPage() {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="space-y-4">
                     <div className="bg-white border border-[#EAEAE6] rounded-md p-4">
                       <p className="text-[11px] uppercase tracking-wider text-[#999] mb-2 font-medium">Upcoming Invoice</p>
                       <p className="text-[24px] font-medium text-[#0C0C0C] tracking-tight mb-1">$24.00</p>
                       <p className="text-[12px] text-[#777]">Draft scheduled for Nov 12, 2026</p>
                     </div>
-                    
+
                     <div className="bg-white border border-[#EAEAE6] rounded-md p-4">
                       <p className="text-[11px] uppercase tracking-wider text-[#999] mb-2 font-medium">Auto-Charge Method</p>
                       <div className="flex items-center gap-3">
@@ -192,7 +192,7 @@ export default function SubscriptionsPage() {
               Any pricing model.<br />
               <span className="italic text-[#666]">Instantly deployable.</span>
             </h2>
-            
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#EAEAE6]">
               <div className="bg-[#FAFAF8] p-10 flex flex-col">
                 <Repeat className="w-5 h-5 text-[#777] mb-6" />
@@ -264,9 +264,6 @@ export default function SubscriptionsPage() {
                 </span>
               </Link>
             </div>
-            <p className="mt-8 text-[13px] text-[#BBB] font-light max-w-xl mx-auto leading-relaxed">
-              Paymonei acts solely as a software orchestration platform. All payment execution and settlement services are fully operated by our licensed financial partners.
-            </p>
           </div>
         </section>
 

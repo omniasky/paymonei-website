@@ -168,7 +168,7 @@ export default function PaymentLinksPage() {
                 <div>
                   <h3 className="text-[24px] font-medium text-[#0C0C0C] mb-4">Streamline agency invoicing</h3>
                   <p className="text-[15px] text-[#666] leading-relaxed font-light mb-6">
-                    Agencies and consultancies rely on robust billing workflows. Generate an invoice link directly after a client call and dispatch it via email or Slack. 
+                    Agencies and consultancies rely on robust billing workflows. Generate an invoice link directly after a client call and dispatch it via email or Slack.
                   </p>
                   <ul className="space-y-3">
                     {["Instant request generation without coding", "Automated invoice PDF attachment", "Real-time payment status tracking"].map(item => (
@@ -252,9 +252,6 @@ export default function PaymentLinksPage() {
                 </span>
               </Link>
             </div>
-            <p className="mt-8 text-[13px] text-[#BBB] font-light max-w-xl mx-auto leading-relaxed">
-              Paymonei acts solely as a software orchestration platform. All payment execution and settlement services are fully operated by our licensed financial partners.
-            </p>
           </div>
         </section>
 

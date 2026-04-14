@@ -101,93 +101,93 @@ export default function CheckoutPage() {
 
             {/* Right Interface Mockup -> Now Full Width Below */}
             <div className="relative border border-[#EAEAE6] rounded-xl bg-[#FAFAF8] shadow-sm p-4 md:p-6 overflow-hidden w-full">
-                <div className="bg-white rounded-lg border border-[#EAEAE6] shadow-sm overflow-hidden flex flex-col md:flex-row h-full">
-                  {/* Left cart summary */}
-                  <div className="flex-1 bg-[#FAFAF8] border-b md:border-b-0 md:border-r border-[#EAEAE6] p-6">
-                    <p className="text-[13px] font-medium text-[#777] mb-2">Back to cart</p>
-                    <div className="mb-6">
-                      <p className="text-[12px] text-[#999] mb-1">Pay</p>
-                      <h3 className="text-3xl font-semibold tracking-tight text-[#0C0C0C] mb-1">S$22.18</h3>
-                      <p className="text-[11px] text-[#999]">Order #ORD-2026-66610</p>
-                    </div>
+              <div className="bg-white rounded-lg border border-[#EAEAE6] shadow-sm overflow-hidden flex flex-col md:flex-row h-full">
+                {/* Left cart summary */}
+                <div className="flex-1 bg-[#FAFAF8] border-b md:border-b-0 md:border-r border-[#EAEAE6] p-6">
+                  <p className="text-[13px] font-medium text-[#777] mb-2">Back to cart</p>
+                  <div className="mb-6">
+                    <p className="text-[12px] text-[#999] mb-1">Pay</p>
+                    <h3 className="text-3xl font-semibold tracking-tight text-[#0C0C0C] mb-1">S$22.18</h3>
+                    <p className="text-[11px] text-[#999]">Order #ORD-2026-66610</p>
+                  </div>
 
-                    <div className="space-y-4 mb-4 border-b border-[#EAEAE6] pb-4">
-                      <div className="flex justify-between items-start">
-                        <div>
-                          <p className="text-[13px] font-medium text-[#333]">Product Alpha</p>
-                          <p className="text-[11px] text-[#999]">Qty 1</p>
-                        </div>
-                        <p className="text-[13px] text-[#555]">Rp19,000</p>
+                  <div className="space-y-4 mb-4 border-b border-[#EAEAE6] pb-4">
+                    <div className="flex justify-between items-start">
+                      <div>
+                        <p className="text-[13px] font-medium text-[#333]">Product Alpha</p>
+                        <p className="text-[11px] text-[#999]">Qty 1</p>
                       </div>
-                      <div className="flex justify-between items-start">
-                        <div>
-                          <p className="text-[13px] font-medium text-[#333]">Product Beta</p>
-                          <p className="text-[11px] text-[#999]">Qty 2</p>
-                        </div>
-                        <p className="text-[13px] text-[#555]">Rp190,000</p>
-                      </div>
+                      <p className="text-[13px] text-[#555]">Rp19,000</p>
                     </div>
-
-                    <div className="space-y-2 mb-4">
-                      <div className="flex justify-between items-center">
-                        <p className="text-[12px] text-[#777]">Subtotal</p>
-                        <p className="text-[12px] text-[#333] font-medium">S$19.79</p>
+                    <div className="flex justify-between items-start">
+                      <div>
+                        <p className="text-[13px] font-medium text-[#333]">Product Beta</p>
+                        <p className="text-[11px] text-[#999]">Qty 2</p>
                       </div>
-                      <div className="flex justify-between items-center">
-                        <p className="text-[12px] text-[#777]">Shipping</p>
-                        <p className="text-[12px] text-[#333] font-medium">S$2.24</p>
-                      </div>
-                      <div className="flex justify-between items-center">
-                        <p className="text-[12px] text-[#777]">Software Fee</p>
-                        <p className="text-[12px] text-[#333] font-medium">S$0.15</p>
-                      </div>
+                      <p className="text-[13px] text-[#555]">Rp190,000</p>
                     </div>
                   </div>
 
-                  {/* Right payment options */}
-                  <div className="flex-[1.2] p-6 lg:p-8 bg-white">
-                    <h4 className="text-[18px] font-medium text-[#0C0C0C] mb-1">Payment Details</h4>
-                    <p className="text-[12px] text-[#777] mb-6">Select your preferred method to complete the workflow.</p>
-
-                    <div className="bg-[#FAFAF8] rounded-lg p-4 border border-[#EAEAE6] mb-6">
-                      <p className="text-[11px] tracking-wider uppercase text-[#999] mb-1 font-medium">Shipping to</p>
-                      <p className="text-[14px] font-medium text-[#333]">Jane Doe</p>
-                      <p className="text-[12px] text-[#777]">123 Main St, Tech District</p>
+                  <div className="space-y-2 mb-4">
+                    <div className="flex justify-between items-center">
+                      <p className="text-[12px] text-[#777]">Subtotal</p>
+                      <p className="text-[12px] text-[#333] font-medium">S$19.79</p>
                     </div>
-
-                    {/* Pseudo-tabs */}
-                    <div className="flex bg-[#F5F5F2] rounded-lg p-1 border border-[#EAEAE6] mb-6">
-                      <div className="flex-1 text-center py-2 bg-white rounded shadow-sm text-[12px] font-medium border border-[#EAEAE6] text-blue-600">Pay in SGD (S$22.18)</div>
-                      <div className="flex-1 text-center py-2 text-[12px] font-medium text-[#777]">Pay in IDR</div>
+                    <div className="flex justify-between items-center">
+                      <p className="text-[12px] text-[#777]">Shipping</p>
+                      <p className="text-[12px] text-[#333] font-medium">S$2.24</p>
                     </div>
-
-                    {/* Method List */}
-                    <div className="space-y-3 relative">
-                      <div className="flex items-center justify-between p-4 rounded-lg border-2 border-blue-600 cursor-pointer">
-                        <div className="flex items-center gap-3">
-                          <CheckCircle2 className="w-4 h-4 text-blue-600" />
-                          <span className="text-[14px] font-medium text-[#0C0C0C]">Card</span>
-                        </div>
-                      </div>
-                      
-                      <div className="flex items-center justify-between p-4 rounded-lg border border-[#EAEAE6] opacity-60">
-                        <div className="flex items-center gap-3">
-                          <Globe className="w-4 h-4 text-[#777]" />
-                          <span className="text-[14px] font-medium text-[#333]">Local Transfer</span>
-                        </div>
-                        <span className="text-[10px] uppercase tracking-wider font-medium text-[#999] bg-[#EAEAE6] px-2 py-0.5 rounded">Upcoming</span>
-                      </div>
-
-                      <div className="flex items-center justify-between p-4 rounded-lg border border-[#EAEAE6] opacity-60">
-                        <div className="flex items-center gap-3">
-                          <ShieldCheck className="w-4 h-4 text-[#777]" />
-                          <span className="text-[14px] font-medium text-[#333]">Stablecoin</span>
-                        </div>
-                        <span className="text-[10px] uppercase tracking-wider font-medium text-[#999] bg-[#EAEAE6] px-2 py-0.5 rounded">Upcoming</span>
-                      </div>
+                    <div className="flex justify-between items-center">
+                      <p className="text-[12px] text-[#777]">Software Fee</p>
+                      <p className="text-[12px] text-[#333] font-medium">S$0.15</p>
                     </div>
                   </div>
                 </div>
+
+                {/* Right payment options */}
+                <div className="flex-[1.2] p-6 lg:p-8 bg-white">
+                  <h4 className="text-[18px] font-medium text-[#0C0C0C] mb-1">Payment Details</h4>
+                  <p className="text-[12px] text-[#777] mb-6">Select your preferred method to complete the workflow.</p>
+
+                  <div className="bg-[#FAFAF8] rounded-lg p-4 border border-[#EAEAE6] mb-6">
+                    <p className="text-[11px] tracking-wider uppercase text-[#999] mb-1 font-medium">Shipping to</p>
+                    <p className="text-[14px] font-medium text-[#333]">Jane Doe</p>
+                    <p className="text-[12px] text-[#777]">123 Main St, Tech District</p>
+                  </div>
+
+                  {/* Pseudo-tabs */}
+                  <div className="flex bg-[#F5F5F2] rounded-lg p-1 border border-[#EAEAE6] mb-6">
+                    <div className="flex-1 text-center py-2 bg-white rounded shadow-sm text-[12px] font-medium border border-[#EAEAE6] text-blue-600">Pay in SGD (S$22.18)</div>
+                    <div className="flex-1 text-center py-2 text-[12px] font-medium text-[#777]">Pay in IDR</div>
+                  </div>
+
+                  {/* Method List */}
+                  <div className="space-y-3 relative">
+                    <div className="flex items-center justify-between p-4 rounded-lg border-2 border-blue-600 cursor-pointer">
+                      <div className="flex items-center gap-3">
+                        <CheckCircle2 className="w-4 h-4 text-blue-600" />
+                        <span className="text-[14px] font-medium text-[#0C0C0C]">Card</span>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center justify-between p-4 rounded-lg border border-[#EAEAE6] opacity-60">
+                      <div className="flex items-center gap-3">
+                        <Globe className="w-4 h-4 text-[#777]" />
+                        <span className="text-[14px] font-medium text-[#333]">Local Transfer</span>
+                      </div>
+                      <span className="text-[10px] uppercase tracking-wider font-medium text-[#999] bg-[#EAEAE6] px-2 py-0.5 rounded">Upcoming</span>
+                    </div>
+
+                    <div className="flex items-center justify-between p-4 rounded-lg border border-[#EAEAE6] opacity-60">
+                      <div className="flex items-center gap-3">
+                        <ShieldCheck className="w-4 h-4 text-[#777]" />
+                        <span className="text-[14px] font-medium text-[#333]">Stablecoin</span>
+                      </div>
+                      <span className="text-[10px] uppercase tracking-wider font-medium text-[#999] bg-[#EAEAE6] px-2 py-0.5 rounded">Upcoming</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -238,7 +238,7 @@ export default function CheckoutPage() {
         <section className="py-24 px-5 sm:px-8 border-b border-[#EAEAE6] bg-[#FAFAF8]">
           <div className="max-w-7xl mx-auto lg:px-8">
             <p className="text-[12px] tracking-[0.14em] uppercase text-[#999] mb-5 font-medium">The Interface layer</p>
-            
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#EAEAE6]">
               <div className="bg-[#FAFAF8] p-10 flex flex-col">
                 <Paintbrush className="w-5 h-5 text-[#777] mb-6" />
@@ -310,9 +310,6 @@ export default function CheckoutPage() {
                 </span>
               </Link>
             </div>
-            <p className="mt-8 text-[13px] text-[#BBB] font-light max-w-xl mx-auto leading-relaxed">
-              Paymonei acts solely as a software orchestration platform. All payment execution and settlement services are fully operated by our licensed financial partners.
-            </p>
           </div>
         </section>
 
