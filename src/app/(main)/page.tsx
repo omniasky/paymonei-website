@@ -204,12 +204,12 @@ export default function HomePage() {
               {/* Merchant Collections */}
               <div className="lg:col-span-6">
                 <div className="group overflow-hidden rounded-2xl border border-[#EAEAE6] bg-[#FAFAF8] hover:border-[#D5D5D0] transition-colors duration-200">
-                  <div className="h-56 lg:h-72 relative">
+                  <div className="h-56 lg:h-72 relative p-4">
                     <Image
                       src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/merchant-settlement.png"
                       alt="Merchant Collections"
                       fill
-                      className="object-cover object-top"
+                      className="object-contain"
                     />
                   </div>
                   <div className="px-6 py-5 border-t border-[#EAEAE6]">
@@ -222,12 +222,12 @@ export default function HomePage() {
               {/* Business Disbursements */}
               <div className="lg:col-span-6">
                 <div className="group overflow-hidden rounded-2xl border border-[#EAEAE6] bg-[#FAFAF8] hover:border-[#D5D5D0] transition-colors duration-200">
-                  <div className="h-56 lg:h-72 relative">
+                  <div className="h-56 lg:h-72 relative p-4">
                     <Image
                       src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/enterprise-payouts.png"
                       alt="Business Disbursements"
                       fill
-                      className="object-cover object-top"
+                      className="object-contain"
                     />
                   </div>
                   <div className="px-6 py-5 border-t border-[#EAEAE6]">
@@ -240,8 +240,8 @@ export default function HomePage() {
               {/* Workforce Coordination */}
               <div className="lg:col-span-4">
                 <div className="group flex flex-col overflow-hidden rounded-2xl border border-[#EAEAE6] bg-[#FAFAF8] hover:border-[#D5D5D0] transition-colors duration-200 h-full">
-                  <div className="h-44 relative shrink-0">
-                    <Image src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/global-payroll.png" alt="Workforce Coordination" fill className="object-cover object-top" />
+                  <div className="h-44 relative shrink-0 p-4">
+                    <Image src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/global-payroll.png" alt="Workforce Coordination" fill className="object-contain" />
                   </div>
                   <div className="px-5 py-4 border-t border-[#EAEAE6] flex-1">
                     <h3 className="text-[15px] font-medium text-[#0C0C0C]">Workforce Coordination</h3>
@@ -253,8 +253,8 @@ export default function HomePage() {
               {/* Smart Invoice */}
               <div className="lg:col-span-4">
                 <div className="group flex flex-col overflow-hidden rounded-2xl border border-[#EAEAE6] bg-[#FAFAF8] hover:border-[#D5D5D0] transition-colors duration-200 h-full">
-                  <div className="h-44 relative shrink-0">
-                    <Image src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/invoice-payment.png" alt="Smart Invoice" fill className="object-cover object-top" />
+                  <div className="h-44 relative shrink-0 p-4">
+                    <Image src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/invoice-payment.png" alt="Smart Invoice" fill className="object-contain" />
                   </div>
                   <div className="px-5 py-4 border-t border-[#EAEAE6] flex-1">
                     <h3 className="text-[15px] font-medium text-[#0C0C0C]">Smart Invoice</h3>
@@ -266,8 +266,8 @@ export default function HomePage() {
               {/* Multi-rail Billing */}
               <div className="lg:col-span-4">
                 <div className="group flex flex-col overflow-hidden rounded-2xl border border-[#EAEAE6] bg-[#FAFAF8] hover:border-[#D5D5D0] transition-colors duration-200 h-full">
-                  <div className="h-44 relative shrink-0">
-                    <Image src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/stablecoin-orchestration.png" alt="Multi-rail Billing" fill className="object-cover object-top" />
+                  <div className="h-44 relative shrink-0 p-4">
+                    <Image src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/stablecoin-orchestration.png" alt="Multi-rail Billing" fill className="object-contain" />
                   </div>
                   <div className="px-5 py-4 border-t border-[#EAEAE6] flex-1">
                     <h3 className="text-[15px] font-medium text-[#0C0C0C]">Multi-rail Billing</h3>
