@@ -6,6 +6,11 @@ import { Landmark } from "lucide-react";
 // ── Pain points ───────────────────────────────────────────────────────────────
 const pains = [
   {
+    id: "disconnect",
+    headline: "The quote-to-cash disconnect.",
+    body: "Sales closes the deal. Accounting rebuilds it manually weeks later. Line items vanish, terms get missed, and bills go out late.",
+  },
+  {
     id: "collections",
     headline: "Sent does not mean paid.",
     body: "Most businesses lose hours every week chasing invoices that left their desk weeks ago. There is no system, just follow-up emails.",
@@ -14,11 +19,6 @@ const pains = [
     id: "multimethod",
     headline: "Scattered data. Manual reconciliation.",
     body: "Consolidate multi-region clients into a single source of truth. No more piecing together mismatched formats by hand.",
-  },
-  {
-    id: "sprawl",
-    headline: "Three tools. Still no clear picture.",
-    body: "Invoicing in one place, tracking in a spreadsheet, chasing in email. Nothing connects. You never have a clean view of what is actually overdue.",
   },
 ];
 
@@ -226,72 +226,78 @@ function MultiRailWidget({ active }: { active: boolean }) {
   );
 }
 
-function ToolSprawlWidget({ active }: { active: boolean }) {
-  const tools = [
-    { emoji: "📊", name: "Spreadsheet" },
-    { emoji: "📧", name: "Email" },
-    { emoji: "📄", name: "Billing app" },
+function QuoteToCashWidget({ active }: { active: boolean }) {
+  const nodes = [
+    { emoji: "📄", name: "PDF Proposal" },
+    { emoji: "⌨️", name: "Manual Data Entry" },
+    { emoji: "🧾", name: "Invoice System" },
   ];
-  const steps = ["Export", "Copy-paste", "Manual update"];
+  const painPoints = ["Dropped line items", "Missed terms", "Delayed billing"];
 
   return (
-    <div className="space-y-3">
-      <div className="flex items-center gap-1.5">
-        {tools.map((t, i) => (
-          <div key={t.name} className="flex items-center gap-1.5">
+    <div className="w-full space-y-4 pt-2">
+      <div className="flex items-center w-full justify-between relative px-2">
+        {nodes.map((n, i) => (
+          <div key={n.name} className="flex flex-col items-center gap-2 relative z-10">
             <div
-              className="flex flex-col items-center gap-1"
+              className={`w-11 h-11 rounded-xl flex items-center justify-center shadow-sm border ${
+                i === 1 ? "border-[#FCA5A5] bg-[#FEF2F2]" : "border-[#EAEAE6] bg-white"
+              }`}
               style={{
                 opacity: active ? 1 : 0,
-                transition: `opacity 0.35s ease ${i * 0.1}s`,
+                transform: active ? "none" : "translateY(4px)",
+                transition: `opacity 0.4s ease ${i * 0.25}s, transform 0.4s ease ${i * 0.25}s`,
               }}
             >
-              <div className="w-9 h-9 rounded-xl border border-[#EAEAE6] bg-white flex items-center justify-center shadow-sm">
-                <span className="text-base leading-none">{t.emoji}</span>
-              </div>
-              <span className="text-[9px] text-[#BBB] text-center whitespace-nowrap">
-                {t.name}
-              </span>
+              <span className="text-lg leading-none">{n.emoji}</span>
             </div>
-            {i < tools.length - 1 && (
-              <span
-                className="text-[#DDDDD8] text-sm pb-4 shrink-0"
-                aria-hidden="true"
+            <span
+              className={`text-[9px] font-medium text-center whitespace-nowrap ${
+                i === 1 ? "text-[#EF4444]" : "text-[#888]"
+              }`}
+              style={{
+                opacity: active ? 1 : 0,
+                transition: `opacity 0.4s ease ${i * 0.25 + 0.15}s`,
+              }}
+            >
+              {n.name}
+            </span>
+            
+            {/* Draw connector lines from center of current node to next node */}
+            {i < nodes.length - 1 && (
+              <div
+                className="absolute top-[22px] left-[50%] w-[100px] sm:w-[120px] -z-10"
                 style={{
                   opacity: active ? 1 : 0,
-                  transition: `opacity 0.35s ease ${i * 0.1 + 0.12}s`,
+                  transition: `opacity 0.4s ease ${i * 0.25 + 0.2}s`,
                 }}
               >
-                →
-              </span>
+                <div className="w-full border-t border-dashed border-[#D5D5D0]" />
+              </div>
             )}
           </div>
         ))}
       </div>
+      
+      {/* Pain point tags */}
       <div
-        className="flex gap-1.5 flex-wrap"
-        style={{ opacity: active ? 0.85 : 0, transition: "opacity 0.4s ease 0.36s" }}
+        className="flex gap-1.5 flex-wrap justify-center pt-2"
+        style={{ opacity: active ? 0.9 : 0, transition: "opacity 0.4s ease 0.8s" }}
       >
-        {steps.map((s) => (
+        {painPoints.map((p) => (
           <span
-            key={s}
-            className="text-[9px] px-2 py-0.5 rounded-full border border-[#E0E0DB] text-[#AAA]"
+            key={p}
+            className="text-[9.5px] px-2 py-[3px] rounded-full border border-[#E0E0DB] text-[#888] bg-white shadow-[0_1px_2px_rgba(0,0,0,0.02)]"
           >
-            {s}
+            {p}
           </span>
         ))}
       </div>
-      <p
-        className="text-[10px] text-[#AAA]"
-        style={{ opacity: active ? 1 : 0, transition: "opacity 0.4s ease 0.46s" }}
-      >
-        No single source of truth
-      </p>
     </div>
   );
 }
 
-const widgets = [CollectionWidget, MultiRailWidget, ToolSprawlWidget];
+const widgets = [QuoteToCashWidget, CollectionWidget, MultiRailWidget];
 
 // ── Section ───────────────────────────────────────────────────────────────────
 
@@ -345,7 +351,7 @@ export function ProblemSection() {
                 }}
               >
                 {/* Illustration zone */}
-                <div className="px-6 py-7 min-h-[180px] flex items-center border-b border-[#EBEBEB]">
+                <div className="px-6 py-7 h-[200px] flex items-center border-b border-[#EBEBEB]">
                   <Widget active={visible} />
                 </div>
 
