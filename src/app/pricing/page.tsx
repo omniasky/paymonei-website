@@ -147,16 +147,13 @@ const faqs = [
   },
   {
     q: "What does my client pay when settling an invoice?",
-    a: "Your client pays the invoice amount. Card and bank transfer payments carry standard network processing fees set by card schemes (Visa, Mastercard) and banking infrastructure. These are deducted from your settlement, not added on top for your client. Stablecoin payments (USDC/USDT) carry only a small blockchain network fee of roughly $0.01.",
+    a: "Your client pays the invoice amount. Card and bank transfer payments carry standard network processing fees set by card schemes (Visa, Mastercard), stablecoin payments (USDC/USDT) and banking infrastructure. These are deducted from your settlement, not added on top for your client.",
   },
   {
     q: "Is there a setup fee or contract?",
     a: "No setup fees, no contracts. Starter is free indefinitely. Core and Growth are month-to-month with no minimum commitment. You can cancel or change plans at any time.",
   },
-  {
-    q: "What is the difference between Core ($59) and Growth ($249)?",
-    a: "Core adds up to 3 entities, 6 months of AR analytics, and webhook management on top of everything in Starter. Growth scales to 10 entities, 24 months of analytics, configurable dunning per subscription, an account manager, and built-in accounting tools when available.",
-  },
+
   {
     q: "What currencies and geographies are supported?",
     a: "Paymonei supports multi-currency invoice creation and payment link generation across 150+ countries. \n\nPaymonei does not provide services to jurisdictions subject to applicable sanctions programmes, including those maintained by OFAC (US), UN Security Council, EU, or equivalent authorities. Use of Paymonei in sanctioned jurisdictions is prohibited.",
