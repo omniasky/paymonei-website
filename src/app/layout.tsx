@@ -20,38 +20,35 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL('https://paymonei.com'),
   title: {
-    default: "Business Billing & Payment Operations Software | Paymonei",
+    default: "Business Billing & AR Automation Software | Paymonei",
     template: "%s | Paymonei"
   },
-  description: "Paymonei is billing and payment operations software for global businesses. Create invoices, track collections, and run payment workflows from one dashboard, across 150+ countries.",
+  description: "Paymonei is the billing and accounts receivable software for global businesses. Automate invoices, track AR aging, and organize vendor billing from one dashboard.",
   keywords: [
-    // Core product category
+    // Core product category (Safe SaaS terms)
     "billing software",
     "invoicing software",
-    "payment operations software",
-    "business payment software",
-    "payment workflow software",
+    "accounts receivable software",
+    "AR automation",
+    "billing workflow software",
 
     // Use case keywords (buyer intent)
-    "cross-border payment management",
-    "global payment operations",
     "enterprise billing software",
-    "outbound payment management",
-    "international invoice software",
-    "vendor payment management",
+    "quote-to-cash software",
+    "vendor billing management",
     "multi-currency invoicing",
+    "accounts payable tracking",
 
     // API / developer
-    "payment API",
     "billing API",
     "invoice API",
-    "payment operations software",
-    "embedded checkout",
+    "AR ledger API",
+    "embedded billing",
 
-    // Multi-rail
-    "multi-rail payments",
-    "payment routing software",
-    "global payment infrastructure",
+    // Operations
+    "unified AR ledger",
+    "global invoicing platform",
+    "financial operations software",
   ],
   authors: [{ name: "Paymonei", url: "https://paymonei.com" }],
   creator: "Paymonei",
@@ -66,14 +63,14 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://paymonei.com",
     siteName: "Paymonei",
-    title: "Business Billing & Payment Operations Software | Paymonei",
-    description: "Billing and payment operations software for global businesses. Create invoices, track collections, and run payment workflows from one dashboard, across 150+ countries.",
+    title: "Business Billing & AR Automation Software | Paymonei",
+    description: "Paymonei is the billing and accounts receivable software for global businesses. Automate invoices, track AR aging, and organize vendor billing from one dashboard.",
     images: [
       {
         url: "https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/og-image.png",
         width: 1200,
         height: 600,
-        alt: "Paymonei: Business Billing and Payment Operations Software",
+        alt: "Paymonei: Business Billing and AR Automation Software",
       },
     ],
   },
@@ -81,8 +78,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@paymonei",
     creator: "@paymonei",
-    title: "Business Billing & Payment Software | Paymonei",
-    description: "Billing and payment operations software for global businesses. Create invoices, track collections, and run payment workflows from one dashboard, across 150+ countries.",
+    title: "Business Billing & AR Automation Software | Paymonei",
+    description: "Paymonei is the billing and accounts receivable software for global businesses. Automate invoices, track AR aging, and organize vendor billing from one dashboard.",
     images: ["https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/twitter-card.png"],
   },
   robots: {
