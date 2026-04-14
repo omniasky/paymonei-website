@@ -64,7 +64,7 @@ export function Footer() {
             </Link>
 
             <p className="text-[15px] text-[#777] leading-relaxed font-light max-w-xs">
-              Business payment software for invoices, billing, and checkout workflows — built for companies that operate across borders.
+              Business software for invoices, billing, and payment workflows, built for companies that operate across borders.
             </p>
 
             {/* Social */}
@@ -140,9 +140,7 @@ export function Footer() {
                   Privacy
                 </Link>
               </p>
-              <p className="text-[12px] text-[#CCC] font-light leading-relaxed max-w-sm ml-auto">
-                Paymonei does not hold or transmit funds. Payment execution is performed by licensed third-party financial institutions.
-              </p>
+
             </div>
           </div>
         </div>
