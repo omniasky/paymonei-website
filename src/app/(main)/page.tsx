@@ -271,7 +271,7 @@ export default function HomePage() {
                   </div>
                   <div className="px-5 py-4 border-t border-[#EAEAE6] flex-1">
                     <h3 className="text-[15px] font-medium text-[#0C0C0C]">Multi-rail Billing</h3>
-                    <p className="mt-1 text-sm text-[#888] leading-relaxed font-light">Support card, bank transfer, and stablecoin on the same invoice. Let clients choose.</p>
+                    <p className="mt-1 text-sm text-[#888] leading-relaxed font-light">Support card, local payment methods, and stablecoin on the same invoice. Let clients choose.</p>
                   </div>
                 </div>
               </div>
