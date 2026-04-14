@@ -8,19 +8,19 @@ const pains = [
     id: "collections",
     tag: "01",
     headline: "You send the invoice. Then spend weeks chasing it.",
-    body: "Most businesses lose hours every week on manual follow-up and overdue tracking. Invoice sent is not invoice paid.",
+    body: "Invoice sent is not invoice paid. Most businesses lose hours every week chasing payments that are already overdue.",
   },
   {
     id: "multimethod",
     tag: "02",
     headline: "Clients pay in different currencies and methods. Nothing lines up.",
-    body: "Card, bank transfer, QRIS, wire — each payment arrives differently. Reconciliation happens across inboxes, spreadsheets, and bank statements.",
+    body: "Card, local payment, QRIS, wire. Each arrives differently, in different currencies. You reconcile manually just to know what collected.",
   },
   {
     id: "sprawl",
     tag: "03",
     headline: "Three tools for billing. Still no clear view of what is overdue.",
-    body: "Invoicing, tracking, and chasing happen in separate tools. When you need your AR position, you pull from three sources that never agree.",
+    body: "Invoicing in one tool, tracking in a spreadsheet, chasing in email. You never have a clean AR view.",
   },
 ];
 
@@ -208,7 +208,7 @@ export function ProblemSection() {
       className="bg-white border-t border-[#EAEAE6] py-20 px-5 sm:px-8"
     >
       <div className="max-w-7xl mx-auto lg:px-8">
-        <p className="text-[12px] tracking-[0.14em] uppercase text-[#999] mb-12">
+        <p className="text-[12px] tracking-[0.14em] uppercase text-[#777] mb-12">
           Why teams choose Paymonei
         </p>
 
@@ -236,7 +236,7 @@ export function ProblemSection() {
                   >
                     {pain.headline}
                   </h3>
-                  <p className="text-[13px] text-[#888] leading-relaxed font-light">
+                  <p className="text-[15px] text-[#666] leading-relaxed font-light">
                     {pain.body}
                   </p>
                 </div>

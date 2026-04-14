@@ -214,7 +214,7 @@ export default function HomePage() {
                   </div>
                   <div className="px-6 py-5 border-t border-[#EAEAE6]">
                     <h3 className="text-[15px] font-medium text-[#0C0C0C]">Merchant Collections</h3>
-                    <p className="mt-1 text-sm text-[#888] leading-relaxed font-light">Create invoices and payment links globally. Track collection status in real time.</p>
+                    <p className="mt-1 text-[15px] text-[#777] leading-relaxed font-light">Create invoices and payment links globally. Track collection status in real time.</p>
                   </div>
                 </div>
               </div>
@@ -232,7 +232,7 @@ export default function HomePage() {
                   </div>
                   <div className="px-6 py-5 border-t border-[#EAEAE6]">
                     <h3 className="text-[15px] font-medium text-[#0C0C0C]">Business Payouts</h3>
-                    <p className="mt-1 text-sm text-[#888] leading-relaxed font-light">Manage and track outbound payment batches to vendors and suppliers worldwide.</p>
+                    <p className="mt-1 text-[15px] text-[#777] leading-relaxed font-light">Manage and track outbound payment batches to vendors and suppliers worldwide.</p>
                   </div>
                 </div>
               </div>
@@ -245,7 +245,7 @@ export default function HomePage() {
                   </div>
                   <div className="px-5 py-4 border-t border-[#EAEAE6] flex-1">
                     <h3 className="text-[15px] font-medium text-[#0C0C0C]">Workforce Coordination</h3>
-                    <p className="mt-1 text-sm text-[#888] leading-relaxed font-light">Coordinate contractor and team payments across 150+ countries from one dashboard.</p>
+                    <p className="mt-1 text-[15px] text-[#777] leading-relaxed font-light">Coordinate contractor and team payments across 150+ countries from one dashboard.</p>
                   </div>
                 </div>
               </div>
@@ -258,7 +258,7 @@ export default function HomePage() {
                   </div>
                   <div className="px-5 py-4 border-t border-[#EAEAE6] flex-1">
                     <h3 className="text-[15px] font-medium text-[#0C0C0C]">Smart Invoice</h3>
-                    <p className="mt-1 text-sm text-[#888] leading-relaxed font-light">Automated invoicing with multi-currency support and PDF export.</p>
+                    <p className="mt-1 text-[15px] text-[#777] leading-relaxed font-light">Automated invoicing with multi-currency support and PDF export.</p>
                   </div>
                 </div>
               </div>
@@ -271,7 +271,7 @@ export default function HomePage() {
                   </div>
                   <div className="px-5 py-4 border-t border-[#EAEAE6] flex-1">
                     <h3 className="text-[15px] font-medium text-[#0C0C0C]">Multi-rail Billing</h3>
-                    <p className="mt-1 text-sm text-[#888] leading-relaxed font-light">Support card, local payment methods, and stablecoin on the same invoice. Let clients choose.</p>
+                    <p className="mt-1 text-[15px] text-[#777] leading-relaxed font-light">Support card, local payment methods, and stablecoin on the same invoice. Let clients choose.</p>
                   </div>
                 </div>
               </div>
