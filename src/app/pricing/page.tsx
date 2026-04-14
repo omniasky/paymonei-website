@@ -143,11 +143,11 @@ const plans = [
 const faqs = [
   {
     q: "What does the platform fee cover?",
-    a: "Your platform fee pays for the Paymonei software: invoice creation, PDF generation, payment links, subscription billing, dunning automation, webhook delivery, and the AR dashboard. It is a flat monthly fee — the same regardless of how many invoices you send or what payment methods your clients use.",
+    a: "Your platform fee pays for the Paymonei software: invoice creation, PDF generation, payment links, subscription billing, dunning automation, webhook delivery, and the AR dashboard. It is a flat monthly fee, the same regardless of how many invoices you send or what payment methods your clients use.",
   },
   {
     q: "What does my client pay when settling an invoice?",
-    a: "Your client pays the invoice amount. Card and bank transfer payments carry standard network processing fees set by card schemes (Visa, Mastercard) and banking infrastructure — these are deducted from your settlement, not added on top for your client. Stablecoin payments (USDC/USDT) carry only a small blockchain network fee of roughly $0.01.",
+    a: "Your client pays the invoice amount. Card and bank transfer payments carry standard network processing fees set by card schemes (Visa, Mastercard) and banking infrastructure. These are deducted from your settlement, not added on top for your client. Stablecoin payments (USDC/USDT) carry only a small blockchain network fee of roughly $0.01.",
   },
   {
     q: "Is there a setup fee or contract?",
@@ -163,11 +163,11 @@ const faqs = [
   },
   {
     q: "Can I accept stablecoin payments (USDC / USDT)?",
-    a: "Yes. Merchants can enable USDC and USDT as payment options on any invoice or payment page. A 1.5% platform fee applies on stablecoin settlements in addition to a small blockchain network fee (typically under $0.01). Stablecoin payment acceptance is subject to jurisdiction availability and may not be available in all regions.",
+    a: "Yes. Merchants can enable USDC and USDT as payment options on any invoice or payment page. Stablecoin payment acceptance is subject to jurisdiction availability and may not be available in all regions.",
   },
   {
     q: "What is the working capital eligibility feature?",
-    a: "Merchants with a verified account and consistent invoice activity may become eligible for working capital introductions through licensed lending partners. This is an opt-in referral — Paymonei does not assess creditworthiness or make lending decisions.",
+    a: "Merchants with a verified account and consistent invoice activity may become eligible for working capital introductions through licensed lending partners. This is an opt-in referral. Paymonei does not assess creditworthiness or make lending decisions.",
   },
 ];
 

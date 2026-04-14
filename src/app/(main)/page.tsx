@@ -10,18 +10,18 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Business Billing & Payment Software | Invoices, Disbursements & Global Operations | Paymonei",
   description:
-    "Paymonei is billing and operations software for modern companies. Create invoices, track collections, and manage global disbursements — from one dashboard, across 150+ countries.",
+    "Paymonei is billing and operations software for modern companies. Create invoices, track collections, and manage global disbursements from one dashboard, across 150+ countries.",
   openGraph: {
     title: "Business Billing & Payment Software | Paymonei",
     description:
-      "Invoices, disbursements, and global payment workflows — from one clean dashboard. Built for companies that operate across borders.",
+      "Invoices, disbursements, and global payment workflows from one clean dashboard. Built for companies that operate across borders.",
     url: "https://paymonei.com",
     images: [
       {
         url: "https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Paymonei — Business Billing & Payment Software",
+        alt: "Paymonei: Business Billing and Payment Software",
       },
     ],
   },
@@ -142,20 +142,20 @@ export default function HomePage() {
                   One platform for every billing problem your product faces.
                 </h2>
                 <p className="mt-5 text-[15px] text-[#777] leading-relaxed font-light max-w-xs">
-                  Ship billing in days, not months — without stitching together five different tools or owning infrastructure your team will maintain forever.
+                  Ship billing in days, not months. No need to stitch together five different tools or own infrastructure your team will maintain forever.
                 </p>
               </div>
               <div className="space-y-8 pt-1">
                 {[
                   {
                     num: "01",
-                    title: "Complete billing backend — out of the box",
-                    body: "Pricing plans, subscription engine, proration, dunning, PDF invoices, and a merchant portal — pre-built. Integrate in days, not quarters.",
+                    title: "Complete billing backend, out of the box",
+                    body: "Pricing plans, subscription engine, proration, dunning, PDF invoices, and a merchant portal. Pre-built. Integrate in days, not quarters.",
                   },
                   {
                     num: "02",
                     title: "Embedded checkout that stays in your product",
-                    body: "A fully in-product checkout flow — no external redirect, no hosted page. Your customers pay without leaving your app.",
+                    body: "A fully in-product checkout flow with no external redirect, no hosted page. Your customers pay without leaving your app.",
                   },
                   {
                     num: "03",
@@ -195,7 +195,7 @@ export default function HomePage() {
                 Built for E2E Business Operations
               </h2>
               <p className="mt-4 text-[15px] text-[#777] max-w-md leading-relaxed font-light">
-                Every billing and payment workflow your business runs — tracked and managed from one place.
+                Every billing and payment workflow your business runs, tracked and managed from one place.
               </p>
             </div>
 
@@ -302,7 +302,7 @@ export default function HomePage() {
               <span className="italic">Your Business?</span>
             </h2>
             <p className="text-[15px] text-[#777] leading-relaxed mb-10 font-light mx-auto" style={{ maxWidth: "400px" }}>
-              Join businesses worldwide that manage their billing and payment operations with Paymonei — simpler, faster, with less overhead.
+              Join businesses worldwide that manage their billing and payment operations with Paymonei. Simpler, faster, with less overhead.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <Link href="https://app.paymonei.com/auth/register">
