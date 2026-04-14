@@ -60,7 +60,7 @@ export function Navbar({
   navLinks = [
     // { href: "#solutions", label: "Solutions" },
     { href: "/pricing", label: "Pricing" },
-    { href: "#developers", label: "Developers" },
+    // { href: "#developers", label: "Developers" },
     // { href: "#resources", label: "Resources" },
   ],
 }: NavbarProps) {
