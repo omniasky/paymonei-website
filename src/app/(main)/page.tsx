@@ -8,13 +8,13 @@ import { ProblemSection } from "@/components/organisms/ProblemSection";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Business Billing & Payment Software | Invoices, Disbursements & Global Operations | Paymonei",
+  title: "Business Billing and Payment Software | Invoices, Collections and Global Operations | Paymonei",
   description:
-    "Paymonei is billing and operations software for modern companies. Create invoices, track collections, and manage global disbursements from one dashboard, across 150+ countries.",
+    "Paymonei is billing and operations software for modern companies. Create invoices, track collections, and manage outgoing payments from one dashboard, across 150+ countries.",
   openGraph: {
     title: "Business Billing & Payment Software | Paymonei",
     description:
-      "Invoices, disbursements, and global payment workflows from one clean dashboard. Built for companies that operate across borders.",
+      "Invoices, collections, and global payment workflows from one clean dashboard. Built for companies that operate across borders.",
     url: "https://paymonei.com",
     images: [
       {
@@ -36,7 +36,7 @@ const structuredData = {
       "@id": "https://paymonei.com/#organization",
       name: "Paymonei",
       url: "https://paymonei.com",
-      description: "Business billing and payment operations software for invoices, disbursements, and global payment workflows.",
+      description: "Business billing and payment operations software for invoices, collections, and global payment workflows.",
       foundingDate: "2023",
     },
     {
@@ -47,7 +47,7 @@ const structuredData = {
       featureList: [
         "Invoice Management",
         "Billing Automation",
-        "Cross-border Disbursement Tracking",
+        "Cross-border Payment Tracking",
         "Workforce Payment Coordination",
         "Merchant Billing Tools",
         "Multi-currency Support",
@@ -225,13 +225,13 @@ export default function HomePage() {
                   <div className="h-56 lg:h-72 relative p-4">
                     <Image
                       src="https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/enterprise-payouts.png"
-                      alt="Business Disbursements"
+                      alt="Business Payouts"
                       fill
                       className="object-contain"
                     />
                   </div>
                   <div className="px-6 py-5 border-t border-[#EAEAE6]">
-                    <h3 className="text-[15px] font-medium text-[#0C0C0C]">Business Disbursements</h3>
+                    <h3 className="text-[15px] font-medium text-[#0C0C0C]">Business Payouts</h3>
                     <p className="mt-1 text-sm text-[#888] leading-relaxed font-light">Manage and track outbound payment batches to vendors and suppliers worldwide.</p>
                   </div>
                 </div>
@@ -302,7 +302,7 @@ export default function HomePage() {
               <span className="italic">Your Business?</span>
             </h2>
             <p className="text-[15px] text-[#777] leading-relaxed mb-10 font-light mx-auto" style={{ maxWidth: "400px" }}>
-              Join businesses worldwide that manage their billing and payment operations with Paymonei. Simpler, faster, with less overhead.
+              Join businesses worldwide that manage their billing and payment operations with Paymonei. <br /> Simpler, faster, with less overhead.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <Link href="https://app.paymonei.com/auth/register">

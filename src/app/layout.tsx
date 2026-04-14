@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     default: "Business Billing & Payment Operations Software | Paymonei",
     template: "%s | Paymonei"
   },
-  description: "Paymonei is billing and payment operations software for global businesses. Create invoices, track collections, manage disbursements, and run payment workflows — from one dashboard, across 150+ countries.",
+  description: "Paymonei is billing and payment operations software for global businesses. Create invoices, track collections, and run payment workflows from one dashboard, across 150+ countries.",
   keywords: [
     // Core product category
     "billing software",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     "cross-border payment management",
     "global payment operations",
     "enterprise billing software",
-    "disbursement management software",
+    "outbound payment management",
     "international invoice software",
     "vendor payment management",
     "multi-currency invoicing",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     "payment API",
     "billing API",
     "invoice API",
-    "payment infrastructure software",
+    "payment operations software",
     "embedded checkout",
 
     // Multi-rail
@@ -67,13 +67,13 @@ export const metadata: Metadata = {
     url: "https://paymonei.com",
     siteName: "Paymonei",
     title: "Business Billing & Payment Operations Software | Paymonei",
-    description: "Billing and payment operations software for global businesses. Create invoices, track collections, manage disbursements — from one dashboard, across 150+ countries.",
+    description: "Billing and payment operations software for global businesses. Create invoices, track collections, and run payment workflows from one dashboard, across 150+ countries.",
     images: [
       {
         url: "https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/og-image.png",
         width: 1200,
         height: 600,
-        alt: "Paymonei — Business Billing & Payment Operations Software",
+        alt: \"Paymonei: Business Billing and Payment Operations Software\",
       },
     ],
   },
@@ -82,7 +82,7 @@ export const metadata: Metadata = {
     site: "@paymonei",
     creator: "@paymonei",
     title: "Business Billing & Payment Software | Paymonei",
-    description: "Billing and payment operations software for global businesses. Create invoices, track collections, manage disbursements — from one dashboard, across 150+ countries.",
+    description: "Billing and payment operations software for global businesses. Create invoices, track collections, and run payment workflows from one dashboard, across 150+ countries.",
     images: ["https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/twitter-card.png"],
   },
   robots: {

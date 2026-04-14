@@ -13,7 +13,7 @@ function InvoiceMockup({ visible }: { visible: boolean }) {
   const lineItems = [
     { desc: "Q2 Platform License", qty: 1, amount: "$4,200.00" },
     { desc: "API Overage (12k calls)", qty: 12, amount: "$360.00" },
-    { desc: "Intl. Settlement Fee", qty: 1, amount: "$84.00" },
+    { desc: "Global Platform Add-on", qty: 1, amount: "$84.00" },
   ];
 
   const transactions = [
@@ -167,7 +167,7 @@ export function HeroSection({ primaryCta, secondaryCta }: HeroSectionProps) {
                 transition: "opacity 0.6s ease 0.08s, transform 0.6s ease 0.08s",
               }}
             >
-              One platform for how modern businesses bill, collect, and disburse.
+              One platform for how modern businesses bill, collect, and get paid.
             </h1>
 
             <p
@@ -178,7 +178,7 @@ export function HeroSection({ primaryCta, secondaryCta }: HeroSectionProps) {
                 transition: "opacity 0.6s ease 0.16s, transform 0.6s ease 0.16s",
               }}
             >
-              Create invoices, track incoming payments, and manage disbursements — from one clean dashboard.
+              Create invoices, track incoming payments, and manage outgoing payments from one clean dashboard.
             </p>
 
             <div
