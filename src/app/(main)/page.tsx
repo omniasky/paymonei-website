@@ -9,20 +9,20 @@ import { AnswerSection } from "@/components/organisms/AnswerSection";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Business Billing and Payment Software | Invoices, Collections and Global Operations | Paymonei",
+  title: "Business Billing & AR Automation Software | Paymonei",
   description:
-    "Paymonei is billing and operations software for modern companies. Create invoices, track collections, and manage outgoing payments from one dashboard, across 150+ countries.",
+    "Paymonei is the billing and accounts receivable software for global businesses. Automate invoices, track AR aging, and organize vendor billing from one dashboard.",
   openGraph: {
-    title: "Business Billing & Payment Software | Paymonei",
+    title: "Business Billing & AR Automation Software | Paymonei",
     description:
-      "Invoices, collections, and global payment workflows from one clean dashboard. Built for companies that operate across borders.",
+      "Invoices, statement automation, and global AR workflows from one clean dashboard. Built for companies that operate across borders.",
     url: "https://paymonei.com",
     images: [
       {
         url: "https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Paymonei: Business Billing and Payment Software",
+        alt: "Paymonei: Business Billing and AR Automation Software",
       },
     ],
   },
@@ -37,7 +37,7 @@ const structuredData = {
       "@id": "https://paymonei.com/#organization",
       name: "Paymonei",
       url: "https://paymonei.com",
-      description: "Business billing and payment operations software for invoices, collections, and global payment workflows.",
+      description: "Business billing and accounts receivable automation software for invoices, dunning, and global billing workflows.",
       foundingDate: "2023",
     },
     {
@@ -48,12 +48,12 @@ const structuredData = {
       featureList: [
         "Invoice Management",
         "Billing Automation",
-        "Cross-border Payment Tracking",
-        "Workforce Payment Coordination",
-        "Merchant Billing Tools",
-        "Multi-currency Support",
-        "Payment Links",
-        "Multi-rail Payment Support",
+        "Accounts Receivable Tracking",
+        "Contractor Invoicing Coordination",
+        "Global Billing Tools",
+        "Multi-currency Statements",
+        "Automated Dunning",
+        "Unified AR Ledger",
       ],
     },
   ],
