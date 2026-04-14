@@ -73,7 +73,7 @@ export const metadata: Metadata = {
         url: "https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/og-image.png",
         width: 1200,
         height: 600,
-        alt: \"Paymonei: Business Billing and Payment Operations Software\",
+        alt: "Paymonei: Business Billing and Payment Operations Software",
       },
     ],
   },

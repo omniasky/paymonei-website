@@ -2,72 +2,70 @@
 
 import { useEffect, useState, useCallback } from "react";
 
-// ── Slides: Ranked by how universally painful they are ────────────────────
-// CCO framing: all problems are SOFTWARE/ENGINEERING problems.
-// Never frame as financial, regulatory, or compliance problems — that
-// implies Paymonei is a financial institution solving regulated workflows.
-// We are a software company solving a developer/product problem.
+// ── Slides: Universal SME pains ──────────────────────────────────────────────
+// CCO framing: all problems are OPERATIONAL/SOFTWARE problems for any business
+// that invoices. Applies to agencies, consultants, SaaS, trading companies.
+// Never frame as financial, regulatory, or compliance problems.
 const slides = [
   {
-    id: "billing",
+    id: "collections",
     tag: "01",
-    headline: "Building SaaS billing takes 6–12 months before your first invoice ships.",
-    body: "Pricing table, subscription engine, proration logic, dunning, invoice PDF, embedded checkout — most payment APIs give you a checkout form, not a billing system. Most teams build it all from scratch, twice.",
-    note: "Avg. time reported by B2B SaaS teams before billing goes live",
+    headline: "You send the invoice. Then spend weeks chasing it.",
+    body: "Most businesses lose hours every week on manual follow-up emails, payment reminders, and overdue tracking. Invoice sent is not invoice paid. Without automation, AR is a second job.",
+    note: "Avg. hours per week SMEs spend chasing unpaid invoices",
   },
   {
-    id: "checkout",
+    id: "multimethod",
     tag: "02",
-    headline: "Checkout redirects lose customers before they pay.",
-    body: "External-hosted checkout pages break your product flow. Building a fully embedded checkout that stays inside your app is another 2–3 months of work — and most teams skip it.",
-    note: "Conversion drops when customers leave your product to pay",
+    headline: "Clients pay in different currencies and methods. Nothing lines up.",
+    body: "One client pays by card, another by bank transfer, one in Singapore dollars, another in euros. You reconcile across inboxes, spreadsheets, and bank statements just to know what you have collected.",
+    note: "Tools the average SME uses to track a single cross-border collection",
   },
   {
-    id: "expansion",
+    id: "sprawl",
     tag: "03",
-    headline: "Every new market restarts your localization roadmap.",
-    body: "Multi-currency pricing, local bank formats, country-specific tax rules, and regional payment methods. Launch in three countries and you have re-built your billing layer three times.",
-    note: "New market entry cost without a unified billing layer",
+    headline: "You use three tools for billing and still cannot see what is overdue.",
+    body: "Invoicing in one place, tracking in a spreadsheet, chasing in email. When you need your AR position, you are pulling from three sources that never agree.",
+    note: "Average tools used across a single invoice lifecycle",
   },
 ];
 
 // ── Right panel illustrations ─────────────────────────────────────────────
 
-function BillingIllustration({ active }: { active: boolean }) {
-  const steps = [
-    { label: "Pricing table & plan management", done: false },
-    { label: "Subscription engine + proration", done: false },
-    { label: "Invoice generation & PDF export", done: false },
-    { label: "Embedded checkout (in-product)", done: false },
-    { label: "Dunning & failed payment handling", done: false },
-    { label: "Reconciliation & reporting", done: false },
+function CollectionIllustration({ active }: { active: boolean }) {
+  const timeline = [
+    { day: "Day 0", label: "Invoice sent", color: "#0C0C0C" },
+    { day: "Day 7", label: "Reminder #1", color: "#999" },
+    { day: "Day 14", label: "Reminder #2", color: "#999" },
+    { day: "Day 21", label: "Follow-up call", color: "#999" },
+    { day: "Day 30+", label: "Still unpaid", color: "#C53030" },
   ];
 
   return (
-    <div className="relative w-full h-full flex flex-col justify-center px-6 py-6 gap-3">
-      {/* Time badge */}
+    <div className="relative w-full h-full flex flex-col justify-center px-6 py-6 gap-2.5">
       <div
         className="absolute top-5 right-5 text-right"
         style={{ opacity: active ? 1 : 0, transition: "opacity 0.5s ease 0.1s" }}
       >
-        <div className="text-[9px] text-[#BBB] tracking-wider uppercase mb-1">Time to ship</div>
-        <div className="text-2xl font-light tracking-tight" style={{ color: "#C53030" }}>6–12 mo</div>
+        <div className="text-[9px] text-[#BBB] tracking-wider uppercase mb-1">Unpaid</div>
+        <div className="text-2xl font-light tracking-tight" style={{ color: "#C53030" }}>30+ days</div>
       </div>
 
-      <p className="text-[9px] text-[#BBB] tracking-[0.14em] uppercase mb-2 font-medium">Build from scratch</p>
+      <p className="text-[9px] text-[#BBB] tracking-[0.14em] uppercase mb-2 font-medium">Manual follow-up chain</p>
 
-      {steps.map((step, i) => (
+      {timeline.map((step, i) => (
         <div
-          key={step.label}
+          key={step.day}
           className="flex items-center gap-3"
           style={{
             opacity: active ? 1 : 0,
             transform: active ? "none" : "translateX(-6px)",
-            transition: `opacity 0.4s ease ${0.1 + i * 0.06}s, transform 0.4s ease ${0.1 + i * 0.06}s`,
+            transition: `opacity 0.4s ease ${0.1 + i * 0.08}s, transform 0.4s ease ${0.1 + i * 0.08}s`,
           }}
         >
-          <div className="w-4 h-4 rounded border-2 border-[#E0E0DB] bg-white shrink-0" />
-          <span className="text-sm text-[#555] font-light leading-snug">{step.label}</span>
+          <div className="text-[10px] text-[#BBB] w-14 shrink-0">{step.day}</div>
+          <div className="flex-1 h-px bg-[#F0F0EC]" />
+          <div className="text-[11px] font-light" style={{ color: step.color }}>{step.label}</div>
         </div>
       ))}
 
@@ -75,129 +73,106 @@ function BillingIllustration({ active }: { active: boolean }) {
         className="mt-2 text-xs text-[#BBB] italic"
         style={{ opacity: active ? 0.7 : 0, transition: "opacity 0.4s ease 0.7s" }}
       >
-        …and each pricing change requires revisiting all of these
+        ...repeat for every invoice, every client
       </div>
     </div>
   );
 }
 
-function CheckoutIllustration({ active }: { active: boolean }) {
-  return (
-    <div className="relative w-full h-full flex items-center justify-center gap-4 px-6">
+function MultiRailIllustration({ active }: { active: boolean }) {
+  const sources = [
+    { method: "Visa card", currency: "USD", flag: "🇺🇸" },
+    { method: "SEPA transfer", currency: "EUR", flag: "🇩🇪" },
+    { method: "QRIS", currency: "IDR", flag: "🇮🇩" },
+    { method: "Bank wire", currency: "SGD", flag: "🇸🇬" },
+  ];
 
-      {/* Your app */}
-      <div
-        className="flex flex-col"
-        style={{ opacity: active ? 1 : 0, transition: "opacity 0.4s ease 0.1s" }}
-      >
-        <div className="text-[9px] text-[#999] tracking-wider uppercase mb-2 text-center">Your product</div>
-        <div className="w-36 rounded-xl border border-[#EAEAE6] bg-white shadow-sm overflow-hidden">
-          <div className="px-3 py-2 border-b border-[#F0F0EC] bg-[#FAFAF8]">
-            <div className="h-1.5 bg-[#E8E8E4] rounded-full w-16 mb-1" />
-            <div className="h-1.5 bg-[#E8E8E4] rounded-full w-24" />
+  return (
+    <div className="relative w-full h-full flex items-center justify-center gap-5 px-6">
+      <div className="flex flex-col gap-2.5">
+        {sources.map((s, i) => (
+          <div
+            key={s.method}
+            className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg border border-[#EAEAE6] bg-white shadow-sm"
+            style={{
+              opacity: active ? 1 : 0,
+              transform: active ? "none" : "translateX(-6px)",
+              transition: `opacity 0.4s ease ${0.1 + i * 0.08}s, transform 0.4s ease ${0.1 + i * 0.08}s`,
+            }}
+          >
+            <span className="text-sm">{s.flag}</span>
+            <span className="text-[10px] text-[#555] font-medium">{s.method}</span>
+            <span className="text-[9px] text-[#BBB] ml-1">{s.currency}</span>
           </div>
-          <div className="px-3 py-3 space-y-2">
-            <div className="h-1.5 bg-[#F0F0EC] rounded-full w-full" />
-            <div className="h-1.5 bg-[#F0F0EC] rounded-full w-4/5" />
-            {/* Button in-app */}
-            <div className="mt-3 flex justify-center">
-              <div className="px-3 py-1 rounded-full bg-[#0C0C0C] text-white text-[9px]">
-                Subscribe →
-              </div>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
 
-      {/* Arrow */}
-      <div
-        className="flex flex-col items-center gap-1"
-        style={{ opacity: active ? 1 : 0, transition: "opacity 0.4s ease 0.3s" }}
-      >
-        <div className="text-[10px] text-[#C53030]">leaves app</div>
-        <svg width="40" height="16" viewBox="0 0 40 16" fill="none">
-          <path d="M0 8h36M28 2l8 6-8 6" stroke="#C53030" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+      <div style={{ opacity: active ? 1 : 0, transition: "opacity 0.4s ease 0.45s" }}>
+        <svg width="28" height="80" viewBox="0 0 28 80" fill="none">
+          <path d="M4 10 Q24 40 4 70" stroke="#DDDDD8" strokeWidth="1.5" strokeDasharray="4 3" />
+          <path d="M4 25 Q20 40 4 55" stroke="#DDDDD8" strokeWidth="1.5" strokeDasharray="4 3" />
+          <path d="M14 10 L14 70" stroke="#DDDDD8" strokeWidth="1.5" strokeDasharray="4 3" />
         </svg>
       </div>
 
-      {/* External checkout */}
       <div
-        className="flex flex-col"
-        style={{ opacity: active ? 1 : 0, transition: "opacity 0.4s ease 0.2s" }}
+        className="flex flex-col items-center gap-2"
+        style={{ opacity: active ? 1 : 0, transition: "opacity 0.4s ease 0.55s" }}
       >
-        <div className="text-[9px] text-[#C53030] tracking-wider uppercase mb-2 text-center">External page</div>
-        <div className="w-36 rounded-xl border-2 border-[#FFD4D4] bg-[#FFF8F8] overflow-hidden shadow-sm">
-          <div className="px-3 py-2 border-b border-[#FFE8E8] bg-[#FFF0F0]">
-            <div className="flex items-center gap-1.5">
-              <div className="w-2 h-2 rounded-full bg-[#EFA0A0]" />
-              <div className="h-1.5 bg-[#F5C0C0] rounded-full w-20" />
-            </div>
-          </div>
-          <div className="px-3 py-3 space-y-2">
-            <div className="h-1.5 bg-[#F5E0E0] rounded-full w-full" />
-            <div className="h-1.5 bg-[#F5E0E0] rounded-full w-3/5" />
-            <input readOnly className="mt-2 w-full text-[9px] border border-[#F0C0C0] rounded px-1.5 py-1 text-[#C53030] bg-white" placeholder="Card number" defaultValue="" />
-          </div>
+        <div className="w-14 h-14 rounded-2xl border-2 border-dashed border-[#DDDDD8] bg-[#F9F9F6] flex items-center justify-center">
+          <span className="text-2xl">?</span>
         </div>
+        <span className="text-[9px] text-[#C53030] text-center">Where is it?</span>
       </div>
 
-      {/* Drop-off label */}
       <div
         className="absolute bottom-5 left-1/2 -translate-x-1/2 text-center"
         style={{ opacity: active ? 0.6 : 0, transition: "opacity 0.5s ease 0.7s" }}
       >
-        <div className="text-[10px] text-[#AAA]">Customers who leave rarely come back</div>
+        <div className="text-[10px] text-[#AAA]">Reconcile manually across 3+ tools</div>
       </div>
     </div>
   );
 }
 
-function ExpansionIllustration({ active }: { active: boolean }) {
-  const markets = [
-    { flag: "🇸🇬", name: "Singapore", items: ["SGD", "PayNow", "GIRO", "GST 9%"] },
-    { flag: "🇩🇪", name: "Germany", items: ["EUR", "SEPA", "IBAN", "VAT 19%"] },
-    { flag: "🇧🇷", name: "Brazil", items: ["BRL", "PIX", "Boleto", "ISS/ICMS"] },
+function ToolSprawlIllustration({ active }: { active: boolean }) {
+  const tools = [
+    { icon: "📊", name: "Spreadsheet", sub: "overdue tracker" },
+    { icon: "📧", name: "Email inbox", sub: "reminders" },
+    { icon: "📄", name: "Billing app", sub: "invoices" },
   ];
 
   return (
     <div className="relative w-full h-full flex items-center justify-center gap-3 px-4">
-      {markets.map((market, i) => (
+      {tools.map((tool, i) => (
         <div
-          key={market.name}
+          key={tool.name}
           className="flex-1"
           style={{
             opacity: active ? 1 : 0,
             transform: active ? "none" : "translateY(8px)",
-            transition: `opacity 0.4s ease ${0.1 + i * 0.1}s, transform 0.4s ease ${0.1 + i * 0.1}s`,
+            transition: `opacity 0.4s ease ${0.1 + i * 0.12}s, transform 0.4s ease ${0.1 + i * 0.12}s`,
           }}
         >
           <div className="rounded-xl border border-[#EAEAE6] bg-white shadow-sm overflow-hidden">
-            <div className="px-3 py-2.5 border-b border-[#F5F5F2] bg-[#FAFAF8] flex items-center gap-2">
-              <span className="text-base">{market.flag}</span>
-              <span className="text-[11px] font-medium text-[#0C0C0C]">{market.name}</span>
+            <div className="px-3 py-2.5 border-b border-[#F5F5F2] bg-[#FAFAF8] flex items-center gap-1.5">
+              <span className="text-base">{tool.icon}</span>
+              <span className="text-[10px] font-medium text-[#0C0C0C]">{tool.name}</span>
             </div>
             <div className="px-3 py-2.5 space-y-1.5">
-              {market.items.map((item) => (
-                <div key={item} className="flex items-center gap-2">
-                  <div className="w-1 h-1 rounded-full bg-[#DDDDD8] shrink-0" />
-                  <span className="text-[10px] text-[#666]">{item}</span>
-                </div>
-              ))}
+              <div className="h-1.5 bg-[#F0F0EC] rounded-full w-full" />
+              <div className="h-1.5 bg-[#F0F0EC] rounded-full w-3/4" />
+              <div className="h-1.5 bg-[#F0F0EC] rounded-full w-1/2" />
             </div>
           </div>
-          {/* Re-build arrow */}
-          {i < markets.length - 1 && (
-            <div className="sr-only">separator</div>
-          )}
         </div>
       ))}
 
-      {/* Re-build badges */}
       <div
         className="absolute bottom-5 left-1/2 -translate-x-1/2 flex items-center gap-2"
         style={{ opacity: active ? 0.6 : 0, transition: "opacity 0.5s ease 0.6s" }}
       >
-        {["Rebuild #1", "Rebuild #2", "Rebuild #3"].map((label) => (
+        {["Export", "Copy-paste", "Manually update"].map((label) => (
           <span key={label} className="text-[9px] px-2 py-0.5 rounded-full border border-[#E0E0DB] text-[#AAA]">
             {label}
           </span>
@@ -207,7 +182,7 @@ function ExpansionIllustration({ active }: { active: boolean }) {
   );
 }
 
-const illustrations = [BillingIllustration, CheckoutIllustration, ExpansionIllustration];
+const illustrations = [CollectionIllustration, MultiRailIllustration, ToolSprawlIllustration];
 
 // ── Main Section ────────────────────────────────────────────────────────────
 

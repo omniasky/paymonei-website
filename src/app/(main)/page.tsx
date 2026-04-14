@@ -139,28 +139,28 @@ export default function HomePage() {
                   className="text-[clamp(1.8rem,3.5vw,2.8rem)] font-light leading-tight tracking-[-0.03em] text-[#0C0C0C]"
                   style={{ fontFamily: "'Instrument Serif', Georgia, serif" }}
                 >
-                  One platform for every billing problem your product faces.
+                  One platform for every business that invoices.
                 </h2>
                 <p className="mt-5 text-[15px] text-[#777] leading-relaxed font-light max-w-xs">
-                  Ship billing in days, not months. No need to stitch together five different tools or own infrastructure your team will maintain forever.
+                  Stop chasing. Stop reconciling across tools. From first invoice to collected payment, automated and visible in one place.
                 </p>
               </div>
               <div className="space-y-8 pt-1">
                 {[
                   {
                     num: "01",
-                    title: "Complete billing backend, out of the box",
-                    body: "Pricing plans, subscription engine, proration, dunning, PDF invoices, and a merchant portal. Pre-built. Integrate in days, not quarters.",
+                    title: "Automated follow-up so you stop chasing",
+                    body: "Set dunning rules once. Paymonei sends reminders on schedule, escalates overdue invoices, and flags problem accounts in your AR dashboard. You focus on the work, not the collection.",
                   },
                   {
                     num: "02",
-                    title: "Embedded checkout that stays in your product",
-                    body: "A fully in-product checkout flow with no external redirect, no hosted page. Your customers pay without leaving your app.",
+                    title: "Every payment method your client needs, one link",
+                    body: "Card, local payment methods, or stablecoin, all from the same payment link. Your client pays how they prefer. You see every collection in one place, in any currency.",
                   },
                   {
                     num: "03",
                     title: "Multi-currency from day one, every market",
-                    body: "Launch in a new country without rebuilding your billing layer. Currency, local payment methods, and tax handling are already there.",
+                    body: "Invoice in any currency, accept local payment methods, and see your full AR position across all entities in a single dashboard. No more spreadsheet reconciliation.",
                   },
                 ].map((item) => (
                   <div key={item.num} className="flex items-start gap-4">
