@@ -12,8 +12,8 @@ const pains = [
   },
   {
     id: "multimethod",
-    headline: "Receivables arrive from different sources. Nothing ties together.",
-    body: "One client pays by bank transfer. Another pays through a local method. Each one shows up differently. You reconcile by hand just to know what actually cleared.",
+    headline: "Scattered data. Manual reconciliation.",
+    body: "Consolidate multi-region clients into a single source of truth. No more piecing together mismatched formats by hand.",
   },
   {
     id: "sprawl",
@@ -111,7 +111,7 @@ function MultiRailWidget({ active }: { active: boolean }) {
             style={{
               opacity: active ? 1 : 0,
               transform: active ? "none" : "translateX(-6px)",
-              transition: `opacity 0.4s ease ${i * 0.12}s, transform 0.4s ease ${i * 0.12}s`,
+              transition: `opacity 0.4s ease ${i * 0.4}s, transform 0.4s ease ${i * 0.4}s`,
             }}
           >
             <div className="w-9 h-9 rounded-xl border border-[#EAEAE6] bg-white flex items-center justify-center shadow-sm shrink-0">
@@ -122,30 +122,91 @@ function MultiRailWidget({ active }: { active: boolean }) {
         ))}
       </div>
 
-      {/* Dotted connector lines */}
-      <div className="flex-1 flex flex-col gap-3 px-1">
-        {sources.map((src, i) => (
-          <div
-            key={src.label}
-            className="flex items-center"
-            style={{
-              opacity: active ? 1 : 0,
-              transition: `opacity 0.4s ease ${i * 0.12 + 0.2}s`,
-            }}
-          >
-            <svg width="100%" height="2" className="overflow-visible">
-              <line
-                x1="0"
-                y1="1"
-                x2="100%"
-                y2="1"
-                stroke="#D5D5D0"
-                strokeWidth="1.5"
-                strokeDasharray="3 4"
-              />
-            </svg>
-          </div>
-        ))}
+      {/* Dotted connector converging curves (90 degree pipe style) */}
+      <div className="flex-1 flex items-center px-1" style={{ height: "132px" }}>
+        <svg
+          className="w-full h-full overflow-visible"
+          viewBox="0 0 100 132"
+          preserveAspectRatio="none"
+        >
+          <defs>
+            <style>
+              {`
+                @keyframes march-ants {
+                  from { stroke-dashoffset: 14; }
+                  to { stroke-dashoffset: 0; }
+                }
+                .running-line {
+                  animation: march-ants 0.6s linear infinite;
+                }
+              `}
+            </style>
+          </defs>
+
+          {/* Main merged trunk (from x=60 to Paymonei box) */}
+          <mask id="trunk-mask" maskUnits="userSpaceOnUse">
+             <path
+               d="M 60 66 L 100 66"
+               stroke="white"
+               strokeWidth="20"
+               fill="none"
+               strokeDasharray="100"
+               strokeDashoffset={active ? 0 : 100}
+               style={{ transition: "stroke-dashoffset 0.3s ease 1.3s" }}
+             />
+          </mask>
+          <path
+            d="M 60 66 L 100 66"
+            fill="none"
+            stroke="#C0C0BA"
+            strokeWidth="1.5"
+            strokeDasharray="3 4"
+            vectorEffect="non-scaling-stroke"
+            className="running-line"
+            mask="url(#trunk-mask)"
+          />
+          
+          {sources.map((src, i) => {
+            let d = "";
+            let length = 150;
+            if (i === 0) {
+              d = "M 0 18 L 40 18 Q 50 18 50 28 L 50 56 Q 50 66 60 66";
+            } else if (i === 1) {
+              d = "M 0 66 L 60 66";
+              length = 60;
+            } else {
+              d = "M 0 114 L 40 114 Q 50 114 50 104 L 50 76 Q 50 66 60 66";
+            }
+            
+            const delay = i * 0.4 + 0.1;
+            
+            return (
+              <g key={src.label}>
+                <mask id={`mask-${i}`} maskUnits="userSpaceOnUse">
+                   <path 
+                     d={d} 
+                     stroke="white" 
+                     strokeWidth="20" 
+                     fill="none" 
+                     strokeDasharray={length} 
+                     strokeDashoffset={active ? 0 : length} 
+                     style={{ transition: `stroke-dashoffset 0.4s ease ${delay}s` }} 
+                   />
+                </mask>
+                <path
+                  d={d}
+                  fill="none"
+                  stroke="#C0C0BA"
+                  strokeWidth="1.5"
+                  strokeDasharray="3 4"
+                  vectorEffect="non-scaling-stroke"
+                  className="running-line"
+                  mask={`url(#mask-${i})`}
+                />
+              </g>
+            );
+          })}
+        </svg>
       </div>
 
       {/* Paymonei destination node */}
@@ -153,7 +214,7 @@ function MultiRailWidget({ active }: { active: boolean }) {
         style={{
           opacity: active ? 1 : 0,
           transform: active ? "none" : "translateX(6px)",
-          transition: "opacity 0.5s ease 0.45s, transform 0.5s ease 0.45s",
+          transition: "opacity 0.4s ease 1.6s, transform 0.4s ease 1.6s",
         }}
       >
         <div className="w-14 h-14 rounded-2xl border border-[#0C0C0C] bg-[#0C0C0C] flex flex-col items-center justify-center gap-0.5 shadow-sm">
