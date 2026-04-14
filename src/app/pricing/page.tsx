@@ -159,11 +159,11 @@ const faqs = [
   },
   {
     q: "What currencies and geographies are supported?",
-    a: "Paymonei supports multi-currency invoice creation and payment link generation across 150+ countries. Available settlement currencies and local payment methods depend on the payment infrastructure active in your region.",
+    a: "Paymonei supports multi-currency invoice creation and payment link generation across 150+ countries. Available settlement currencies and local payment methods depend on the payment infrastructure active in your region.\n\nPaymonei does not provide services to individuals, entities, or jurisdictions subject to applicable sanctions programmes, including those maintained by OFAC (US), UN Security Council, EU, or equivalent authorities. Use of Paymonei in sanctioned jurisdictions is prohibited.",
   },
   {
     q: "Can I accept stablecoin payments (USDC / USDT)?",
-    a: "Yes. Merchants can enable USDC and USDT as payment options on any invoice or payment page. Stablecoin settlement is handled by licensed infrastructure partners. Paymonei does not provide cryptocurrency exchange or custody services.",
+    a: "Yes. Merchants can enable USDC and USDT as payment options on any invoice or payment page. A 1.5% platform fee applies on stablecoin settlements in addition to a small blockchain network fee (typically under $0.01). Stablecoin payment acceptance is subject to jurisdiction availability and may not be available in all regions.",
   },
   {
     q: "What is the working capital eligibility feature?",
@@ -519,8 +519,13 @@ export default function PricingPage() {
                       <td className="py-3.5 text-right text-[14px] text-[#0C0C0C] font-medium whitespace-nowrap">~3.4% + $0.37</td>
                     </tr>
                     <tr className="border-b border-[#F5F5F2]">
-                      <td className="py-3.5 pr-4 text-[14px] text-[#555] font-light">USDC / USDT (stablecoin)</td>
-                      <td className="py-3.5 text-right text-[14px] text-[#0C0C0C] font-medium whitespace-nowrap">~$0.01 network fee</td>
+                      <td className="py-3.5 pr-4 text-[14px] text-[#555] font-light">
+                        USDC / USDT (stablecoin)
+                        <span className="block text-[11px] text-[#AAA] font-light mt-0.5">Platform fee charged by Paymonei</span>
+                      </td>
+                      <td className="py-3.5 text-right text-[14px] text-[#0C0C0C] font-medium whitespace-nowrap">
+                        1.5% + ~$0.01 gas
+                      </td>
                     </tr>
                     <tr>
                       <td className="py-3.5 pr-4 text-[14px] text-[#555] font-light">SWIFT / bank transfer</td>
@@ -560,9 +565,18 @@ export default function PricingPage() {
                       <td className="py-3.5 pr-4 text-[14px] text-[#555] font-light">Virtual Account ≥ Rp 2,000,000</td>
                       <td className="py-3.5 text-right text-[14px] text-[#0C0C0C] font-medium whitespace-nowrap">50 free / mo, then Rp 4,000</td>
                     </tr>
-                    <tr>
+                    <tr className="border-b border-[#F5F5F2]">
                       <td className="py-3.5 pr-4 text-[14px] text-[#555] font-light">Virtual Account &lt; Rp 2,000,000</td>
                       <td className="py-3.5 text-right text-[14px] text-[#0C0C0C] font-medium whitespace-nowrap">Rp 4,000</td>
+                    </tr>
+                    <tr>
+                      <td className="py-3.5 pr-4 text-[14px] text-[#555] font-light">
+                        USDC / USDT (stablecoin)
+                        <span className="block text-[11px] text-[#AAA] font-light mt-0.5">Platform fee charged by Paymonei</span>
+                      </td>
+                      <td className="py-3.5 text-right text-[14px] text-[#0C0C0C] font-medium whitespace-nowrap">
+                        1.5% + ~Rp 150 gas
+                      </td>
                     </tr>
                   </tbody>
                 </table>
