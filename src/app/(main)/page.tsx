@@ -5,6 +5,7 @@ import { Footer } from "@/components/organisms/Footer";
 import { HeroSection } from "@/components/templates/HeroSection";
 import { CodeComparisonSection } from "@/components/organisms/CodeComparisonSection";
 import { ProblemSection } from "@/components/organisms/ProblemSection";
+import { AnswerSection } from "@/components/organisms/AnswerSection";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -130,51 +131,7 @@ export default function HomePage() {
         <ProblemSection />
 
         {/* ── WHAT WE DO ───────────────────────────────────────────── */}
-        <section className="border-t border-[#EAEAE6] bg-[#FAFAF8] py-20 px-5 sm:px-8">
-          <div className="max-w-7xl mx-auto lg:px-8">
-            <div className="grid md:grid-cols-2 gap-16 items-start">
-              <div>
-                <p className="text-[12px] tracking-[0.14em] uppercase text-[#999] mb-5">The answer</p>
-                <h2
-                  className="text-[clamp(1.8rem,3.5vw,2.8rem)] font-light leading-tight tracking-[-0.03em] text-[#0C0C0C]"
-                  style={{ fontFamily: "'Instrument Serif', Georgia, serif" }}
-                >
-                  One platform for every business that invoices.
-                </h2>
-                <p className="mt-5 text-[15px] text-[#777] leading-relaxed font-light max-w-xs">
-                  Stop chasing. Stop reconciling across tools. From first invoice to collected payment, automated and visible in one place.
-                </p>
-              </div>
-              <div className="space-y-8 pt-1">
-                {[
-                  {
-                    num: "01",
-                    title: "Automated follow-up so you stop chasing",
-                    body: "Set dunning rules once. Paymonei sends reminders on schedule, escalates overdue invoices, and flags problem accounts in your AR dashboard. You focus on the work, not the collection.",
-                  },
-                  {
-                    num: "02",
-                    title: "Every payment method your client needs, one link",
-                    body: "Card, local payment methods, or stablecoin, all from the same payment link. Your client pays how they prefer. You see every collection in one place, in any currency.",
-                  },
-                  {
-                    num: "03",
-                    title: "Multi-currency from day one, every market",
-                    body: "Invoice in any currency, accept local payment methods, and see your full AR position across all entities in a single dashboard. No more spreadsheet reconciliation.",
-                  },
-                ].map((item) => (
-                  <div key={item.num} className="flex items-start gap-4">
-                    <span className="text-[12px] text-[#CCC] font-medium tracking-wider mt-0.5 w-5 shrink-0">{item.num}</span>
-                    <div>
-                      <h3 className="text-[15px] font-medium text-[#0C0C0C] mb-1.5">{item.title}</h3>
-                      <p className="text-[15px] text-[#777] leading-relaxed font-light">{item.body}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
+        <AnswerSection />
 
 
         {/* ── FROM COMPLEX TO SIMPLE ───────────────────────────────── */}
