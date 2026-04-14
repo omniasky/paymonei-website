@@ -14,22 +14,22 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Payment Links — Billing Operations Software | Paymonei",
+  title: "Payment Links | Billing Operations Software | Paymonei",
   description:
-    "Generate secure payment request links in seconds. Accelerate collections with multi-rail payment orchestration workflows.",
+    "Generate secure payment request links in seconds. Accelerate accounts receivable with automated checkout workflows.",
   keywords: [
-    "payment links",
-    "payment request software",
+    "payment request links",
+    "B2B checkout links",
     "invoice link generator",
-    "billing operations",
+    "digital billing operations",
     "no-code billing",
-    "digital payment links",
-    "multi-rail billing links",
+    "accounts receivable software",
+    "AR collections engine",
   ],
   openGraph: {
-    title: "Payment Links — Billing Operations Software | Paymonei",
+    title: "Payment Links | Billing Operations Software | Paymonei",
     description:
-      "Generate secure payment request links in seconds. Accelerate collections with multi-rail payment orchestration workflows.",
+      "Generate secure payment request links in seconds. Accelerate accounts receivable with automated checkout workflows.",
     url: "https://paymonei.com/payments/links",
     siteName: "Paymonei",
     type: "website",
@@ -44,11 +44,12 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Payment Links — Billing Operations Software | Paymonei",
+    title: "Payment Links | Billing Operations Software | Paymonei",
     description:
-      "Generate secure payment request links in seconds. Accelerate collections with multi-rail payment orchestration workflows.",
+      "Generate secure payment request links in seconds. Accelerate accounts receivable with automated checkout workflows.",
     images: ["https://s3.ap-southeast-3.amazonaws.com/assets.paymonei.com/web/og-image.png"],
   },
+  alternates: { canonical: "https://paymonei.com/payments/links" },
 };
 
 export default function PaymentLinksPage() {
@@ -81,7 +82,7 @@ export default function PaymentLinksPage() {
                   <span className="italic text-[#666]">Anywhere, anytime.</span>
                 </h1>
                 <p className="text-[16px] text-[#666] leading-relaxed font-light max-w-md mb-10">
-                  Generate secure, branded payment requests instantly. Our software orchestrates the workflow, while our licensed partners handle execution seamlessly.
+                  Generate secure, branded checkout requests instantly. Our software automates the Accounts Receivable workflow seamlessly without writing custom code.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -220,7 +221,7 @@ export default function PaymentLinksPage() {
                     Connect with customers where they already are. Drop payment links smoothly into WhatsApp, Instagram DMs, or Support channels.
                   </p>
                   <ul className="space-y-3">
-                    {["Frictionless mobile-optimized payment flows", "Multi-rail compatibility (Cards, Bank Transfer, Stablecoin)", "Unified tracking dashboard for all channels"].map(item => (
+                    {["Frictionless mobile-optimized checkout flows", "Flexible invoice settlement methods for your clients", "Unified tracking dashboard for all channels"].map(item => (
                       <li key={item} className="flex items-start gap-3">
                         <Check className="w-4 h-4 text-[#0C0C0C] mt-0.5 opacity-60" />
                         <span className="text-[14px] text-[#555] font-light">{item}</span>
@@ -274,13 +275,13 @@ const features = [
   },
   {
     icon: CreditCard,
-    title: "Multi-rail compatibility",
-    desc: "Provide customers the flexibility to settle via cards, bank transfers, or stablecoins through licensed networks.",
+    title: "Flexible settlement",
+    desc: "Provide clients the flexibility to settle invoices directly through secure external portals.",
   },
   {
     icon: Shield,
     title: "Enterprise security",
-    desc: "Benefiting from bank-grade encryption handled by our regulated clearing and settlement partners.",
+    desc: "Benefiting from bank-grade encryption and secure webhook hand-offs to your private ledgers.",
   },
   {
     icon: BarChart3,
