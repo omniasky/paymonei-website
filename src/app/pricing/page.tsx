@@ -46,13 +46,11 @@ void _metadataRef; // suppress unused warning
 
 // ── Pricing model (comments only; no runtime effect) ────────────────────────
 //
-// Framing: Software platform fee + per-volume software service fee.
-// We are NOT charging interchange, MDR, or payment processing fees.
-// Licensed infrastructure costs are absorbed by execution partners.
-//
-// Free tier: 0% software fee on first $10K/month billing volume.
-// Above $10K: 1.5% software fee (software fee, not a processing fee).
-// Legally consistent with ToS and the Chargebee/Maxio billing model.
+// Framing: Pure subscription (platform fee). No per-volume % fee.
+// Starter: free indefinitely (feature-gated by entities).
+// Core $59/mo, Growth $249/mo, Enterprise custom.
+// Bank / network / card fees are set by payment infrastructure — not us.
+// Legally consistent with Xero / QuickBooks SaaS subscription model.
 
 const plans = [
   {
@@ -65,7 +63,6 @@ const plans = [
     cta: "Start for free",
     ctaHref: "https://app.paymonei.com/auth/register",
     ctaPrimary: false,
-    softwareFee: "0% up to $10K / mo",
     entities: "1 entity",
     includes: [
       "Unlimited invoices & PDF export",
@@ -91,7 +88,6 @@ const plans = [
     cta: "Get started",
     ctaHref: "https://app.paymonei.com/auth/register?plan=core",
     ctaPrimary: false,
-    softwareFee: "1.2% software fee",
     entities: "Up to 3 entities",
     includes: [
       "Everything in Starter",
@@ -111,7 +107,6 @@ const plans = [
     cta: "Get started",
     ctaHref: "https://app.paymonei.com/auth/register?plan=growth",
     ctaPrimary: true,
-    softwareFee: "0.9% software fee",
     entities: "Up to 10 entities",
     includes: [
       "Everything in Core",
@@ -132,7 +127,6 @@ const plans = [
     cta: "Contact sales",
     ctaHref: "mailto:sales@paymonei.com",
     ctaPrimary: false,
-    softwareFee: "Custom rate",
     entities: "Unlimited entities",
     includes: [
       "Everything in Growth",
@@ -141,23 +135,19 @@ const plans = [
       "Custom SLA (99.95% uptime commitment)",
       "Data Processing Agreement (GDPR / PDPA)",
       "24/7 Slack & phone support",
-      "Volume-based software fee schedules",
+      "Custom platform fee schedule",
     ],
   },
 ];
 
 const faqs = [
   {
-    q: "What does the software service fee cover?",
-    a: "It covers the software itself: creating invoices, generating payment links, running subscription billing, sending dunning reminders, and delivering webhooks. We charge for the software layer. The actual movement of money is handled by licensed financial partners — we are not a payment processor or financial institution.",
+    q: "What does the platform fee cover?",
+    a: "Your platform fee pays for the Paymonei software: invoice creation, PDF generation, payment links, subscription billing, dunning automation, webhook delivery, and the AR dashboard. It is a flat monthly fee — the same regardless of how many invoices you send or what payment methods your clients use.",
   },
   {
-    q: "What does a payment actually cost my client?",
-    a: "It depends on how your client pays. On a $1,000 invoice using the Starter plan:\n\nStablecoin (USDC/USDT): $0 software fee (under $10K/month) + ~$0.01 blockchain gas. Your client pays $1,000.01 effectively nothing extra.\n\nCredit or debit card: $0 software fee + ~$34 card processing fee from our execution partner (approx. 3.4% + $0.37). Total cost: ~$34 on a $1,000 invoice.\n\nCard processing fees are charged by our licensed payment execution partners, not by Paymonei. They appear itemised at checkout. Stablecoin payments avoid card processing entirely.",
-  },
-  {
-    q: "Why is the Starter plan free up to $10K / month?",
-    a: "We want businesses to build real invoice history and verify that Paymonei fits their workflow before committing to a paid plan. The $10K threshold resets every month — bill under $10K in any given month and pay nothing. Above $10K, a 1.5% software fee applies to the excess. Most businesses grow into the Core plan once they need multiple entities or deeper analytics — not because of the fee.",
+    q: "What does my client pay when settling an invoice?",
+    a: "Your client pays the invoice amount. Card and bank transfer payments carry standard network processing fees set by card schemes (Visa, Mastercard) and banking infrastructure — these are deducted from your settlement, not added on top for your client. Stablecoin payments (USDC/USDT) carry only a small blockchain network fee of roughly $0.01.",
   },
   {
     q: "Is there a setup fee or contract?",
@@ -165,23 +155,19 @@ const faqs = [
   },
   {
     q: "What is the difference between Core ($59) and Growth ($249)?",
-    a: "Core adds up to 3 entities, 6 months of AR analytics, and webhook management on top of the free Starter features. Growth scales to 10 entities, 24 months of analytics, configurable dunning per subscription, an account manager, and access to our built-in accounting tools when available.",
-  },
-  {
-    q: "Do you handle the actual payment processing?",
-    a: "No. Paymonei is software. We generate invoices, payment links, and coordinate billing workflows. The actual movement of funds is executed by our licensed financial infrastructure partners. Your contract for financial services is with a regulated institution, not with us.",
+    a: "Core adds up to 3 entities, 6 months of AR analytics, and webhook management on top of everything in Starter. Growth scales to 10 entities, 24 months of analytics, configurable dunning per subscription, an account manager, and built-in accounting tools when available.",
   },
   {
     q: "What currencies and geographies are supported?",
-    a: "Our software supports multi-currency invoice creation and payment link generation across 150+ countries. Supported settlement currencies and local payment methods depend on the underlying licensed infrastructure partners active in your region.",
+    a: "Paymonei supports multi-currency invoice creation and payment link generation across 150+ countries. Available settlement currencies and local payment methods depend on the payment infrastructure active in your region.",
   },
   {
     q: "Can I accept stablecoin payments (USDC / USDT)?",
-    a: "Yes. Merchants can enable USDC and USDT as payment options on their invoices and payment pages. Settlement is handled by our licensed infrastructure partners. Paymonei does not provide cryptocurrency exchange or custody services.",
+    a: "Yes. Merchants can enable USDC and USDT as payment options on any invoice or payment page. Stablecoin settlement is handled by licensed infrastructure partners. Paymonei does not provide cryptocurrency exchange or custody services.",
   },
   {
     q: "What is the working capital eligibility feature?",
-    a: "Merchants with a verified account and consistent invoice activity may become eligible for working capital facilities through our licensed lending partners. This is an opt-in referral service. Paymonei does not assess creditworthiness or make lending decisions. You are introduced directly to a licensed financial institution.",
+    a: "Merchants with a verified account and consistent invoice activity may become eligible for working capital introductions through licensed lending partners. This is an opt-in referral — Paymonei does not assess creditworthiness or make lending decisions.",
   },
 ];
 
@@ -198,13 +184,8 @@ type ComparisonRow = {
 const comparison: ComparisonRow[] = [
   {
     feature: "Monthly platform fee",
-    tooltip: "Fixed monthly cost. No contracts or minimums.",
+    tooltip: "Flat monthly cost. No contracts, no minimums, no per-invoice or per-volume charges.",
     starter: "$0", core: "$59", growth: "$249", enterprise: "Custom",
-  },
-  {
-    feature: "Software service fee",
-    tooltip: "Charged monthly on your billing volume. Starter: 0% on the first $10K billed each month, then 1.5% above that. Core: 1.2% on all volume. Growth: 0.9% on all volume.",
-    starter: "0% up to $10K / mo, then 1.5%", core: "1.2%", growth: "0.9%", enterprise: "Custom",
   },
   {
     feature: "Invoices per month",
@@ -395,12 +376,8 @@ export default function PricingPage() {
                       </span>
                     </div>
                     <p className="text-[13px] text-[#AAA] font-light mb-5">{plan.priceSub}</p>
-                    {/* Key specs: 2 lines only */}
+                    {/* Key specs */}
                     <div className="flex flex-col gap-1 pt-4 border-t border-[#EAEAE6]">
-                      <p className="text-[13px] text-[#555]">
-                        <span className="text-[#AAA] font-light">Fee </span>
-                        <span className="font-medium">{plan.softwareFee}</span>
-                      </p>
                       <p className="text-[13px] text-[#555]">
                         <span className="text-[#AAA] font-light">Entities </span>
                         <span className="font-medium">{plan.entities}</span>
@@ -519,10 +496,10 @@ export default function PricingPage() {
               className="text-[clamp(1.8rem,3.5vw,2.8rem)] font-light leading-tight tracking-[-0.03em] text-[#0C0C0C] mb-4"
               style={{ fontFamily: "'Instrument Serif', Georgia, serif" }}
             >
-              Not charged<br />by Paymonei.
+              Rates by<br />payment method.
             </h2>
             <p className="text-[15px] text-[#666] font-light leading-relaxed mb-12 max-w-xl">
-              Paying by card, bank transfer, or digital wallet involves fees set by card networks (Visa, Mastercard), Bank Indonesia (for QRIS), and local banking infrastructure. These rates are standard across the industry — Paymonei does not set, collect, or earn from them.
+              Card, bank transfer, and digital wallet payments carry standard fees set by card networks and banking infrastructure. Rates vary by payment method and region.
             </p>
 
             <div className="grid md:grid-cols-2 gap-6">
@@ -593,7 +570,7 @@ export default function PricingPage() {
             </div>
 
             <p className="mt-6 text-[12px] text-[#BBB] font-light leading-relaxed max-w-2xl">
-              Rates are set by card networks (Visa, Mastercard), Bank Indonesia, and local banking infrastructure. They are subject to change without notice and may vary by merchant category, transaction volume, card type, or applicable local regulations. Paymonei is not a payment processor, bank, or financial institution and does not set or collect these fees.
+              Rates shown are indicative and subject to change. Verify current rates with your payment services provider.
             </p>
           </div>
         </section>
