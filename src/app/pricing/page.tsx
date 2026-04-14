@@ -349,7 +349,7 @@ export default function PricingPage() {
               <span className="italic">No surprises.</span>
             </h1>
             <p className="mt-6 text-[16px] text-[#666] leading-relaxed font-light max-w-md">
-              You pay for the software layer. Payment execution is handled by licensed infrastructure partners, not by us.
+              Simple monthly subscription. Pick a plan, cancel anytime.
             </p>
           </div>
         </section>
@@ -405,8 +405,8 @@ export default function PricingPage() {
                     <Link href={plan.ctaHref}>
                       <span
                         className={`block w-full text-center px-5 py-3 rounded-full text-sm font-medium transition-colors duration-150 cursor-pointer ${plan.ctaPrimary
-                            ? "bg-[#0C0C0C] text-white hover:bg-[#222]"
-                            : "border border-[#E5E5E2] text-[#555] hover:border-[#ccc] hover:text-[#0C0C0C] bg-white"
+                          ? "bg-[#0C0C0C] text-white hover:bg-[#222]"
+                          : "border border-[#E5E5E2] text-[#555] hover:border-[#ccc] hover:text-[#0C0C0C] bg-white"
                           }`}
                       >
                         {plan.cta}
@@ -521,7 +521,6 @@ export default function PricingPage() {
                     <tr className="border-b border-[#F5F5F2]">
                       <td className="py-3.5 pr-4 text-[14px] text-[#555] font-light">
                         USDC / USDT (stablecoin)
-                        <span className="block text-[11px] text-[#AAA] font-light mt-0.5">Platform fee charged by Paymonei</span>
                       </td>
                       <td className="py-3.5 text-right text-[14px] text-[#0C0C0C] font-medium whitespace-nowrap">
                         1.5% + ~$0.01 gas
@@ -568,15 +567,6 @@ export default function PricingPage() {
                     <tr className="border-b border-[#F5F5F2]">
                       <td className="py-3.5 pr-4 text-[14px] text-[#555] font-light">Virtual Account &lt; Rp 2,000,000</td>
                       <td className="py-3.5 text-right text-[14px] text-[#0C0C0C] font-medium whitespace-nowrap">Rp 4,000</td>
-                    </tr>
-                    <tr>
-                      <td className="py-3.5 pr-4 text-[14px] text-[#555] font-light">
-                        USDC / USDT (stablecoin)
-                        <span className="block text-[11px] text-[#AAA] font-light mt-0.5">Platform fee charged by Paymonei</span>
-                      </td>
-                      <td className="py-3.5 text-right text-[14px] text-[#0C0C0C] font-medium whitespace-nowrap">
-                        1.5% + ~Rp 150 gas
-                      </td>
                     </tr>
                   </tbody>
                 </table>
