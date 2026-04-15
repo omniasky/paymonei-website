@@ -520,7 +520,7 @@ export default function PricingPage() {
                         USDC / USDT (stablecoin)
                       </td>
                       <td className="py-3.5 text-right text-[14px] text-[#0C0C0C] font-medium whitespace-nowrap">
-                        1.5% + ~$0.01 gas
+                        1.5% + gas (varies per network)
                       </td>
                     </tr>
                   </tbody>
