@@ -565,10 +565,6 @@ export default function PricingPage() {
                 </table>
               </div>
             </div>
-
-            <p className="mt-6 text-[12px] text-[#BBB] font-light leading-relaxed max-w-2xl">
-              Rates shown are indicative and subject to change. Verify current rates with your payment services provider.
-            </p>
           </div>
         </section>
 
