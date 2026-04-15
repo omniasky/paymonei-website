@@ -496,7 +496,7 @@ export default function PricingPage() {
               Rates by<br />payment method.
             </h2>
             <p className="text-[15px] text-[#666] font-light leading-relaxed mb-12 max-w-xl">
-              Card, bank transfer, and digital wallet payments carry standard fees set by card networks and banking infrastructure. Rates vary by payment method and region.
+              Card and stablecoin payments carry standard fees set by card networks and blockchain infrastructure. Rates vary by payment method and region.
             </p>
 
             <div className="grid md:grid-cols-2 gap-6">
@@ -515,17 +515,13 @@ export default function PricingPage() {
                       <td className="py-3.5 pr-4 text-[14px] text-[#555] font-light">Credit & debit card (Visa, Mastercard, JCB)</td>
                       <td className="py-3.5 text-right text-[14px] text-[#0C0C0C] font-medium whitespace-nowrap">~3.4% + $0.37</td>
                     </tr>
-                    <tr className="border-b border-[#F5F5F2]">
+                    <tr>
                       <td className="py-3.5 pr-4 text-[14px] text-[#555] font-light">
                         USDC / USDT (stablecoin)
                       </td>
                       <td className="py-3.5 text-right text-[14px] text-[#0C0C0C] font-medium whitespace-nowrap">
                         1.5% + ~$0.01 gas
                       </td>
-                    </tr>
-                    <tr>
-                      <td className="py-3.5 pr-4 text-[14px] text-[#555] font-light">SWIFT / bank transfer</td>
-                      <td className="py-3.5 text-right text-[14px] text-[#0C0C0C] font-medium whitespace-nowrap">Varies</td>
                     </tr>
                   </tbody>
                 </table>
