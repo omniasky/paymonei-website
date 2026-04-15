@@ -164,7 +164,7 @@ const faqs = [
   },
   {
     q: "What is the working capital eligibility feature?",
-    a: "Merchants with a verified account and consistent invoice activity may become eligible for working capital introductions through licensed lending partners. This is an opt-in referral. Paymonei does not assess creditworthiness or make lending decisions.",
+    a: "Merchants with a verified account and consistent invoice activity may become eligible for working capital introductions through licensed lending partners. This is an opt-in referral.",
   },
 ];
 
