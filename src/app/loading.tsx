@@ -1,58 +1,54 @@
-"use client"
-
-import { Card, CardContent } from "@/components/ui/card"
-import { Loader2, Wallet } from "lucide-react"
-
 export default function Loading() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-muted/30 to-background flex items-center justify-center p-4">
-      <div className="max-w-md mx-auto text-center space-y-6">
-        {/* Loading Animation */}
-        <div className="relative">
-          {/* Outer spinning ring */}
-          <div className="w-20 h-20 mx-auto border-4 border-muted rounded-full animate-spin border-t-primary"></div>
-          
-          {/* Inner wallet icon */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-12 h-12 bg-background rounded-full flex items-center justify-center shadow-sm">
-              <Wallet className="w-6 h-6 text-primary" />
-            </div>
-          </div>
-        </div>
+    <div
+      className="min-h-screen flex items-center justify-center"
+      style={{ backgroundColor: "#FAFAF8", fontFamily: "'Geist', system-ui, sans-serif" }}
+    >
+      {/* Centered wordmark + subtle pulse bar */}
+      <div className="flex flex-col items-center gap-8">
+        {/* Wordmark */}
+        <p
+          style={{
+            fontSize: "clamp(1.1rem, 2vw, 1.4rem)",
+            fontWeight: 350,
+            letterSpacing: "-0.03em",
+            color: "#0C0C0C",
+          }}
+        >
+          Paymonei
+        </p>
 
-        {/* Loading Text */}
-        <div className="space-y-2">
-          <h2 className="text-xl font-semibold">Loading...</h2>
-          <p className="text-muted-foreground">
-            Please wait while we prepare your wallet dashboard
-          </p>
-        </div>
-
-        {/* Loading Steps Indicator */}
-        <Card className="text-left">
-          <CardContent className="p-4">
-            <div className="space-y-3">
-              <div className="flex items-center gap-3">
-                <Loader2 className="w-4 h-4 animate-spin text-primary" />
-                <span className="text-sm">Initializing secure connection...</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-4 h-4 rounded-full bg-muted flex-shrink-0"></div>
-                <span className="text-sm text-muted-foreground">Loading your assets...</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-4 h-4 rounded-full bg-muted flex-shrink-0"></div>
-                <span className="text-sm text-muted-foreground">Preparing dashboard...</span>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Tips */}
-        <div className="text-xs text-muted-foreground">
-          <p>💡 <strong>Tip:</strong> Keep your browser updated for the best experience</p>
+        {/* Animated thin progress bar */}
+        <div
+          style={{
+            width: "120px",
+            height: "1px",
+            backgroundColor: "#EAEAE6",
+            borderRadius: "999px",
+            overflow: "hidden",
+          }}
+        >
+          <div
+            style={{
+              height: "100%",
+              width: "40%",
+              backgroundColor: "#0C0C0C",
+              borderRadius: "999px",
+              animation: "paymonei-slide 1.4s ease-in-out infinite",
+            }}
+          />
         </div>
       </div>
+
+      {/* Keyframe injection */}
+      <style>{`
+        @keyframes paymonei-slide {
+          0%   { transform: translateX(-100%); opacity: 0; }
+          20%  { opacity: 1; }
+          80%  { opacity: 1; }
+          100% { transform: translateX(350%); opacity: 0; }
+        }
+      `}</style>
     </div>
-  )
+  );
 }
