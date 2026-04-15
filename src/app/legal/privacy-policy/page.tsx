@@ -91,11 +91,11 @@ export default function PrivacyPolicyPage() {
             {/* Main content */}
             <article className="flex-1 min-w-0 max-w-3xl">
 
-              {/* ── Software-Only Shield Notice ── */}
+              {/* ── Important Notice ── */}
               <div className="bg-[#F5F5F2] border border-[#EAEAE6] rounded-lg p-6 mb-12">
                 <p className="text-[13px] font-medium text-[#0C0C0C] mb-2">Important Notice</p>
                 <p className="text-[14px] text-[#555] leading-relaxed font-light">
-                  Paymonei is a <strong className="font-medium text-[#333]">software orchestration platform</strong> that provides billing and payment workflow tools. We do not hold, transmit, or have custody of financial funds at any time. All financial transaction execution and settlement is performed exclusively by our licensed third-party financial institution partners. This means the data described in this policy relates to software access, analytics, and workflow state — not to the custody of money.
+                  <strong>Omniasky Technology Pte Ltd</strong> is a technology company incorporated in Singapore. It is not a bank, financial institution, money services business, or virtual asset service provider. All financial execution services, including payment processing, fund movement, and transaction settlement, are provided exclusively by licensed third-party Execution Partners under their own regulatory licences and frameworks. The data described in this policy relates to software access, analytics, and workflow state only.
                 </p>
               </div>
 
@@ -108,7 +108,7 @@ export default function PrivacyPolicyPage() {
                   Technology development and platform management services are delivered by our affiliated entity, <strong>PT Evora Vera Teknologi</strong>, a limited liability company incorporated in Indonesia, acting as our authorized technology partner.
                 </p>
                 <p>
-                  Neither Omniasky Technology Pte Ltd nor PT Evora Vera Teknologi is a bank, payment institution, money services business, or virtual asset service provider. We are software companies. Financial execution services are provided by our regulated, licensed partners on a separate contractual basis.
+                  Omniasky Technology Pte Ltd is a technology company. It is not a bank, financial institution, money services business, or virtual asset service provider. Financial execution services are provided exclusively by our licensed Execution Partners on a separate contractual basis under their own regulatory frameworks.
                 </p>
                 <p>This Policy applies to:</p>
                 <ul>

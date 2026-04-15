@@ -388,7 +388,7 @@ export default function CookiePolicyPage() {
                   </div>
                 </div>
                 <p className="text-[14px] text-[#777] mt-6 font-light">
-                  This Cookie Policy is published by Omniasky Technology Pte Ltd, registered in Singapore, the intellectual property and management holding company of the Paymonei platform. For related policies, see our <Link href="/legal/privacy-policy">Privacy Policy</Link> and <Link href="/legal/terms-of-service">Terms of Service</Link>.
+                  This Cookie Policy is published by Omniasky Technology Pte Ltd, a private limited company incorporated in Singapore and the intellectual property owner and international contracting entity of the Paymonei platform. For related policies, see our <Link href="/legal/privacy-policy">Privacy Policy</Link> and <Link href="/legal/terms-of-service">Terms of Service</Link>.
                 </p>
               </Section>
 
