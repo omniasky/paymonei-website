@@ -128,10 +128,10 @@ export default function TermsOfServicePage() {
               {/* ── Block 1: Introduction & Parties ── */}
               <Section id="introduction" title="1. Introduction & Parties">
                 <p>
-                  These Terms of Service (&ldquo;Terms&rdquo; or &ldquo;Agreement&rdquo;) govern access to and use of the Paymonei platform, APIs, dashboards, and hosted services (collectively, the &ldquo;Services&rdquo;) provided by <strong>Omniasky Technology Pte Ltd</strong> (&ldquo;Omniasky&rdquo;, &ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;us&rdquo;), a private limited company incorporated in Singapore, which owns the intellectual property, technology, and proprietary platform of Paymonei.
+                  These Terms of Service (&ldquo;Terms&rdquo; or &ldquo;Agreement&rdquo;) govern access to and use of the Paymonei platform, APIs, dashboards, and hosted services (collectively, the &ldquo;Services&rdquo;) provided by <strong>Omniasky Technology Pte Ltd</strong>, a private limited company incorporated in Singapore and the intellectual property owner of the Paymonei platform (&ldquo;Omniasky&rdquo;, &ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;us&rdquo;).
                 </p>
                 <p>
-                  All intellectual property in and to the Paymonei platform, including the underlying technology, is owned by <strong>Omniasky Technology Pte Ltd</strong>. Technology development, platform delivery, and operational support services are provided by <strong>PT Evora Vera Teknologi</strong> (&ldquo;PT Evora&rdquo;), a limited liability company incorporated under the laws of the Republic of Indonesia, acting as Omniasky&rsquo;s authorized technology and operations partner under an intercompany technology licence agreement.
+                  All intellectual property in and to the Paymonei platform, including the underlying technology, is owned by <strong>Omniasky Technology Pte Ltd</strong>. <strong>PT Evora Vera Teknologi</strong> (&ldquo;PT Evora&rdquo;), a limited liability company incorporated under the laws of the Republic of Indonesia, operates as Omniasky&rsquo;s authorized technology and operations partner in Indonesia under an intercompany technology licence agreement.
                 </p>
                 <p>
                   These Terms apply exclusively to businesses and their duly authorized representatives (&ldquo;Merchants&rdquo;) who register for and use the Services. The Services are not designed for, marketed to, or available to private individuals acting in a personal capacity.
