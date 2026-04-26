@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { APP_REGISTER_URL } from "@/lib/app-url";
 import { Navbar } from "@/components/organisms/Navbar";
 import { Footer } from "@/components/organisms/Footer";
 import Link from "next/link";
@@ -88,7 +89,7 @@ export default function SubscriptionsPage() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto">
-                <Link href="https://app.paymonei.com/auth/register">
+                <Link href={APP_REGISTER_URL}>
                   <span className="inline-flex flex-1 items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#0C0C0C] text-white text-[15px] font-medium hover:bg-[#222] transition-colors cursor-pointer w-full">
                     Configure your plans
                     <Check className="w-4 h-4 opacity-70" />
@@ -262,7 +263,7 @@ export default function SubscriptionsPage() {
               <span className="italic text-[#666]">Upgrade when you scale.</span>
             </h2>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-              <Link href="https://app.paymonei.com/auth/register">
+              <Link href={APP_REGISTER_URL}>
                 <span className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#0C0C0C] text-white text-[15px] font-medium hover:bg-[#222] transition-colors cursor-pointer">
                   Create your account
                   <Check className="w-4 h-4 opacity-70" />

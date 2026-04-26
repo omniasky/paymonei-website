@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { APP_LOGIN_URL, APP_REGISTER_URL } from "@/lib/app-url";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CustomMegaMenu } from "../CustomMegaMenu";
@@ -106,12 +107,12 @@ export function Navbar({
 
           {/* Right side: Login, Sign up - Desktop only */}
           <div className="hidden lg:flex items-center gap-2">
-            <Link href="https://app.paymonei.com/auth/login">
+            <Link href={APP_LOGIN_URL}>
               <span className="px-4 py-2 text-sm text-[#555] hover:text-[#0C0C0C] font-light transition-colors cursor-pointer">
                 Log in
               </span>
             </Link>
-            <Link href="https://app.paymonei.com/auth/register">
+            <Link href={APP_REGISTER_URL}>
               <span className="px-4 py-2 rounded-full bg-[#0C0C0C] text-white text-sm font-medium hover:bg-[#222] transition-colors cursor-pointer">
                 Get started
               </span>
@@ -191,7 +192,7 @@ export function Navbar({
                     {/* Auth Buttons */}
                     <div className="space-y-2 pt-4 border-t border-[#EAEAE6]">
                       <Link
-                        href="https://app.paymonei.com/auth/login"
+                        href={APP_LOGIN_URL}
                         onClick={() => setIsOpen(false)}
                       >
                         <span className="block w-full text-center px-4 py-2.5 rounded-full border border-[#E5E5E2] text-sm text-[#555] hover:border-[#ccc] hover:text-[#0C0C0C] transition-colors">
@@ -199,7 +200,7 @@ export function Navbar({
                         </span>
                       </Link>
                       <Link
-                        href="https://app.paymonei.com/auth/register"
+                        href={APP_REGISTER_URL}
                         onClick={() => setIsOpen(false)}
                       >
                         <span className="block w-full text-center px-4 py-2.5 rounded-full bg-[#0C0C0C] text-white text-sm font-medium hover:bg-[#222] transition-colors">

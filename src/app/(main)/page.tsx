@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { APP_LOGIN_URL, APP_REGISTER_URL } from "@/lib/app-url";
 import { Navbar } from "@/components/organisms/Navbar";
 import { Footer } from "@/components/organisms/Footer";
 import { HeroSection } from "@/components/templates/HeroSection";
@@ -97,7 +98,7 @@ export default function HomePage() {
 
         {/* ── HERO ─────────────────────────────────────────────────── */}
         <HeroSection
-          primaryCta={{ label: "Get started", href: "https://app.paymonei.com/auth/register" }}
+          primaryCta={{ label: "Get started", href: APP_REGISTER_URL }}
           secondaryCta={{ label: "See how it works", href: "#how-it-works" }}
         />
 
@@ -262,7 +263,7 @@ export default function HomePage() {
               Join businesses worldwide that manage their billing and payment operations with Paymonei. <br /> Simpler, faster, with less overhead.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-              <Link href="https://app.paymonei.com/auth/register">
+              <Link href={APP_REGISTER_URL}>
                 <span className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#0C0C0C] text-white text-sm font-medium hover:bg-[#1a1a1a] transition-colors duration-150 cursor-pointer">
                   Create your account
                   <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
@@ -270,7 +271,7 @@ export default function HomePage() {
                   </svg>
                 </span>
               </Link>
-              <Link href="https://app.paymonei.com/auth/login">
+              <Link href={APP_LOGIN_URL}>
                 <span className="inline-flex items-center px-6 py-3 rounded-full text-sm text-[#555] border border-[#E5E5E2] hover:border-[#ccc] hover:text-[#0C0C0C] bg-white/80 backdrop-blur-sm transition-colors duration-150 cursor-pointer">
                   Sign in
                 </span>

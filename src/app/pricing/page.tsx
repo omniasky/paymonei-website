@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { APP_REGISTER_URL, appUrl } from "@/lib/app-url";
 import { Navbar } from "@/components/organisms/Navbar";
 import { Footer } from "@/components/organisms/Footer";
 import {
@@ -61,7 +62,7 @@ const plans = [
     priceLabel: "Free",
     priceSub: "No time limit. No credit card.",
     cta: "Start for free",
-    ctaHref: "https://app.paymonei.com/auth/register",
+    ctaHref: APP_REGISTER_URL,
     ctaPrimary: false,
     entities: "1 entity",
     includes: [
@@ -86,7 +87,7 @@ const plans = [
     priceLabel: "$59",
     priceSub: "per month, cancel anytime",
     cta: "Get started",
-    ctaHref: "https://app.paymonei.com/auth/register?plan=core",
+    ctaHref: appUrl("/register?plan=core"),
     ctaPrimary: false,
     entities: "Up to 3 entities",
     includes: [
@@ -105,7 +106,7 @@ const plans = [
     priceLabel: "$249",
     priceSub: "per month, cancel anytime",
     cta: "Get started",
-    ctaHref: "https://app.paymonei.com/auth/register?plan=growth",
+    ctaHref: appUrl("/register?plan=growth"),
     ctaPrimary: true,
     entities: "Up to 10 entities",
     includes: [
@@ -628,7 +629,7 @@ export default function PricingPage() {
               The Starter plan is free with no time limit. No credit card required.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-              <Link href="https://app.paymonei.com/auth/register">
+              <Link href={APP_REGISTER_URL}>
                 <span className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#0C0C0C] text-white text-sm font-medium hover:bg-[#1a1a1a] transition-colors duration-150 cursor-pointer">
                   Create your account
                   <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
